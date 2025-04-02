@@ -1,83 +1,89 @@
 // Archivo: app/comparator/page.tsx
 
-'use client';
+import fs from "fs/promises";
+import path from "path";
+import { FaPills, FaFilter } from "react-icons/fa";
+import { MdSearch } from "react-icons/md";
 
-import { FaSearch, FaPills, FaInfoCircle } from 'react-icons/fa';
-import Image from 'next/image';
+// Este componente se ejecuta del lado del servidor
+export default async function ComparatorPage() {
+  // Ruta al archivo JSON
+  const filePath = path.resolve(process.cwd(), "WebScrapers/output/medicines.json");
 
-// Página comparador de medicamentos
-export default function ComparatorPage() {
+  // Leer el archivo y parsear su contenido
+  let medicines = [];
+  try {
+    const fileData = await fs.readFile(filePath, "utf8");
+    medicines = JSON.parse(fileData);
+  } catch (error) {
+    console.error("❌ Error al leer el archivo medicines.json:", error);
+  }
+
   return (
-    <main className="container py-5">
-      {/* Título principal */}
-      <h1 className="text-center mb-4">
-        <FaPills className="me-2 text-success" />
-        Comparador de Medicamentos
-      </h1>
+    <main className="container mx-auto py-8 px-4">
+      {/* Título */}
+      <section className="text-center mb-10">
+        <h1 className="text-4xl font-bold text-green-700 flex justify-center items-center gap-2">
+          <FaPills />
+          Comparador de Medicamentos
+        </h1>
+        <p className="text-gray-600 mt-3">
+          Compara precios de medicamentos y encuentra disponibilidad en farmacias cercanas.
+        </p>
+      </section>
 
-      <p className="text-center text-muted mb-5">
-        Compara precios, disponibilidad y opciones para tus medicamentos en distintas farmacias.
-      </p>
-
-      {/* Filtro de búsqueda (funcionalidad futura) */}
-      <div className="input-group mb-4 w-75 mx-auto">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Busca un medicamento..."
-          aria-label="Buscar"
-        />
-        <button className="btn btn-outline-success" type="button">
-          <FaSearch />
-        </button>
-      </div>
-
-      {/* Tarjetas de medicamentos */}
-      <div className="row g-4">
-        {/* Tarjeta 1 */}
-        <div className="col-md-6 col-lg-4">
-          <div className="card h-100 shadow">
-            <Image
-              src="/medicine1.jpg" // Imagen guardada en /public
-              width={500}
-              height={300}
-              alt="Paracetamol"
-              className="card-img-top object-fit-cover"
+      {/* Filtros */}
+      <section className="mb-8 bg-white rounded-lg shadow-md p-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-2 w-full md:w-1/2">
+            <MdSearch className="text-green-700 text-xl" />
+            <input
+              type="text"
+              placeholder="Buscar medicamento..."
+              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <div className="card-body">
-              <h5 className="card-title">Paracetamol 500mg</h5>
-              <p className="card-text text-muted">Farmacia Salcobrand</p>
-              <p className="fw-bold text-success">$1.200 CLP</p>
-              <a href="#" className="btn btn-outline-success w-100">
-                <FaInfoCircle className="me-2" /> Ver detalles
-              </a>
-            </div>
+          </div>
+          <div className="flex items-center gap-2 w-full md:w-1/2">
+            <FaFilter className="text-green-700 text-xl" />
+            <select className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+              <option>Seleccionar región</option>
+              <option>RM</option>
+              <option>Valparaíso</option>
+              <option>Biobío</option>
+              <option>Otras regiones...</option>
+            </select>
           </div>
         </div>
+      </section>
 
-        {/* Tarjeta 2 */}
-        <div className="col-md-6 col-lg-4">
-          <div className="card h-100 shadow">
-            <Image
-              src="/medicine2.jpg"
-              width={500}
-              height={300}
-              alt="Ibuprofeno"
-              className="card-img-top object-fit-cover"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Ibuprofeno 400mg</h5>
-              <p className="card-text text-muted">Farmacia Cruz Verde</p>
-              <p className="fw-bold text-success">$1.800 CLP</p>
-              <a href="#" className="btn btn-outline-success w-100">
-                <FaInfoCircle className="me-2" /> Ver detalles
-              </a>
+      {/* Lista de medicamentos */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {medicines.length === 0 ? (
+          <p className="text-gray-500 text-center col-span-2">
+            No se encontraron resultados. Revisa si hay datos en el archivo JSON.
+          </p>
+        ) : (
+          medicines.map((med: any, index: number) => (
+            <div
+              key={index}
+              className="flex items-center justify-between bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300"
+            >
+              <div>
+                <h3 className="text-lg font-semibold text-green-700">{med.name}</h3>
+                <p className="text-sm text-gray-500">Farmacia: {med.pharmacy}</p>
+                <p className="text-sm text-gray-500">Precio: ${med.price}</p>
+              </div>
+              <div>
+                <img
+                  src={med.image || "/pills.svg"}
+                  alt={med.name}
+                  className="w-24 h-24 object-contain"
+                />
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Más tarjetas aquí */}
-      </div>
+          ))
+        )}
+      </section>
     </main>
   );
 }
