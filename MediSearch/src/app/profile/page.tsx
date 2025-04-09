@@ -1,112 +1,138 @@
-'use client';
+'use client'; // Directiva obligatoria para que el archivo sea tratado como componente del lado del cliente
 
-import { useState } from 'react';
-import { FaUserEdit, FaPills, FaRegClock } from 'react-icons/fa';
+// Componente: Página de Perfil de Usuario
+// Este componente permite ingresar y visualizar información personal básica,
+// tratamientos activos y medicamentos frecuentes. Toda la información se guarda en localStorage.
+// En futuros sprints se conectará con la base de datos real mediante login.
 
-// Página de perfil del usuario
+import { useEffect, useState } from 'react';
+import { FaUserCircle, FaEdit, FaStar, FaPills } from 'react-icons/fa';
+
 export default function ProfilePage() {
-  // Estado que simula si el usuario ha iniciado sesión
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  // Estados para la información personal del usuario
+  const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [birthday, setBirthday] = useState('');
+  const [region, setRegion] = useState('');
+  const [weight, setWeight] = useState('');
 
-  // Datos simulados del usuario (a reemplazar por datos reales desde login o base de datos)
-  const [profileData, setProfileData] = useState({
-    firstName: "Tomás",
-    lastName: "Poblete",
-    age: 23,
-    weight: 70,
-    region: "Región Metropolitana",
-    profileImage: "https://i.imgur.com/8Km9tLL.png" // Imagen de perfil por defecto
-  });
+  // Cálculo automático de la edad a partir de la fecha de nacimiento
+  const calculateAge = (birthdate: string) => {
+    const birth = new Date(birthdate);
+    const today = new Date();
+    let age = today.getFullYear() - birth.getFullYear();
+    const monthDiff = today.getMonth() - birth.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+      age--;
+    }
+    return age;
+  };
 
-  // Medicamentos frecuentes del usuario
-  const [medications, setMedications] = useState<string[]>([
-    "Paracetamol 500mg",
-    "Ibuprofeno 400mg",
-    "Loratadina 10mg"
-  ]);
+  // Estados para los tratamientos y medicamentos frecuentes
+  const [frequentMeds, setFrequentMeds] = useState<string[]>([]);
+  const [treatments, setTreatments] = useState<
+    { name: string; dosage: string; duration: string }[]
+  >([]);
 
-  // Recordatorios de compra o tratamiento
-  const [reminders, setReminders] = useState<string[]>([
-    "Comprar Paracetamol cada 30 días",
-    "Recordar Ibuprofeno el viernes"
-  ]);
+  // Al iniciar el componente, se cargan los datos guardados en localStorage
+  useEffect(() => {
+    const profile = JSON.parse(localStorage.getItem('profile') || '{}');
+    setName(profile.name || '');
+    setLastname(profile.lastname || '');
+    setBirthday(profile.birthday || '');
+    setRegion(profile.region || '');
+    setWeight(profile.weight || '');
+    setFrequentMeds(profile.frequentMeds || []);
+    setTreatments(profile.treatments || []);
+  }, []);
 
-  // Si el usuario no ha iniciado sesión, se muestra mensaje de advertencia
-  if (!isLoggedIn) {
-    return (
-      <main className="container py-10 text-center">
-        <h2 className="text-2xl font-bold mb-4">Acceso restringido</h2>
-        <p>Debes iniciar sesión para acceder a tu perfil y ver tus tratamientos guardados.</p>
-      </main>
+  // Cada vez que cambia la información del perfil, se actualiza el localStorage
+  useEffect(() => {
+    localStorage.setItem(
+      'profile',
+      JSON.stringify({ name, lastname, birthday, region, weight, frequentMeds, treatments })
     );
-  }
+  }, [name, lastname, birthday, region, weight, frequentMeds, treatments]);
+
+  // Función para agregar un nuevo tratamiento (simulado por inputs tipo prompt)
+  const addTreatment = () => {
+    const newTreatment = {
+      name: prompt('Nombre del medicamento') || '',
+      dosage: prompt('Dosis por día') || '',
+      duration: prompt('Duración del tratamiento (ej. 7 días)') || '',
+    };
+    if (newTreatment.name) {
+      setTreatments([...treatments, newTreatment]);
+    }
+  };
+
+  // Función para agregar un medicamento frecuente (simulado por input tipo prompt)
+  const addFrequentMed = () => {
+    const med = prompt('Nombre del medicamento frecuente');
+    if (med) setFrequentMeds([...frequentMeds, med]);
+  };
 
   return (
-    <main className="min-h-screen bg-gray-50 py-10 px-4 sm:px-8 md:px-16 text-gray-800">
-      {/* Encabezado de la página con ícono */}
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-green-700 mb-2">Mi Perfil</h1>
-        <p className="text-gray-600">Revisa y gestiona tus datos personales y tratamientos.</p>
-      </div>
+    <main className="container py-5">
+      {/* Título de la página */}
+      <h1 className="text-center mb-4 text-3xl font-bold text-primary">Mi Perfil</h1>
 
       {/* Sección de información personal */}
-      <section className="bg-white rounded-xl shadow p-6 mb-10 flex flex-col items-center">
-        {/* Imagen de perfil centrada */}
-        <div className="relative mb-4">
-          <img
-            src={profileData.profileImage}
-            alt="Foto de perfil"
-            className="w-32 h-32 rounded-full object-cover border-4 border-green-300"
+      <div className="text-center mb-5">
+        <FaUserCircle size={100} className="text-secondary mb-3" />
+        <div className="grid gap-3 md:grid-cols-2 max-w-xl mx-auto">
+          <input className="form-control" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} />
+          <input className="form-control" placeholder="Apellido" value={lastname} onChange={(e) => setLastname(e.target.value)} />
+          <input
+            type="date"
+            className="form-control"
+            placeholder="Fecha de nacimiento"
+            value={birthday}
+            onChange={(e) => setBirthday(e.target.value)}
           />
-          <button className="absolute bottom-0 right-0 bg-white p-1 rounded-full shadow border">
-            <FaUserEdit className="text-green-600" />
+          {/* Mostrar la edad automáticamente al lado de la fecha */}
+          {birthday && (
+            <p className="text-start text-muted col-span-2">
+              Edad: <strong>{calculateAge(birthday)}</strong> años
+            </p>
+          )}
+          <input className="form-control" placeholder="Región" value={region} onChange={(e) => setRegion(e.target.value)} />
+          <input className="form-control" placeholder="Peso (kg)" value={weight} onChange={(e) => setWeight(e.target.value)} />
+        </div>
+      </div>
+
+      {/* Sección de tratamientos activos */}
+      <section className="mb-5">
+        <div className="d-flex justify-content-between align-items-center mb-2">
+          <h2 className="text-xl font-semibold">Tratamientos activos</h2>
+          <button className="btn btn-outline-primary" onClick={addTreatment}>
+            <FaEdit className="me-2" /> Añadir tratamiento
           </button>
         </div>
-
-        {/* Datos del usuario */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center sm:text-left">
-          <p><strong>Nombre:</strong> {profileData.firstName}</p>
-          <p><strong>Apellido:</strong> {profileData.lastName}</p>
-          <p><strong>Edad:</strong> {profileData.age} años</p>
-          <p><strong>Peso:</strong> {profileData.weight} kg</p>
-          <p><strong>Región:</strong> {profileData.region}</p>
-        </div>
+        <ul className="list-group">
+          {treatments.map((t, i) => (
+            <li key={i} className="list-group-item">
+              <strong>{t.name}</strong> - {t.dosage} durante {t.duration}
+            </li>
+          ))}
+        </ul>
       </section>
 
-      {/* Medicamentos frecuentes */}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <FaPills className="text-green-600" />
-          Medicamentos frecuentes
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {medications.map((med, i) => (
-            <div
-              key={i}
-              className="bg-white p-4 rounded-lg shadow border-l-4 border-green-400"
-            >
-              <p>{med}</p>
-            </div>
-          ))}
+      {/* Sección de medicamentos frecuentes */}
+      <section>
+        <div className="d-flex justify-content-between align-items-center mb-2">
+          <h2 className="text-xl font-semibold">Medicamentos frecuentes</h2>
+          <button className="btn btn-outline-warning" onClick={addFrequentMed}>
+            <FaStar className="me-2" /> Añadir medicamento
+          </button>
         </div>
-      </section>
-
-      {/* Recordatorios */}
-      <section className="mb-8">
-        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <FaRegClock className="text-green-600" />
-          Recordatorios de compra
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {reminders.map((reminder, i) => (
-            <div
-              key={i}
-              className="bg-white p-4 rounded-lg shadow border-l-4 border-yellow-400"
-            >
-              <p>{reminder}</p>
-            </div>
+        <ul className="list-group">
+          {frequentMeds.map((m, i) => (
+            <li key={i} className="list-group-item">
+              <FaPills className="me-2 text-success" /> {m}
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     </main>
   );
