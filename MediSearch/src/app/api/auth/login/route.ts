@@ -2,14 +2,14 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
-import { usersCollection } from "../../../../lib/mongodb.ts";
+import { usersCollection } from "@/lib/mongodb";
 import { SignJWT } from "jose";
 
-// Se obtiene y codifica la clave secreta desde .env
+// Codifica la clave secreta para JWT desde .env
 const encoder = new TextEncoder();
 const JWT_SECRET = encoder.encode(process.env.JWT_SECRET || "fallback-secret");
 
-// Función para generar token JWT
+// Función que genera un token JWT con expiración de 1 hora
 async function generateToken(payload: any) {
   return await new SignJWT(payload)
     .setProtectedHeader({ alg: "HS256", typ: "JWT" })
@@ -17,7 +17,7 @@ async function generateToken(payload: any) {
     .sign(JWT_SECRET);
 }
 
-// Endpoint POST para login
+// Ruta POST para login
 export async function POST(req: NextRequest) {
   try {
     const { email, password } = await req.json();
@@ -26,23 +26,30 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Correo y contraseña requeridos" }, { status: 400 });
     }
 
-    const user = await usersCollection.findOne({ email });
+    // Desempaqueta la colección (la promesa)
+    const users = await usersCollection;
+
+    // Busca al usuario por email
+    const user = await users.findOne({ email });
 
     if (!user) {
       return NextResponse.json({ message: "Usuario no encontrado" }, { status: 401 });
     }
 
+    // Compara la contraseña cifrada
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return NextResponse.json({ message: "Contraseña incorrecta" }, { status: 401 });
     }
 
+    // Genera el token con la info del usuario
     const token = await generateToken({
       email: user.email,
       name: user.name,
       id: user._id.toString(),
     });
 
+    // Construye la respuesta y asigna la cookie
     const response = NextResponse.json(
       {
         message: "Inicio de sesión exitoso",
@@ -62,7 +69,7 @@ export async function POST(req: NextRequest) {
       httpOnly: true,
       secure: true,
       sameSite: "strict",
-      maxAge: 60 * 60,
+      maxAge: 60 * 60, // 1 hora
       path: "/"
     });
 
