@@ -1,30 +1,38 @@
-// Archivo: src/api/auth/register/route.ts
+// Archivo: src/app/api/auth/register/route.ts
 
 import { NextRequest, NextResponse } from "next/server";
-import { hash } from "npm:bcryptjs";
-import { usersCollection } from "../../../../lib/mongodb.ts";
+import bcrypt from "bcryptjs";
+import { usersCollection } from "../../../../lib/mongodb.ts"; // Ruta absoluta desde tsconfig.json
 
 // Ruta para registrar nuevos usuarios en la base de datos
 export async function POST(req: NextRequest) {
   try {
-    // Se extraen los datos enviados por el frontend
+    // Se extraen los datos enviados desde el frontend en formato JSON
     const body = await req.json();
     const { email, password, name, lastname, birthday, region, weight } = body;
 
-    // Se verifica si ya existe un usuario con el mismo correo
-    const existingUser = await usersCollection.findOne({ email });
-
-    if (existingUser) {
+    // Se valida que los campos requeridos estén presentes
+    if (!email || !password || !name || !lastname || !birthday || !region || !weight) {
       return NextResponse.json(
-        { message: "El correo ya está registrado." },
+        { message: "Faltan campos requeridos" },
         { status: 400 }
       );
     }
 
-    // Se cifra la contraseña antes de guardarla
-    const hashedPassword = await hash(password, 10);
+    // Se verifica si ya existe un usuario registrado con el mismo correo
+    const existingUser = await usersCollection.findOne({ email });
 
-    // Se construye el nuevo usuario a registrar
+    if (existingUser) {
+      return NextResponse.json(
+        { message: "El correo ya está registrado" },
+        { status: 400 }
+      );
+    }
+
+    // Se cifra la contraseña con bcrypt antes de almacenarla
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Se construye el objeto del nuevo usuario
     const newUser = {
       email,
       password: hashedPassword,
@@ -36,18 +44,18 @@ export async function POST(req: NextRequest) {
       createdAt: new Date(),
     };
 
-    // Se inserta el nuevo usuario en la colección
+    // Se inserta el nuevo usuario en la base de datos
     await usersCollection.insertOne(newUser);
 
-    // Respuesta exitosa
+    // Se devuelve respuesta exitosa
     return NextResponse.json(
       { message: "Usuario registrado correctamente" },
       { status: 201 }
     );
   } catch (error) {
-    console.error("❌ Error en el registro:", error);
+    console.error("Error en el registro:", error);
     return NextResponse.json(
-      { message: "Error al registrar usuario" },
+      { message: "Error interno al registrar el usuario" },
       { status: 500 }
     );
   }
