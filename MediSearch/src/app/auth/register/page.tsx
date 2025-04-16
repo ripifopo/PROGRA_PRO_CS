@@ -1,11 +1,14 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function RegisterPage() {
-  // Estados del formulario
+  const router = useRouter();
+
+  // Estados para almacenar los campos del formulario
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -16,12 +19,12 @@ export default function RegisterPage() {
     weight: ''
   });
 
-  // Manejo de cambios en el formulario
+  // Manejador para actualizar los valores de los campos
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Validaciones del formulario
+  // Validaciones básicas del formulario antes de enviar
   const validateForm = () => {
     const { email, password, name, lastname, birthday, region, weight } = formData;
     if (!email || !password || !name || !lastname || !birthday || !region || !weight) {
@@ -39,7 +42,7 @@ export default function RegisterPage() {
     return true;
   };
 
-  // Envío del formulario
+  // Envía los datos del formulario al servidor
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -55,7 +58,15 @@ export default function RegisterPage() {
 
       if (res.ok) {
         toast.success("Registro exitoso.");
-        setFormData({ email: '', password: '', name: '', lastname: '', birthday: '', region: '', weight: '' });
+
+        // Guarda temporalmente el email y password para autocompletar login
+        localStorage.setItem('lastRegister', JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        }));
+
+        // Redirige al login
+        router.push('/auth/login');
       } else {
         toast.error(result.message || "Error al registrar.");
       }
@@ -65,8 +76,8 @@ export default function RegisterPage() {
   };
 
   return (
-    <main className="container py-5 d-flex justify-content-center align-items-center">
-      <form onSubmit={handleSubmit} className="w-100" style={{ maxWidth: '500px' }}>
+    <main className="min-vh-100 d-flex justify-content-center align-items-center">
+      <form onSubmit={handleSubmit} className="w-100 px-3" style={{ maxWidth: '500px' }}>
         <h2 className="text-center mb-4">Registro de Usuario</h2>
 
         <input className="form-control mb-3" name="email" type="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} />
@@ -75,7 +86,7 @@ export default function RegisterPage() {
         <input className="form-control mb-3" name="lastname" placeholder="Apellido" value={formData.lastname} onChange={handleChange} />
         <input className="form-control mb-3" name="birthday" type="date" placeholder="Fecha de nacimiento" value={formData.birthday} onChange={handleChange} />
         <input className="form-control mb-3" name="region" placeholder="Región" value={formData.region} onChange={handleChange} />
-        <input className="form-control mb-3" name="weight" type="number" placeholder="Peso (kg)" value={formData.weight} onChange={handleChange} />
+        <input className="form-control mb-4" name="weight" type="number" placeholder="Peso (kg)" value={formData.weight} onChange={handleChange} />
 
         <button type="submit" className="btn btn-primary w-100">Registrarse</button>
       </form>
