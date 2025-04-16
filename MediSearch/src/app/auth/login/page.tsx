@@ -1,3 +1,5 @@
+// Archivo: src/app/auth/login/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -30,12 +32,12 @@ export default function LoginPage() {
     const { email, password } = formData;
 
     if (!email || !password) {
-      toast.error("Por favor completa los campos.");
+      toast.error("Por favor completa todos los campos.");
       return false;
     }
 
     if (!email.includes('@')) {
-      toast.error("Correo no válido.");
+      toast.error("El correo no es válido.");
       return false;
     }
 
@@ -58,6 +60,7 @@ export default function LoginPage() {
       if (res.ok) {
         toast.success("Inicio de sesión exitoso.");
         localStorage.setItem('token', result.token);
+        localStorage.setItem('userProfile', JSON.stringify(result.user)); // ✅ se guarda aquí
         router.push('/profile');
       } else {
         toast.error(result.message || "Credenciales incorrectas.");
