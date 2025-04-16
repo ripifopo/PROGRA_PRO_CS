@@ -5,32 +5,30 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { FaPills, FaHeartbeat, FaStethoscope, FaEdit } from 'react-icons/fa';
 
-// Se define la interfaz que representa los datos del perfil de usuario
+// Interfaz para representar el perfil del usuario
 interface UserProfile {
   email: string;
   name: string;
   lastname: string;
   birthday: string;
   region: string;
-  icon?: string; // Campo opcional que representa el ícono del perfil
+  icon?: string; // Icono de perfil personalizado (opcional)
 }
 
-// Íconos disponibles para que el usuario seleccione como avatar
+// Íconos disponibles para el perfil
 const availableIcons = {
   pills: <FaPills size={40} color="#218754" />,
   heartbeat: <FaHeartbeat size={40} color="#218754" />,
-  stethoscope: <FaStethoscope size={40} color="#218754" />
+  stethoscope: <FaStethoscope size={40} color="#218754" />,
 };
 
 export default function ProfilePage() {
   const router = useRouter();
-
-  // Se almacenan los datos del usuario y el ícono seleccionado
   const [user, setUser] = useState<UserProfile | null>(null);
   const [selectedIcon, setSelectedIcon] = useState<keyof typeof availableIcons>('pills');
-  const [showIconSelector, setShowIconSelector] = useState(false); // Controla si se despliega el selector de íconos
+  const [showIconSelector, setShowIconSelector] = useState(false); // Muestra u oculta el menú de íconos
 
-  // Función que calcula la edad en base a la fecha de nacimiento
+  // Calcula la edad a partir de la fecha de nacimiento
   const calculateAge = (birthday: string) => {
     const birthDate = new Date(birthday);
     const today = new Date();
@@ -42,57 +40,62 @@ export default function ProfilePage() {
     return age;
   };
 
-  // Efecto que se ejecuta al cargar la página para validar sesión y cargar datos del usuario
+  // Carga datos desde localStorage y verifica autenticación
   useEffect(() => {
     try {
+      const token = localStorage.getItem('token');
       const userData = localStorage.getItem('userProfile');
-      if (!userData) throw new Error();
+
+      // Si no hay token o perfil, se considera sesión inválida
+      if (!token || !userData) {
+        throw new Error();
+      }
 
       const parsed = JSON.parse(userData);
       if (!parsed || typeof parsed !== 'object') throw new Error();
 
-      // Se carga el perfil desde localStorage
       setUser(parsed);
 
-      // Se busca el ícono guardado específicamente para el usuario
+      // Verifica si hay ícono personalizado guardado por email
       const savedIcon = parsed.email ? localStorage.getItem(`icon-${parsed.email}`) : null;
-
       if (savedIcon && Object.keys(availableIcons).includes(savedIcon)) {
         setSelectedIcon(savedIcon as keyof typeof availableIcons);
       } else if (parsed.icon && Object.keys(availableIcons).includes(parsed.icon)) {
         setSelectedIcon(parsed.icon);
       }
     } catch {
-      // Si ocurre un error, se considera inválida la sesión y se redirige al login
+      // Si algo falla, limpia la sesión y redirige
       toast.error('Sesión inválida. Inicia sesión nuevamente.');
       localStorage.removeItem('token');
+      localStorage.removeItem('userProfile');
       router.push('/auth/login');
     }
   }, [router]);
 
-  // Función que cierra sesión, pero mantiene el ícono personalizado guardado por usuario
+  // Cierra sesión, eliminando el token y redirigiendo (pero manteniendo íconos por usuario)
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Solo se elimina el token de sesión
+    localStorage.removeItem('token');       // Elimina token
+    localStorage.removeItem('userProfile'); // Elimina perfil cargado
     toast.success('Sesión cerrada');
     router.push('/auth/login');
   };
 
-  // Función que guarda el ícono seleccionado según el email del usuario
+  // Cambia el ícono de perfil y lo guarda asociado al email
   const handleIconChange = (icon: keyof typeof availableIcons) => {
     setSelectedIcon(icon);
     if (user?.email) {
-      localStorage.setItem(`icon-${user.email}`, icon);
+      localStorage.setItem(`icon-${user.email}`, icon); // Guardado personalizado por usuario
     }
   };
 
-  // Si aún no se cargan los datos, no se muestra el componente
+  // Mientras no haya usuario cargado, no renderizar nada
   if (!user) return null;
 
   return (
     <div className="container d-flex justify-content-center align-items-center min-vh-100">
       <div className="card shadow-lg p-4 position-relative" style={{ maxWidth: '600px', width: '100%' }}>
 
-        {/* Botón de cerrar sesión en la esquina superior derecha */}
+        {/* Botón de cerrar sesión arriba a la derecha */}
         <button
           onClick={handleLogout}
           className="btn btn-sm btn-danger position-absolute"
@@ -101,10 +104,10 @@ export default function ProfilePage() {
           Cerrar sesión
         </button>
 
-        {/* Título de sección */}
+        {/* Título principal */}
         <h2 className="text-center text-success mb-3">Mi Perfil</h2>
 
-        {/* Ícono de perfil personalizado */}
+        {/* Ícono personalizado del perfil */}
         <div className="text-center mb-3">
           <div
             className="rounded-circle bg-light d-flex justify-content-center align-items-center mx-auto"
@@ -113,7 +116,7 @@ export default function ProfilePage() {
             {availableIcons[selectedIcon]}
           </div>
 
-          {/* Botón para desplegar el menú de íconos */}
+          {/* Botón para desplegar selector de íconos */}
           <button
             className="btn btn-link text-success mt-1"
             onClick={() => setShowIconSelector(!showIconSelector)}
@@ -121,7 +124,7 @@ export default function ProfilePage() {
             <FaEdit className="me-1" /> Editar ícono
           </button>
 
-          {/* Selector de íconos (solo se muestra si showIconSelector está activo) */}
+          {/* Opciones de íconos (solo si showIconSelector está activado) */}
           {showIconSelector && (
             <div className="d-flex justify-content-center mt-2 gap-2">
               {Object.entries(availableIcons).map(([key, icon]) => (
@@ -145,7 +148,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Información del usuario (no editable) */}
+        {/* Datos del perfil del usuario (no editables) */}
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             <strong>Nombre:</strong> {user.name} {user.lastname}
