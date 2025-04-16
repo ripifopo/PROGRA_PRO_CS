@@ -1,26 +1,19 @@
-// Archivo: lib/mongodb.ts
+// Archivo: src/lib/mongodb.ts
 
-import { MongoClient } from "npm:mongodb";
+import { MongoClient } from "mongodb";
 
-// URL de conexión obtenida desde el archivo .env
-const uri = Deno.env.get("MONGODB_URI");
+// Se obtiene la URI de conexión desde el archivo .env
+const uri = process.env.MONGODB_URI;
 
-// Validación: Si no se encuentra la variable, lanzar error
 if (!uri) {
-  throw new Error("La variable MONGODB_URI no está definida en el archivo .env");
+  throw new Error("No se encontró la URI de conexión a MongoDB en el archivo .env");
 }
 
-// Se crea una instancia de cliente de MongoDB con la URI
+// Se crea una nueva instancia del cliente
 const client = new MongoClient(uri);
 
-// Función para obtener la base de datos específica
-export async function connectToDatabase() {
-  // Se conecta con el servidor solo si aún no está conectado
-  if (!client.isConnected?.()) {
-    await client.connect();
-  }
+// Se selecciona la base de datos llamada "medisearch"
+const db = client.db("medisearch");
 
-  // Se retorna el acceso a la base de datos. Puedes cambiar el nombre si tu base no se llama "medisearch"
-  const db = client.db("medisearch");
-  return db;
-}
+// Se exporta la colección de usuarios para uso en rutas de la API
+export const usersCollection = db.collection("users");
