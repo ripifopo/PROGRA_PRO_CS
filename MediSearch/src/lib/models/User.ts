@@ -1,12 +1,11 @@
-// Modelo de usuario que define los campos a guardar en MongoDB
+// Archivo: src/lib/models/User.ts
 
 export interface User {
-  email: string;              // Correo del usuario (único)
-  password: string;           // Contraseña cifrada
-  name: string;               // Nombre del usuario
-  lastname: string;           // Apellido
-  birthday: string;           // Fecha de nacimiento
-  region: string;             // Región
-  weight: string;             // Peso
-  createdAt?: Date;           // Fecha de creación
+  email: string;
+  password: string;
+  name: string;
+  lastname: string;
+  birthday: string;
+  region: string;
+  createdAt?: Date;
 }
