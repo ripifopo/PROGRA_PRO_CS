@@ -8,41 +8,46 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function RegisterPage() {
   const router = useRouter();
 
-  // Estados para almacenar los campos del formulario
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     name: '',
     lastname: '',
     birthday: '',
-    region: '',
-    weight: ''
+    region: ''
   });
 
-  // Manejador para actualizar los valores de los campos
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Validaciones básicas del formulario antes de enviar
   const validateForm = () => {
-    const { email, password, name, lastname, birthday, region, weight } = formData;
-    if (!email || !password || !name || !lastname || !birthday || !region || !weight) {
+    const { email, password, name, lastname, birthday, region } = formData;
+
+    if (!email || !password || !name || !lastname || !birthday || !region) {
       toast.error("Por favor completa todos los campos.");
       return false;
     }
+
     if (!email.includes('@')) {
-      toast.error("El correo no es válido.");
+      toast.error("El correo debe ser válido.");
       return false;
     }
+
     if (!region.toLowerCase().startsWith("región")) {
       toast.error("La región debe comenzar con 'Región'.");
       return false;
     }
+
+    const symbolRegex = /[!@#$%^&*]/;
+    if (password.length < 6 || !symbolRegex.test(password)) {
+      toast.error("La contraseña debe tener al menos 6 caracteres y un símbolo especial.");
+      return false;
+    }
+
     return true;
   };
 
-  // Envía los datos del formulario al servidor
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -59,18 +64,16 @@ export default function RegisterPage() {
       if (res.ok) {
         toast.success("Registro exitoso.");
 
-        // Guarda temporalmente el email y password para autocompletar login
         localStorage.setItem('lastRegister', JSON.stringify({
           email: formData.email,
           password: formData.password
         }));
 
-        // Redirige al login
         router.push('/auth/login');
       } else {
         toast.error(result.message || "Error al registrar.");
       }
-    } catch (err) {
+    } catch {
       toast.error("Error en el servidor.");
     }
   };
@@ -85,10 +88,21 @@ export default function RegisterPage() {
         <input className="form-control mb-3" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
         <input className="form-control mb-3" name="lastname" placeholder="Apellido" value={formData.lastname} onChange={handleChange} />
         <input className="form-control mb-3" name="birthday" type="date" placeholder="Fecha de nacimiento" value={formData.birthday} onChange={handleChange} />
-        <input className="form-control mb-3" name="region" placeholder="Región" value={formData.region} onChange={handleChange} />
-        <input className="form-control mb-4" name="weight" type="number" placeholder="Peso (kg)" value={formData.weight} onChange={handleChange} />
+        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} onChange={handleChange} />
 
-        <button type="submit" className="btn btn-primary w-100">Registrarse</button>
+        <button type="submit" className="btn w-100" style={{ backgroundColor: '#218754', color: '#fff' }}>
+          Registrarse
+        </button>
+
+        <div className="text-center mt-3">
+          <hr />
+          <span className="px-2 text-muted">O</span>
+          <hr />
+        </div>
+
+        <div className="text-center mt-2">
+          <a href="/auth/login" className="text-decoration-none">¿Ya tienes cuenta? Inicia sesión</a>
+        </div>
       </form>
     </main>
   );
