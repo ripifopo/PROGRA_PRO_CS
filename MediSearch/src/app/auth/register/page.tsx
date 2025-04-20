@@ -16,17 +16,35 @@ export default function RegisterPage() {
     name: '',
     lastname: '',
     birthday: '',
-    region: ''
+    region: '',
+    comuna: ''
   });
 
+  // Detecta región automáticamente con GPS
   useEffect(() => {
-    const stored = localStorage.getItem('userLocation');
-    if (stored) {
-      const { region } = JSON.parse(stored);
-      if (region) {
-        setFormData(prev => ({ ...prev, region }));
-      }
+    if (!navigator.geolocation) {
+      toast.error('Geolocalización no soportada por tu navegador');
+      return;
     }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`);
+        const data = await res.json();
+        const region = data.address.state || data.address.region || data.address['ISO3166-2-lvl4'] || '';
+        if (region) {
+          setFormData(prev => ({ ...prev, region }));
+          toast.success('Región detectada automáticamente');
+        }
+      },
+      () => toast.error('No se pudo detectar tu región'),
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      }
+    );
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,9 +52,9 @@ export default function RegisterPage() {
   };
 
   const validateForm = () => {
-    const { email, password, name, lastname, birthday, region } = formData;
+    const { email, password, name, lastname, birthday, region, comuna } = formData;
 
-    if (!email || !password || !name || !lastname || !birthday || !region) {
+    if (!email || !password || !name || !lastname || !birthday || !region || !comuna) {
       toast.error("Por favor completa todos los campos.");
       return false;
     }
@@ -100,7 +118,8 @@ export default function RegisterPage() {
         <input className="form-control mb-3" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
         <input className="form-control mb-3" name="lastname" placeholder="Apellido" value={formData.lastname} onChange={handleChange} />
         <input className="form-control mb-3" name="birthday" type="date" placeholder="Fecha de nacimiento" value={formData.birthday} onChange={handleChange} />
-        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} onChange={handleChange} readOnly />
+        <input className="form-control mb-3" name="comuna" placeholder="Comuna" value={formData.comuna} onChange={handleChange} />
+        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} readOnly />
 
         <button type="submit" className="btn w-100" style={{ backgroundColor: '#218754', color: '#fff' }}>
           Registrarse
