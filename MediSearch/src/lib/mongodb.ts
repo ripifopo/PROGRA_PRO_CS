@@ -1,26 +1,30 @@
-// Archivo: lib/mongodb.ts
+// Archivo: src/lib/mongodb.ts
 
-import { MongoClient } from "npm:mongodb";
+import { MongoClient, Db, Collection } from "mongodb";
 
-// URL de conexión obtenida desde el archivo .env
-const uri = Deno.env.get("MONGODB_URI");
+// Se obtiene la URI desde el archivo .env
+const uri = process.env.MONGODB_URI;
 
-// Validación: Si no se encuentra la variable, lanzar error
 if (!uri) {
-  throw new Error("La variable MONGODB_URI no está definida en el archivo .env");
+  throw new Error("No se encontró la URI de conexión a MongoDB");
 }
 
-// Se crea una instancia de cliente de MongoDB con la URI
-const client = new MongoClient(uri);
-
-// Función para obtener la base de datos específica
-export async function connectToDatabase() {
-  // Se conecta con el servidor solo si aún no está conectado
-  if (!client.isConnected?.()) {
-    await client.connect();
-  }
-
-  // Se retorna el acceso a la base de datos. Puedes cambiar el nombre si tu base no se llama "medisearch"
-  const db = client.db("medisearch");
-  return db;
+// Variable global para evitar crear múltiples conexiones en desarrollo
+declare global {
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
 }
+
+// Solo crea una instancia si aún no existe
+let clientPromise: Promise<MongoClient>;
+
+if (!global._mongoClientPromise) {
+  const client = new MongoClient(uri);
+  global._mongoClientPromise = client.connect();
+}
+
+clientPromise = global._mongoClientPromise;
+
+// Exporta la colección una vez la conexión esté lista
+export const usersCollection: Promise<Collection> = clientPromise.then(client =>
+  client.db("medisearch").collection("users")
+);
