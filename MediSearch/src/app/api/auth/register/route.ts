@@ -2,7 +2,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
-import { usersCollection } from "@/lib/mongodb";
+import { usersCollection } from "../../../../lib/mongodb.ts";
 
 // Ruta POST para registrar nuevos usuarios
 export async function POST(req: NextRequest) {

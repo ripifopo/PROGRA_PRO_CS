@@ -2,7 +2,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
-import { usersCollection } from "@/lib/mongodb";
+import { usersCollection } from "../../../../lib/mongodb.ts";
 import { SignJWT } from "jose";
 
 // Codifica la clave secreta para JWT desde .env
