@@ -1,11 +1,18 @@
+// Archivo: src/app/LoadingSpinner.tsx
 'use client';
 
 export default function LoadingSpinner() {
   return (
-    <div className="position-fixed top-0 start-0 w-100 h-100 bg-white bg-opacity-75 d-flex justify-content-center align-items-center" style={{ zIndex: 9999 }}>
-      <div className="spinner-border text-success" role="status" style={{ width: '3rem', height: '3rem' }}>
-        <span className="visually-hidden">Cargando...</span>
-      </div>
+    <div style={{
+      position: 'fixed',
+      top: 0, left: 0, right: 0, bottom: 0,
+      backgroundColor: 'rgba(255,255,255,0.8)',
+      zIndex: 9999,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <div className="spinner-border text-success" style={{ width: '4rem', height: '4rem' }} />
     </div>
   );
 }

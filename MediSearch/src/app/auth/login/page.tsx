@@ -15,6 +15,7 @@ export default function LoginPage() {
     password: ''
   });
 
+  // Si viene del registro, completa automáticamente los campos
   useEffect(() => {
     const last = localStorage.getItem('lastRegister');
     if (last) {
@@ -28,6 +29,7 @@ export default function LoginPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Valida que el correo y contraseña estén correctamente ingresados
   const validateForm = () => {
     const { email, password } = formData;
 
@@ -44,6 +46,7 @@ export default function LoginPage() {
     return true;
   };
 
+  // Maneja el envío del formulario
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -59,8 +62,17 @@ export default function LoginPage() {
 
       if (res.ok) {
         toast.success("Inicio de sesión exitoso.");
+
+        // Guarda token y perfil del usuario
         localStorage.setItem('token', result.token);
-        localStorage.setItem('userProfile', JSON.stringify(result.user)); // ✅ se guarda aquí
+        localStorage.setItem('userProfile', JSON.stringify(result.user));
+
+        // También guarda la ubicación para otras páginas como comparator y availability
+        localStorage.setItem('userLocation', JSON.stringify({
+          region: result.user.region,
+          comuna: result.user.comuna
+        }));
+
         router.push('/profile');
       } else {
         toast.error(result.message || "Credenciales incorrectas.");
