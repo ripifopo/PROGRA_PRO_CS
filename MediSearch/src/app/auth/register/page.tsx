@@ -1,7 +1,9 @@
+// Archivo: src/app/auth/register/page.tsx
+
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -16,6 +18,16 @@ export default function RegisterPage() {
     birthday: '',
     region: ''
   });
+
+  useEffect(() => {
+    const stored = localStorage.getItem('userLocation');
+    if (stored) {
+      const { region } = JSON.parse(stored);
+      if (region) {
+        setFormData(prev => ({ ...prev, region }));
+      }
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -88,7 +100,7 @@ export default function RegisterPage() {
         <input className="form-control mb-3" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
         <input className="form-control mb-3" name="lastname" placeholder="Apellido" value={formData.lastname} onChange={handleChange} />
         <input className="form-control mb-3" name="birthday" type="date" placeholder="Fecha de nacimiento" value={formData.birthday} onChange={handleChange} />
-        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} onChange={handleChange} />
+        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} onChange={handleChange} readOnly />
 
         <button type="submit" className="btn w-100" style={{ backgroundColor: '#218754', color: '#fff' }}>
           Registrarse

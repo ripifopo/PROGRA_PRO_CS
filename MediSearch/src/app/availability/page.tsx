@@ -1,31 +1,37 @@
+// Archivo: src/app/availability/page.tsx
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useRouter } from 'next/navigation';
+import { useLoading } from '../../../context/LoadingContext';
 
 // Token de Mapbox para visualizar el mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
 export default function AvailabilityPage() {
-  const mapContainerRef = useRef<HTMLDivElement | null>(null); // Referencia al contenedor del mapa
-  const mapRef = useRef<mapboxgl.Map | null>(null); // Referencia al objeto mapa
-  const markerRef = useRef<mapboxgl.Marker | null>(null); // Referencia al marcador del usuario
-  const [mapVisible, setMapVisible] = useState(false); // Estado para mostrar/ocultar mapa ampliado
-  const [userCoords, setUserCoords] = useState<[number, number] | null>(null); // Coordenadas del usuario
-  const router = useRouter(); // Para redirección
+  const mapContainerRef = useRef<HTMLDivElement | null>(null);
+  const mapRef = useRef<mapboxgl.Map | null>(null);
+  const markerRef = useRef<mapboxgl.Marker | null>(null);
 
-  // Función que centra el mapa en la ubicación del usuario
+  const [mapVisible, setMapVisible] = useState(false);
+  const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
+  const [userRegion, setUserRegion] = useState<string>('');
+  const [userComuna, setUserComuna] = useState<string>('');
+  const router = useRouter();
+  const { setLoading } = useLoading();
+
+  // Centra el mapa en la ubicación actual del usuario
   const goToUserLocation = () => {
     if (userCoords && mapRef.current) {
       mapRef.current.flyTo({ center: userCoords, zoom: 14 });
     }
   };
 
-  // Crea el marcador en la ubicación actual del usuario
+  // Crea el marcador personalizado en la ubicación del usuario
   const createUserMarker = (lng: number, lat: number) => {
-    // Estilo del marcador verde
     const el = document.createElement('div');
     el.style.width = '18px';
     el.style.height = '18px';
@@ -34,10 +40,8 @@ export default function AvailabilityPage() {
     el.style.boxShadow = '0 0 10px rgba(25, 135, 84, 0.6)';
     el.style.cursor = 'pointer';
 
-    // Al hacer clic en el marcador, se vuelve a centrar el mapa
     el.addEventListener('click', () => goToUserLocation());
 
-    // Contenido del popup
     const popupContent = document.createElement('div');
     popupContent.style.backgroundColor = '#ffffff';
     popupContent.style.color = '#333';
@@ -49,96 +53,85 @@ export default function AvailabilityPage() {
     popupContent.style.textAlign = 'center';
     popupContent.innerText = '📍 Estás aquí';
 
-    // Crear el popup sin flechita (tip)
-    const popup = new mapboxgl.Popup({
-      offset: 25,
-      closeButton: true,
-      className: 'no-tip'
-    }).setDOMContent(popupContent);
+    const popup = new mapboxgl.Popup({ offset: 25, closeButton: true, className: 'no-tip' }).setDOMContent(popupContent);
 
-    // Eliminar manualmente la flechita (por si queda)
     setTimeout(() => {
       const tip = document.querySelector('.mapboxgl-popup-tip');
       if (tip) tip.remove();
     }, 100);
 
-    // Eliminar marcador anterior si existía
     if (markerRef.current) markerRef.current.remove();
 
-    // Crear nuevo marcador
     markerRef.current = new mapboxgl.Marker({ element: el })
       .setLngLat([lng, lat])
       .setPopup(popup)
       .addTo(mapRef.current!);
   };
 
-  // Inicializa el mapa cuando el componente se monta
+  // Inicializa el mapa y obtiene ubicación desde localStorage
   useEffect(() => {
-    if (!mapContainerRef.current || mapRef.current) return;
+    setLoading(true);
 
-    // Crear el mapa
+    const stored = localStorage.getItem('userLocation');
+    if (!stored) {
+      setLoading(false);
+      return;
+    }
+
+    const locationData = JSON.parse(stored);
+    setUserRegion(locationData.region);
+    setUserComuna(locationData.comuna);
+
+    if (!navigator.geolocation || mapRef.current || !mapContainerRef.current) {
+      setLoading(false);
+      return;
+    }
+
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/light-v11',
-      center: [-70.6483, -33.4569], // Centro inicial en Santiago
-      zoom: 12
+      center: [-70.6483, -33.4569],
+      zoom: 12,
     });
 
-    // Controles de navegación del mapa (zoom, rotación)
     mapRef.current.addControl(new mapboxgl.NavigationControl());
 
-    // Obtener ubicación del usuario
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { longitude, latitude } = position.coords;
-          setUserCoords([longitude, latitude]);
-          mapRef.current?.flyTo({ center: [longitude, latitude], zoom: 14 });
-          createUserMarker(longitude, latitude);
-        },
-        (error) => {
-          // Mensajes de error para ubicación
-          const errors = [
-            'El usuario denegó el permiso de ubicación.',
-            'La ubicación no está disponible.',
-            'La solicitud de ubicación expiró.',
-            'Ocurrió un error desconocido.'
-          ];
-          alert(errors[error.code] || errors[3]);
-        },
-        {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 0
-        }
-      );
-    }
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { longitude, latitude } = position.coords;
+        setUserCoords([longitude, latitude]);
+        mapRef.current?.flyTo({ center: [longitude, latitude], zoom: 14 });
+        createUserMarker(longitude, latitude);
+        setLoading(false);
+      },
+      () => {
+        setLoading(false);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      }
+    );
   }, []);
 
-  // Ajusta el mapa al redimensionar (cuando se amplía o minimiza)
+  // Redibuja el mapa si se amplía o minimiza
   useEffect(() => {
     if (mapRef.current) {
       setTimeout(() => {
-        mapRef.current!.resize(); // Redibuja el mapa
+        mapRef.current!.resize();
         if (userCoords) {
-          mapRef.current!.flyTo({
-            center: userCoords,
-            zoom: 14,
-            essential: true // Indica que es una animación importante
-          });
+          mapRef.current!.flyTo({ center: userCoords, zoom: 14 });
         }
-      }, 300); // Espera a que la animación del contenedor termine
+      }, 300);
     }
   }, [mapVisible]);
 
   return (
     <div className="container py-4">
-      {/* Botón de volver al comparador y volver a la ubicación */}
+      {/* Botones de navegación */}
       <div className="mb-3 d-flex justify-content-between align-items-center">
-        <button
-          className="btn btn-outline-dark"
-          onClick={() => router.push('/comparator')}
-        >
+        <button className="btn btn-outline-dark" onClick={() => router.push('/comparator')}>
           ← Volver al Comparador
         </button>
 
@@ -149,20 +142,17 @@ export default function AvailabilityPage() {
         )}
       </div>
 
-      {/* Título y subtítulo del mapa */}
+      {/* Título y subtítulo */}
       <div className="text-center mb-4">
         <h3 className="fw-bold text-dark">Farmacias Cercanas</h3>
         <p className="text-muted">
-          Visualiza tu ubicación actual y encuentra farmacias en tu zona
+          Visualiza tu ubicación actual en <strong>{userComuna}, {userRegion}</strong> y encuentra farmacias en tu zona
         </p>
       </div>
 
-      {/* Botón para ampliar o minimizar mapa */}
+      {/* Botón para ampliar o minimizar el mapa */}
       <div className="text-center mb-3">
-        <button
-          className="btn btn-success px-4 rounded-pill shadow-sm"
-          onClick={() => setMapVisible(!mapVisible)}
-        >
+        <button className="btn btn-success px-4 rounded-pill shadow-sm" onClick={() => setMapVisible(!mapVisible)}>
           {mapVisible ? 'Minimizar Mapa' : 'Ampliar Mapa'}
         </button>
       </div>
@@ -176,7 +166,7 @@ export default function AvailabilityPage() {
           borderRadius: '1rem',
           overflow: 'hidden',
           transition: 'height 0.4s ease',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}
       />
     </div>
