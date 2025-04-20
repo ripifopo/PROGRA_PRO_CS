@@ -1,9 +1,14 @@
+// Archivo: src/app/comparator/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 import { FaSearch, FaTag, FaMapMarkerAlt, FaSync } from 'react-icons/fa';
+import { useLoading } from '../../../context/LoadingContext';
 
+// Medicamentos de ejemplo (serán reemplazados por datos de la base de datos en producción)
 const medicines = [
   { name: 'Paracetamol 500mg', pharmacy: 'Cruz Verde', price: 990, image: 'https://i.imgur.com/Nz8UvBX.png' },
   { name: 'Ibuprofeno 400mg', pharmacy: 'Salcobrand', price: 1250, image: 'https://i.imgur.com/J3oOXYb.png' },
@@ -13,36 +18,86 @@ const medicines = [
 ];
 
 export default function ComparatorPage() {
+  const { setLoading } = useLoading(); // Usa el contexto de carga global
+
+  // Estados para filtros y vista
   const [region, setRegion] = useState('');
   const [comuna, setComuna] = useState('');
   const [search, setSearch] = useState('');
   const [pharmacy, setPharmacy] = useState('');
   const [sort, setSort] = useState('asc');
-
   const [showModal, setShowModal] = useState(true);
-  const [tempRegion, setTempRegion] = useState('');
-  const [tempComuna, setTempComuna] = useState('');
 
-  useEffect(() => {
-    const stored = localStorage.getItem('userLocation');
-    if (stored) {
-      const { region, comuna } = JSON.parse(stored);
-      setRegion(region);
-      setComuna(comuna);
-      setShowModal(false);
-    }
-  }, []);
+  // Detecta la ubicación del usuario y realiza reverse geocoding
+  const handleAcceptLocation = async () => {
+    setLoading(true);
 
-  const handleAcceptLocation = () => {
-    if (tempRegion && tempComuna) {
-      localStorage.setItem('userLocation', JSON.stringify({ region: tempRegion, comuna: tempComuna }));
-      setRegion(tempRegion);
-      setComuna(tempComuna);
-      setShowModal(false);
+    try {
+      if (!navigator.geolocation) {
+        toast.error('Geolocalización no soportada por tu navegador');
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const { latitude, longitude } = position.coords;
+
+          const response = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`);
+          const data = await response.json();
+          const address = data.address;
+
+          const regionParsed =
+            address.state ||
+            address.region ||
+            address['ISO3166-2-lvl4'] || '';
+
+          const comunaParsed =
+            address.city ||
+            address.town ||
+            address.village ||
+            address.county ||
+            address.municipality ||
+            address.suburb || '';
+
+          if (!regionParsed || !comunaParsed) {
+            console.error('Reverse geocoding data:', address);
+            toast.error('No fue posible detectar tu comuna o región');
+            return;
+          }
+
+          // Guarda la información para que esté disponible globalmente
+          localStorage.setItem('userLocation', JSON.stringify({ region: regionParsed, comuna: comunaParsed }));
+
+          setRegion(regionParsed);
+          setComuna(comunaParsed);
+          setShowModal(false);
+          toast.success('Ubicación detectada correctamente');
+        },
+        (error) => {
+          toast.error('No se pudo obtener tu ubicación');
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0,
+        }
+      );
+    } catch (error) {
+      toast.error('Error al detectar ubicación');
+    } finally {
+      setLoading(false);
     }
   };
 
-  const minPrice = Math.min(...medicines.map((m) => m.price));
+  // Reinicia filtros
+  const resetFilters = () => {
+    setSearch('');
+    setPharmacy('');
+    setSort('asc');
+    toast.info('Filtros reiniciados');
+  };
+
+  // Aplica filtros sobre los medicamentos
   const filtered = medicines
     .filter((m) =>
       m.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -50,119 +105,90 @@ export default function ComparatorPage() {
     )
     .sort((a, b) => (sort === 'asc' ? a.price - b.price : b.price - a.price));
 
-  const resetFilters = () => {
-    setSearch('');
-    setPharmacy('');
-    setSort('asc');
-  };
+  const minPrice = Math.min(...medicines.map((m) => m.price));
 
   return (
     <div className="container py-5">
-      {/* MODAL UBICACIÓN */}
+      {/* Modal de ubicación */}
       {showModal && (
-        <div className="modal show fade d-block" tabIndex={-1}>
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content shadow">
-              <div className="modal-header">
-                <h5 className="modal-title">Selecciona tu ubicación</h5>
-              </div>
-              <div className="modal-body">
-                <p className="text-muted small">
-                  Esto nos ayuda a mostrarte disponibilidad en tu comuna.
-                </p>
-                <div className="mb-3">
-                  <label className="form-label">Región</label>
-                  <select
-                    className="form-select"
-                    value={tempRegion}
-                    onChange={(e) => setTempRegion(e.target.value)}
+        <>
+          <div className="modal show fade d-block" tabIndex={-1} style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content shadow border-0">
+                <div className="modal-header bg-success text-white">
+                  <h5 className="modal-title">Aceptar ubicación</h5>
+                </div>
+                <div className="modal-body">
+                  <p className="text-muted">
+                    Para mostrarte resultados relevantes en tu comuna, necesitamos acceder a tu ubicación actual.
+                  </p>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    className="btn btn-success"
+                    onClick={handleAcceptLocation}
                   >
-                    <option value="">Selecciona una región</option>
-                    <option value="Región Metropolitana">Región Metropolitana</option>
-                    <option value="Valparaíso">Valparaíso</option>
-                    <option value="Biobío">Biobío</option>
-                  </select>
+                    Detectar automáticamente
+                  </button>
                 </div>
-                <div className="mb-3">
-                  <label className="form-label">Comuna</label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    placeholder="Ej: Las Condes"
-                    value={tempComuna}
-                    onChange={(e) => setTempComuna(e.target.value)}
-                  />
-                </div>
-              </div>
-              <div className="modal-footer">
-                <button
-                  onClick={handleAcceptLocation}
-                  className="btn btn-success"
-                  disabled={!tempRegion || !tempComuna}
-                >
-                  Aceptar
-                </button>
               </div>
             </div>
           </div>
-          <div className="modal-backdrop fade show"></div>
-        </div>
+        </>
       )}
 
-      {/* Título */}
+      {/* Título principal */}
       <div className="text-center mb-4">
         <h1 className="display-5 fw-bold text-success">Comparador de Medicamentos</h1>
-        <p className="text-muted">Busca, filtra y encuentra los mejores precios en farmacias chilenas</p>
+        <p className="text-muted">Busca y compara precios en farmacias de tu comuna</p>
       </div>
 
       {/* Buscador */}
       <div className="d-flex justify-content-center mb-4">
-        <div className="input-group w-75 w-md-50 shadow-sm">
-          <span className="input-group-text bg-white"><FaSearch /></span>
+        <div className="input-group w-75 shadow-sm">
+          <span className="input-group-text bg-white">
+            <FaSearch />
+          </span>
           <input
             type="text"
             className="form-control"
             placeholder="Buscar por nombre o principio activo..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+              setLoading(true);
+              setSearch(e.target.value);
+              setTimeout(() => setLoading(false), 300);
+            }}
           />
         </div>
       </div>
 
       {/* Filtros */}
       <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
-        <select
-          className="form-select w-auto"
-          value={pharmacy}
-          onChange={(e) => setPharmacy(e.target.value)}
-        >
+        <select className="form-select w-auto" value={pharmacy} onChange={(e) => setPharmacy(e.target.value)}>
           <option value="">Todas las farmacias</option>
           <option value="Cruz Verde">Cruz Verde</option>
           <option value="Salcobrand">Salcobrand</option>
           <option value="Ahumada">Ahumada</option>
         </select>
 
-        <select
-          className="form-select w-auto"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-        >
+        <select className="form-select w-auto" value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="asc">Menor precio</option>
           <option value="desc">Mayor precio</option>
         </select>
 
-        <Link href="/availability" className="btn btn-success d-flex align-items-center gap-2">
+        <Link href="/availability" className="btn btn-outline-success d-flex align-items-center gap-2">
           <FaMapMarkerAlt />
           Farmacias cercanas
         </Link>
 
-        <button className="btn btn-outline-danger d-flex align-items-center gap-2" onClick={resetFilters}>
+        <button className="btn btn-outline-secondary d-flex align-items-center gap-2" onClick={resetFilters}>
           <FaSync />
           Reiniciar filtros
         </button>
       </div>
 
-      {/* Ubicación actual */}
+      {/* Ubicación detectada */}
       {region && comuna && (
         <p className="text-center text-muted mb-4">
           Mostrando resultados para: <span className="text-success fw-semibold">{comuna}, {region}</span>
@@ -176,12 +202,12 @@ export default function ComparatorPage() {
         ) : (
           filtered.map((med, index) => (
             <div key={index} className="col-sm-6 col-lg-4">
-              <div className="card h-100 shadow-sm text-center">
+              <div className="card h-100 shadow-sm text-center border-0">
                 <img src={med.image} alt={med.name} className="card-img-top p-3" style={{ height: '120px', objectFit: 'contain' }} />
                 <div className="card-body">
                   <h5 className="card-title text-success fw-bold">{med.name}</h5>
-                  <p className="card-subtitle mb-1 text-muted">{med.pharmacy}</p>
-                  <p className="card-text fs-5 fw-semibold text-dark">${med.price}</p>
+                  <p className="card-subtitle text-muted">{med.pharmacy}</p>
+                  <p className="fs-5 fw-semibold text-dark">${med.price}</p>
                   {med.price === minPrice && (
                     <span className="badge bg-success text-light d-inline-flex align-items-center gap-1">
                       <FaTag /> Mejor precio
