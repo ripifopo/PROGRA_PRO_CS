@@ -1,10 +1,23 @@
+// src/app/comparator/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { FaSearch, FaTag, FaMapMarkerAlt, FaSync } from 'react-icons/fa';
-import { useLoading } from '../../../context/LoadingContext';
+import { useLoading } from '../../../context/LoadingContext.tsx';
+
+// Regiones y comunas de ejemplo (reemplazar con datos reales de Chile si es necesario)
+const REGIONES_COMUNAS: Record<string, string[]> = {
+  'Región Metropolitana': ['Santiago', 'Providencia', 'Las Condes', 'Maipú', 'Puente Alto'],
+  'Valparaíso': ['Valparaíso', 'Viña del Mar', 'Quilpué'],
+  'Biobío': ['Concepción', 'Talcahuano'],
+  'Araucanía': ['Temuco', 'Padre Las Casas'],
+  'Los Lagos': ['Puerto Montt', 'Osorno'],
+  'Antofagasta': ['Antofagasta', 'Calama'],
+  // Agrega el resto de regiones y comunas reales aquí
+};
 
 const medicines = [
   { name: 'Paracetamol 500mg', pharmacy: 'Cruz Verde', price: 990, image: 'https://i.imgur.com/Nz8UvBX.png' },
@@ -22,25 +35,17 @@ export default function ComparatorPage() {
   const [search, setSearch] = useState('');
   const [pharmacy, setPharmacy] = useState('');
   const [sort, setSort] = useState<'asc' | 'desc'>('asc');
+  const [profileComuna, setProfileComuna] = useState('');
+  const [profileRegion, setProfileRegion] = useState('');
 
-  // Cargar comuna y región desde el perfil
   useEffect(() => {
-    setLoading(true);
-
-    try {
-      const stored = localStorage.getItem('userProfile');
-      if (!stored) throw new Error();
-      const parsed = JSON.parse(stored);
-      if (!parsed.comuna || !parsed.region) throw new Error();
-
-      setComuna(parsed.comuna);
-      setRegion(parsed.region);
-    } catch {
-      toast.error('No se pudo obtener la ubicación desde tu perfil');
-    } finally {
-      setLoading(false);
+    const profile = localStorage.getItem('userProfile');
+    if (profile) {
+      const parsed = JSON.parse(profile);
+      setProfileComuna(parsed.comuna);
+      setProfileRegion(parsed.region);
     }
-  }, [setLoading]);
+  }, []);
 
   const resetFilters = () => {
     setSearch('');
@@ -50,35 +55,47 @@ export default function ComparatorPage() {
   };
 
   const filtered = medicines
-    .filter(m =>
+    .filter((m) =>
       m.name.toLowerCase().includes(search.toLowerCase()) &&
       (pharmacy ? m.pharmacy === pharmacy : true)
     )
-    .sort((a, b) => sort === 'asc' ? a.price - b.price : b.price - a.price);
+    .sort((a, b) => (sort === 'asc' ? a.price - b.price : b.price - a.price));
 
-  const minPrice = Math.min(...medicines.map(m => m.price));
+  const minPrice = Math.min(...medicines.map((m) => m.price));
 
   return (
     <div className="container py-5">
       <div className="text-center mb-4">
         <h1 className="display-5 fw-bold text-success">Comparador de Medicamentos</h1>
-        <p className="text-muted">Busca y compara precios en farmacias de tu comuna</p>
+        <p className="text-muted">Busca y compara precios en farmacias de una comuna determinada</p>
       </div>
 
-      <div className="d-flex justify-content-center mb-4">
-        <div className="input-group w-75 shadow-sm">
-          <span className="input-group-text bg-white"><FaSearch /></span>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Buscar por nombre o principio activo..."
-            value={search}
-            onChange={(e) => {
-              setLoading(true);
-              setSearch(e.target.value);
-              setTimeout(() => setLoading(false), 300);
-            }}
-          />
+      {/* Información del perfil y ubicación actual */}
+      {profileComuna && profileRegion && (
+        <p className="text-center text-muted mb-3">
+          Perfil: <strong>{profileComuna}, {profileRegion}</strong>
+        </p>
+      )}
+
+      <div className="row justify-content-center mb-3">
+        <div className="col-md-4 mb-2">
+          <select className="form-select" value={region} onChange={(e) => {
+            setRegion(e.target.value);
+            setComuna('');
+          }}>
+            <option value="">Selecciona una región</option>
+            {Object.keys(REGIONES_COMUNAS).map((reg) => (
+              <option key={reg} value={reg}>{reg}</option>
+            ))}
+          </select>
+        </div>
+        <div className="col-md-4 mb-2">
+          <select className="form-select" value={comuna} onChange={(e) => setComuna(e.target.value)} disabled={!region}>
+            <option value="">Selecciona una comuna</option>
+            {REGIONES_COMUNAS[region]?.map((com) => (
+              <option key={com} value={com}>{com}</option>
+            ))}
+          </select>
         </div>
       </div>
 
