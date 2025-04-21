@@ -1,14 +1,14 @@
 'use client';
 
 import { useLoading } from '../../context/LoadingContext';
-import LoadingSpinner from './LoadingSpinner';
+import FullPageLoader from './FullPageLoader';
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const { loading } = useLoading();
 
   return (
     <>
-      {loading && <LoadingSpinner />} {/* ✅ Muestra el spinner si está activo */}
+      {loading && <FullPageLoader />} {/* ← Pantalla de carga fullscreen */}
       {children}
     </>
   );
