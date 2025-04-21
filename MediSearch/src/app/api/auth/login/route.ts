@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Correo y contraseña requeridos" }, { status: 400 });
     }
 
-    // Desempaqueta la colección (la promesa)
+    // Desempaqueta la colección
     const users = await usersCollection;
 
     // Busca al usuario por email
@@ -42,14 +42,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Contraseña incorrecta" }, { status: 401 });
     }
 
-    // Genera el token con la info del usuario
+    // Genera el token con la info básica del usuario
     const token = await generateToken({
       email: user.email,
       name: user.name,
       id: user._id.toString(),
     });
 
-    // Construye la respuesta y asigna la cookie
+    // Respuesta con los datos del usuario, incluyendo comuna
     const response = NextResponse.json(
       {
         message: "Inicio de sesión exitoso",
@@ -59,7 +59,8 @@ export async function POST(req: NextRequest) {
           name: user.name,
           lastname: user.lastname,
           birthday: user.birthday,
-          region: user.region
+          region: user.region,
+          comuna: user.comuna  // ✅ Se agregó comuna
         }
       },
       { status: 200 }

@@ -1,0 +1,57 @@
+/* Archivo: src/app/FullPageLoader.css */
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .loading-box {
+    text-align: center;
+  }
+  
+  .loading-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #218754;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .loading-bar {
+    width: 200px;
+    height: 8px;
+    background-color: #d4d4d4;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .loading-progress {
+    width: 0;
+    height: 100%;
+    background-color: #218754;
+    animation: progress 1.6s infinite ease-in-out;
+    border-radius: 4px;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes progress {
+    0% { width: 0%; }
+    50% { width: 100%; }
+    100% { width: 0%; }
+  }
+  
