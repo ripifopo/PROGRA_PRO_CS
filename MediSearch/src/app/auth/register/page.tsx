@@ -5,11 +5,13 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useLoading } from '../../../context/LoadingContext.tsx'; // Hook del sistema de carga
 
 export default function RegisterPage() {
   const router = useRouter();
+  const { setLoading } = useLoading(); // Hook para activar y desactivar el loader
 
+  // Estado para almacenar los datos del formulario
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -20,7 +22,7 @@ export default function RegisterPage() {
     comuna: ''
   });
 
-  // Detecta región automáticamente con GPS
+  // Este efecto intenta obtener automáticamente la región del usuario
   useEffect(() => {
     if (!navigator.geolocation) {
       toast.error('Geolocalización no soportada por tu navegador');
@@ -47,10 +49,12 @@ export default function RegisterPage() {
     );
   }, []);
 
+  // Esta función actualiza el estado cada vez que el usuario escribe
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Esta función valida todos los campos antes del envío
   const validateForm = () => {
     const { email, password, name, lastname, birthday, region, comuna } = formData;
 
@@ -78,9 +82,12 @@ export default function RegisterPage() {
     return true;
   };
 
+  // Esta función se ejecuta al enviar el formulario
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
+
+    setLoading(true); // Activa la pantalla de carga
 
     try {
       const res = await fetch('/api/auth/register', {
@@ -105,6 +112,8 @@ export default function RegisterPage() {
       }
     } catch {
       toast.error("Error en el servidor.");
+    } finally {
+      setLoading(false); // Desactiva la pantalla de carga
     }
   };
 
