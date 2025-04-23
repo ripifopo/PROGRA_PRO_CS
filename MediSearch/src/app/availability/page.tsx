@@ -5,8 +5,9 @@
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { useLoading } from '../../../context/LoadingContext';
+import { useLoading } from '../../context/LoadingContext.tsx';
 
+// Token de Mapbox para visualizar el mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
 export default function AvailabilityPage() {
@@ -22,9 +23,7 @@ export default function AvailabilityPage() {
   const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
   const { setLoading } = useLoading();
 
-  // Cambia el estilo del mapa
-  const getMapStyle = () =>
-    isDarkMode ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/streets-v12';
+  const getMapStyle = () => isDarkMode ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/streets-v12';
 
   const centerMap = (coords: [number, number]) => {
     mapRef.current?.flyTo({ center: coords, zoom: 14 });
@@ -43,8 +42,7 @@ export default function AvailabilityPage() {
     el.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
     el.style.cursor = 'pointer';
 
-    const popup = new mapboxgl.Popup({ offset: 25 })
-      .setText(isDestination ? 'Destino' : 'Estás aquí');
+    const popup = new mapboxgl.Popup({ offset: 25 }).setText(isDestination ? 'Destino' : 'Estás aquí');
 
     const marker = new mapboxgl.Marker({ element: el })
       .setLngLat(coords)
@@ -73,7 +71,6 @@ export default function AvailabilityPage() {
       geometry: route,
     };
 
-    // Elimina la ruta anterior si existe
     if (mapRef.current?.getLayer(routeLayerId)) {
       mapRef.current.removeLayer(routeLayerId);
       mapRef.current.removeSource(routeLayerId);
@@ -158,10 +155,13 @@ export default function AvailabilityPage() {
     );
   }, []);
 
-  // Cambia el estilo del mapa si cambia el modo oscuro
   useEffect(() => {
     if (mapRef.current) mapRef.current.setStyle(getMapStyle());
   }, [isDarkMode]);
+
+  useEffect(() => {
+    if (mapRef.current && userCoords) centerMap(userCoords);
+  }, [mapVisible]);
 
   return (
     <div className="container py-4">
@@ -203,10 +203,7 @@ export default function AvailabilityPage() {
       </div>
 
       <div className="text-center mb-3">
-        <button className="btn btn-success px-4 rounded-pill shadow-sm" onClick={() => {
-          setMapVisible(!mapVisible);
-          setTimeout(() => goToUserLocation(), 300);
-        }}>
+        <button className="btn btn-success px-4 rounded-pill shadow-sm" onClick={() => setMapVisible(!mapVisible)}>
           {mapVisible ? 'Minimizar Mapa' : 'Ampliar Mapa'}
         </button>
       </div>
@@ -215,10 +212,10 @@ export default function AvailabilityPage() {
         ref={mapContainerRef}
         className="w-100 mx-auto"
         style={{
-          height: mapVisible ? '65vh' : '300px',
+          height: mapVisible ? '70vh' : '300px',
           borderRadius: '1rem',
           overflow: 'hidden',
-          transition: 'height 0.4s ease',
+          transition: 'all 0.4s ease',
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}
       />
