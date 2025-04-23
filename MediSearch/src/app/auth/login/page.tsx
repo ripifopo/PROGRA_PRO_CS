@@ -5,10 +5,12 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
+import { useLoading } from '../../../context/LoadingContext.tsx';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginPage() {
   const router = useRouter();
+  const { setLoading } = useLoading();
 
   const [formData, setFormData] = useState({
     email: '',
@@ -25,6 +27,7 @@ export default function LoginPage() {
     }
   }, []);
 
+  // Actualiza los campos del formulario
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -32,25 +35,23 @@ export default function LoginPage() {
   // Valida que el correo y contraseña estén correctamente ingresados
   const validateForm = () => {
     const { email, password } = formData;
-
     if (!email || !password) {
       toast.error("Por favor completa todos los campos.");
       return false;
     }
-
     if (!email.includes('@')) {
       toast.error("El correo no es válido.");
       return false;
     }
-
     return true;
   };
 
-  // Maneja el envío del formulario
+  // Maneja el envío del formulario de login
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
+    setLoading(true);
     try {
       const res = await fetch('/api/auth/login', {
         method: 'POST',
@@ -62,23 +63,20 @@ export default function LoginPage() {
 
       if (res.ok) {
         toast.success("Inicio de sesión exitoso.");
-
-        // Guarda token y perfil del usuario
         localStorage.setItem('token', result.token);
         localStorage.setItem('userProfile', JSON.stringify(result.user));
-
-        // También guarda la ubicación para otras páginas como comparator y availability
         localStorage.setItem('userLocation', JSON.stringify({
           region: result.user.region,
           comuna: result.user.comuna
         }));
-
         router.push('/profile');
       } else {
         toast.error(result.message || "Credenciales incorrectas.");
       }
     } catch {
       toast.error("Error en el servidor.");
+    } finally {
+      setLoading(false);
     }
   };
 

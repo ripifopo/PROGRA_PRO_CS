@@ -1,14 +1,12 @@
-// src/app/comparator/page.tsx
-
 'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { FaSearch, FaTag, FaMapMarkerAlt, FaSync } from 'react-icons/fa';
-import { useLoading } from '../../../context/LoadingContext.tsx';
+import { useLoading } from '../../context/LoadingContext.tsx'; // Hook del contexto de carga
 
-// Regiones y comunas de ejemplo (reemplazar con datos reales de Chile si es necesario)
+// Regiones y comunas predefinidas para efectos de filtrado
 const REGIONES_COMUNAS: Record<string, string[]> = {
   'Región Metropolitana': ['Santiago', 'Providencia', 'Las Condes', 'Maipú', 'Puente Alto'],
   'Valparaíso': ['Valparaíso', 'Viña del Mar', 'Quilpué'],
@@ -16,9 +14,9 @@ const REGIONES_COMUNAS: Record<string, string[]> = {
   'Araucanía': ['Temuco', 'Padre Las Casas'],
   'Los Lagos': ['Puerto Montt', 'Osorno'],
   'Antofagasta': ['Antofagasta', 'Calama'],
-  // Agrega el resto de regiones y comunas reales aquí
 };
 
+// Lista estática simulada de medicamentos
 const medicines = [
   { name: 'Paracetamol 500mg', pharmacy: 'Cruz Verde', price: 990, image: 'https://i.imgur.com/Nz8UvBX.png' },
   { name: 'Ibuprofeno 400mg', pharmacy: 'Salcobrand', price: 1250, image: 'https://i.imgur.com/J3oOXYb.png' },
@@ -30,6 +28,7 @@ const medicines = [
 export default function ComparatorPage() {
   const { setLoading } = useLoading();
 
+  // Estados para filtros y datos del perfil del usuario
   const [region, setRegion] = useState('');
   const [comuna, setComuna] = useState('');
   const [search, setSearch] = useState('');
@@ -37,16 +36,29 @@ export default function ComparatorPage() {
   const [sort, setSort] = useState<'asc' | 'desc'>('asc');
   const [profileComuna, setProfileComuna] = useState('');
   const [profileRegion, setProfileRegion] = useState('');
+  const [ready, setReady] = useState(false); // Controla la visualización inicial
 
+  // Al cargar la página, se obtienen los datos del perfil
   useEffect(() => {
+    setLoading(true);
     const profile = localStorage.getItem('userProfile');
     if (profile) {
       const parsed = JSON.parse(profile);
       setProfileComuna(parsed.comuna);
       setProfileRegion(parsed.region);
     }
+
+    // Se utiliza un pequeño retardo para permitir mostrar el loader visual
+    setTimeout(() => {
+      setReady(true);
+      setLoading(false);
+    }, 300);
   }, []);
 
+  // Si aún no está listo, no se renderiza nada (evita el salto visual)
+  if (!ready) return null;
+
+  // Reinicia todos los filtros activos
   const resetFilters = () => {
     setSearch('');
     setPharmacy('');
@@ -54,6 +66,7 @@ export default function ComparatorPage() {
     toast.info('Filtros reiniciados');
   };
 
+  // Aplica filtros de búsqueda y orden
   const filtered = medicines
     .filter((m) =>
       m.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -61,6 +74,7 @@ export default function ComparatorPage() {
     )
     .sort((a, b) => (sort === 'asc' ? a.price - b.price : b.price - a.price));
 
+  // Calcula el precio mínimo para destacar como "Mejor precio"
   const minPrice = Math.min(...medicines.map((m) => m.price));
 
   return (
@@ -70,19 +84,26 @@ export default function ComparatorPage() {
         <p className="text-muted">Busca y compara precios en farmacias de una comuna determinada</p>
       </div>
 
-      {/* Información del perfil y ubicación actual */}
+      {/* Si el perfil tiene región y comuna, se muestra como contexto */}
       {profileComuna && profileRegion && (
         <p className="text-center text-muted mb-3">
           Perfil: <strong>{profileComuna}, {profileRegion}</strong>
         </p>
       )}
 
+      {/* Filtro de región y comuna */}
       <div className="row justify-content-center mb-3">
         <div className="col-md-4 mb-2">
-          <select className="form-select" value={region} onChange={(e) => {
-            setRegion(e.target.value);
-            setComuna('');
-          }}>
+          <select
+            className="form-select"
+            value={region}
+            onChange={(e) => {
+              setLoading(true); // Solo región activa el loading
+              setRegion(e.target.value);
+              setComuna('');
+              setTimeout(() => setLoading(false), 400);
+            }}
+          >
             <option value="">Selecciona una región</option>
             {Object.keys(REGIONES_COMUNAS).map((reg) => (
               <option key={reg} value={reg}>{reg}</option>
@@ -90,7 +111,12 @@ export default function ComparatorPage() {
           </select>
         </div>
         <div className="col-md-4 mb-2">
-          <select className="form-select" value={comuna} onChange={(e) => setComuna(e.target.value)} disabled={!region}>
+          <select
+            className="form-select"
+            value={comuna}
+            onChange={(e) => setComuna(e.target.value)}
+            disabled={!region}
+          >
             <option value="">Selecciona una comuna</option>
             {REGIONES_COMUNAS[region]?.map((com) => (
               <option key={com} value={com}>{com}</option>
@@ -99,6 +125,7 @@ export default function ComparatorPage() {
         </div>
       </div>
 
+      {/* Filtros dinámicos adicionales */}
       <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
         <select className="form-select w-auto" value={pharmacy} onChange={(e) => setPharmacy(e.target.value)}>
           <option value="">Todas las farmacias</option>
@@ -121,12 +148,14 @@ export default function ComparatorPage() {
         </button>
       </div>
 
+      {/* Información de filtro aplicado */}
       {region && comuna && (
         <p className="text-center text-muted mb-4">
           Mostrando resultados para: <span className="text-success fw-semibold">{comuna}, {region}</span>
         </p>
       )}
 
+      {/* Lista de medicamentos según filtros */}
       <div className="row g-4">
         {filtered.length === 0 ? (
           <p className="text-center text-muted">No se encontraron medicamentos con los filtros aplicados.</p>
@@ -134,7 +163,12 @@ export default function ComparatorPage() {
           filtered.map((med, index) => (
             <div key={index} className="col-sm-6 col-lg-4">
               <div className="card h-100 shadow-sm text-center border-0">
-                <img src={med.image} alt={med.name} className="card-img-top p-3" style={{ height: '120px', objectFit: 'contain' }} />
+                <img
+                  src={med.image}
+                  alt={med.name}
+                  className="card-img-top p-3"
+                  style={{ height: '120px', objectFit: 'contain' }}
+                />
                 <div className="card-body">
                   <h5 className="card-title text-success fw-bold">{med.name}</h5>
                   <p className="card-subtitle text-muted">{med.pharmacy}</p>
