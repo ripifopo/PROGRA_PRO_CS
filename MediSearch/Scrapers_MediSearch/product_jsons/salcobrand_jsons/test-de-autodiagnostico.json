@@ -1,0 +1,217 @@
+[
+  {
+    "id": 52568,
+    "name": "Test Allbriefs Vitamina D 1 Unidad",
+    "sku": "584358",
+    "price": "9999.0",
+    "brand": "Allbriefs",
+    "slug": "test-vitamina-d",
+    "description": "<h2>Caracter&iacute;sticas del Producto</h2>\r\n<p>El Test de Vitamina D es una prueba r&aacute;pida para la detecci&oacute;n semicuantitativa de 25-hidroxivitamina D en sangre entera humana por punci&oacute;n digital.</p>\r\n<p>&nbsp;</p>\r\n<p>Para autodiagn&oacute;stico de Deficiencia, insuficiencia o suficiencia de la Vitamina D.</p>\r\n<p>&nbsp;</p>\r\n<p>-Toma de muestra: punci&oacute;n para obtenci&oacute;n de gota de sangre.</p>\r\n<p>-Precisi&oacute;n 94%.</p>\r\n<p>-Seguro y confiable.</p>\r\n<p>-Resultados en 10 minutos.</p>\r\n<p>&nbsp;</p>\r\n<p>Este kit contiene todo lo necesario para realizar la prueba, exepto un cronometro que es necesario para la correcta lectura de los resultados.</p>\r\n<p>&nbsp;</p>\r\n<h3>Modo de uso</h3>\r\n<p>Incluidas en el kit.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Se recomienda leer las instrucciones de uso incluidas en el prospecto antes de realizar la prueba para un correcto uso.</strong></p>",
+    "short_description": "Caja con 1 dispositivo tipo casete para la detección de 25-hidroxivitamina D (Deficiente, insuficiente, suficiente).",
+    "categories": "marcas-exclusivas/cuidado-personal/allbriefs",
+    "pretty_categories": "Marcas Exclusivas -> Cuidado Personal -> Allbriefs",
+    "badge": {
+      "raw_final_price": "9999.0",
+      "type": null
+    },
+    "available_on": "2023-04-12T00:00:00.000-04:00",
+    "is_store_exclusive": true,
+    "images": [
+      {
+        "id": 91002,
+        "position": 1,
+        "attachment_content_type": "image/jpeg",
+        "attachment_file_name": "584358.jpg",
+        "type": "Spree::Image",
+        "attachment_updated_at": "2023-04-12T15:51:11.000-04:00",
+        "attachment_width": 1500,
+        "attachment_height": 1500,
+        "alt": "",
+        "viewable_type": "Spree::Variant",
+        "viewable_id": 52568,
+        "thumbnail_url": "https://static.salcobrandonline.cl/spree/products/91002/thumbnail/584358.jpg?1681329071",
+        "mini_url": "https://static.salcobrandonline.cl/spree/products/91002/mini/584358.jpg?1681329071",
+        "small_url": "https://static.salcobrandonline.cl/spree/products/91002/small/584358.jpg?1681329071",
+        "medium_url": "https://static.salcobrandonline.cl/spree/products/91002/medium/584358.jpg?1681329071",
+        "large_url": "https://static.salcobrandonline.cl/spree/products/91002/large/584358.jpg?1681329071",
+        "large_webp_url": "https://static.salcobrandonline.cl/spree/products/91002/large_webp/584358.webp?1681329071",
+        "original_url": "https://static.salcobrandonline.cl/spree/products/91002/original/584358.jpg?1681329071"
+      }
+    ],
+    "url": "https://salcobrand.cl/test-vitamina-d",
+    "categoria": "test-de-autodiagnostico",
+    "subcategoria": null
+  },
+  {
+    "id": 19192,
+    "name": "Test De Droga Marihuana",
+    "sku": "3321252",
+    "price": "6499.0",
+    "brand": "La Prepie",
+    "slug": "test-de-droga-marihuana",
+    "description": "<h2>Caracter&iacute;sticas del Producto</h2>\r\n<p>Test Uso de droga, inmunoensayo cromatogr&aacute;fico r&aacute;pido, detector de metabolitos de THC (marihuana) en la orina. Este ensayo proporciona s&oacute;lo un resultado anal&iacute;tico preliminar, para obtener un resultado anal&iacute;tico confirmado, debe utilizarse un m&eacute;todo qu&iacute;mico alternativo m&aacute;s espec&iacute;fico.</p>\r\n<p>&nbsp;</p>\r\n<h3>Beneficios</h3>\r\n<p>- Detecta el consumo de marihuana de las &uacute;ltimas 48 horas.</p>\r\n<p>- R&aacute;pido y f&aacute;cil de realizar.</p>\r\n<p>&nbsp;</p>\r\n<p><strong>Contenido</strong></p>\r\n<p>- Prueba panel detector de droga.</p>\r\n<p>- Una pipeta.</p>\r\n<p>- Instructivo.</p>\r\n<p>&nbsp;</p>\r\n<h3>Modo de uso</h3>\r\n<p>- Retirar el dispositivo de prueba de la bolsa sellada.</p>\r\n<p>- Con la pipeta, poner 2 o 3 gotas de orina en el recipiente para la muestra (S) del dispositivo, y luego iniciar el temporizador.</p>\r\n<p>- Esperar que aparezca 1 o m&aacute;s l&iacute;neas rojas.</p>\r\n<p>- Resultado debe ser le&iacute;do a los 5 minutos.</p>",
+    "short_description": "Test Uso de droga, inmunoensayo cromatográfico rápido, detector de metabolitos de THC (marihuana) en la orina. Este ensayo proporciona sólo un resultado analítico preliminar.\r\n",
+    "categories": "medicamentos",
+    "pretty_categories": "Medicamentos",
+    "badge": {
+      "raw_final_price": "6499.0",
+      "type": null
+    },
+    "available_on": "2018-04-04T00:00:00.000-03:00",
+    "is_store_exclusive": true,
+    "images": [
+      {
+        "id": 12935,
+        "position": 1,
+        "attachment_content_type": "image/jpeg",
+        "attachment_file_name": "3321252.jpg",
+        "type": "Spree::Image",
+        "attachment_updated_at": "2022-01-06T11:46:45.000-03:00",
+        "attachment_width": 1050,
+        "attachment_height": 1050,
+        "alt": "",
+        "viewable_type": "Spree::Variant",
+        "viewable_id": 19192,
+        "thumbnail_url": "https://static.salcobrandonline.cl/spree/products/12935/thumbnail/3321252.jpg?1641480405",
+        "mini_url": "https://static.salcobrandonline.cl/spree/products/12935/mini/3321252.jpg?1641480405",
+        "small_url": "https://static.salcobrandonline.cl/spree/products/12935/small/3321252.jpg?1641480405",
+        "medium_url": "https://static.salcobrandonline.cl/spree/products/12935/medium/3321252.jpg?1641480405",
+        "large_url": "https://static.salcobrandonline.cl/spree/products/12935/large/3321252.jpg?1641480405",
+        "large_webp_url": "https://static.salcobrandonline.cl/spree/products/12935/large_webp/3321252.webp?1641480405",
+        "original_url": "https://static.salcobrandonline.cl/spree/products/12935/original/3321252.jpg?1641480405"
+      }
+    ],
+    "url": "https://salcobrand.cl/test-de-droga-marihuana",
+    "categoria": "test-de-autodiagnostico",
+    "subcategoria": null
+  },
+  {
+    "id": 52612,
+    "name": "Test Multipanel 5 Drogas La Prepie 1 Unidad",
+    "sku": "583348",
+    "price": "9499.0",
+    "brand": "La Prepie",
+    "slug": "test-multipanel-5-drogas",
+    "description": "<h2>Caracter&iacute;sticas del Producto</h2>\r\n<p>Test multipanel detecci&oacute;n de uso de 5 drogas. THC (marihuana), coca&iacute;na, anfetamina, &eacute;xtasis, benzodiacepinas. Ayuda a prevenir accidentes en el trabajo y tr&aacute;nsito, bajo rendimiento laboral y acad&eacute;mico y para la detecci&oacute;n de adicciones.</p>\r\n<p>&nbsp;</p>\r\n<p>Este Kit de diagn&oacute;stico es un inmunoensayo cromatogr&aacute;fico para la detecci&oacute;n cualitativa y simult&aacute;nea de las cinco drogas en la orina humana.</p>\r\n<p>&nbsp;</p>\r\n<h3>Beneficios</h3>\r\n<p>- Resultados en 5 minutos.</p>\r\n<p>- Seguro.</p>\r\n<p>- Uso domiciliario.</p>\r\n<p>- F&aacute;cil de usar.</p>\r\n<p>&nbsp;</p>\r\n<p>El test contiene la Prueba de panel de drogas e instructivo.</p>\r\n<p>&nbsp;</p>\r\n<h3>Modo de uso</h3>\r\n<p>1) Retire el dispositivo de prueba de su bolsa protectora.</p>\r\n<p>2) Retira la tapa protectora de la prueba.</p>\r\n<p>3) Toma una muestra de orina a analizar.</p>\r\n<p>4) Sumerja la tira de la muestra con el extremo de la flecha apuntando hacia la muestra. No sumergir pasado la l&iacute;nea MAX (m&aacute;xima).</p>\r\n<p>5) Saque el dispositivo despu&eacute;s de 10 segundos y col&oacute;quelo sobre una superficie limpia, seca y no absorbente</p>\r\n<p>6) Observa los resultados a los 5 minutos.</p>",
+    "short_description": "Test multipanel detección de uso de 5 drogas. THC (marihuana), cocaína, anfetamina, éxtasis, benzodiacepinas. Ayuda a prevenir accidentes en el trabajo y tránsito, bajo rendimiento laboral y académico y para la detección de adicciones.",
+    "categories": "medicamentos",
+    "pretty_categories": "Medicamentos",
+    "badge": {
+      "raw_final_price": "9499.0",
+      "type": null
+    },
+    "available_on": "2023-04-13T00:00:00.000-04:00",
+    "is_store_exclusive": true,
+    "images": [
+      {
+        "id": 91064,
+        "position": 1,
+        "attachment_content_type": "image/jpeg",
+        "attachment_file_name": "583348.jfif",
+        "type": "Spree::Image",
+        "attachment_updated_at": "2023-04-13T14:55:29.000-04:00",
+        "attachment_width": 1500,
+        "attachment_height": 1067,
+        "alt": "",
+        "viewable_type": "Spree::Variant",
+        "viewable_id": 52612,
+        "thumbnail_url": "https://static.salcobrandonline.cl/spree/products/91064/thumbnail/583348.jfif?1681412129",
+        "mini_url": "https://static.salcobrandonline.cl/spree/products/91064/mini/583348.jfif?1681412129",
+        "small_url": "https://static.salcobrandonline.cl/spree/products/91064/small/583348.jfif?1681412129",
+        "medium_url": "https://static.salcobrandonline.cl/spree/products/91064/medium/583348.jfif?1681412129",
+        "large_url": "https://static.salcobrandonline.cl/spree/products/91064/large/583348.jfif?1681412129",
+        "large_webp_url": "https://static.salcobrandonline.cl/spree/products/91064/large_webp/583348.webp?1681412129",
+        "original_url": "https://static.salcobrandonline.cl/spree/products/91064/original/583348.jfif?1681412129"
+      }
+    ],
+    "url": "https://salcobrand.cl/test-multipanel-5-drogas",
+    "categoria": "test-de-autodiagnostico",
+    "subcategoria": null
+  },
+  {
+    "id": 59494,
+    "name": "Allbriefs HC Test De Drogas 1 Unidad",
+    "sku": "589390",
+    "price": "8999.0",
+    "brand": "Allbriefs",
+    "slug": "allbriefs-hc-test-de-drogas-1-unidad",
+    "description": "<h2>Caracter&iacute;sticas del Producto</h2>\r\n<p>Allbriefs HC Test De Drogas 1 Unidad.</p>",
+    "short_description": "Allbriefs HC Test De Drogas 1 Unidad.",
+    "categories": "medicamentos",
+    "pretty_categories": "Medicamentos",
+    "badge": {
+      "raw_final_price": "8999.0",
+      "type": null
+    },
+    "available_on": "2024-11-26T00:00:00.000-03:00",
+    "is_store_exclusive": true,
+    "images": [
+      {
+        "id": 127701,
+        "position": 1,
+        "attachment_content_type": "image/jpeg",
+        "attachment_file_name": "589390.jpg",
+        "type": "Spree::Image",
+        "attachment_updated_at": "2024-11-26T15:00:15.000-03:00",
+        "attachment_width": 1500,
+        "attachment_height": 1500,
+        "alt": "",
+        "viewable_type": "Spree::Variant",
+        "viewable_id": 59494,
+        "thumbnail_url": "https://static.salcobrandonline.cl/spree/products/127701/thumbnail/589390.jpg?1732644015",
+        "mini_url": "https://static.salcobrandonline.cl/spree/products/127701/mini/589390.jpg?1732644015",
+        "small_url": "https://static.salcobrandonline.cl/spree/products/127701/small/589390.jpg?1732644015",
+        "medium_url": "https://static.salcobrandonline.cl/spree/products/127701/medium/589390.jpg?1732644015",
+        "large_url": "https://static.salcobrandonline.cl/spree/products/127701/large/589390.jpg?1732644015",
+        "large_webp_url": "https://static.salcobrandonline.cl/spree/products/127701/large_webp/589390.webp?1732644015",
+        "original_url": "https://static.salcobrandonline.cl/spree/products/127701/original/589390.jpg?1732644015"
+      }
+    ],
+    "url": "https://salcobrand.cl/allbriefs-hc-test-de-drogas-1-unidad",
+    "categoria": "test-de-autodiagnostico",
+    "subcategoria": null
+  },
+  {
+    "id": 60930,
+    "name": "Test Droga Doble THC-COC Home Control",
+    "sku": "589848",
+    "price": "7899.0",
+    "brand": "La Prepie",
+    "slug": "test-droga-doble-thc-coc-home-control",
+    "description": "<h2>Caracter&iacute;sticas del Producto</h2>\r\n<p>El test es un inmunoensayo cromatogr&aacute;fico r&aacute;pido, detector de metabolitos de ambas drogas en la orina. Este ensayo proporciona solo un resultado anal&iacute;tico preliminar, para obtener un resultado anal&iacute;tico confirmado, debe utilizarse un metodo qu&iacute;mico alternativo mas espec&iacute;fico.</p>",
+    "short_description": "Test de uso domiciliario que a través de la orina detecta el consumo de cocaína y THC (marihuana) de las ultimas 48.",
+    "categories": "medicamentos",
+    "pretty_categories": "Medicamentos",
+    "badge": {
+      "raw_final_price": "7899.0",
+      "type": null
+    },
+    "available_on": "2025-03-12T00:00:00.000-03:00",
+    "is_store_exclusive": true,
+    "images": [
+      {
+        "id": 137986,
+        "position": 1,
+        "attachment_content_type": "image/jpeg",
+        "attachment_file_name": "589848.jpg",
+        "type": "Spree::Image",
+        "attachment_updated_at": "2025-03-12T10:35:18.000-03:00",
+        "attachment_width": 1173,
+        "attachment_height": 1050,
+        "alt": "",
+        "viewable_type": "Spree::Variant",
+        "viewable_id": 60930,
+        "thumbnail_url": "https://static.salcobrandonline.cl/spree/products/137986/thumbnail/589848.jpg?1741786518",
+        "mini_url": "https://static.salcobrandonline.cl/spree/products/137986/mini/589848.jpg?1741786518",
+        "small_url": "https://static.salcobrandonline.cl/spree/products/137986/small/589848.jpg?1741786518",
+        "medium_url": "https://static.salcobrandonline.cl/spree/products/137986/medium/589848.jpg?1741786518",
+        "large_url": "https://static.salcobrandonline.cl/spree/products/137986/large/589848.jpg?1741786518",
+        "large_webp_url": "https://static.salcobrandonline.cl/spree/products/137986/large_webp/589848.webp?1741786518",
+        "original_url": "https://static.salcobrandonline.cl/spree/products/137986/original/589848.jpg?1741786518"
+      }
+    ],
+    "url": "https://salcobrand.cl/test-droga-doble-thc-coc-home-control",
+    "categoria": "test-de-autodiagnostico",
+    "subcategoria": null
+  }
+]
