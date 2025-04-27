@@ -1,0 +1,2173 @@
+{
+  "infantil": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "LA PREPIE",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "272658",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "La Prepie Sticker Termómetro 6 Unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+                "title": "La Prepie Sticker Termómetro 6 Unidades"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "La Prepie Sticker Termómetro 6 Unidades",
+        "price": 1690,
+        "prices": {
+          "price-sale-cl": 1490,
+          "price-list-cl": 1690
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas",
+        "pageKeywords": "Termómetro Adhesivo, Dmed, 272658, Accesorios Médicos",
+        "pageTitle": "La Prepie Sticker Termómetro 6 Unidades",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;La Prepie Sticker Termómetro 6 Unidades &lt;/h5&gt;&lt;p&gt;&lt;strong&gt; Características y Beneficios &lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Fácil de usar.  &lt;/li&gt; &lt;li&gt;Se despega fácilmente.  &lt;/li&gt; &lt;li&gt; No produce irritación.  &lt;/li&gt; &lt;li&gt;Seguro, libre de mercurio. &lt;/li&gt; &lt;li&gt;48 horas. &lt;/li&gt; &lt;li&gt;Se ilumina indicando la temperatura corporal. &lt;/li&gt;  &lt;/ul&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt;Indicador de fiebre adhesivo. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 7450,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "LA PREPIE",
+        "milliliters": 7450,
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 249 por Unidad",
+        "showImages": true,
+        "size": 7450,
+        "storePickup": true,
+        "subBrand": "LA PREPIE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+          "ogImageAlt": "La Prepie Sticker Termómetro 6 Unidades",
+          "ogType": "product",
+          "ogTitle": "La Prepie Sticker Termómetro 6 Unidades | Cruz Verde",
+          "description": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas",
+          "title": "La Prepie Sticker Termómetro 6 Unidades | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/272658?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas"
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "272658"
+          }
+        ],
+        "shareURL": "undefinedpdp/272658.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/infantil/monitores/de/salud/y/diagnostico/272658.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "infantil"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "287407",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo ET-306",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+                "title": "Termómetro Infrarrojo ET-306"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Termómetro Infrarrojo ET-306",
+        "price": 29990,
+        "prices": {
+          "price-sale-cl": 18990,
+          "price-list-cl": 29990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica.",
+        "pageKeywords": "termometro, scianmed, 287407, infrarojo, termometro digital",
+        "pageTitle": "Termómetro Infrarrojo ET-306",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;Termómetro Infrarrojo ET-306 &lt;/h5&gt;&lt;p&gt;&lt;strong&gt; Características y Beneficios &lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Más comodidad y mayor precisión para tomar la fiebre.  &lt;/li&gt; &lt;li&gt; El termómetro infrarrojo mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica y ésta a su vez en un número que mostrar en una pantalla; que será la temperatura. &lt;/li&gt; &lt;li&gt; Estos termómetros no emiten infrarrojos, sino que recogen la información que emite una persona.  &lt;/li&gt;  &lt;li&gt;Termómetro Digital Infrarrojo. &lt;/li&gt;  &lt;/ul&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt;La mejor forma de obtener una medida correcta de la temperatura es colocando el plano de la lente del termómetro infrarrojo lo más paralelo posible a la frente de la persona y así garantizar la perpendicularidad de la radiación incidente. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt; &lt;/p&gt; &lt;table width=&quot;&quot;50%&quot;&quot;&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;&lt;strong&gt;Marca&lt;/strong&gt;&lt;/td&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;Scianmed&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Modelo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Et-306&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Tipo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Termometro&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Color&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;NA&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 2864,
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "milliliters": 2864,
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 18990 por Unidad",
+        "showImages": true,
+        "size": 2864,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+          "ogImageAlt": "Termómetro Infrarrojo ET-306",
+          "ogType": "product",
+          "ogTitle": "Termómetro Infrarrojo ET-306 | Cruz Verde",
+          "description": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica.",
+          "title": "Termómetro Infrarrojo ET-306 | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/287407?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica."
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "287407"
+          }
+        ],
+        "shareURL": "undefinedpdp/287407.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/infantil/monitores/de/salud/y/diagnostico/287407.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "infantil"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "FAMILY SET",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "297436",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Family Set Termómetro Sticker 6 Stickers",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+                "title": "Family Set Termómetro Sticker 6 Stickers"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Family Set Termómetro Sticker 6 Stickers",
+        "price": 1490,
+        "prices": {
+          "price-list-cl": 1490
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación.",
+        "pageKeywords": "297436",
+        "pageTitle": "Family Set Termómetro Sticker 6 Stickers",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "FAMILY SET",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 1490 por Unidad",
+        "storePickup": true,
+        "subBrand": "FAMILY SET",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+          "ogImageAlt": "Family Set Termómetro Sticker 6 Stickers",
+          "ogType": "product",
+          "ogTitle": "Family Set Termómetro Sticker 6 Stickers | Cruz Verde",
+          "description": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación.",
+          "title": "Family Set Termómetro Sticker 6 Stickers | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/297436?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "297436"
+          }
+        ],
+        "shareURL": "undefinedpdp/297436.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/infantil/monitores/de/salud/y/diagnostico/297436.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "infantil"
+    }
+  ],
+  "monitores": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ABBOTT",
+        "category": "monitores-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "271444",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Optium Neo Equipo Medidor de Glucosa",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6cba5a7/images/large/271444-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6cba5a7/images/large/271444-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "title": "Optium Neo Equipo Medidor de Glucosa"
+              },
+              {
+                "_type": "image",
+                "alt": "Optium Neo Equipo Medidor de Glucosa",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfd67a198/images/large/271444-2-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwfd67a198/images/large/271444-2-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "title": "Optium Neo Equipo Medidor de Glucosa"
+              },
+              {
+                "_type": "image",
+                "alt": "Optium Neo Equipo Medidor de Glucosa",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5e16fd27/images/large/271444-3-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5e16fd27/images/large/271444-3-optium-neo-equipo-medidor-de-glucosa.jpg",
+                "title": "Optium Neo Equipo Medidor de Glucosa"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Optium Neo Equipo Medidor de Glucosa",
+        "price": 43490,
+        "prices": {
+          "price-list-cl": 43490
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Optium Neo Equipo Medidor de Glucosa No requiere codificación, obtienes resultados en 5 segundos, indicadores visuales de hiper e hipoglucemia.",
+        "pageKeywords": "Equipo Medidor de Glucosa, Freestyle, 271444, one touch, medidor de glicemia, glucometro",
+        "pageTitle": "Optium Neo Equipo Medidor de Glucosa",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt; Optium Neo Equipo Medidor de Glucosa &lt;/h5&gt;&lt;p&gt; Medición de glucosa y cuerpos cetónicos en sangre. &lt;/p&gt;&lt;h5&gt; Beneficios &lt;/h5&gt;&lt;p&gt;No requiere codificación. Resultados en 5 segundos, indicadores visuales de hiper e hipoglucemia. &lt;/p&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;                                                                                                                                                                                                                                                                                                      &lt;p&gt;Luego de lavarse las manos, inserte la tira reactiva en su medidor. Pinche el costado de la punta de su dedo para obtener una gota de sangre. Toque y mantenga la punta de la tira reactiva en la gota de sangre, espere por los resultados. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt; &lt;/p&gt; &lt;table width=&quot;&quot;50%&quot;&quot;&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;&lt;strong&gt;Marca&lt;/strong&gt;&lt;/td&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;Freestyle&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Modelo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Optium Neo&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Tipo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Equipo Medidor de Glucosa&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Color&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 8093,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ABBOTT",
+        "milliliters": 8093,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 43490 por Unidad",
+        "size": 8093,
+        "storePickup": true,
+        "subBrand": "ABBOTT",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwb6cba5a7/images/large/271444-optium-neo-equipo-medidor-de-glucosa.jpg",
+          "ogImageAlt": "Optium Neo Equipo Medidor de Glucosa",
+          "ogType": "product",
+          "ogTitle": "Optium Neo Equipo Medidor de Glucosa | Cruz Verde",
+          "description": "Optium Neo Equipo Medidor de Glucosa No requiere codificación, obtienes resultados en 5 segundos, indicadores visuales de hiper e hipoglucemia.",
+          "title": "Optium Neo Equipo Medidor de Glucosa | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/271444?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Optium Neo Equipo Medidor de Glucosa No requiere codificación, obtienes resultados en 5 segundos, indicadores visuales de hiper e hipoglucemia."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "271444"
+          }
+        ],
+        "shareURL": "undefinedpdp/271444.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/monitores/monitores/de/salud/y/diagnostico/271444.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "monitores"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ROCHE",
+        "category": "monitores-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "290566",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Accu-Chek Instant Medidor",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc7d28b97/images/large/290566-instant-equipo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc7d28b97/images/large/290566-instant-equipo.jpg",
+                "title": "Accu-Chek Instant Medidor"
+              },
+              {
+                "_type": "image",
+                "alt": "Accu-Chek Instant Medidor",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3b91ed7a/images/large/290566-2-instant-equipo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3b91ed7a/images/large/290566-2-instant-equipo.jpg",
+                "title": "Accu-Chek Instant Medidor"
+              },
+              {
+                "_type": "image",
+                "alt": "Accu-Chek Instant Medidor",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw29698ad9/images/large/290566-3-instant-equipo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw29698ad9/images/large/290566-3-instant-equipo.jpg",
+                "title": "Accu-Chek Instant Medidor"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Accu-Chek Instant Medidor",
+        "price": 32990,
+        "prices": {
+          "price-list-cl": 32990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Instant Equipo Kit medidor de glucemia y dispositivo de punción. Posee un tipo de tecnología cómoda de utilizar, además usar un intervalo ideal.",
+        "pageKeywords": "accu, accuchek, accu-chek",
+        "pageTitle": "Accu-Chek Instant Medidor",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h3 class=&quot;semibold&quot;&gt;EQUIPO INSTANT&lt;/h3&gt; &lt;div class=&quot;descripcion&quot;&gt; &lt;p&gt;Kit medidor de glucemia y dispositivo de punción&lt;/p&gt; &lt;/div&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 7471,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ROCHE",
+        "milliliters": 7471,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 32990 por Unidad",
+        "size": 7471,
+        "storePickup": true,
+        "subBrand": "ROCHE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc7d28b97/images/large/290566-instant-equipo.jpg",
+          "ogImageAlt": "Accu-Chek Instant Medidor",
+          "ogType": "product",
+          "ogTitle": "Accu-Chek Instant Medidor | Cruz Verde",
+          "description": "Instant Equipo Kit medidor de glucemia y dispositivo de punción. Posee un tipo de tecnología cómoda de utilizar, además usar un intervalo ideal.",
+          "title": "Accu-Chek Instant Medidor | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/290566?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Instant Equipo Kit medidor de glucemia y dispositivo de punción. Posee un tipo de tecnología cómoda de utilizar, además usar un intervalo ideal."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "290566"
+          }
+        ],
+        "shareURL": "undefinedpdp/290566.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/monitores/monitores/de/salud/y/diagnostico/290566.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "monitores"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ACC. MEDICOS BEST HOUSE",
+        "category": "monitores-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "548843",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Brazo Omron HEM-7121J",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc05798d5/images/large/548843-toma-de-presión-de-brazo-omron-HEM-7121J.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc05798d5/images/large/548843-toma-de-presi%C3%B3n-de-brazo-omron-HEM-7121J.jpg",
+                "title": "Toma de Presión de Brazo Omron HEM-7121J"
+              },
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Brazo Omron HEM-7121J",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw55e4c127/images/large/548843-2-toma-de-presión-de-brazo-omron-HEM-7121J.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw55e4c127/images/large/548843-2-toma-de-presi%C3%B3n-de-brazo-omron-HEM-7121J.jpg",
+                "title": "Toma de Presión de Brazo Omron HEM-7121J"
+              },
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Brazo Omron HEM-7121J",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36a99b52/images/large/548843-3-toma-de-presión-de-brazo-omron-HEM-7121J.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw36a99b52/images/large/548843-3-toma-de-presi%C3%B3n-de-brazo-omron-HEM-7121J.jpg",
+                "title": "Toma de Presión de Brazo Omron HEM-7121J"
+              },
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Brazo Omron HEM-7121J",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0f144211/images/large/548843-4-toma-de-presión-de-brazo-omron-HEM-7121J.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw0f144211/images/large/548843-4-toma-de-presi%C3%B3n-de-brazo-omron-HEM-7121J.jpg",
+                "title": "Toma de Presión de Brazo Omron HEM-7121J"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Toma de Presión de Brazo Omron HEM-7121J",
+        "price": 70690,
+        "prices": {
+          "price-list-cl": 70690
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Toma de Presión de Brazo Omron HEM-7121J",
+        "pageKeywords": "monitor de presion arterial,tomapresion,tensiometro,hipertension,colesterol,diabetes,hipoglucemia,glucemia,accu-chek,548843",
+        "pageTitle": "Toma de Presión de Brazo Omron HEM-7121J",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;El monitor de presión arterial de brazo OMRON HEM-7121J permite medir la presión arterial de manera precisa y rápida. Además, es fácil de usar.&lt;/p&gt;&lt;p&gt;á 5 años de garantía.&lt;/p&gt;&lt;p&gt;á Compacto y sencillo de usar: solo debe pulsar 1 botón.&lt;/p&gt;&lt;p&gt;á Con pantalla de fácil lectura.&lt;/p&gt;&lt;p&gt;á Posee sensor de posición para un correcto uso.&lt;/p&gt;&lt;p&gt;á El monitor alerta cuando hay latidos irregulares.&lt;/p&gt;&lt;p&gt;á Memoria para almacenar hasta 30 mediciones.&lt;/p&gt;&lt;p&gt;á Está clínicamente validado por la Sociedad Chilena de Cardiología.&lt;/p&gt;&lt;p&gt;á Es compatible con la App OMRON Connect, para almacenar las mediciones en su celular y compartirlos con su médico o con su familia.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Descargue la aplicación OMRON Connect en su celular (disponible en Google Play y AppStore). www.omronhealthcare.la&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt;Contiene:&lt;/p&gt;&lt;p&gt;á 1 monitor de presión arterial de brazo digital.&lt;/p&gt;&lt;p&gt;á 1 brazalete universal (22 cm. a 42 cm. de circunferencia)&lt;/p&gt;&lt;p&gt;á 4 pilas “AA” (alcalinas).&lt;/p&gt;&lt;p&gt;á Manual de instrucciones.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Dimensiones de la unidad principal:&lt;/p&gt;&lt;p&gt;á Monitor: aprox. 112 mm (ancho) x 82 mm (alto) x 140 mm (largo).&lt;/p&gt;&lt;p&gt;á Brazalete: aprox. 145 mm x 594 mm (tubo de aire: 750 mm).&lt;/p&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ACC. MEDICOS BEST HOUSE",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 70690 por Unidad",
+        "storePickup": true,
+        "subBrand": "ACC. MEDICOS BEST HOUSE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwc05798d5/images/large/548843-toma-de-presión-de-brazo-omron-HEM-7121J.jpg",
+          "ogImageAlt": "Toma de Presión de Brazo Omron HEM-7121J",
+          "ogType": "product",
+          "ogTitle": "Toma de Presión de Brazo Omron HEM-7121J | Cruz Verde",
+          "description": "Toma de Presión de Brazo Omron HEM-7121J",
+          "title": "Toma de Presión de Brazo Omron HEM-7121J | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/548843?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Toma de Presión de Brazo Omron HEM-7121J"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "548843"
+          }
+        ],
+        "shareURL": "undefinedpdp/548843.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/monitores/monitores/de/salud/y/diagnostico/548843.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "monitores"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ACC. MEDICOS BEST HOUSE",
+        "category": "monitores-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "548841",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Muñeca Omron HEM-6124",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2df397f3/images/large/548841-toma-de-presión-de-muñeca-omron-HEM-6124.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2df397f3/images/large/548841-toma-de-presi%C3%B3n-de-mu%C3%B1eca-omron-HEM-6124.jpg",
+                "title": "Toma de Presión de Muñeca Omron HEM-6124"
+              },
+              {
+                "_type": "image",
+                "alt": "Toma de Presión de Muñeca Omron HEM-6124",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6ab88c40/images/large/548841-3-toma-de-presión-de-muñeca-omron-HEM-6124.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6ab88c40/images/large/548841-3-toma-de-presi%C3%B3n-de-mu%C3%B1eca-omron-HEM-6124.jpg",
+                "title": "Toma de Presión de Muñeca Omron HEM-6124"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Toma de Presión de Muñeca Omron HEM-6124",
+        "price": 38270,
+        "prices": {
+          "price-list-cl": 38270
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Toma de Presión de Muñeca Omron HEM-6124",
+        "pageKeywords": "monitor de presion arterial,tomapresion,tensiometro,hipertension,colesterol,diabetes,hipoglucemia,glucemia,accu-chek,548841",
+        "pageTitle": "Toma de Presión de Muñeca Omron HEM-6124",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;El monitor de presión arterial de muñeca OMRON HEM-6124 es un dispositivo compacto y fácil de usar que permite medir la presión arterial de manera precisa y rápida.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;á 5 años de garantía.&lt;/p&gt;&lt;p&gt;á Compacto y sencillo de usar: solo debe pulsar 1 botón.&lt;/p&gt;&lt;p&gt;á Con pantalla de fácil lectura.&lt;/p&gt;&lt;p&gt;á Posee sensor de posición para un correcto uso.&lt;/p&gt;&lt;p&gt;á El monitor alerta cuando hay latidos irregulares.&lt;/p&gt;&lt;p&gt;á Memoria para almacenar hasta 30 mediciones.&lt;/p&gt;&lt;p&gt;á Ideal para monitorear tu presión arterial en casa o mientras viajas.&lt;/p&gt;&lt;p&gt;á Está clínicamente validado por la Sociedad Chilena de Cardiología.&lt;/p&gt;&lt;p&gt;á Es compatible con la App OMRON Connect, para almacenar las mediciones en su celular y compartirlos con su médico o con su familia.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Descargue la aplicación OMRON Connect en su celular (disponible en Google Play y AppStore). www.omronhealthcare.la&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt;Contiene:&lt;/p&gt;&lt;p&gt;á 1 monitor de presión arterial de muñeca digital.&lt;/p&gt;&lt;p&gt;á 2 pilas “AAA” (alcalinas).&lt;/p&gt;&lt;p&gt;á Manual de instrucciones.&lt;/p&gt;&lt;p&gt;Dimensiones de la unidad principal (sin incluir el brazalete): aprox. 78 mm (ancho) × 60 mm (largo) × 21 mm (profundidad) &lt;/p&gt;&lt;p&gt;Circunferencia medible de la muñeca: aprox. 13.5 cm a 21.5 cm&lt;/p&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ACC. MEDICOS BEST HOUSE",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 38270 por Unidad",
+        "storePickup": true,
+        "subBrand": "ACC. MEDICOS BEST HOUSE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2df397f3/images/large/548841-toma-de-presión-de-muñeca-omron-HEM-6124.jpg",
+          "ogImageAlt": "Toma de Presión de Muñeca Omron HEM-6124",
+          "ogType": "product",
+          "ogTitle": "Toma de Presión de Muñeca Omron HEM-6124 | Cruz Verde",
+          "description": "Toma de Presión de Muñeca Omron HEM-6124",
+          "title": "Toma de Presión de Muñeca Omron HEM-6124 | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/548841?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Toma de Presión de Muñeca Omron HEM-6124"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "548841"
+          }
+        ],
+        "shareURL": "undefinedpdp/548841.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/monitores/monitores/de/salud/y/diagnostico/548841.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "monitores"
+    }
+  ],
+  "termometros": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "LA PREPIE",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "272658",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "La Prepie Sticker Termómetro 6 Unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+                "title": "La Prepie Sticker Termómetro 6 Unidades"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "La Prepie Sticker Termómetro 6 Unidades",
+        "price": 1690,
+        "prices": {
+          "price-sale-cl": 1490,
+          "price-list-cl": 1690
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas",
+        "pageKeywords": "Termómetro Adhesivo, Dmed, 272658, Accesorios Médicos",
+        "pageTitle": "La Prepie Sticker Termómetro 6 Unidades",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;La Prepie Sticker Termómetro 6 Unidades &lt;/h5&gt;&lt;p&gt;&lt;strong&gt; Características y Beneficios &lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Fácil de usar.  &lt;/li&gt; &lt;li&gt;Se despega fácilmente.  &lt;/li&gt; &lt;li&gt; No produce irritación.  &lt;/li&gt; &lt;li&gt;Seguro, libre de mercurio. &lt;/li&gt; &lt;li&gt;48 horas. &lt;/li&gt; &lt;li&gt;Se ilumina indicando la temperatura corporal. &lt;/li&gt;  &lt;/ul&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt;Indicador de fiebre adhesivo. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 7450,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "LA PREPIE",
+        "milliliters": 7450,
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 249 por Unidad",
+        "showImages": true,
+        "size": 7450,
+        "storePickup": true,
+        "subBrand": "LA PREPIE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw184e31a8/images/large/272658-sticker-termometro-adhesivo.jpg",
+          "ogImageAlt": "La Prepie Sticker Termómetro 6 Unidades",
+          "ogType": "product",
+          "ogTitle": "La Prepie Sticker Termómetro 6 Unidades | Cruz Verde",
+          "description": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas",
+          "title": "La Prepie Sticker Termómetro 6 Unidades | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/272658?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "La PrePie Sticker Termómetro 6 Unidades Funciona principalmente como sticker termómetro indicador de fiebre adhesivo con diseños 48 horas"
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "272658"
+          }
+        ],
+        "shareURL": "undefinedpdp/272658.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/termometros/monitores/de/salud/y/diagnostico/272658.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "termometros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "287407",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo ET-306",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+                "title": "Termómetro Infrarrojo ET-306"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Termómetro Infrarrojo ET-306",
+        "price": 29990,
+        "prices": {
+          "price-sale-cl": 18990,
+          "price-list-cl": 29990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica.",
+        "pageKeywords": "termometro, scianmed, 287407, infrarojo, termometro digital",
+        "pageTitle": "Termómetro Infrarrojo ET-306",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;Termómetro Infrarrojo ET-306 &lt;/h5&gt;&lt;p&gt;&lt;strong&gt; Características y Beneficios &lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Más comodidad y mayor precisión para tomar la fiebre.  &lt;/li&gt; &lt;li&gt; El termómetro infrarrojo mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica y ésta a su vez en un número que mostrar en una pantalla; que será la temperatura. &lt;/li&gt; &lt;li&gt; Estos termómetros no emiten infrarrojos, sino que recogen la información que emite una persona.  &lt;/li&gt;  &lt;li&gt;Termómetro Digital Infrarrojo. &lt;/li&gt;  &lt;/ul&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt;La mejor forma de obtener una medida correcta de la temperatura es colocando el plano de la lente del termómetro infrarrojo lo más paralelo posible a la frente de la persona y así garantizar la perpendicularidad de la radiación incidente. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt; &lt;/p&gt; &lt;table width=&quot;&quot;50%&quot;&quot;&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;&lt;strong&gt;Marca&lt;/strong&gt;&lt;/td&gt; &lt;td width=&quot;&quot;50%&quot;&quot;&gt;Scianmed&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Modelo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Et-306&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Tipo&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;Termometro&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;&lt;strong&gt;Color&lt;/strong&gt;&lt;/td&gt; &lt;td&gt;NA&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 2864,
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "milliliters": 2864,
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 18990 por Unidad",
+        "showImages": true,
+        "size": 2864,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa33eca89/images/large/287407-et-306-termometro.jpg",
+          "ogImageAlt": "Termómetro Infrarrojo ET-306",
+          "ogType": "product",
+          "ogTitle": "Termómetro Infrarrojo ET-306 | Cruz Verde",
+          "description": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica.",
+          "title": "Termómetro Infrarrojo ET-306 | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/287407?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Termómetro Infrarrojo ET-306 mide la cantidad y la emisividad de esa radiación en el espectro infrarrojo, las convierte en una corriente eléctrica."
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "287407"
+          }
+        ],
+        "shareURL": "undefinedpdp/287407.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/termometros/monitores/de/salud/y/diagnostico/287407.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "termometros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "VARIOS LABORATORIOS",
+        "category": "termometros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "392738",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Termometro Digital Infrarrojo Modelo TDI",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe3b754e3/images/large/392738-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe3b754e3/images/large/392738-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "title": "Termometro Digital Infrarrojo Modelo TDI"
+              },
+              {
+                "_type": "image",
+                "alt": "Termometro Digital Infrarrojo Modelo TDI",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8be92f2f/images/large/392738-2-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw8be92f2f/images/large/392738-2-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "title": "Termometro Digital Infrarrojo Modelo TDI"
+              },
+              {
+                "_type": "image",
+                "alt": "Termometro Digital Infrarrojo Modelo TDI",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd1186af3/images/large/392738-3-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd1186af3/images/large/392738-3-termometro-digital-infrarrojo-modelo-tdi.jpg",
+                "title": "Termometro Digital Infrarrojo Modelo TDI"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Termometro Digital Infrarrojo Modelo TDI",
+        "price": 37990,
+        "prices": {
+          "price-sale-cl": 19990,
+          "price-list-cl": 37990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Termómetro Digital Infrarrojo Modelo TDI. Mide la temperatura del cuerpo sin contacto, a distancia, lo que permite una medición segura.",
+        "pageKeywords": "392738",
+        "pageTitle": "Termometro Digital Infrarrojo Modelo TDI",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt;El termómetro infrarrojo Love&amp;life mide la temperatura del cuerpo humano sin contacto, a distancia, lo que permite una medición segura. Es rápido y fácil de usar.  Sus principales características son:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Vida útil 200.000 Test.&lt;/li&gt;&lt;li&gt;Certificado Rohs y FCC&lt;/li&gt;&lt;li&gt;Distancia de medición: 3 - 5 cm.&lt;/li&gt;&lt;li&gt;Tiempo de medición: 0.5 segundos.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Alerta de color en la pantalla, para caso de temperatura normal indica color verde, y en caso de fiebre indica color naranjo o rojo.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Mide temperaturas extremas que oscilan entre 32 ºC   y 42.9 ºC con alta precisión.&lt;/li&gt;&lt;li&gt;Está integrado con sensores que proporcionan temperaturas más rápidas y precisas.&lt;/li&gt;&lt;li&gt;Tiene modos de temperatura corporal y de superficie con encendido automático conmutable.&lt;/li&gt;&lt;li&gt;Puede medir temperaturas tanto en Celcius como en Fahrenheit con 32 grupos de memoria.&lt;/li&gt;&lt;li&gt;Apagado automático en 30 segundos&lt;/li&gt;&lt;/ul&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "Sin P.Activo",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isClub": true,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "VARIOS LABORATORIOS",
+        "oai": false,
+        "productPlus": true,
+        "pum": "Precio por Unidad Fraccionada: $ 19990 por Unidad",
+        "showImages": true,
+        "storePickup": true,
+        "subBrand": "VARIOS LABORATORIOS",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe3b754e3/images/large/392738-termometro-digital-infrarrojo-modelo-tdi.jpg",
+          "ogImageAlt": "Termometro Digital Infrarrojo Modelo TDI",
+          "ogType": "product",
+          "ogTitle": "Termometro Digital Infrarrojo Modelo TDI | Cruz Verde",
+          "description": "Termómetro Digital Infrarrojo Modelo TDI. Mide la temperatura del cuerpo sin contacto, a distancia, lo que permite una medición segura.",
+          "title": "Termometro Digital Infrarrojo Modelo TDI | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/392738?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Termómetro Digital Infrarrojo Modelo TDI. Mide la temperatura del cuerpo sin contacto, a distancia, lo que permite una medición segura."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "392738"
+          }
+        ],
+        "shareURL": "undefinedpdp/392738.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/termometros/monitores/de/salud/y/diagnostico/392738.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "termometros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ACC. MEDICOS IAMPRODUCT",
+        "category": "termometros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "567571",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo Infantil",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwce923f68/images/large/567571-termómetro-infrarrojo-infantil.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwce923f68/images/large/567571-term%C3%B3metro-infrarrojo-infantil.jpg",
+                "title": "Termómetro Infrarrojo Infantil"
+              },
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo Infantil",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw10c04f1d/images/large/567571-2-termómetro-infrarrojo-infantil.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw10c04f1d/images/large/567571-2-term%C3%B3metro-infrarrojo-infantil.jpg",
+                "title": "Termómetro Infrarrojo Infantil"
+              },
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo Infantil",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6dcec3a3/images/large/567571-3-termómetro-infrarrojo-infantil.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6dcec3a3/images/large/567571-3-term%C3%B3metro-infrarrojo-infantil.jpg",
+                "title": "Termómetro Infrarrojo Infantil"
+              },
+              {
+                "_type": "image",
+                "alt": "Termómetro Infrarrojo Infantil",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbbdbc713/images/large/567571-4-termómetro-infrarrojo-infantil.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbbdbc713/images/large/567571-4-term%C3%B3metro-infrarrojo-infantil.jpg",
+                "title": "Termómetro Infrarrojo Infantil"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Termómetro Infrarrojo Infantil",
+        "price": 19990,
+        "prices": {
+          "price-list-cl": 19990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Termómetro Infrarrojo Infantil",
+        "pageKeywords": "dispositivo, infantil, termometro,567571,567571",
+        "pageTitle": "Termómetro Infrarrojo Infantil|Cruz Verde",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;¿Para qué enfermedades o condiciones se prescribe este medicamento?&lt;/p&gt;&lt;ul&gt;&lt;li&gt;El termómetro infrarrojo de doble función es un medidor de temperatura corporal detectando fiebres en forma rápida, además puede medir la temperatura en el oído orientado especialmente para niños, es adecuado para uso médico y doméstico.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt; ¿Qué precauciones debo tener al usar este medicamento? &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Su uso e interpretación debe ser supervisado por adultos.&lt;/li&gt;&lt;li&gt;No golpear.&lt;/li&gt;&lt;/ul&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ACC. MEDICOS IAMPRODUCT",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 19990 por Unidad",
+        "storePickup": true,
+        "subBrand": "ACC. MEDICOS IAMPRODUCT",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwce923f68/images/large/567571-termómetro-infrarrojo-infantil.jpg",
+          "ogImageAlt": "Termómetro Infrarrojo Infantil",
+          "ogType": "product",
+          "ogTitle": "Termómetro Infrarrojo Infantil|Cruz Verde | Cruz Verde",
+          "description": "Termómetro Infrarrojo Infantil",
+          "title": "Termómetro Infrarrojo Infantil|Cruz Verde | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/567571?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Termómetro Infrarrojo Infantil"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "567571"
+          }
+        ],
+        "shareURL": "undefinedpdp/567571.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/termometros/monitores/de/salud/y/diagnostico/567571.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "termometros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "FAMILY SET",
+        "category": "infantil-dolor-y-fiebre-medicamentos",
+        "id": "297436",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Family Set Termómetro Sticker 6 Stickers",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+                "title": "Family Set Termómetro Sticker 6 Stickers"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Family Set Termómetro Sticker 6 Stickers",
+        "price": 1490,
+        "prices": {
+          "price-list-cl": 1490
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación.",
+        "pageKeywords": "297436",
+        "pageTitle": "Family Set Termómetro Sticker 6 Stickers",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "FAMILY SET",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 1490 por Unidad",
+        "storePickup": true,
+        "subBrand": "FAMILY SET",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw1c5b2b73/images/large/297436-family-set-termometro-sticker-6-stickers.jpg",
+          "ogImageAlt": "Family Set Termómetro Sticker 6 Stickers",
+          "ogType": "product",
+          "ogTitle": "Family Set Termómetro Sticker 6 Stickers | Cruz Verde",
+          "description": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación.",
+          "title": "Family Set Termómetro Sticker 6 Stickers | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/297436?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Family Set Termómetro Sticker 6 Stickers. Se despega fácilmente (con agua). No produce irritación."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "297436"
+          }
+        ],
+        "shareURL": "undefinedpdp/297436.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/termometros/monitores/de/salud/y/diagnostico/297436.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "termometros"
+    }
+  ],
+  "test-de-embarazo-y-otros": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "LABORATORIO CHILE",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "274692",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo Clearblue Plus",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw336e3828/images/large/274692-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw336e3828/images/large/274692-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Test de Embarazo Clearblue Plus"
+              },
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo Clearblue Plus",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2e37954a/images/large/274692-2-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw2e37954a/images/large/274692-2-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Test de Embarazo Clearblue Plus"
+              },
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo Clearblue Plus",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw82326a89/images/large/274692-3-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw82326a89/images/large/274692-3-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Test de Embarazo Clearblue Plus"
+              },
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo Clearblue Plus",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbf9a3963/images/large/274692-4-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbf9a3963/images/large/274692-4-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Test de Embarazo Clearblue Plus"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Test de Embarazo Clearblue Plus",
+        "price": 7990,
+        "prices": {
+          "price-list-cl": 7990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Test de embarazo Clearblue Plus: Resultados precisos en minutos. ¡Descúbrelo ahora!",
+        "pageKeywords": "test de embarazo, clear blue, 274692, clearblue",
+        "pageTitle": "Test de Embarazo Clearblue Plus",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt; Test de Embarazo Clearblue Plus &lt;/h5&gt;&lt;p&gt; Prueba de embarazo diseñada para ofrecer una experiencia de prueba de embarazo lo más sencilla posible, con precisión y en apenas un minuto.&lt;/p&gt;&lt;h5&gt; Beneficios &lt;/h5&gt;&lt;p&gt; Test De Embarazo&lt;/p&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;                                                                                                                                                                                                                                                                                                       &lt;p&gt;Debe aparecer una línea azul en la ventana de control cuando lea el resultado. Esta línea indica que la prueba ha funcionado correctamente. Si no aparece ninguna línea azul en la ventana de control en los 10 minutos posteriores a la realización de la prueba, significará que no ha funcionado correctamente. &lt;/p&gt; &lt;h5&gt; ¿Qué tan efectiva es la prueba de embarazo Clearblue Plus? &lt;/h5&gt;&lt;p&gt;La prueba de embarazo Clearblue se ha diseñado para ofrecer una experiencia de prueba de embarazo lo más sencilla posible, con una precisión superior al 99%. &lt;/p&gt;&lt;h5&gt; ¿Cómo saber si estoy Embarazada con la prueba Clearblue? &lt;/h5&gt;&lt;p&gt; En 3 minutos aparecerá en la pantalla el resultado en palabras: “Embarazada” o “No embarazada”. Si el resultado es “Embarazada”, la prueba también indicará de cuánto tiempo se está (1-2, 2-3 o más de tres semanas). * Clearblue recomienda hacerse la prueba a partir de la fecha en la que debería iniciarse el período.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 2513,
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "LABORATORIO CHILE",
+        "milliliters": 2513,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 7990 por Unidad",
+        "size": 2513,
+        "storePickup": true,
+        "subBrand": "LABORATORIO CHILE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw336e3828/images/large/274692-clear-blue-test-de-embarazo-1-unidad.jpg",
+          "ogImageAlt": "Test de Embarazo Clearblue Plus",
+          "ogType": "product",
+          "ogTitle": "Test de Embarazo Clearblue Plus | Cruz Verde",
+          "description": "Test de embarazo Clearblue Plus: Resultados precisos en minutos. ¡Descúbrelo ahora!",
+          "title": "Test de Embarazo Clearblue Plus | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/274692?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Test de embarazo Clearblue Plus: Resultados precisos en minutos. ¡Descúbrelo ahora!"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "274692"
+          }
+        ],
+        "shareURL": "undefinedpdp/274692.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/274692.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "LABORATORIO CHILE",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "274693",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Clearblue Test Digital de Embarazo 1 Prueba",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd4ad5983/images/large/274693-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd4ad5983/images/large/274693-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Clearblue Test Digital de Embarazo 1 Prueba"
+              },
+              {
+                "_type": "image",
+                "alt": "Clearblue Test Digital de Embarazo 1 Prueba",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbcb35f87/images/large/274693-2-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwbcb35f87/images/large/274693-2-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Clearblue Test Digital de Embarazo 1 Prueba"
+              },
+              {
+                "_type": "image",
+                "alt": "Clearblue Test Digital de Embarazo 1 Prueba",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw93f774b5/images/large/274693-3-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw93f774b5/images/large/274693-3-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Clearblue Test Digital de Embarazo 1 Prueba"
+              },
+              {
+                "_type": "image",
+                "alt": "Clearblue Test Digital de Embarazo 1 Prueba",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw34146144/images/large/274693-4-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw34146144/images/large/274693-4-clear-blue-test-de-embarazo-1-unidad.jpg",
+                "title": "Clearblue Test Digital de Embarazo 1 Prueba"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Clearblue Test Digital de Embarazo 1 Prueba",
+        "price": 13990,
+        "prices": {
+          "price-list-cl": 13990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Prueba digital embarazo Clearblue, resultados claros y precisos",
+        "pageKeywords": "test de embarazo, clear blue, 274693, clearblue, digital",
+        "pageTitle": "Clearblue Test Digital de Embarazo 1 Prueba",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;Clearblue Test Digital de Embarazo 1 Prueba  &lt;/h5&gt;&lt;p&gt; Prueba de embarazo con indicador de semanas es la primera y única prueba con una precisión equiparable a la de una ecografía en la datación del embarazo.&lt;/p&gt; &lt;h5&gt; Beneficios&lt;/h5&gt; &lt;p&gt;Test De Embarazo. La prueba de embarazo Clearblue Digital con indicador de semanas es la primera y única prueba con una precisión equiparable a la de una ecografía en la datación del embarazo**. Su sensor Smart Dual Sensor™ no sólo indica en palabras si se está &quot;Embarazada&quot; o &quot;No embarazada&quot;, sino que también informa de cuánto tiempo se está.&lt;/p&gt; &lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt;Si va a hacerse la prueba para saber si está embarazada a partir del día estimado de inicio del período, podrá hacerla en cualquier momento del día. Si va a hacerse la prueba de forma anticipada, para que el resultado del indicador de semanas sea preciso deberá utilizar la primera orina del día. No beba mucho antes de hacerse la prueba de embarazo digital. Cuando esté preparada para hacerse la prueba, extraiga la varilla de prueba del envoltorio de aluminio y retire la tapa azul. Utilice la prueba de inmediato. Coloque la punta absorbente hacia abajo en el flujo de orina durante sólo 5 segundos. Procure que el resto de la varilla de la prueba de embarazo digital no se moje. También puede recoger una muestra de orina en un recipiente limpio y seco. Ponga la punta absorbente hacia abajo en la orina durante sólo 20 segundos.- Si lo desea, puede volver a colocar la tapa y poner la varilla de la prueba de embarazo digital en posición horizontal. - Mantenga la punta hacia abajo o ponga la varilla de la prueba de embarazo digital en posición horizontal mientras espera a que aparezca el resultado.Punta de prueba hacia arriba/abajo. IMPORTANTE. Durante la prueba, nunca sostenga la varilla de prueba con la punta absorbente hacia arriba. &lt;/p&gt; &lt;h5&gt;  ¿Qué tan confiable es la prueba de embarazo Clearblue?&lt;/h5&gt;&lt;p&gt; No hay otras pruebas con mayor precisión: Todas las pruebas de embarazo de Clearblue ofrecen una precisión superior al 99 %*. Son tan precisas que podrá realizar la prueba con antelación: Todas las pruebas de embarazo de Clearblue pueden utilizarse hasta 4 días antes de la fecha estimada de inicio del período.&lt;/p&gt;&lt;h5&gt; ¿Cuándo se puede hacer la prueba de embarazo Clearblue? &lt;/h5&gt;&lt;p&gt;Tiene una precisión superior al 99% y se puede realizar la prueba hasta 4 días antes del periodo. &lt;/p&gt;&lt;h5&gt; ¿Qué significa 3+ en una prueba de embarazo Clearblue? &lt;/h5&gt;&lt;p&gt;Si el resultado de la prueba es &quot;Embarazada&quot; se muestra también un resultado numérico (&quot;1-2&quot;, &quot;2-3&quot; o &quot;3+&quot;) que indica cuándo se produjo la concepción, por ejemplo, hace 1 o 2 semanas, hace 2 o 3 semanas o hace más de 3 semanas3. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 2514,
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "LABORATORIO CHILE",
+        "milliliters": 2514,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 13990 por Unidad",
+        "size": 2514,
+        "storePickup": true,
+        "subBrand": "LABORATORIO CHILE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd4ad5983/images/large/274693-clear-blue-test-de-embarazo-1-unidad.jpg",
+          "ogImageAlt": "Clearblue Test Digital de Embarazo 1 Prueba",
+          "ogType": "product",
+          "ogTitle": "Clearblue Test Digital de Embarazo 1 Prueba | Cruz Verde",
+          "description": "Prueba digital embarazo Clearblue, resultados claros y precisos",
+          "title": "Clearblue Test Digital de Embarazo 1 Prueba | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/274693?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Prueba digital embarazo Clearblue, resultados claros y precisos"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "274693"
+          }
+        ],
+        "shareURL": "undefinedpdp/274693.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/274693.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "290110",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6d6e7ca7/images/large/290110-scanmed-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6d6e7ca7/images/large/290110-scanmed-test-de-embarazo-1-unidad.jpg",
+                "title": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad"
+              },
+              {
+                "_type": "image",
+                "alt": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw89c13344/images/large/290110-2-scanmed-test-de-embarazo-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw89c13344/images/large/290110-2-scanmed-test-de-embarazo-1-unidad.jpg",
+                "title": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad",
+        "price": 6290,
+        "prices": {
+          "price-sale-cl": 4990,
+          "price-list-cl": 6290
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad. Fácil de usar, privado, entrega un resultado rápido, tiene 99% de exactitud.",
+        "pageKeywords": "test de embarazo, scanmed, 290110",
+        "pageTitle": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt; Scanmed Test de Embarazo 99% de Exactitud 1 Unidad &lt;/h5&gt;&lt;p&gt; Test de Embarazo.&lt;/p&gt;&lt;h5&gt; Beneficios &lt;/h5&gt;&lt;p&gt; Fácil de usar, privado, entrega un resultado rápido, tiene 99% de exactitud.&lt;/p&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;                                                                                                                                                                                                                                                                                                       &lt;p&gt;Cuando utilizar: Es fundamental escoger bien el día que nos hacemos la prueba, ya que la hormona del embarazo se detecta en la orina quince días después de la concepción y no antes. Si realizamos la prueba antes de la fecha, es probable que el test de un falso negativo. &lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 2492,
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "milliliters": 2492,
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 4990 por Unidad",
+        "showImages": true,
+        "size": 2492,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6d6e7ca7/images/large/290110-scanmed-test-de-embarazo-1-unidad.jpg",
+          "ogImageAlt": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad",
+          "ogType": "product",
+          "ogTitle": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad | Cruz Verde",
+          "description": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad. Fácil de usar, privado, entrega un resultado rápido, tiene 99% de exactitud.",
+          "title": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/290110?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Scanmed Test de Embarazo 99% de Exactitud 1 Unidad. Fácil de usar, privado, entrega un resultado rápido, tiene 99% de exactitud."
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "290110"
+          }
+        ],
+        "shareURL": "undefinedpdp/290110.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/290110.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "290111",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo 2 unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe8a96681/images/large/290111-clasico-test-de-embarazo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe8a96681/images/large/290111-clasico-test-de-embarazo.jpg",
+                "title": "Test de Embarazo 2 unidades"
+              },
+              {
+                "_type": "image",
+                "alt": "Test de Embarazo 2 unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw31419aab/images/large/290111-2-clasico-test-de-embarazo.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw31419aab/images/large/290111-2-clasico-test-de-embarazo.jpg",
+                "title": "Test de Embarazo 2 unidades"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Test de Embarazo 2 unidades",
+        "price": 9290,
+        "prices": {
+          "price-list-cl": 9290
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Clásica Test de Embarazo funciona como prueba de embarazo, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos.",
+        "pageKeywords": "Test de Embarazo, Scanmed, 290111",
+        "pageTitle": "Test de Embarazo 2 unidades",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h3 class=&quot;semibold&quot;&gt;&lt;strong&gt;Test de Embarazo 2 unidades&lt;/strong&gt;&lt;/h3&gt;&lt;div class=&quot;descripcion&quot;&gt;&lt;p&gt;Test de embarazo, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos. Conforme con la Comunidad Europea y con la Administración de Alimentos y Medicamentos FDA. Contiene 2 unidades&lt;/p&gt;&lt;/div&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 10539,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "milliliters": 10539,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 4645 por Unidad",
+        "showImages": true,
+        "size": 10539,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwe8a96681/images/large/290111-clasico-test-de-embarazo.jpg",
+          "ogImageAlt": "Test de Embarazo 2 unidades",
+          "ogType": "product",
+          "ogTitle": "Test de Embarazo 2 unidades | Cruz Verde",
+          "description": "Clásica Test de Embarazo funciona como prueba de embarazo, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos.",
+          "title": "Test de Embarazo 2 unidades | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/290111?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Clásica Test de Embarazo funciona como prueba de embarazo, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "290111"
+          }
+        ],
+        "shareURL": "undefinedpdp/290111.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/290111.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "290112",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Scanmed Test de Embarazo Digital 1 Unidad",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw362873e9/images/large/290112-scanmed-test-de-embarazo-digital-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw362873e9/images/large/290112-scanmed-test-de-embarazo-digital-1-unidad.jpg",
+                "title": "Scanmed Test de Embarazo Digital 1 Unidad"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Scanmed Test de Embarazo Digital 1 Unidad",
+        "price": 10790,
+        "prices": {
+          "price-sale-cl": 9990,
+          "price-list-cl": 10790
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Scanmed Test de Embarazo Digital 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento.",
+        "pageKeywords": "test, embarazo, 290112",
+        "pageTitle": "Scanmed Test de Embarazo Digital 1 Unidad",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "superOai": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "oai": true,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 9990 por Unidad",
+        "showImages": true,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw362873e9/images/large/290112-scanmed-test-de-embarazo-digital-1-unidad.jpg",
+          "ogImageAlt": "Scanmed Test de Embarazo Digital 1 Unidad",
+          "ogType": "product",
+          "ogTitle": "Scanmed Test de Embarazo Digital 1 Unidad | Cruz Verde",
+          "description": "Scanmed Test de Embarazo Digital 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento.",
+          "title": "Scanmed Test de Embarazo Digital 1 Unidad | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/290112?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Scanmed Test de Embarazo Digital 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento."
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "OAI RIBBON FANTASMA",
+                  "creationDate": "2021-06-30T21:04:28.000Z",
+                  "description": "ribbon-oai-cv",
+                  "enabled": true,
+                  "lastModified": "2024-10-04T00:29:02.000Z",
+                  "promotionId": "r002",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "OAI RIBBON FANTASMA",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2021-07-01T04:00:00.000Z"
+            },
+            "creationDate": "2021-06-30T20:56:18.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "r002",
+            "lastModified": "2025-04-01T18:38:23.000Z",
+            "name": "ribbon-oai-cv",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "r002"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-ahorra-aqui.png"
+        ],
+        "presentations": [
+          {
+            "id": "290112"
+          }
+        ],
+        "shareURL": "undefinedpdp/290112.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/290112.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "290113",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Test de ovulación 10 unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw16879eb6/images/large/290113-clasico-test-de-ovulacion.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw16879eb6/images/large/290113-clasico-test-de-ovulacion.jpg",
+                "title": "Test de ovulación 10 unidades"
+              },
+              {
+                "_type": "image",
+                "alt": "Test de ovulación 10 unidades",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw03d28a27/images/large/290113-2-clasico-test-de-ovulacion.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw03d28a27/images/large/290113-2-clasico-test-de-ovulacion.jpg",
+                "title": "Test de ovulación 10 unidades"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Test de ovulación 10 unidades",
+        "price": 19990,
+        "prices": {
+          "price-list-cl": 19990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Scanmed Clásico Test de Ovulación Test de ovulación, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos.",
+        "pageKeywords": "Test de Ovulación, Scanmed, 290113",
+        "pageTitle": "Test de ovulación 10 unidades",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h3 class=&quot;semibold&quot;&gt;TEST DE OVULACIÓN CLÁSICO&lt;/h3&gt; &lt;div class=&quot;descripcion&quot;&gt; &lt;p&gt;Test de ovulación, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos. Conforme con la Comunidad Europea. Contiene 10 unidades&lt;/p&gt; &lt;/div&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "dose": 7466,
+        "format": "unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "milliliters": 7466,
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 1999 por Prueba",
+        "showImages": true,
+        "size": 7466,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw16879eb6/images/large/290113-clasico-test-de-ovulacion.jpg",
+          "ogImageAlt": "Test de ovulación 10 unidades",
+          "ogType": "product",
+          "ogTitle": "Test de ovulación 10 unidades | Cruz Verde",
+          "description": "Scanmed Clásico Test de Ovulación Test de ovulación, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos.",
+          "title": "Test de ovulación 10 unidades | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/290113?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Scanmed Clásico Test de Ovulación Test de ovulación, privado, fácil de usar y resultado rápido con 99% de exactitud, resultado en menos de 5 minutos."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "290113"
+          }
+        ],
+        "shareURL": "undefinedpdp/290113.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/290113.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "SCANMED",
+        "category": "test-de-embarazo-y-otros-monitores-de-salud-y-diagnostico-medicamentos",
+        "id": "295699",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Scanmed Test de Embarazo HCG 1 Unidad",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd94f65a8/images/large/295699-scanmed-test-de-embarazo-hcg-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd94f65a8/images/large/295699-scanmed-test-de-embarazo-hcg-1-unidad.jpg",
+                "title": "Scanmed Test de Embarazo HCG 1 Unidad"
+              },
+              {
+                "_type": "image",
+                "alt": "Scanmed Test de Embarazo HCG 1 Unidad",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13e414ef/images/large/295699-2-scanmed-test-de-embarazo-hcg-1-unidad.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw13e414ef/images/large/295699-2-scanmed-test-de-embarazo-hcg-1-unidad.jpg",
+                "title": "Scanmed Test de Embarazo HCG 1 Unidad"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Scanmed Test de Embarazo HCG 1 Unidad",
+        "price": 4990,
+        "prices": {
+          "price-list-cl": 4990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Scanmed Test de Embarazo HCG 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento.",
+        "pageKeywords": "tes de embarazo, test de embarazo, test embarazo, test embaraso, embarazo",
+        "pageTitle": "Scanmed Test de Embarazo HCG 1 Unidad",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;Scanmed Test de Embarazo HCG 1 Unidad  &lt;/h5&gt;&lt;p&gt; Test de Embarazo.&lt;/p&gt;&lt;h5&gt; Beneficios&lt;/h5&gt;&lt;p&gt;Fácil de usar, privado, entrega un resultado rápido, tiene 99% de exactitud. &lt;/p&gt;&lt;h5&gt; Modo de uso&lt;/h5&gt;&lt;p&gt; Cuando utilizar: Es fundamental escoger bien el día que nos hacemos la prueba, ya que la hormona del embarazo se detecta en la orina quince días después de la concepción y no antes. Si realizamos la prueba antes de la fecha, es probable que el test de un falso negativo.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": false,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "SIN P.ACTIVO",
+        "availableForInStorePickup": true,
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "SCANMED",
+        "oai": false,
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 4990 por Unidad",
+        "showImages": true,
+        "storePickup": true,
+        "subBrand": "SCANMED",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd94f65a8/images/large/295699-scanmed-test-de-embarazo-hcg-1-unidad.jpg",
+          "ogImageAlt": "Scanmed Test de Embarazo HCG 1 Unidad",
+          "ogType": "product",
+          "ogTitle": "Scanmed Test de Embarazo HCG 1 Unidad | Cruz Verde",
+          "description": "Scanmed Test de Embarazo HCG 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento.",
+          "title": "Scanmed Test de Embarazo HCG 1 Unidad | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/295699?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Scanmed Test de Embarazo HCG 1 Unidad funciona indicando las semanas del embarazo. Sistema fácil, sencillo y rápido de utilizar en cualquier momento."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "295699"
+          }
+        ],
+        "shareURL": "undefinedpdp/295699.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/test/de/embarazo/y/otros/monitores/de/salud/y/diagnostico/295699.html",
+      "categoria": "monitores-de-salud-y-diagnostico",
+      "subcategoria": "test-de-embarazo-y-otros"
+    }
+  ]
+}

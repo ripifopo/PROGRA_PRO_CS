@@ -1,0 +1,807 @@
+{
+  "inmunoterapia": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ASCEND",
+        "category": "cat-inicio",
+        "id": "287844",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Azatioprina 50 mg 100 Comprimidos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7381403b/images/large/287844-azatioprina-50-mg-100-comprimidos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7381403b/images/large/287844-azatioprina-50-mg-100-comprimidos.jpg",
+                "title": "Azatioprina 50 mg 100 Comprimidos"
+              },
+              {
+                "_type": "image",
+                "alt": "Azatioprina 50 mg 100 Comprimidos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5973215f/images/large/287844-2-azatioprina-50-mg-100-comprimidos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw5973215f/images/large/287844-2-azatioprina-50-mg-100-comprimidos.jpg",
+                "title": "Azatioprina 50 mg 100 Comprimidos"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Azatioprina 50 mg 100 Comprimidos",
+        "price": 16890,
+        "prices": {
+          "price-list-cl": 16890
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Azatioprina 50 mg 100 Comprimidos antimetabolito inmunosupresor sólo o, generalmente en combinación con otros agentes (normalmente corticosteroides).",
+        "pageKeywords": "Remedio, C Inmunosupresor, 287844, Imuran",
+        "pageTitle": "Azatioprina 50 mg 100 Comprimidos",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;AZATIOPRINA 50 MG 100 COMPRIMIDOS&lt;/h5&gt;&lt;h5&gt;LABORATORIO: ASCEND&lt;/h5&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Imagen Referencial.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "AZATIOPRINA",
+        "availableForInStorePickup": true,
+        "bioequivalence": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwa78b8d79/images/bioequivalence.png",
+        "difarmaPrescriptionModel": "simple",
+        "dose": 11858,
+        "format": "100-unidades",
+        "hasExpressDelivery": false,
+        "healthPrograms": "false",
+        "homeDelivery": true,
+        "isBioequivalent": true,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ASCEND",
+        "milliliters": 11858,
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": true,
+        "pum": "Precio por Unidad Fraccionada: $ 169 por Comprimido",
+        "size": 11858,
+        "storePickup": true,
+        "subBrand": "ASCEND",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw7381403b/images/large/287844-azatioprina-50-mg-100-comprimidos.jpg",
+          "ogImageAlt": "Azatioprina 50 mg 100 Comprimidos",
+          "ogType": "product",
+          "ogTitle": "Azatioprina 50 mg 100 Comprimidos | Cruz Verde",
+          "description": "Azatioprina 50 mg 100 Comprimidos antimetabolito inmunosupresor sólo o, generalmente en combinación con otros agentes (normalmente corticosteroides).",
+          "title": "Azatioprina 50 mg 100 Comprimidos | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/287844?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Azatioprina 50 mg 100 Comprimidos antimetabolito inmunosupresor sólo o, generalmente en combinación con otros agentes (normalmente corticosteroides)."
+        },
+        "bioequivalentSubCategoryId": "azatioprina-50-mg",
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://api.cruzverde.cl/product-service/images/ribbons_bioequivalent.png"
+        ],
+        "presentations": [
+          {
+            "id": "287844"
+          }
+        ],
+        "shareURL": "undefinedpdp/287844.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/inmunoterapia/de/especialidad/287844.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "inmunoterapia"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ASPEN",
+        "category": "medicamentos-de-especialidad-medicamentos",
+        "id": "159090",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw057e5ebc/images/large/159090-imuran-azatioprina-50-mg-100-comprimidos-recubiertos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw057e5ebc/images/large/159090-imuran-azatioprina-50-mg-100-comprimidos-recubiertos.jpg",
+                "title": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos",
+        "price": 66130,
+        "prices": {
+          "price-list-cl": 66130
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Compra Imuran Azatioprina 50 mg, 100 comprimidos recubiertos, para el tratamiento eficaz de enfermedades autoinmunes. Consulta a tu médico.",
+        "pageKeywords": "159090, azatioprina, Imuran,",
+        "pageTitle": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;IMURAN AZATIOPRINA 50 MG 100 COMPRIMIDOS RECUBIERTOS&lt;/h5&gt;&lt;h5&gt;LABORATORIO: ASPEN&lt;/h5&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "AZATIOPRINA",
+        "availableForInStorePickup": false,
+        "difarmaPrescriptionModel": "simple",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": true,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ASPEN",
+        "necesidadSalud": "7",
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": false,
+        "productoNecesidad": true,
+        "pum": "Precio por Unidad Fraccionada: $ 662 por Comprimido",
+        "storePickup": true,
+        "subBrand": "ASPEN",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw057e5ebc/images/large/159090-imuran-azatioprina-50-mg-100-comprimidos-recubiertos.jpg",
+          "ogImageAlt": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos",
+          "ogType": "product",
+          "ogTitle": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos | Cruz Verde",
+          "description": "Compra Imuran Azatioprina 50 mg, 100 comprimidos recubiertos, para el tratamiento eficaz de enfermedades autoinmunes. Consulta a tu médico.",
+          "title": "Imuran Azatioprina 50 mg 100 Comprimidos Recubiertos | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/159090?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Compra Imuran Azatioprina 50 mg, 100 comprimidos recubiertos, para el tratamiento eficaz de enfermedades autoinmunes. Consulta a tu médico."
+        },
+        "bioequivalentSubCategoryId": "azatioprina-50-mg",
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "Ribbon fantasma Venta presencial",
+                  "creationDate": "2024-11-15T15:24:42.000Z",
+                  "description": "ribbon-producto-mas",
+                  "enabled": true,
+                  "lastModified": "2024-11-19T20:00:43.000Z",
+                  "promotionId": "ribbonproductomas",
+                  "rank": 10,
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "Ribbon fantasma Venta presencial",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2024-10-24T03:00:00.000Z"
+            },
+            "creationDate": "2024-11-15T15:24:42.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "ribbonproductomas",
+            "lastModified": "2025-04-04T15:32:42.000Z",
+            "name": "ribbon-producto-mas",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon_producto_mas.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionPar": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "ribbonproductomas"
+          },
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "Ribbon fantasma Venta presencial",
+                  "creationDate": "2024-11-19T14:35:53.000Z",
+                  "description": "ribbon-producto-mas-2",
+                  "enabled": true,
+                  "lastModified": "2024-11-25T00:16:12.000Z",
+                  "promotionId": "ribbonproductomasx2",
+                  "rank": 40,
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "Ribbon fantasma Venta presencial",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2024-10-24T03:00:00.000Z"
+            },
+            "creationDate": "2024-11-19T14:31:28.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "ribbonproductomasx2",
+            "lastModified": "2025-04-04T15:33:02.000Z",
+            "name": "ribbon-producto-mas-2",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-producto-mas-info.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionPar": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "ribbonproductomasx2"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon_producto_mas.png",
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon-producto-mas-info.png",
+          "https://api.cruzverde.cl/product-service/images/ribbons_bioequivalent.png"
+        ],
+        "presentations": [
+          {
+            "id": "159090"
+          }
+        ],
+        "shareURL": "undefinedpdp/159090.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/inmunoterapia/de/especialidad/159090.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "inmunoterapia"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "ROCHE",
+        "id": "760143",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaf9cfe43/images/large/760143-cellcept-micofenolato-mofetilo-500-mg-50-comprimidos-recubiertos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaf9cfe43/images/large/760143-cellcept-micofenolato-mofetilo-500-mg-50-comprimidos-recubiertos.jpg",
+                "title": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos"
+              },
+              {
+                "_type": "image",
+                "alt": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd05b2708/images/large/760143-2-cellcept-micofenolato-mofetilo-500-mg-50-comprimidos-recubiertos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwd05b2708/images/large/760143-2-cellcept-micofenolato-mofetilo-500-mg-50-comprimidos-recubiertos.jpg",
+                "title": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos",
+        "price": 119190,
+        "prices": {
+          "price-list-cl": 119190
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Descubre Cellcept Micofenolato Mofetilo 500 mg, 50 comprimidos recubiertos para el tratamiento eficaz de enfermedades autoinmunes.",
+        "pageKeywords": "#¡REF!",
+        "pageTitle": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;CELLCEPT MICOFENOLATO MOFETILO 500 MG 50 COMPRIMIDOS RECUBIERTOS&lt;/h5&gt;&lt;h5&gt;LABORATORIO: ROCHE ESPECIALIDADES&lt;/h5&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "MICOFENOLATO MOFETIL",
+        "availableForInStorePickup": false,
+        "difarmaPrescriptionModel": "simple",
+        "hasExpressDelivery": false,
+        "healthPrograms": "false",
+        "homeDelivery": true,
+        "isBioequivalent": true,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "ROCHE",
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 2384 por Comprimido",
+        "storePickup": true,
+        "subBrand": "ROCHE",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dwaf9cfe43/images/large/760143-cellcept-micofenolato-mofetilo-500-mg-50-comprimidos-recubiertos.jpg",
+          "ogImageAlt": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos",
+          "ogType": "product",
+          "ogTitle": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos | Cruz Verde",
+          "description": "Descubre Cellcept Micofenolato Mofetilo 500 mg, 50 comprimidos recubiertos para el tratamiento eficaz de enfermedades autoinmunes.",
+          "title": "Cellcept Micofenolato Mofetilo 500 mg 50 Comprimidos Recubiertos | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/760143?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Descubre Cellcept Micofenolato Mofetilo 500 mg, 50 comprimidos recubiertos para el tratamiento eficaz de enfermedades autoinmunes."
+        },
+        "bioequivalentSubCategoryId": "micofenolato-mofetil-500-mg",
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://api.cruzverde.cl/product-service/images/ribbons_bioequivalent.png"
+        ],
+        "presentations": [
+          {
+            "id": "760143"
+          }
+        ],
+        "shareURL": "undefinedpdp/760143.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/inmunoterapia/de/especialidad/760143.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "inmunoterapia"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "PASTEUR",
+        "category": "inmunologia-oncologia-medicamentos-de-especialidad-medicamentos",
+        "id": "258843",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Cortyk Dexametasona 4 mg 10 Comprimidos",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw103734e6/images/large/258843-cortyk-dexametasona-4-mg-10-comprimidos.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw103734e6/images/large/258843-cortyk-dexametasona-4-mg-10-comprimidos.jpg",
+                "title": "Cortyk Dexametasona 4 mg 10 Comprimidos"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Cortyk Dexametasona 4 mg 10 Comprimidos",
+        "price": 8990,
+        "prices": {
+          "price-list-cl": 8990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Compra Cortyk Dexametasona 4 mg, 10 comprimidos. Alivia inflamaciones y alergias de manera efectiva. Consulta a tu médico antes de usar.",
+        "pageKeywords": "remedio, medicamento, 258843",
+        "pageTitle": "Cortyk Dexametasona 4 mg 10 Comprimidos",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;CORTYK DEXAMETASONA 4 MG 10 COMPRIMIDOS&lt;/h5&gt;&lt;h5&gt;LABORATORIO: ESPECIALIDADES SCF&lt;/h5&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "DEXAMETASONA",
+        "availableForInStorePickup": false,
+        "difarmaPrescriptionModel": "restricted",
+        "hasExpressDelivery": false,
+        "homeDelivery": false,
+        "isBioequivalent": false,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "PASTEUR",
+        "oai": false,
+        "prescription": "restricted",
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 899 por Comprimido",
+        "storePickup": false,
+        "subBrand": "PASTEUR",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw103734e6/images/large/258843-cortyk-dexametasona-4-mg-10-comprimidos.jpg",
+          "ogImageAlt": "Cortyk Dexametasona 4 mg 10 Comprimidos",
+          "ogType": "product",
+          "ogTitle": "Cortyk Dexametasona 4 mg 10 Comprimidos | Cruz Verde",
+          "description": "Compra Cortyk Dexametasona 4 mg, 10 comprimidos. Alivia inflamaciones y alergias de manera efectiva. Consulta a tu médico antes de usar.",
+          "title": "Cortyk Dexametasona 4 mg 10 Comprimidos | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/258843?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Compra Cortyk Dexametasona 4 mg, 10 comprimidos. Alivia inflamaciones y alergias de manera efectiva. Consulta a tu médico antes de usar."
+        },
+        "stock": 0,
+        "promotions": [
+          {
+            "archived": false,
+            "assignmentInformation": {
+              "active": true,
+              "activeCampaignAssignments": [
+                {
+                  "campaignId": "Ribbon fantasma Venta presencial",
+                  "creationDate": "2024-10-24T15:00:45.000Z",
+                  "description": "ribbon-venta-presencial",
+                  "enabled": true,
+                  "lastModified": "2024-10-24T15:00:45.000Z",
+                  "promotionId": "ribbonventapresencial",
+                  "schedule": {}
+                }
+              ],
+              "campaignId": "Ribbon fantasma Venta presencial",
+              "enabled": true,
+              "schedule": {},
+              "scheduleType": "campaign",
+              "startDate": "2024-10-24T03:00:00.000Z"
+            },
+            "creationDate": "2024-10-23T23:39:42.000Z",
+            "disableGloballyExcluded": false,
+            "enabled": true,
+            "exclusivity": "no",
+            "id": "ribbonventapresencial",
+            "lastModified": "2025-04-08T14:42:48.000Z",
+            "name": "ribbon-venta-presencial",
+            "promotionClass": "shipping",
+            "badge": "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon_venta_presencial.png",
+            "hasApproachingShippingDiscounts": false,
+            "isClubPromotion": false,
+            "isPaymentPromotion": false,
+            "promotionPar": false,
+            "promotionClassCode": "12",
+            "promotionClassText": "Shipping - With Number of Shipment-Qualifying Products",
+            "promotionId": "ribbonventapresencial"
+          }
+        ],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://beta.cruzverde.cl/on/demandware.static/-/Sites/default/v6dc95e0e5449c15af8bc11866d2c5f4ba667ebac/ribbon_venta_presencial.png"
+        ],
+        "presentations": [
+          {
+            "id": "258843"
+          }
+        ],
+        "shareURL": "undefinedpdp/258843.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/inmunoterapia/de/especialidad/258843.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "inmunoterapia"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "GADOR",
+        "category": "medicamentos-de-especialidad-medicamentos",
+        "id": "159114",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Prograf Tacrolimus 1 mg 100 Cápsulas",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6c01c537/images/large/159114-prograf-tacrolimus-1-mg-100-capsulas.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6c01c537/images/large/159114-prograf-tacrolimus-1-mg-100-capsulas.jpg",
+                "title": "Prograf Tacrolimus 1 mg 100 Cápsulas"
+              },
+              {
+                "_type": "image",
+                "alt": "Prograf Tacrolimus 1 mg 100 Cápsulas",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f6e1d90/images/large/159114-2-prograf-tacrolimus-1-mg-100-capsulas.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f6e1d90/images/large/159114-2-prograf-tacrolimus-1-mg-100-capsulas.jpg",
+                "title": "Prograf Tacrolimus 1 mg 100 Cápsulas"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Prograf Tacrolimus 1 mg 100 Cápsulas",
+        "price": 215990,
+        "prices": {
+          "price-list-cl": 215990
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Compra Prograf Tacrolimus 1 mg, 100 cápsulas para el control del rechazo de trasplantes. Efectivo en el mantenimiento post-transplante.",
+        "pageKeywords": "159114",
+        "pageTitle": "0",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;h5&gt;PROGRAF TACROLIMUS 1 MG 100 Cñ?PSULAS&lt;/h5&gt;&lt;h5&gt;LABORATORIO: GADOR&lt;/h5&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "crueltyFree": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "TACROLIMUS",
+        "availableForInStorePickup": false,
+        "difarmaPrescriptionModel": "simple",
+        "hasExpressDelivery": false,
+        "homeDelivery": true,
+        "isBioequivalent": true,
+        "isMedProduct": true,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "GADOR",
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 2160 por Cápsula",
+        "storePickup": true,
+        "subBrand": "GADOR",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw6c01c537/images/large/159114-prograf-tacrolimus-1-mg-100-capsulas.jpg",
+          "ogImageAlt": "Prograf Tacrolimus 1 mg 100 Cápsulas",
+          "ogType": "product",
+          "ogTitle": "0 | Cruz Verde",
+          "description": "Compra Prograf Tacrolimus 1 mg, 100 cápsulas para el control del rechazo de trasplantes. Efectivo en el mantenimiento post-transplante.",
+          "title": "0 | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/159114?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Compra Prograf Tacrolimus 1 mg, 100 cápsulas para el control del rechazo de trasplantes. Efectivo en el mantenimiento post-transplante."
+        },
+        "bioequivalentSubCategoryId": "tacrolimus-1-mg",
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [
+          "https://api.cruzverde.cl/product-service/images/ribbons_bioequivalent.png"
+        ],
+        "presentations": [
+          {
+            "id": "159114"
+          }
+        ],
+        "shareURL": "undefinedpdp/159114.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/inmunoterapia/de/especialidad/159114.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "inmunoterapia"
+    }
+  ],
+  "vacunas": [
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "MSD ESPECIALIDADES",
+        "id": "292125",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw810a5039/images/large/292125-gardasil-9-vacuna-antivirus-papiloma-inyectable-1-jeringa-prellenada.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw810a5039/images/large/292125-gardasil-9-vacuna-antivirus-papiloma-inyectable-1-jeringa-prellenada.jpg",
+                "title": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+        "price": 133190,
+        "prices": {
+          "price-list-cl": 133190
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+        "pageKeywords": "#¡REF!",
+        "pageTitle": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;¿Para qué enfermedades o condiciones se prescribe este medicamento?&lt;/p&gt;&lt;p&gt;1.1 Niñas y Mujeres&lt;/p&gt;&lt;p&gt;GARDASIL 9 es una vacuna indicada en niñas y mujeres desde los 9 a 45 años de edad para la prevención de cáncer cervical, vulvar, vaginal anal, orofaríngeo y otros cánceres de cabeza y cuello, así como las lesiones precancerosas o displásicas, las verrugas genitales y las infecciones persistentes causadas por el Virus del Papiloma Humano (VPH).&lt;/p&gt;&lt;p&gt;1.2 Niños y Varones&lt;/p&gt;&lt;p&gt;GARDASIL 9 está indicada tanto en niños como en varones desde los 9 a 45 años de edad para la prevención de cáncer anal, orofaríngeo y otros cánceres de cabeza y cuello, lesiones anales precancerosas o displásicas, lesiones genitales externas (incluyendo verrugas genitales); e infecciones persistentes causadas por el VPH.&lt;/p&gt;&lt;p&gt;Para más información, dirigirse al folleto de información del paciente.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;¿Qué precauciones debo tener al usar este medicamento?&lt;/p&gt;&lt;p&gt;La vacuna debe utilizarse como se provee; no es necesario diluirla ni reconstituirla. Se debe utilizar la dosis total recomendada de la vacuna. Para más información, dirigirse al folleto de información del paciente. Se debe contar con orden médica.&lt;br /&gt;&lt;br /&gt;Principio Activo: PROTEÍNA L1 DE VIRUS PAPILOMA HUMANO TIPO (11-16-18-31-33-45-52-58-6) en cantidades 40-60-40-20-20-20-20-20-30 mcg respectivamente.&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica",
+            "content": "&lt;p&gt;Contraindicaciones:&lt;/p&gt;&lt;p&gt;Los individuos que desarrollan síntomas indicadores de hipersensibilidad luego de recibir una dosis de GARDASIL 9 o GARDASIL no deben recibir más dosis de GARDASIL 9. Para más información, dirigirse al folleto de información del paciente.&lt;/p&gt;&lt;p&gt;Reacciones Adversas:&lt;/p&gt;&lt;p&gt;Experiencia en ensayos clínicos. Para más información, dirigirse al folleto de información del paciente.&lt;/p&gt;"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "isFreezerRequired": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "PROTEINA DE VIRUS PAPILOMA HUMANO",
+        "availableForInStorePickup": true,
+        "difarmaPrescriptionModel": "simple",
+        "hasExpressDelivery": false,
+        "healthPrograms": "false",
+        "homeDelivery": false,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "MSD ESPECIALIDADES",
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 13319000 por 100 Comprimido",
+        "storePickup": true,
+        "subBrand": "MSD ESPECIALIDADES",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw810a5039/images/large/292125-gardasil-9-vacuna-antivirus-papiloma-inyectable-1-jeringa-prellenada.jpg",
+          "ogImageAlt": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+          "ogType": "product",
+          "ogTitle": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada | Cruz Verde",
+          "description": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada",
+          "title": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/292125?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Gardasil 9 Vacuna Antivirus Papiloma Inyectable 1 Jeringa Prellenada"
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "292125"
+          }
+        ],
+        "shareURL": "undefinedpdp/292125.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/vacunas/de/especialidad/292125.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "vacunas"
+    },
+    {
+      "productData": {
+        "type": "PRODUCT",
+        "brand": "CSL BEHRING ESPECIALIDADES",
+        "category": "vacunas-medicamentos-de-especialidad-medicamentos",
+        "id": "388649",
+        "imageGroups": [
+          {
+            "_type": "image_group",
+            "images": [
+              {
+                "_type": "image",
+                "alt": "Rhophylac Solución Inyectable 300 mcg / 2 ml",
+                "dis_base_link": "https://beta.cruzverde.cl/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f095c08/images/large/388649-2.jpg",
+                "link": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f095c08/images/large/388649-2.jpg",
+                "title": "Rhophylac Solución Inyectable 300 mcg / 2 ml"
+              }
+            ],
+            "view_type": "large"
+          }
+        ],
+        "name": "Rhophylac Solución Inyectable 300 mcg / 2 ml",
+        "price": 72590,
+        "prices": {
+          "price-list-cl": 72590
+        },
+        "priceCurrency": "CLP",
+        "minOrderQuantity": 1,
+        "pageDescription": "Blíster con Jeringa prellenada con agua para inyección, sistema BD Hypak SCF (Sterile, Clean and ready to Fill) de vidrio tipo I sellado con goma de clorobutilo, sistema de bloqueo Luer Lock y émbolo de goma de clorobutilo libre de látex.",
+        "pageKeywords": "Inmunoglubulina AntiD, Inmunoglubulina Anti-RHO,55119, inyectable",
+        "pageTitle": "Rhophylac Solución Inyectable 300 mcg / 2 ml",
+        "tabs": [
+          {
+            "title": "Beneficios y Usos",
+            "content": "&lt;p&gt;Indicación: Profilaxis de la inmunización Rh (D) en mujeres Rh (D) negativas Profilaxis preparto planificada: á Aborto o amenaza de aborto, embarazo ectópico o mola hidatiforme á Hemorragia transplacentaria (HTP) como consecuencia de una hemorragia preparto (HPP), amniocentesis, biopsia de vellosidades coriónicas o procedimientos de manipulación obstétrica, como versión cefálica externa o en trauma abdominal. Profilaxis postparto: á Parto de bebés Rh(D) positivos (D, Ddébil, Dparcial) Se asume un embarazo Rh (D) incompatible si el feto/bebé es Rh (D) positivo o Rh (D) desconocido, o si el padre es Rh (D) positivo o Rh (D) desconocido. Tratamiento de personas Rh (D) negativas después de recibir transfusiones incompatibles de sangre Rh (D) positiva u otros productos que contengan eritrocitos&lt;/p&gt;"
+          },
+          {
+            "title": "Ficha técnica"
+          },
+          {
+            "title": "Aviso Legal",
+            "content": "&lt;p&gt;Dispensación sujeta a normativa sanitaria.&lt;/p&gt;&lt;p&gt;Precio válido sólo para ventas a través de nuestro sitio web, no incluye costo de despacho.&lt;/p&gt;&lt;p&gt;Infórmate sobre la disponibilidad del o los productos solicitados en la herramienta “&lt;em&gt;&lt;u&gt;Ver Disponibilidad en Locales&lt;/u&gt;&lt;/em&gt;”. La disponibilidad de los productos en nuestra plataforma web está sujeta a la reposición de los mismos en nuestros locales, en particular aquella farmacia física vinculada con la compra en línea. Revisa la información disponible en ésta plataforma del stock de nuestros productos en otros los locales de la cadena en caso que quieras acceder a ellos en forma presencial, información que se actualiza cada hora. Para más información, llamar al número 800 802 800, teléfonos celulares al *7700 o al Servicio de Atención al Cliente de Farmacias Cruz Verde S.A.&lt;/p&gt;"
+          }
+        ],
+        "showModalContraceptive": false,
+        "skipPrescription": false,
+        "isFreezerRequired": true,
+        "sorCommitment": 1,
+        "sorProduct": false,
+        "activeIngredient": "INMUNOGLOBULINA HUMANA ANTI RHO",
+        "availableForInStorePickup": true,
+        "difarmaPrescriptionModel": "simple",
+        "format": "1-unidad",
+        "hasExpressDelivery": false,
+        "homeDelivery": false,
+        "isBioequivalent": false,
+        "isMedProduct": false,
+        "isMobileRecommendationModalOnAddCartEnabled": true,
+        "laboratory": "CSL BEHRING ESPECIALIDADES",
+        "oai": false,
+        "prescription": "simple",
+        "productPlus": false,
+        "pum": "Precio por Unidad Fraccionada: $ 72590 por mL",
+        "storePickup": true,
+        "subBrand": "CSL BEHRING ESPECIALIDADES",
+        "metaTags": {
+          "ogImage": "https://beta.cruzverde.cl/on/demandware.static/-/Sites-masterCatalog_Chile/default/dw3f095c08/images/large/388649-2.jpg",
+          "ogImageAlt": "Rhophylac Solución Inyectable 300 mcg / 2 ml",
+          "ogType": "product",
+          "ogTitle": "Rhophylac Solución Inyectable 300 mcg / 2 ml | Cruz Verde",
+          "description": "Blíster con Jeringa prellenada con agua para inyección, sistema BD Hypak SCF (Sterile, Clean and ready to Fill) de vidrio tipo I sellado con goma de clorobutilo, sistema de bloqueo Luer Lock y émbolo de goma de clorobutilo libre de látex.",
+          "title": "Rhophylac Solución Inyectable 300 mcg / 2 ml | Cruz Verde",
+          "ogUrl": "https://beta.cruzverde.cl/s/Chile/dw/shop/v19_1/products/388649?expand=availability,+bundled_products,+links,+promotions,+options,+images,+prices,+variations,+set_products,+recommendations&inventory_ids=&locale=es-CL",
+          "ogDescription": "Blíster con Jeringa prellenada con agua para inyección, sistema BD Hypak SCF (Sterile, Clean and ready to Fill) de vidrio tipo I sellado con goma de clorobutilo, sistema de bloqueo Luer Lock y émbolo de goma de clorobutilo libre de látex."
+        },
+        "stock": 0,
+        "promotions": [],
+        "appliedPromotions": {},
+        "ribbons": [],
+        "presentations": [
+          {
+            "id": "388649"
+          }
+        ],
+        "shareURL": "undefinedpdp/388649.html"
+      },
+      "recommendations": null,
+      "setProducts": null,
+      "url": "https://www.cruzverde.cl/medicamentos/vacunas/de/especialidad/388649.html",
+      "categoria": "medicamentos-de-especialidad",
+      "subcategoria": "vacunas"
+    }
+  ]
+}

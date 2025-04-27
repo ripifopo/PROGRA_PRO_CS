@@ -1,0 +1,181 @@
+[
+  {
+    "name": "comprimido",
+    "synonyms": [
+      "comprimido",
+      "comprimidos",
+      "tableta",
+      "tabletas",
+      "comp.",
+      "comps."
+    ]
+  },
+  {
+    "name": "cápsula",
+    "synonyms": [
+      "cápsula",
+      "capsula",
+      "cápsulas",
+      "capsulas",
+      "cap.",
+      "caps."
+    ]
+  },
+  {
+    "name": "inyección",
+    "synonyms": [
+      "inyección",
+      "inyeccion",
+      "inyectable",
+      "inyecciones",
+      "ampolla",
+      "ampollas",
+      "inj.",
+      "amp.",
+      "vacuna",
+      "vacunas"
+    ]
+  },
+  {
+    "name": "jarabe",
+    "synonyms": [
+      "jarabe",
+      "solución oral",
+      "solucion oral",
+      "líquido",
+      "liquido",
+      "suspensión",
+      "suspension",
+      "sol. oral",
+      "susp. oral"
+    ]
+  },
+  {
+    "name": "sublingual",
+    "synonyms": [
+      "sublingual",
+      "tableta sublingual",
+      "comp. sublingual"
+    ]
+  },
+  {
+    "name": "efervescente",
+    "synonyms": [
+      "efervescente",
+      "comprimido efervescente",
+      "tablet efervescente"
+    ]
+  },
+  {
+    "name": "óvulo",
+    "synonyms": [
+      "óvulo",
+      "ovulo",
+      "óvulos",
+      "ovulos"
+    ]
+  },
+  {
+    "name": "crema",
+    "synonyms": [
+      "crema",
+      "tópico",
+      "topico",
+      "uso tópico",
+      "uso topico",
+      "ungüento",
+      "unguento",
+      "pomada"
+    ]
+  },
+  {
+    "name": "gotas",
+    "synonyms": [
+      "gotas",
+      "solución oftálmica",
+      "solucion oftalmica",
+      "solución nasal",
+      "solucion nasal",
+      "gotas orales"
+    ]
+  },
+  {
+    "name": "parche",
+    "synonyms": [
+      "parche",
+      "parches",
+      "adhesivo",
+      "adhesivos"
+    ]
+  },
+  {
+    "name": "spray",
+    "synonyms": [
+      "spray",
+      "aerosol",
+      "pulverizador",
+      "nebulizador"
+    ]
+  },
+  {
+    "name": "gel",
+    "synonyms": [
+      "gel",
+      "gel tópico",
+      "gel topico",
+      "gel oral"
+    ]
+  },
+  {
+    "name": "polvo",
+    "synonyms": [
+      "polvo",
+      "sobres",
+      "granulado"
+    ]
+  },
+  {
+    "name": "emulsión",
+    "synonyms": [
+      "emulsión",
+      "emulsion"
+    ]
+  },
+  {
+    "name": "enema",
+    "synonyms": [
+      "enema"
+    ]
+  },
+  {
+    "name": "solución",
+    "synonyms": [
+      "solución",
+      "solucion",
+      "solución inyectable",
+      "solucion inyectable",
+      "sol. inyectable"
+    ]
+  },
+  {
+    "name": "spray nasal",
+    "synonyms": [
+      "spray nasal",
+      "aerosol nasal"
+    ]
+  },
+  {
+    "name": "colirio",
+    "synonyms": [
+      "colirio"
+    ]
+  },
+  {
+    "name": "suero",
+    "synonyms": [
+      "suero",
+      "solución intravenosa",
+      "solucion intravenosa"
+    ]
+  }
+]
