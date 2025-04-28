@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { toast } from 'react-toastify';
-import { FaSearch, FaTag, FaMapMarkerAlt, FaSync } from 'react-icons/fa';
-import { useLoading } from '../../context/LoadingContext.tsx'; // Hook del contexto de carga
+import { FaTag, FaMapMarkerAlt, FaSync } from 'react-icons/fa';
+import { useLoading } from '../../context/LoadingContext.tsx'; // Hook de carga global
 
-// Regiones y comunas predefinidas para efectos de filtrado
+// Regiones y comunas predefinidas para filtro (perfil del usuario)
 const REGIONES_COMUNAS: Record<string, string[]> = {
   'Región Metropolitana': ['Santiago', 'Providencia', 'Las Condes', 'Maipú', 'Puente Alto'],
   'Valparaíso': ['Valparaíso', 'Viña del Mar', 'Quilpué'],
@@ -16,89 +16,127 @@ const REGIONES_COMUNAS: Record<string, string[]> = {
   'Antofagasta': ['Antofagasta', 'Calama'],
 };
 
-// Lista estática simulada de medicamentos
-const medicines = [
-  { name: 'Paracetamol 500mg', pharmacy: 'Cruz Verde', price: 990, image: 'https://i.imgur.com/Nz8UvBX.png' },
-  { name: 'Ibuprofeno 400mg', pharmacy: 'Salcobrand', price: 1250, image: 'https://i.imgur.com/J3oOXYb.png' },
-  { name: 'Loratadina 10mg', pharmacy: 'Ahumada', price: 850, image: 'https://i.imgur.com/IX1Tm9B.png' },
-  { name: 'Omeprazol 20mg', pharmacy: 'Cruz Verde', price: 1350, image: 'https://i.imgur.com/hChF4xO.png' },
-  { name: 'Amoxicilina 500mg', pharmacy: 'Salcobrand', price: 1890, image: 'https://i.imgur.com/dZzSukG.png' },
-];
-
 export default function ComparatorPage() {
   const { setLoading } = useLoading();
 
-  // Estados para filtros y datos del perfil del usuario
+  // Estados para filtros
   const [region, setRegion] = useState('');
   const [comuna, setComuna] = useState('');
+  const [pharmacyFilter, setPharmacyFilter] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('');
   const [search, setSearch] = useState('');
-  const [pharmacy, setPharmacy] = useState('');
   const [sort, setSort] = useState<'asc' | 'desc'>('asc');
+
+  // Estados de datos
   const [profileComuna, setProfileComuna] = useState('');
   const [profileRegion, setProfileRegion] = useState('');
-  const [ready, setReady] = useState(false); // Controla la visualización inicial
+  const [allMedicines, setAllMedicines] = useState<any[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [ready, setReady] = useState(false);
 
-  // Al cargar la página, se obtienen los datos del perfil
+  // Carga inicial de perfil y medicamentos
   useEffect(() => {
-    setLoading(true);
-    const profile = localStorage.getItem('userProfile');
-    if (profile) {
-      const parsed = JSON.parse(profile);
-      setProfileComuna(parsed.comuna);
-      setProfileRegion(parsed.region);
-    }
+    const loadData = async () => {
+      setLoading(true);
 
-    // Se utiliza un pequeño retardo para permitir mostrar el loader visual
-    setTimeout(() => {
-      setReady(true);
-      setLoading(false);
-    }, 300);
+      const profile = localStorage.getItem('userProfile');
+      if (profile) {
+        const parsed = JSON.parse(profile);
+        setProfileComuna(parsed.comuna);
+        setProfileRegion(parsed.region);
+      }
+
+      try {
+        const res = await fetch('/api/medicines');
+        const pharmacies = await res.json();
+
+        const flatMedicines: any[] = [];
+
+        pharmacies.forEach((pharmacy: any) => {
+          const pharmacyName = pharmacy.pharmacy;
+          const pharmacyCategories = pharmacy.categories || {};
+
+          for (const [category, meds] of Object.entries(pharmacyCategories)) {
+            (meds as any[]).forEach((med) => {
+              flatMedicines.push({
+                ...med,
+                pharmacy: pharmacyName,
+                category,
+              });
+            });
+          }
+        });
+
+        setAllMedicines(flatMedicines);
+
+        // Extrae todas las categorías únicas
+        const allCategories = new Set(flatMedicines.map((m) => m.category));
+        setCategories(Array.from(allCategories));
+      } catch (error) {
+        console.error('Error cargando medicamentos:', error);
+        toast.error('Error al cargar medicamentos');
+      } finally {
+        setTimeout(() => {
+          setReady(true);
+          setLoading(false);
+        }, 300);
+      }
+    };
+
+    loadData();
   }, []);
 
-  // Si aún no está listo, no se renderiza nada (evita el salto visual)
   if (!ready) return null;
 
-  // Reinicia todos los filtros activos
+  // Reinicia filtros
   const resetFilters = () => {
     setSearch('');
-    setPharmacy('');
+    setPharmacyFilter('');
+    setCategoryFilter('');
     setSort('asc');
     toast.info('Filtros reiniciados');
   };
 
-  // Aplica filtros de búsqueda y orden
-  const filtered = medicines
+  // Aplica los filtros y el orden
+  const filteredMedicines = allMedicines
     .filter((m) =>
       m.name.toLowerCase().includes(search.toLowerCase()) &&
-      (pharmacy ? m.pharmacy === pharmacy : true)
+      (pharmacyFilter ? m.pharmacy === pharmacyFilter : true) &&
+      (categoryFilter ? m.category === categoryFilter : true)
     )
-    .sort((a, b) => (sort === 'asc' ? a.price - b.price : b.price - a.price));
+    .sort((a, b) => {
+      const priceA = parseInt((a.price || '0').replace(/[^\d]/g, ''), 10);
+      const priceB = parseInt((b.price || '0').replace(/[^\d]/g, ''), 10);
+      return sort === 'asc' ? priceA - priceB : priceB - priceA;
+    });
 
-  // Calcula el precio mínimo para destacar como "Mejor precio"
-  const minPrice = Math.min(...medicines.map((m) => m.price));
+  const minPrice = Math.min(
+    ...allMedicines.map((m) => parseInt((m.price || '0').replace(/[^\d]/g, ''), 10))
+  );
 
   return (
     <div className="container py-5">
+      {/* Título */}
       <div className="text-center mb-4">
         <h1 className="display-5 fw-bold text-success">Comparador de Medicamentos</h1>
-        <p className="text-muted">Busca y compara precios en farmacias de una comuna determinada</p>
+        <p className="text-muted">Busca y compara precios en farmacias de tu comuna</p>
       </div>
 
-      {/* Si el perfil tiene región y comuna, se muestra como contexto */}
+      {/* Perfil cargado */}
       {profileComuna && profileRegion && (
         <p className="text-center text-muted mb-3">
           Perfil: <strong>{profileComuna}, {profileRegion}</strong>
         </p>
       )}
 
-      {/* Filtro de región y comuna */}
+      {/* Filtro por Región y Comuna */}
       <div className="row justify-content-center mb-3">
         <div className="col-md-4 mb-2">
           <select
             className="form-select"
             value={region}
             onChange={(e) => {
-              setLoading(true); // Solo región activa el loading
+              setLoading(true);
               setRegion(e.target.value);
               setComuna('');
               setTimeout(() => setLoading(false), 400);
@@ -125,13 +163,20 @@ export default function ComparatorPage() {
         </div>
       </div>
 
-      {/* Filtros dinámicos adicionales */}
+      {/* Filtros de farmacia, categoría y orden */}
       <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
-        <select className="form-select w-auto" value={pharmacy} onChange={(e) => setPharmacy(e.target.value)}>
+        <select className="form-select w-auto" value={pharmacyFilter} onChange={(e) => setPharmacyFilter(e.target.value)}>
           <option value="">Todas las farmacias</option>
+          <option value="Farmacia Ahumada">Farmacia Ahumada</option>
           <option value="Cruz Verde">Cruz Verde</option>
           <option value="Salcobrand">Salcobrand</option>
-          <option value="Ahumada">Ahumada</option>
+        </select>
+
+        <select className="form-select w-auto" value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
+          <option value="">Todas las categorías</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
         </select>
 
         <select className="form-select w-auto" value={sort} onChange={(e) => setSort(e.target.value as 'asc' | 'desc')}>
@@ -148,23 +193,16 @@ export default function ComparatorPage() {
         </button>
       </div>
 
-      {/* Información de filtro aplicado */}
-      {region && comuna && (
-        <p className="text-center text-muted mb-4">
-          Mostrando resultados para: <span className="text-success fw-semibold">{comuna}, {region}</span>
-        </p>
-      )}
-
-      {/* Lista de medicamentos según filtros */}
+      {/* Resultado de medicamentos */}
       <div className="row g-4">
-        {filtered.length === 0 ? (
+        {filteredMedicines.length === 0 ? (
           <p className="text-center text-muted">No se encontraron medicamentos con los filtros aplicados.</p>
         ) : (
-          filtered.map((med, index) => (
+          filteredMedicines.map((med, index) => (
             <div key={index} className="col-sm-6 col-lg-4">
               <div className="card h-100 shadow-sm text-center border-0">
                 <img
-                  src={med.image}
+                  src={med.image || "https://via.placeholder.com/150"}
                   alt={med.name}
                   className="card-img-top p-3"
                   style={{ height: '120px', objectFit: 'contain' }}
@@ -172,8 +210,8 @@ export default function ComparatorPage() {
                 <div className="card-body">
                   <h5 className="card-title text-success fw-bold">{med.name}</h5>
                   <p className="card-subtitle text-muted">{med.pharmacy}</p>
-                  <p className="fs-5 fw-semibold text-dark">${med.price}</p>
-                  {med.price === minPrice && (
+                  <p className="fs-5 fw-semibold text-dark">{med.price}</p>
+                  {parseInt((med.price || '0').replace(/[^\d]/g, ''), 10) === minPrice && (
                     <span className="badge bg-success text-light d-inline-flex align-items-center gap-1">
                       <FaTag /> Mejor precio
                     </span>
