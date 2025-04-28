@@ -348,16 +348,33 @@
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     }
   },
+  "remote": {
+    "https://deno.land/std@0.224.0/dotenv/mod.ts": "0180eaeedaaf88647318811cdaa418cc64dc51fb08354f91f5f480d0a1309f7d",
+    "https://deno.land/std@0.224.0/dotenv/parse.ts": "09977ff88dfd1f24f9973a338f0f91bbdb9307eb5ff6085446e7c423e4c7ba0c",
+    "https://deno.land/std@0.224.0/dotenv/stringify.ts": "275da322c409170160440836342eaa7cf012a1d11a7e700d8ca4e7f2f8aa4615"
+  },
   "workspace": {
+    "dependencies": [
+      "npm:mongodb@*"
+    ],
     "packageJson": {
       "dependencies": [
+        "npm:@mapbox/mapbox-gl-directions@^4.3.1",
+        "npm:@types/mapbox-gl@^3.4.1",
         "npm:@types/node@20",
         "npm:@types/react-dom@19",
         "npm:@types/react@19",
+        "npm:bcryptjs@^3.0.2",
         "npm:bootstrap@^5.3.3",
+        "npm:dotenv@^16.4.7",
+        "npm:jose@^6.0.10",
+        "npm:mapbox-gl@^3.11.0",
+        "npm:mongodb@^6.15.0",
         "npm:next@15.2.4",
         "npm:react-bootstrap-icons@^1.11.5",
         "npm:react-dom@19",
+        "npm:react-icons@^5.5.0",
+        "npm:react-toastify@^11.0.5",
         "npm:react@19",
         "npm:typescript@5"
       ]

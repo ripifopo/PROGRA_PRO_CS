@@ -1,5 +1,8 @@
 {
   "imports": {
     "mongodb": "npm:mongodb"
+  },
+  "tasks": {
+    "insert-medicines": "deno run --allow-read --allow-env --allow-net src/lib/insertMedicines.ts"
   }
 }
