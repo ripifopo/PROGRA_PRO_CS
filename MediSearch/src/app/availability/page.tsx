@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useLoading } from '../../context/LoadingContext.tsx';
+import { GeoAlt } from 'react-bootstrap-icons';
 
-// Token de Mapbox para visualizar el mapa
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
 export default function AvailabilityPage() {
@@ -18,7 +18,6 @@ export default function AvailabilityPage() {
   const routeLayerId = 'route';
 
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [mapVisible, setMapVisible] = useState(false);
   const [searchAddress, setSearchAddress] = useState('');
   const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
   const { setLoading } = useLoading();
@@ -159,27 +158,25 @@ export default function AvailabilityPage() {
     if (mapRef.current) mapRef.current.setStyle(getMapStyle());
   }, [isDarkMode]);
 
-  useEffect(() => {
-    if (mapRef.current && userCoords) centerMap(userCoords);
-  }, [mapVisible]);
-
   return (
-    <div className="container py-4">
-      <div className="mb-3 d-flex justify-content-between align-items-center">
-        <button className="btn btn-outline-dark" onClick={() => location.href = '/comparator'}>
-          ← Volver al Comparador
-        </button>
-        {userCoords && (
-          <button className="btn btn-success" onClick={goToUserLocation}>
-            Volver a mi ubicación
-          </button>
-        )}
-      </div>
+    <div className="py-5 text-center">
+      <div className="container">
+        <GeoAlt size={60} className="text-primary mb-3" />
+        <h1 className="display-5 fw-bold text-dark mb-2">Encuentra farmacias cercanas</h1>
+        <p className="text-muted mb-4">¿Necesitas un medicamento? ¡Busca y compara farmacias cerca de ti!</p>
 
-      <div className="text-center mb-3">
-        <h3 className="fw-bold text-dark">Farmacias Cercanas</h3>
-        <p className="text-muted mb-3">Visualiza tu ubicación actual o busca otra dirección</p>
-        <div className="d-flex justify-content-center gap-2 mb-2">
+        <div className="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+          <a href="/comparator" className="btn btn-success btn-lg shadow d-flex align-items-center gap-2">
+            Comparar Medicamentos
+          </a>
+          {userCoords && (
+            <button className="btn btn-outline-primary btn-lg shadow" onClick={goToUserLocation}>
+              Volver a mi ubicación
+            </button>
+          )}
+        </div>
+
+        <div className="d-flex justify-content-center gap-2 mb-3 flex-wrap">
           <input
             type="text"
             className="form-control w-50"
@@ -190,7 +187,8 @@ export default function AvailabilityPage() {
           <button className="btn btn-outline-success" onClick={handleSearch}>Buscar</button>
           <button className="btn btn-outline-danger" onClick={handleCancel}>Cancelar</button>
         </div>
-        <div className="form-check form-switch d-flex justify-content-center align-items-center gap-2">
+
+        <div className="form-check form-switch d-flex justify-content-center align-items-center gap-2 mb-4">
           <input
             className="form-check-input"
             type="checkbox"
@@ -202,21 +200,16 @@ export default function AvailabilityPage() {
         </div>
       </div>
 
-      <div className="text-center mb-3">
-        <button className="btn btn-success px-4 rounded-pill shadow-sm" onClick={() => setMapVisible(!mapVisible)}>
-          {mapVisible ? 'Minimizar Mapa' : 'Ampliar Mapa'}
-        </button>
-      </div>
-
       <div
         ref={mapContainerRef}
-        className="w-100 mx-auto"
+        className="w-100 mt-4"
         style={{
-          height: mapVisible ? '70vh' : '300px',
+          height: '70vh',
           borderRadius: '1rem',
           overflow: 'hidden',
-          transition: 'all 0.4s ease',
+          transition: 'opacity 0.5s ease',
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          opacity: 1,
         }}
       />
     </div>
