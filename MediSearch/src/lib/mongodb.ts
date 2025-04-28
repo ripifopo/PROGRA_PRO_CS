@@ -28,3 +28,6 @@ clientPromise = global._mongoClientPromise;
 export const usersCollection: Promise<Collection> = clientPromise.then(client =>
   client.db("medisearch").collection("users")
 );
+export const medicinesCollection: Promise<Collection> = clientPromise.then(client =>
+  client.db("medisearch").collection("medicines")
+);
