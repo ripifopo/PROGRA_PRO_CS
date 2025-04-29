@@ -5,13 +5,13 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { useLoading } from '../../../context/LoadingContext.tsx'; // Hook del sistema de carga
+import { useLoading } from '../../../context/LoadingContext.tsx';
 
 export default function RegisterPage() {
   const router = useRouter();
-  const { setLoading } = useLoading(); // Hook para activar y desactivar el loader
+  const { setLoading } = useLoading();
 
-  // Estado para almacenar los datos del formulario
+  // Estado que almacena los datos del formulario de registro
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -22,7 +22,7 @@ export default function RegisterPage() {
     comuna: ''
   });
 
-  // Este efecto intenta obtener automáticamente la región del usuario
+  // Obtiene la región automáticamente usando geolocalización del navegador
   useEffect(() => {
     if (!navigator.geolocation) {
       toast.error('Geolocalización no soportada por tu navegador');
@@ -49,12 +49,12 @@ export default function RegisterPage() {
     );
   }, []);
 
-  // Esta función actualiza el estado cada vez que el usuario escribe
+  // Actualiza el estado a medida que el usuario completa los campos
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Esta función valida todos los campos antes del envío
+  // Valida que todos los campos cumplan las reglas antes de registrar
   const validateForm = () => {
     const { email, password, name, lastname, birthday, region, comuna } = formData;
 
@@ -82,12 +82,12 @@ export default function RegisterPage() {
     return true;
   };
 
-  // Esta función se ejecuta al enviar el formulario
+  // Envía el formulario al servidor para crear una nueva cuenta
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setLoading(true); // Activa la pantalla de carga
+    setLoading(true);
 
     try {
       const res = await fetch('/api/auth/register', {
@@ -99,13 +99,12 @@ export default function RegisterPage() {
       const result = await res.json();
 
       if (res.ok) {
+        // Al registrar correctamente, se guarda email y contraseña en localStorage
         toast.success("Registro exitoso.");
-
         localStorage.setItem('lastRegister', JSON.stringify({
           email: formData.email,
           password: formData.password
         }));
-
         router.push('/auth/login');
       } else {
         toast.error(result.message || "Error al registrar.");
@@ -113,33 +112,96 @@ export default function RegisterPage() {
     } catch {
       toast.error("Error en el servidor.");
     } finally {
-      setLoading(false); // Desactiva la pantalla de carga
+      setLoading(false);
     }
   };
 
+  // Renderizado de la página de registro
   return (
     <main className="min-vh-100 d-flex justify-content-center align-items-center">
+      {/* Formulario principal de registro */}
       <form onSubmit={handleSubmit} className="w-100 px-3" style={{ maxWidth: '500px' }}>
         <h2 className="text-center mb-4">Registro de Usuario</h2>
 
-        <input className="form-control mb-3" name="email" type="email" placeholder="Correo electrónico" value={formData.email} onChange={handleChange} />
-        <input className="form-control mb-3" name="password" type="password" placeholder="Contraseña" value={formData.password} onChange={handleChange} />
-        <input className="form-control mb-3" name="name" placeholder="Nombre" value={formData.name} onChange={handleChange} />
-        <input className="form-control mb-3" name="lastname" placeholder="Apellido" value={formData.lastname} onChange={handleChange} />
-        <input className="form-control mb-3" name="birthday" type="date" placeholder="Fecha de nacimiento" value={formData.birthday} onChange={handleChange} />
-        <input className="form-control mb-3" name="comuna" placeholder="Comuna" value={formData.comuna} onChange={handleChange} />
-        <input className="form-control mb-4" name="region" placeholder="Región" value={formData.region} readOnly />
+        {/* Campo para el correo electrónico */}
+        <input
+          className="form-control mb-3"
+          name="email"
+          type="email"
+          placeholder="Correo electrónico"
+          value={formData.email}
+          onChange={handleChange}
+        />
 
+        {/* Campo para la contraseña */}
+        <input
+          className="form-control mb-3"
+          name="password"
+          type="password"
+          placeholder="Contraseña"
+          value={formData.password}
+          onChange={handleChange}
+        />
+
+        {/* Campo para el nombre */}
+        <input
+          className="form-control mb-3"
+          name="name"
+          placeholder="Nombre"
+          value={formData.name}
+          onChange={handleChange}
+        />
+
+        {/* Campo para el apellido */}
+        <input
+          className="form-control mb-3"
+          name="lastname"
+          placeholder="Apellido"
+          value={formData.lastname}
+          onChange={handleChange}
+        />
+
+        {/* Campo para la fecha de nacimiento */}
+        <input
+          className="form-control mb-3"
+          name="birthday"
+          type="date"
+          placeholder="Fecha de nacimiento"
+          value={formData.birthday}
+          onChange={handleChange}
+        />
+
+        {/* Campo para la comuna */}
+        <input
+          className="form-control mb-3"
+          name="comuna"
+          placeholder="Comuna"
+          value={formData.comuna}
+          onChange={handleChange}
+        />
+
+        {/* Campo para la región (sólo lectura si es autocompletada) */}
+        <input
+          className="form-control mb-4"
+          name="region"
+          placeholder="Región"
+          value={formData.region}
+          readOnly
+        />
+
+        {/* Botón de registro */}
         <button type="submit" className="btn w-100" style={{ backgroundColor: '#218754', color: '#fff' }}>
           Registrarse
         </button>
 
+        {/* Separador visual entre registro e inicio de sesión */}
         <div className="text-center mt-3">
           <hr />
           <span className="px-2 text-muted">O</span>
           <hr />
         </div>
 
+        {/* Enlace para redirigir al login si el usuario ya tiene cuenta */}
         <div className="text-center mt-2">
           <a href="/auth/login" className="text-decoration-none">¿Ya tienes cuenta? Inicia sesión</a>
         </div>
