@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useLoading } from '../../../context/LoadingContext';
+import { useLoading } from '../../../context/LoadingContext.tsx';
 
 export default function CategoriesPage() {
   const { setLoading } = useLoading();

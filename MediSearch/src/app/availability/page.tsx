@@ -6,33 +6,39 @@ import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useLoading } from '../../context/LoadingContext.tsx';
+import { GeoAlt } from 'react-bootstrap-icons';
 
-// Token de Mapbox para visualizar el mapa
+// Se establece el token de acceso de Mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
 export default function AvailabilityPage() {
+  // Referencias para el contenedor del mapa y los elementos de Mapbox
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markerRef = useRef<mapboxgl.Marker | null>(null);
   const destinationMarkerRef = useRef<mapboxgl.Marker | null>(null);
   const routeLayerId = 'route';
 
+  // Estados locales para modo oscuro, búsqueda de dirección y coordenadas del usuario
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [mapVisible, setMapVisible] = useState(false);
   const [searchAddress, setSearchAddress] = useState('');
   const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
   const { setLoading } = useLoading();
 
+  // Retorna el estilo correspondiente de Mapbox basado en el estado de modo oscuro
   const getMapStyle = () => isDarkMode ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/streets-v12';
 
+  // Centra el mapa en unas coordenadas dadas
   const centerMap = (coords: [number, number]) => {
     mapRef.current?.flyTo({ center: coords, zoom: 14 });
   };
 
+  // Centra el mapa en la ubicación actual del usuario
   const goToUserLocation = () => {
     if (userCoords) centerMap(userCoords);
   };
 
+  // Crea un marcador en el mapa. Puede ser para el usuario o para un destino
   const createMarker = (coords: [number, number], isDestination = false) => {
     const el = document.createElement('div');
     el.style.width = '18px';
@@ -58,6 +64,7 @@ export default function AvailabilityPage() {
     }
   };
 
+  // Dibuja una ruta entre dos puntos usando la API de direcciones de Mapbox
   const drawRoute = async (from: [number, number], to: [number, number]) => {
     const query = `https://api.mapbox.com/directions/v5/mapbox/driving/${from[0]},${from[1]};${to[0]},${to[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`;
     const res = await fetch(query);
@@ -96,6 +103,7 @@ export default function AvailabilityPage() {
     });
   };
 
+  // Maneja la búsqueda de una dirección y traza la ruta
   const handleSearch = async () => {
     if (!searchAddress || !userCoords) return;
     setLoading(true);
@@ -115,6 +123,7 @@ export default function AvailabilityPage() {
     }
   };
 
+  // Maneja la cancelación de una búsqueda eliminando el destino y la ruta
   const handleCancel = () => {
     destinationMarkerRef.current?.remove();
     destinationMarkerRef.current = null;
@@ -125,6 +134,7 @@ export default function AvailabilityPage() {
     goToUserLocation();
   };
 
+  // Inicializa el mapa y solicita la ubicación actual del usuario
   useEffect(() => {
     setLoading(true);
 
@@ -155,31 +165,38 @@ export default function AvailabilityPage() {
     );
   }, []);
 
+  // Cambia el estilo del mapa cuando se activa o desactiva el modo oscuro
   useEffect(() => {
     if (mapRef.current) mapRef.current.setStyle(getMapStyle());
   }, [isDarkMode]);
 
-  useEffect(() => {
-    if (mapRef.current && userCoords) centerMap(userCoords);
-  }, [mapVisible]);
-
+  // Renderizado de la página
   return (
-    <div className="container py-4">
-      <div className="mb-3 d-flex justify-content-between align-items-center">
-        <button className="btn btn-outline-dark" onClick={() => location.href = '/comparator'}>
-          ← Volver al Comparador
-        </button>
-        {userCoords && (
-          <button className="btn btn-success" onClick={goToUserLocation}>
-            Volver a mi ubicación
-          </button>
-        )}
-      </div>
+    <div className="py-5 text-center">
+      <div className="container">
+        {/* Ícono decorativo de ubicación */}
+        <GeoAlt size={60} className="text-primary mb-3" />
 
-      <div className="text-center mb-3">
-        <h3 className="fw-bold text-dark">Farmacias Cercanas</h3>
-        <p className="text-muted mb-3">Visualiza tu ubicación actual o busca otra dirección</p>
-        <div className="d-flex justify-content-center gap-2 mb-2">
+        {/* Título principal */}
+        <h1 className="display-5 fw-bold text-dark mb-2">Encuentra farmacias cercanas</h1>
+
+        {/* Slogan descriptivo */}
+        <p className="text-muted mb-4">¿Necesitas un medicamento? ¡Busca y compara farmacias cerca de ti!</p>
+
+        {/* Botones de acción principales */}
+        <div className="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+          <a href="/comparator" className="btn btn-success btn-lg shadow d-flex align-items-center gap-2">
+            Comparar Medicamentos
+          </a>
+          {userCoords && (
+            <button className="btn btn-outline-primary btn-lg shadow" onClick={goToUserLocation}>
+              Volver a mi ubicación
+            </button>
+          )}
+        </div>
+
+        {/* Barra de búsqueda de direcciones */}
+        <div className="d-flex justify-content-center gap-2 mb-3 flex-wrap">
           <input
             type="text"
             className="form-control w-50"
@@ -190,7 +207,9 @@ export default function AvailabilityPage() {
           <button className="btn btn-outline-success" onClick={handleSearch}>Buscar</button>
           <button className="btn btn-outline-danger" onClick={handleCancel}>Cancelar</button>
         </div>
-        <div className="form-check form-switch d-flex justify-content-center align-items-center gap-2">
+
+        {/* Switch para activar modo oscuro */}
+        <div className="form-check form-switch d-flex justify-content-center align-items-center gap-2 mb-4">
           <input
             className="form-check-input"
             type="checkbox"
@@ -202,21 +221,17 @@ export default function AvailabilityPage() {
         </div>
       </div>
 
-      <div className="text-center mb-3">
-        <button className="btn btn-success px-4 rounded-pill shadow-sm" onClick={() => setMapVisible(!mapVisible)}>
-          {mapVisible ? 'Minimizar Mapa' : 'Ampliar Mapa'}
-        </button>
-      </div>
-
+      {/* Contenedor del mapa con diseño expandido */}
       <div
         ref={mapContainerRef}
-        className="w-100 mx-auto"
+        className="w-100 mt-4"
         style={{
-          height: mapVisible ? '70vh' : '300px',
+          height: '70vh',
           borderRadius: '1rem',
           overflow: 'hidden',
-          transition: 'all 0.4s ease',
+          transition: 'opacity 0.5s ease',
           boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          opacity: 1,
         }}
       />
     </div>
