@@ -103,6 +103,41 @@ export default function AvailabilityPage() {
     });
   };
 
+
+  // Carga las farmacias Ahumada desde un JSON y las renderiza en el mapa
+const loadFarmaciasAhumada = async () => {
+  try {
+    const res = await fetch("/data/farmacias_ahumada.json");
+    const farmacias = await res.json();
+
+    farmacias.forEach((f: any) => {
+      if (f.latitude && f.longitude) {
+        const el = document.createElement("div");
+        el.style.width = "16px";
+        el.style.height = "16px";
+        el.style.borderRadius = "50%";
+        el.style.backgroundColor = "red"; // Color para Ahumada
+        el.style.boxShadow = "0 0 6px rgba(0,0,0,0.4)";
+        el.style.cursor = "pointer";
+
+        const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
+          <strong>${f.name}</strong><br/>
+          ${f.address}, ${f.city}<br/>
+          ☎ ${f.phone}<br/>
+          🕐 ${f.hours?.replace(/<[^>]+>/g, " ")}
+        `);
+
+        new mapboxgl.Marker({ element: el })
+          .setLngLat([f.longitude, f.latitude])
+          .setPopup(popup)
+          .addTo(mapRef.current!);
+      }
+    });
+  } catch (error) {
+    console.error("Error al cargar farmacias Ahumada:", error);
+  }
+};
+
   // Maneja la búsqueda de una dirección y traza la ruta
   const handleSearch = async () => {
     if (!searchAddress || !userCoords) return;
