@@ -1,0 +1,850 @@
+[
+  {
+    "id": 3048,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/blox-am-16-10-x-30-capsulas-92555.html",
+    "price_offer": 39799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3049,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/blox-am-16-5-x-30-capsulas-92557.html",
+    "price_offer": 39799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3050,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/blox-am-8-5-x-30-capsulas-92556.html",
+    "price_offer": 36199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3051,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/cheltin-fc-x-30-comprimidos-recubiertos-48802.html",
+    "price_offer": 18529,
+    "price_normal": 21799,
+    "discount": 15
+  },
+  {
+    "id": 3052,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/cheltin-x-30-ml-suspension-para-gotas-45211.html",
+    "price_offer": 17199,
+    "price_normal": 18669,
+    "discount": 8
+  },
+  {
+    "id": 3053,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eritrofer-100-mg-x-30-comprimidos-recubiertos-90800.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3054,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eritrofer-50-mg-ml-x-20-ml-solucion-para-gotas-orales-90699.html",
+    "price_offer": 13699,
+    "price_normal": 18669,
+    "discount": 27
+  },
+  {
+    "id": 3055,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eritrofer-complex-x-30-comprimidos-recubiertos-91957.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3056,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ferinject-500-mg-10-ml-x-1-frasco-ampolla-solucion-inyectable-80611.html",
+    "price_offer": 319999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3057,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ferranem-x-30-capsulas-con-microgranulos-de-liberacion-prolongada-6673.html",
+    "price_offer": 16599,
+    "price_normal": 25049,
+    "discount": 34
+  },
+  {
+    "id": 3058,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ferri-fc-x-30-capsulas-con-granulos-recubiertos-87294.html",
+    "price_offer": 18499,
+    "price_normal": 18669,
+    "discount": 1
+  },
+  {
+    "id": 3059,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ferrigot-x-30-ml-solucion-oral-para-gotas-6148.html",
+    "price_offer": 10199,
+    "price_normal": 18669,
+    "discount": 45
+  },
+  {
+    "id": 3060,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ferroprotina-40-mg-x-30-sobres-granulado-para-solucion-oral-74744.html",
+    "price_offer": 32699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3061,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fisiofer-800-mg-15-ml-x-10-frascos-solucion-oral-15-ml-9377.html",
+    "price_offer": 32699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3062,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fisiofer-800-mg-15-ml-x-120-ml-jarabe-9455.html",
+    "price_offer": 16599,
+    "price_normal": 18669,
+    "discount": 11
+  },
+  {
+    "id": 3063,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fisiofer-fol-x-10-frascos-solucion-oral-15-ml-73585.html",
+    "price_offer": 28899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3064,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folacid-1-mg-x-30-comprimidos-72864.html",
+    "price_offer": 7299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3065,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folacid-5-mg-x-30-comprimidos-72863.html",
+    "price_offer": 7999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3066,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folifer-x-30-capsulas-con-granulos-de-liberacion-prolongada-629.html",
+    "price_offer": 18599,
+    "price_normal": 25049,
+    "discount": 26
+  },
+  {
+    "id": 3067,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folifer-x-60-capsulas-con-granulos-de-liberacion-prolongada-60207.html",
+    "price_offer": 21292,
+    "price_normal": 25049,
+    "discount": 15
+  },
+  {
+    "id": 3068,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folisanin-1-mg-x-30-comprimidos-6452.html",
+    "price_offer": 4929,
+    "price_normal": 5799,
+    "discount": 15
+  },
+  {
+    "id": 3069,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/folisanin-5-mg-x-30-comprimidos-22867.html",
+    "price_offer": 5992,
+    "price_normal": 7049,
+    "discount": 15
+  },
+  {
+    "id": 3070,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/hemoval-100-mg-x-40-comprimidos-masticables-66487.html",
+    "price_offer": 15799,
+    "price_normal": 18669,
+    "discount": 15
+  },
+  {
+    "id": 3071,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/hemoval-50-mg-ml-x-30-ml-solucion-oral-para-gotas-66486.html",
+    "price_offer": 13999,
+    "price_normal": 18669,
+    "discount": 25
+  },
+  {
+    "id": 3072,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/hepta-recombinante-2000-ui-x-1-jeringa-prellenada-solucion-inyectable-68323.html",
+    "price_offer": 7695,
+    "price_normal": 18669,
+    "discount": 59
+  },
+  {
+    "id": 3073,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/hepta-recombinante-4000-ui-x-1-jeringa-prellenada-solucion-inyectable-68324.html",
+    "price_offer": 10454,
+    "price_normal": 12299,
+    "discount": 15
+  },
+  {
+    "id": 3074,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/legofer-40-mg-x-15-ml-solucion-oral-x-10-frascos-9714.html",
+    "price_offer": 25399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3075,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/legofer-800-mg-15-ml-x-120-ml-solucion-oral-1304.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3076,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/maltofer-100-mg-5-ml-x-5-ml-solucion-oral-10-frascos-16252.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3077,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/maltofer-100-mg-x-30-comprimidos-masticables-13766.html",
+    "price_offer": 27242,
+    "price_normal": 32049,
+    "discount": 15
+  },
+  {
+    "id": 3078,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/maltofer-50-mg-ml-x-30-ml-solucion-oral-para-gotas-15029.html",
+    "price_offer": 27599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3079,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/maltofer-x-100-ml-jarabe-15016.html",
+    "price_offer": 27899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3080,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/resvenox-nutrapharm-60-capsulas-88172.html",
+    "price_offer": 17299,
+    "price_normal": 18669,
+    "discount": 7
+  },
+  {
+    "id": 3081,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/sulfato-ferroso-200-mg-x-20-comprimidos-lvalma-90441.html",
+    "price_offer": 2899,
+    "price_normal": 18669,
+    "discount": 84
+  },
+  {
+    "id": 3082,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/venofer-100-mg-solucion-inyectable-5-ampollas-x-5-ml-20733.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3083,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/verquvo-2-5mg-x-14-comp.-rec-90764.html",
+    "price_offer": 82699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3096,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ismo-20-mg-x-30-comprimidos-1397.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3097,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/isosorbide-dinitrato-10-mg-x-60-comprimidos-andromaco-s.a.-5061.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3098,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/isosorbide-dinitrato-10-mg-x-60-comprimidos-mintlab-co-sa-90421.html",
+    "price_offer": 6099,
+    "price_normal": 18669,
+    "discount": 67
+  },
+  {
+    "id": 3099,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/procoralan-5mg-x-28-comprimidos-recubiertos-72112.html",
+    "price_offer": 34599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3100,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/vastarel-mr-x-30-comprimidos-recubiertos-de-liberacion-prolongada-47989.html",
+    "price_offer": 25699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3000,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/acebron-4-mg-x-20-comprimidos-63553.html",
+    "price_offer": 22799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3001,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/artesol-100-mg-x-30-comprimidos-36332.html",
+    "price_offer": 26194,
+    "price_normal": 40299,
+    "discount": 35
+  },
+  {
+    "id": 3002,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/artesol-50-mg-x-30-comprimidos-36345.html",
+    "price_offer": 15599,
+    "price_normal": 23999,
+    "discount": 35
+  },
+  {
+    "id": 3003,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/brilinta-90-mg-x-30-comprimidos-recubiertos-75441.html",
+    "price_offer": 44599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3004,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/brilinta-90-mg-x-60-comprimidos-recubiertos-72275.html",
+    "price_offer": 93599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3005,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/cavamed-5-mg-x-30-comprimidos-75321.html",
+    "price_offer": 34799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3006,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/cilosvitae-100-mg-x-28-comprimidos-80692.html",
+    "price_offer": 18329,
+    "price_normal": 28199,
+    "discount": 35
+  },
+  {
+    "id": 3007,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/cilosvitae-50-mg-x-28-comprimidos-94010.html",
+    "price_offer": 12479,
+    "price_normal": 19199,
+    "discount": 35
+  },
+  {
+    "id": 3008,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clauter-100-mg-x-30-comprimidos-73848.html",
+    "price_offer": 32399,
+    "price_normal": 40299,
+    "discount": 20
+  },
+  {
+    "id": 3009,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clauter-50-mg-x-30-comprimidos-73847.html",
+    "price_offer": 17099,
+    "price_normal": 23999,
+    "discount": 29
+  },
+  {
+    "id": 3010,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clexane-40-mg-0-4-ml-x-2-jeringas-prellenadas-solucion-inyectable-11868.html",
+    "price_offer": 39099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3011,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clopidogrel-75-mg-x-30-comprimidos-recubiertos-ascend-90343.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3012,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clopidogrel-75-mg-x-30-comprimidos-recubiertos-chile-86391.html",
+    "price_offer": 9499,
+    "price_normal": 18669,
+    "discount": 49
+  },
+  {
+    "id": 3013,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/clotrombix-75-mg-x-30-comprimidos-recubiertos-77212.html",
+    "price_offer": 20199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3014,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eliquis-2.5-mg-x-60-comprimidos-recubiertos-87441.html",
+    "price_offer": 67079,
+    "price_normal": 103199,
+    "discount": 35
+  },
+  {
+    "id": 3015,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eliquis-5-mg-x-60-comprimidos-recubiertos-76447.html",
+    "price_offer": 68119,
+    "price_normal": 104799,
+    "discount": 35
+  },
+  {
+    "id": 3016,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/eurogrel-clopidogrel-75-mg-35-comprimidos-61473.html",
+    "price_offer": 42399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3017,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fragmin-2500-ui-0.2-ml-x-1-jeringa-prellenada-5829.html",
+    "price_offer": 13999,
+    "price_normal": 18669,
+    "discount": 25
+  },
+  {
+    "id": 3018,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fragmin-5000-ui-0.2-ml-x-1-jeringa-prellenada-5816.html",
+    "price_offer": 34799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3019,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ilostal-100-mg-x-30-comprimidos-45726.html",
+    "price_offer": 34969,
+    "price_normal": 53799,
+    "discount": 35
+  },
+  {
+    "id": 3020,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ilostal-50-mg-x-30-comprimidos-45725.html",
+    "price_offer": 15794,
+    "price_normal": 24299,
+    "discount": 35
+  },
+  {
+    "id": 3021,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/isquelium-4-mg-x-30-comprimidos-23352.html",
+    "price_offer": 11499,
+    "price_normal": 18669,
+    "discount": 38
+  },
+  {
+    "id": 3022,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/piclokare-75-mg-x-28-comprimidos-recubiertos-69835.html",
+    "price_offer": 14959,
+    "price_normal": 17599,
+    "discount": 15
+  },
+  {
+    "id": 3023,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/pradaxa-110-mg-x-60-capsulas-78166.html",
+    "price_offer": 88899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3024,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/pradaxa-150-mg-x-30-capsulas-71371.html",
+    "price_offer": 64799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3025,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/pradaxa-150-mg-x-60-capsulas-78167.html",
+    "price_offer": 88899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3026,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ribex-10-mg-x-15-comprimidos-recubiertos-93841.html",
+    "price_offer": 32824,
+    "price_normal": 50499,
+    "discount": 35
+  },
+  {
+    "id": 3027,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ribex-15-mg-x-30-comprimidos-recubiertos-94728.html",
+    "price_offer": 31849,
+    "price_normal": 48999,
+    "discount": 35
+  },
+  {
+    "id": 3028,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ribex-20-mg-x-30-comprimidos-recubiertos-93880.html",
+    "price_offer": 38089,
+    "price_normal": 58599,
+    "discount": 35
+  },
+  {
+    "id": 3029,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rilex-%28rivaroxaban-10-mg%29-10-comp.rec.-91611.html",
+    "price_offer": 21189,
+    "price_normal": 32599,
+    "discount": 35
+  },
+  {
+    "id": 3030,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rilex-%28rivaroxaban-15-mg%29-28-comp.rec.-91622.html",
+    "price_offer": 25934,
+    "price_normal": 39899,
+    "discount": 35
+  },
+  {
+    "id": 3031,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rilex-%28rivaroxaban-20-mg%29-28-comp.rec.-91623.html",
+    "price_offer": 28469,
+    "price_normal": 43799,
+    "discount": 35
+  },
+  {
+    "id": 3032,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivaxored-10-mg-x-10-comprimidos-recubiertos-90887.html",
+    "price_offer": 20188,
+    "price_normal": 41199,
+    "discount": 51
+  },
+  {
+    "id": 3033,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivaxored-15-mg-x-28-comprimidos-recubiertos-90883.html",
+    "price_offer": 37093,
+    "price_normal": 75699,
+    "discount": 51
+  },
+  {
+    "id": 3034,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivaxored-20-mg-x-28-comprimidos-recubiertos-90884.html",
+    "price_offer": 37926,
+    "price_normal": 77399,
+    "discount": 51
+  },
+  {
+    "id": 3035,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivoxa-10-mg-x-10-comprimidos-recubiertos-91056.html",
+    "price_offer": 33699,
+    "price_normal": 36999,
+    "discount": 9
+  },
+  {
+    "id": 3036,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivoxa-15-mg-x-30-comprimidos-recubiertos-90258.html",
+    "price_offer": 39909,
+    "price_normal": 61399,
+    "discount": 35
+  },
+  {
+    "id": 3037,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rivoxa-20-mg-x-30-comprimidos-recubiertos-90257.html",
+    "price_offer": 43029,
+    "price_normal": 66199,
+    "discount": 35
+  },
+  {
+    "id": 3038,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rixovitae-15-mg-x-28-comprimidos-recubiertos-94684.html",
+    "price_offer": 25934,
+    "price_normal": 39899,
+    "discount": 35
+  },
+  {
+    "id": 3039,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/rixovitae-20-mg-x-28-comprimidos-recubiertos-94683.html",
+    "price_offer": 28469,
+    "price_normal": 43799,
+    "discount": 35
+  },
+  {
+    "id": 3040,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/trombex-10-mg-x-10-comprimidos-recubiertos-90251.html",
+    "price_offer": 29119,
+    "price_normal": 44799,
+    "discount": 35
+  },
+  {
+    "id": 3041,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/trombex-15-mg-x-28-comprimidos-recubiertos-90249.html",
+    "price_offer": 38674,
+    "price_normal": 59499,
+    "discount": 35
+  },
+  {
+    "id": 3042,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/trombex-20-mg-x-28-comprimidos-recubiertos-90248.html",
+    "price_offer": 45694,
+    "price_normal": 70299,
+    "discount": 35
+  },
+  {
+    "id": 3043,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/xarelto-10-mg-x-10-comprimidos-recubiertos-64278.html",
+    "price_offer": 45399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3044,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/xarelto-15-mg-x-28-comprimidos-recubiertos-72278.html",
+    "price_offer": 56029,
+    "price_normal": 86199,
+    "discount": 35
+  },
+  {
+    "id": 3045,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/xarelto-20-mg-x-28-comprimidos-recubiertos-72279.html",
+    "price_offer": 57784,
+    "price_normal": 88899,
+    "discount": 35
+  },
+  {
+    "id": 3046,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/xaroban-15-mg-x-30-comprimidos-recubiertos-91161.html",
+    "price_offer": 28339,
+    "price_normal": 43599,
+    "discount": 35
+  },
+  {
+    "id": 3047,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/xaroban-20-mg-x-30-comprimidos-recubiertos-91162.html",
+    "price_offer": 30939,
+    "price_normal": 47599,
+    "discount": 35
+  },
+  {
+    "id": 3101,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/digoxina-0.25-mg-x-30-comprimidos-chile-9966.html",
+    "price_offer": 3699,
+    "price_normal": 18669,
+    "discount": 80
+  },
+  {
+    "id": 3102,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/diondel-100-mg-x-50-comprimidos-73181.html",
+    "price_offer": 37829,
+    "price_normal": 58199,
+    "discount": 35
+  },
+  {
+    "id": 3103,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/verquvo-10-mg-x-28-comprimidos-recubiertos-90602.html",
+    "price_offer": 152099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3104,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/verquvo-5-mg-x-14-comprimidos-recubiertos-90720.html",
+    "price_offer": 85145,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3105,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/verquvo-5-mg-x-28-comprimidos-recubiertos-90601.html",
+    "price_offer": 152899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3084,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/etovitae-60-mg-x-14-comprimidos-recubiertos-94017.html",
+    "price_offer": 16499,
+    "price_normal": 17499,
+    "discount": 6
+  },
+  {
+    "id": 3085,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/etovitae-90-mg-x-14-comprimidos-recubiertos-94018.html",
+    "price_offer": 17499,
+    "price_normal": 19499,
+    "discount": 10
+  },
+  {
+    "id": 3086,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fluxus-10-mg-x-30-comprimidos-7292.html",
+    "price_offer": 28099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3087,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/fluxus-10-mg-x-60-comprimidos-7110.html",
+    "price_offer": 31199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3088,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ginkomax--80-mg-x-120-capsulas-88006.html",
+    "price_offer": 16649,
+    "price_normal": 22199,
+    "discount": 25
+  },
+  {
+    "id": 3089,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ginkomax--80-mg-x-30-capsulas-24156.html",
+    "price_offer": 9999,
+    "price_normal": 18669,
+    "discount": 46
+  },
+  {
+    "id": 3090,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/ginkomax--80-mg-x-60-capsulas-88168.html",
+    "price_offer": 19399,
+    "price_normal": 22199,
+    "discount": 13
+  },
+  {
+    "id": 3091,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/nicergolina-15-mg-x-30-comprimidos-recubiertos-chile-1964.html",
+    "price_offer": 11099,
+    "price_normal": 18669,
+    "discount": 41
+  },
+  {
+    "id": 3092,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/pentoxifilina-400-mg-x-30-comprimidos-recubiertos-de-liberacion-prolongada-91785.html",
+    "price_offer": null,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 3093,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/tensuren-am-40-5-30-comp-92775.html",
+    "price_offer": 23984,
+    "price_normal": 36899,
+    "discount": 35
+  },
+  {
+    "id": 3094,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/tensuren-am-80-10-30-comp-92776.html",
+    "price_offer": 23984,
+    "price_normal": 36899,
+    "discount": 35
+  },
+  {
+    "id": 3095,
+    "farmacia": "ahumada",
+    "url": "https://www.farmaciasahumada.cl/tensuren-am-80-5-30-comp-92777.html",
+    "price_offer": 23984,
+    "price_normal": 36899,
+    "discount": 35
+  }
+]

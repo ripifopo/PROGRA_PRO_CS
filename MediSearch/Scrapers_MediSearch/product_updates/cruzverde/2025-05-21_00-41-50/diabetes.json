@@ -1,0 +1,978 @@
+[
+  {
+    "id": 386350,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ozempic-0-25mg-0-5mg-semaglutida-2-mg-1-5-ml-solucion-inyectable-1-dispositivo-prellenado-6-agujas-desechables/386350.html",
+    "price_offer": 193538,
+    "price_normal": 219930,
+    "discount": 12
+  },
+  {
+    "id": 266655,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/kombiglyze-xr-saxagliptina-5-mg-28-comprimidos/266655.html",
+    "price_offer": 64117,
+    "price_normal": 72860,
+    "discount": 12
+  },
+  {
+    "id": 271486,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/tresiba-flextouch-insulina-degludec-100-ui-ml-lapicera-prellenada-3-ml/271486.html",
+    "price_offer": 31275,
+    "price_normal": 35540,
+    "discount": 12
+  },
+  {
+    "id": 386351,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ozempic-1mg-semaglutida-4-mg-3-ml-solucion-inyectable-1-dispositivo-prellenado-4-agujas-desechables/386351.html",
+    "price_offer": 263991,
+    "price_normal": 299990,
+    "discount": 12
+  },
+  {
+    "id": 172011,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/insulatard-hm-insulina-isofanica-humana-100-ui-1-ampolla/172011.html",
+    "price_offer": 37479,
+    "price_normal": 42590,
+    "discount": 12
+  },
+  {
+    "id": 256511,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/levemir-insulina-detemir-100-ui-ml-5-cartridge/256511.html",
+    "price_offer": 103391,
+    "price_normal": 117490,
+    "discount": 12
+  },
+  {
+    "id": 172004,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/actrapid-hm-insulina-soluble-humana-100-ui-1-ampolla/172004.html",
+    "price_offer": 33695,
+    "price_normal": 38290,
+    "discount": 12
+  },
+  {
+    "id": 274372,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/toujeo-insulina-glargina-humana-300-ui-ml-lapicera-prellenada-2-ml/274372.html",
+    "price_offer": 34223,
+    "price_normal": 38890,
+    "discount": 12
+  },
+  {
+    "id": 258139,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lantus-solostar-insulina-glargina-humana-100-ui-ml-1-cartridge/258139.html",
+    "price_offer": 23883,
+    "price_normal": 27140,
+    "discount": 12
+  },
+  {
+    "id": 4576,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/humalog-insulina-lispro-100-ui-1-ampolla/4576.html",
+    "price_offer": 43173,
+    "price_normal": 49060,
+    "discount": 12
+  },
+  {
+    "id": 258140,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/apidra-solostar-insulina-glulisina-100-ui-ml-1-cartridge/258140.html",
+    "price_offer": 13059,
+    "price_normal": 14840,
+    "discount": 12
+  },
+  {
+    "id": 172094,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/novorapid-penfill-insulina-asparta-100-ui-ml-5-cartuchos/172094.html",
+    "price_offer": 76551,
+    "price_normal": 86990,
+    "discount": 12
+  },
+  {
+    "id": 172086,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucagen-hypokit-glucagon-1-mg-1-ampolla/172086.html",
+    "price_offer": 62999,
+    "price_normal": 71590,
+    "discount": 12
+  },
+  {
+    "id": 266011,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/humalog-mix25-kwik-pen-insulina-lispro-25-ui-5-cartridge/266011.html",
+    "price_offer": 81831,
+    "price_normal": 92990,
+    "discount": 12
+  },
+  {
+    "id": 253082,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/novorapid-insulina-aspartica-soluble-100-ui-1-ampolla/253082.html",
+    "price_offer": 38623,
+    "price_normal": 43890,
+    "discount": 12
+  },
+  {
+    "id": 255906,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/novorapid-5-flexpen-insulina-aspartica-soluble-100-ui-ml-5-cartridge/255906.html",
+    "price_offer": 78311,
+    "price_normal": 88990,
+    "discount": 12
+  },
+  {
+    "id": 268066,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/victoza-liraglutida-6-mg-ml-solucion-inyectable-3-ml/268066.html",
+    "price_offer": 82799,
+    "price_normal": 94090,
+    "discount": 12
+  },
+  {
+    "id": 172088,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/insulatard-hm-penfill-insulina-isofanica-humana-100-ui-ml-5-cartridge-con-3-0ml-c-u/172088.html",
+    "price_offer": 59743,
+    "price_normal": 67890,
+    "discount": 12
+  },
+  {
+    "id": 292346,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trulicity-dulaglutida-1-5-mg-0-5-ml-2-lapiceras-prellenadas/292346.html",
+    "price_offer": 94943,
+    "price_normal": 107890,
+    "discount": 12
+  },
+  {
+    "id": 172095,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/actrapid-hm-5-penfill-de-100ui-ml-c-3ml-insulina-soluble-humana-100-ui-5-cartridge/172095.html",
+    "price_offer": 58071,
+    "price_normal": 65990,
+    "discount": 12
+  },
+  {
+    "id": 252682,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/novomix-30-ins-aspartica-soluble-30-70-100u-ml-5-dispositivos-3-ml/252682.html",
+    "price_offer": 80951,
+    "price_normal": 91990,
+    "discount": 12
+  },
+  {
+    "id": 4535,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/humulin-n-insulina-humana-protamina-zinc-100-ui-1-ampolla/4535.html",
+    "price_offer": 35895,
+    "price_normal": 40790,
+    "discount": 12
+  },
+  {
+    "id": 260641,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/humalog-kwik-insulina-lispro-100-ui-5-cartridge/260641.html",
+    "price_offer": 85879,
+    "price_normal": 97590,
+    "discount": 12
+  },
+  {
+    "id": 29160,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/freestyle-lanceta/29160.html",
+    "price_offer": 12990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 559686,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/scanmed-vgl01-50-lancetas-esteril-28g-para-puncion/559686.html",
+    "price_offer": 4990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 271444,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/optium-neo-equipo-medidor-de-glucosa/271444.html",
+    "price_offer": 43490,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 290566,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-instant-medidor/290566.html",
+    "price_offer": 32990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 391306,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-guide-medidor-de-glucemia-inalambrico-puncion-ref-07400926020-1-unidad/391306.html",
+    "price_offer": 51890,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 563453,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/freestyle-libre-2-plus-sensor-monitoreo-continuo-de-glucosa/563453.html",
+    "price_offer": 38990,
+    "price_normal": 63790,
+    "discount": 39
+  },
+  {
+    "id": 559608,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/scanmed-vgm22-equipo-medidor-de-glucosa/559608.html",
+    "price_offer": 20990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 256833,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-performa-tiras-teste-50-tiras/256833.html",
+    "price_offer": 34690,
+    "price_normal": 58490,
+    "discount": 41
+  },
+  {
+    "id": 568691,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/linx-sistema-de-monitoreo-continuo-de-glucosa/568691.html",
+    "price_offer": 36990,
+    "price_normal": 63990,
+    "discount": 42
+  },
+  {
+    "id": 539627,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/rybelsus-semaglutida-30-comprimidos-14-mg/539627.html",
+    "price_offer": 189807,
+    "price_normal": 215690,
+    "discount": 12
+  },
+  {
+    "id": 539749,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/rybelsus-semaglutida-30-comprimidos-3-mg/539749.html",
+    "price_offer": 189807,
+    "price_normal": 215690,
+    "discount": 12
+  },
+  {
+    "id": 539624,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/rybelsus-semaglutida-30-comprimidos-7-mg/539624.html",
+    "price_offer": 189807,
+    "price_normal": 215690,
+    "discount": 12
+  },
+  {
+    "id": 1282,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-metformina-850-mg-60-comprimidos-recubiertos/1282.html",
+    "price_offer": 19879,
+    "price_normal": 22590,
+    "discount": 12
+  },
+  {
+    "id": 1528,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-metformina-1000-mg-30-comprimidos-recubiertos/1528.html",
+    "price_offer": 21991,
+    "price_normal": 24990,
+    "discount": 12
+  },
+  {
+    "id": 11084,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-metformina-850-mg-30-comprimidos-recubiertos/11084.html",
+    "price_offer": 18647,
+    "price_normal": 21190,
+    "discount": 12
+  },
+  {
+    "id": 11085,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-metformina-850-mg-60-comprimidos-recubiertos/11085.html",
+    "price_offer": 25071,
+    "price_normal": 28490,
+    "discount": 12
+  },
+  {
+    "id": 11101,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-metformina-500-mg-30-comprimidos-recubiertos/11101.html",
+    "price_offer": 11695,
+    "price_normal": 13290,
+    "discount": 12
+  },
+  {
+    "id": 11149,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-metformina-1000-mg-30-comprimidos-recubiertos/11149.html",
+    "price_offer": 30527,
+    "price_normal": 34690,
+    "discount": 12
+  },
+  {
+    "id": 11151,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucovance-metformina-500-mg-30-comprimidos-recubiertos/11151.html",
+    "price_offer": 21463,
+    "price_normal": 24390,
+    "discount": 12
+  },
+  {
+    "id": 11152,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucovance-metformina-2-5-mg-30-comprimidos/11152.html",
+    "price_offer": 23558,
+    "price_normal": 26770,
+    "discount": 12
+  },
+  {
+    "id": 11172,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-xr-metformina-500-mg-30-comprimidos-liberacion-prolongada/11172.html",
+    "price_offer": 13367,
+    "price_normal": 15190,
+    "discount": 12
+  },
+  {
+    "id": 15401,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glifortex-metformina-850-mg-30-comprimidos/15401.html",
+    "price_offer": 14775,
+    "price_normal": 16790,
+    "discount": 12
+  },
+  {
+    "id": 57169,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-metformina-850-mg-30-comprimidos/57169.html",
+    "price_offer": 16447,
+    "price_normal": 18690,
+    "discount": 12
+  },
+  {
+    "id": 57170,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-forte-metformina-850-mg-60-comprimidos-recubiertos/57170.html",
+    "price_offer": 29823,
+    "price_normal": 33890,
+    "discount": 12
+  },
+  {
+    "id": 57206,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-metformina-500-mg-30-comprimidos/57206.html",
+    "price_offer": 8175,
+    "price_normal": 9290,
+    "discount": 12
+  },
+  {
+    "id": 253638,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glemaz-glimepirida-4-mg-30-comprimidos/253638.html",
+    "price_offer": 38535,
+    "price_normal": 43790,
+    "discount": 12
+  },
+  {
+    "id": 253774,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicenex-metformina-500-mg-comprimidos-recubiertos/253774.html",
+    "price_offer": 7295,
+    "price_normal": 8290,
+    "discount": 12
+  },
+  {
+    "id": 254859,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-500-lp-metformina-500-mg-30-comprimidos-liberacion-prolongada/254859.html",
+    "price_offer": 10155,
+    "price_normal": 11540,
+    "discount": 12
+  },
+  {
+    "id": 254860,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-500-lp-metformina-500-mg-60-comprimidos-liberacion-prolongada/254860.html",
+    "price_offer": 14775,
+    "price_normal": 16790,
+    "discount": 12
+  },
+  {
+    "id": 254866,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-xr-metformina-750-mg-30-comprimidos-liberacion-prolongada/254866.html",
+    "price_offer": 24103,
+    "price_normal": 27390,
+    "discount": 12
+  },
+  {
+    "id": 255612,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicenex-metformina-850-mg-30-comprimidos-recubiertos/255612.html",
+    "price_offer": 10727,
+    "price_normal": 12190,
+    "discount": 12
+  },
+  {
+    "id": 256480,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/januvia-sitagliptina-100-mg-28-comprimidos-recubierto/256480.html",
+    "price_offer": 49447,
+    "price_normal": 56190,
+    "discount": 12
+  },
+  {
+    "id": 257176,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-500-sitagliptina-50-mg-28-comprimidos/257176.html",
+    "price_offer": 32947,
+    "price_normal": 37440,
+    "discount": 12
+  },
+  {
+    "id": 257178,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-1000-sitagliptina-50-mg-28-comprimidos-recubierto/257178.html",
+    "price_offer": 32947,
+    "price_normal": 37440,
+    "discount": 12
+  },
+  {
+    "id": 259485,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-vildagliptina-50-mg-28-comprimidos/259485.html",
+    "price_offer": 35103,
+    "price_normal": 39890,
+    "discount": 12
+  },
+  {
+    "id": 259486,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-vildagliptina-50-mg-56-comprimidos/259486.html",
+    "price_offer": 48391,
+    "price_normal": 54990,
+    "discount": 12
+  },
+  {
+    "id": 259487,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-vildagliptina-50-mg-metformina-850-mg-de-28-comprimidos/259487.html",
+    "price_offer": 37831,
+    "price_normal": 42990,
+    "discount": 12
+  },
+  {
+    "id": 259488,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-vildagliptina-50-mg-56-comprimidos-recubierto-axon/259488.html",
+    "price_offer": 57103,
+    "price_normal": 64890,
+    "discount": 12
+  },
+  {
+    "id": 259490,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-vildagliptina-50-mg-56-comprimidos-recubierto/259490.html",
+    "price_offer": 51647,
+    "price_normal": 58690,
+    "discount": 12
+  },
+  {
+    "id": 260015,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glafornil-xr-metformina-1000-mg-30-comprimidos-liberacion-prolongada/260015.html",
+    "price_offer": 29559,
+    "price_normal": 33590,
+    "discount": 12
+  },
+  {
+    "id": 260598,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-500-xr-metformina-500-mg-30-comprimidos/260598.html",
+    "price_offer": 11607,
+    "price_normal": 13190,
+    "discount": 12
+  },
+  {
+    "id": 260680,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicenex-sr-metformina-500-mg-30-comprimidos/260680.html",
+    "price_offer": 10111,
+    "price_normal": 11490,
+    "discount": 12
+  },
+  {
+    "id": 260681,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicenex-sr-metformina-750-mg-30-comprimidos/260681.html",
+    "price_offer": 17327,
+    "price_normal": 19690,
+    "discount": 12
+  },
+  {
+    "id": 261423,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucovance-metformina-1000-mg-30-comprimidos/261423.html",
+    "price_offer": 28503,
+    "price_normal": 32390,
+    "discount": 12
+  },
+  {
+    "id": 261725,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-750-xr-metformina-750-mg-30-comprimidos/261725.html",
+    "price_offer": 21463,
+    "price_normal": 24390,
+    "discount": 12
+  },
+  {
+    "id": 261776,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-50-500-metformina-500-mg-28-comprimidos/261776.html",
+    "price_offer": 32903,
+    "price_normal": 37390,
+    "discount": 12
+  },
+  {
+    "id": 261777,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-vildagliptina-50-mg-metformina-500-mg-con-56-comprimidos-recubiertos/261777.html",
+    "price_offer": 60852,
+    "price_normal": 69150,
+    "discount": 12
+  },
+  {
+    "id": 263285,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-750-lp-metformina-750-mg-30-comprimidos-liberacion-prolongada/263285.html",
+    "price_offer": 13367,
+    "price_normal": 15190,
+    "discount": 12
+  },
+  {
+    "id": 263286,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-1000-lp-metformina-1000-mg-30-comprimidos/263286.html",
+    "price_offer": 15303,
+    "price_normal": 17390,
+    "discount": 12
+  },
+  {
+    "id": 265109,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trayenta-duo-linagliptina-2-5-mg-60-comprimidos/265109.html",
+    "price_offer": 52791,
+    "price_normal": 59990,
+    "discount": 12
+  },
+  {
+    "id": 266169,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/forxiga-dapagliflozina-10-mg-28-comprimidos-recubierto/266169.html",
+    "price_offer": 41087,
+    "price_normal": 46690,
+    "discount": 12
+  },
+  {
+    "id": 267741,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glibenclamida-5-mg-60-comprimidos/267741.html",
+    "price_offer": 1399,
+    "price_normal": 1590,
+    "discount": 12
+  },
+  {
+    "id": 269797,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glifortex-xr-metformina-500-mg-30-comprimidos-liberacion-prolongada/269797.html",
+    "price_offer": 9847,
+    "price_normal": 11190,
+    "discount": 12
+  },
+  {
+    "id": 269798,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glifortex-xr-metformina-750-mg-30-comprimidos-de-liberacion-prolongada/269798.html",
+    "price_offer": 14599,
+    "price_normal": 16590,
+    "discount": 12
+  },
+  {
+    "id": 269799,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glifortex-xr-metformina-1000-mg-30-comprimidos-recubiertos-de-liberacion-prolongada/269799.html",
+    "price_offer": 17239,
+    "price_normal": 19590,
+    "discount": 12
+  },
+  {
+    "id": 270694,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-500-sitagliptina-50-mg-56-comprimidos-recubierto/270694.html",
+    "price_offer": 52087,
+    "price_normal": 59190,
+    "discount": 12
+  },
+  {
+    "id": 270695,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-850-sitagliptina-50-mg-56-comprimidos-recubiertos/270695.html",
+    "price_offer": 52571,
+    "price_normal": 59740,
+    "discount": 12
+  },
+  {
+    "id": 270696,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-1000-sitagliptina-50-mg-56-comprimidos/270696.html",
+    "price_offer": 48083,
+    "price_normal": 54640,
+    "discount": 12
+  },
+  {
+    "id": 271426,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diamicron-mr-gliclazida-60-mg-30-comprimidos-liberacion-prolongada/271426.html",
+    "price_offer": 34575,
+    "price_normal": 39290,
+    "discount": 12
+  },
+  {
+    "id": 272008,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-xr-100-1000-sitagliptina-28-comprimidos/272008.html",
+    "price_offer": 58027,
+    "price_normal": 65940,
+    "discount": 12
+  },
+  {
+    "id": 272009,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-xr-50-1000-sitagliptina-50-mg-56-comprimidos/272009.html",
+    "price_offer": 52527,
+    "price_normal": 59690,
+    "discount": 12
+  },
+  {
+    "id": 272010,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trayenta-duo-linagliptina-2-5-mg-60-comprimidos-recubiertos/272010.html",
+    "price_offer": 49535,
+    "price_normal": 56290,
+    "discount": 12
+  },
+  {
+    "id": 272011,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trayenta-duo-linagliptina-2-5-mg-60-comprimidos/272011.html",
+    "price_offer": 45575,
+    "price_normal": 51790,
+    "discount": 12
+  },
+  {
+    "id": 272404,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-750-lp-metformina-750-mg-60-comprimidos-liberacion-prolongada/272404.html",
+    "price_offer": 21111,
+    "price_normal": 23990,
+    "discount": 12
+  },
+  {
+    "id": 272405,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hipoglucin-1000-lp-metformina-1000-mg-60-comprimidos/272405.html",
+    "price_offer": 25511,
+    "price_normal": 28990,
+    "discount": 12
+  },
+  {
+    "id": 272597,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glaupax-500-metformina-500-mg-30-comprimidos-recubiertoss/272597.html",
+    "price_offer": 6796,
+    "price_normal": 8390,
+    "discount": 19
+  },
+  {
+    "id": 272737,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/jardiance-empagliflozina-25-mg-30-comprimidos-recubierto/272737.html",
+    "price_offer": 50680,
+    "price_normal": 58190,
+    "discount": 13
+  },
+  {
+    "id": 272943,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glaupax-850-metformina-850-mg-30-comprimidos-recubiertos/272943.html",
+    "price_offer": 7119,
+    "price_normal": 8090,
+    "discount": 12
+  },
+  {
+    "id": 273320,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/jardiance-empagliflozina-10-mg-30-comprimidos/273320.html",
+    "price_offer": 36159,
+    "price_normal": 41090,
+    "discount": 12
+  },
+  {
+    "id": 276084,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/jardiance-duo-empagliflozina-12-5-mg-60-comprimidos-recubiertos/276084.html",
+    "price_offer": 50151,
+    "price_normal": 56990,
+    "discount": 12
+  },
+  {
+    "id": 276085,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/jardiance-duo-empagliflozina-12-5-mg-60-comprimidos/276085.html",
+    "price_offer": 50679,
+    "price_normal": 57590,
+    "discount": 12
+  },
+  {
+    "id": 276900,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/xigduo-xr-dapagliflozina-10-mg-28-comprimidos/276900.html",
+    "price_offer": 40955,
+    "price_normal": 46540,
+    "discount": 12
+  },
+  {
+    "id": 276901,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/xigduo-xr-dapagliflozina-5-mg-56-comprimidos/276901.html",
+    "price_offer": 45311,
+    "price_normal": 51490,
+    "discount": 12
+  },
+  {
+    "id": 288667,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glaupax-xr-metformina-500-mg-30-comprimidos/288667.html",
+    "price_offer": 10023,
+    "price_normal": 11390,
+    "discount": 12
+  },
+  {
+    "id": 288668,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glaupax-xr-metformina-750-mg-30-comprimidos-de-liberacion-prolongada/288668.html",
+    "price_offer": 13279,
+    "price_normal": 15090,
+    "discount": 12
+  },
+  {
+    "id": 288669,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glaupax-xr-metformina-1000-mg-30-comprimidos/288669.html",
+    "price_offer": 14775,
+    "price_normal": 16790,
+    "discount": 12
+  },
+  {
+    "id": 290364,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glyxambi-empagliflozina-25-mg-30-comprimidos/290364.html",
+    "price_offer": 86759,
+    "price_normal": 98590,
+    "discount": 12
+  },
+  {
+    "id": 294111,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicenex-sr-metformina-1000-mg-30-comprimidos/294111.html",
+    "price_offer": 13103,
+    "price_normal": 14890,
+    "discount": 12
+  },
+  {
+    "id": 296291,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glimefor-xr-metformina-500-mg-30-comprimidos/296291.html",
+    "price_offer": 7999,
+    "price_normal": 9090,
+    "discount": 12
+  },
+  {
+    "id": 296292,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glimefor-xr-metformina-750-mg-30-comprimidos/296292.html",
+    "price_offer": 15215,
+    "price_normal": 17290,
+    "discount": 12
+  },
+  {
+    "id": 297952,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/galvus-met-50-1000-metformina-1000-mg-28-comprimidos/297952.html",
+    "price_offer": 35719,
+    "price_normal": 40590,
+    "discount": 12
+  },
+  {
+    "id": 298014,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glimefor-850-metformina-850-mg-30-comprimidos-recubiertos/298014.html",
+    "price_offer": 5623,
+    "price_normal": 6390,
+    "discount": 12
+  },
+  {
+    "id": 298015,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glimefor-850-metformina-850-mg-60-comprimidos-recubiertos/298015.html",
+    "price_offer": 11255,
+    "price_normal": 12790,
+    "discount": 12
+  },
+  {
+    "id": 391789,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucosan-xr-metformina-clorhidrato-750-mg-60-comprimidos-recubiertos-de-liberacion-prolongada/391789.html",
+    "price_offer": 16975,
+    "price_normal": 19290,
+    "discount": 12
+  },
+  {
+    "id": 392720,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucosan-xr-metformina-clorhidrato-1000-mg-60-comprimidos-recubiertos-de-liberacion-prolongada/392720.html",
+    "price_offer": 24279,
+    "price_normal": 27590,
+    "discount": 12
+  },
+  {
+    "id": 257177,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/janumet-50-850-sitagliptina-50-mg-28-comprimidos-recubierto/257177.html",
+    "price_offer": 32375,
+    "price_normal": 36790,
+    "discount": 12
+  },
+  {
+    "id": 265374,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trayenta-linagliptina-5-mg-30-comprimidos/265374.html",
+    "price_offer": 51031,
+    "price_normal": 57990,
+    "discount": 12
+  },
+  {
+    "id": 270506,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/metformina-850-mg-30-comprimidos/270506.html",
+    "price_offer": 2807,
+    "price_normal": 3190,
+    "discount": 12
+  },
+  {
+    "id": 297539,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucophage-metformina-1000-mg-30-comprimidos-recubiertos/297539.html",
+    "price_offer": 19351,
+    "price_normal": 21990,
+    "discount": 12
+  },
+  {
+    "id": 561608,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/suganon-5-mg-30-compromidos/561608.html",
+    "price_offer": 41351,
+    "price_normal": 46990,
+    "discount": 12
+  },
+  {
+    "id": 29188,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/freestyle-optium-50-tiras-de-glucosa/29188.html",
+    "price_offer": 39790,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 57187,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-softclix-lancetas-200-lancetas/57187.html",
+    "price_offer": 34990,
+    "price_normal": 62090,
+    "discount": 44
+  },
+  {
+    "id": 256833,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-performa-tiras-teste-50-tiras/256833.html",
+    "price_offer": 34690,
+    "price_normal": 58490,
+    "discount": 41
+  },
+  {
+    "id": 274232,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-fastclix-lancetas-100-2-lancetas/274232.html",
+    "price_offer": 34990,
+    "price_normal": 41390,
+    "discount": 15
+  },
+  {
+    "id": 274329,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-fastclix-lancetas-24-lancetas/274329.html",
+    "price_offer": 12090,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 290568,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-instant-25-tiras/290568.html",
+    "price_offer": 28990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 290569,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-instant-50-tiras/290569.html",
+    "price_offer": 29990,
+    "price_normal": 51490,
+    "discount": 42
+  },
+  {
+    "id": 391309,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/accu-chek-guide-tiras-reactivas-ref-07453736-50-tiras/391309.html",
+    "price_offer": 34890,
+    "price_normal": 57890,
+    "discount": 40
+  },
+  {
+    "id": 754197,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glucosa-75-gr/754197.html",
+    "price_offer": 3490,
+    "price_normal": null,
+    "discount": 0
+  }
+]
