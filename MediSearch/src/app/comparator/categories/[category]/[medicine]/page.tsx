@@ -1,10 +1,11 @@
-// src/app/comparator/categories/[category]/[medicine]/page.tsx
+// Archivo: src/app/comparator/categories/[category]/[medicine]/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useLoading } from '../../../../../context/LoadingContext.tsx';
-import { Button, Container, Row, Col, Badge } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { FaHeart } from 'react-icons/fa';
 
@@ -27,7 +28,7 @@ export default function MedicineDetailPage() {
   const [medData, setMedData] = useState<Medicine | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
-  // Buscar medicamento por nombre y categoría desde la API
+  // Obtiene los datos del medicamento buscado desde la API general
   useEffect(() => {
     const fetchAndMatchMedicine = async () => {
       try {
@@ -60,6 +61,7 @@ export default function MedicineDetailPage() {
         if (!found) throw new Error();
         setMedData(found);
 
+        // Decodifica email desde localStorage si hay sesión iniciada
         const stored = localStorage.getItem('userProfile');
         if (stored) {
           const parsed = JSON.parse(stored);
@@ -76,28 +78,31 @@ export default function MedicineDetailPage() {
     fetchAndMatchMedicine();
   }, [medicine, category, router, setLoading]);
 
-  // Formatear el precio con separadores
+  // Formatea el precio con separadores de miles
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
     const cleanPrice = price.replace(/[^0-9]/g, '');
     return '$' + cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // Función que guarda el medicamento como frecuente (si hay sesión iniciada)
+  // Función que guarda el medicamento como frecuente en la base de datos
   const handleSaveFrequent = async () => {
     if (!userEmail || !medData) {
-      const encodedCategory = encodeURIComponent(category as string);
-      const encodedMedicine = encodeURIComponent(medicine as string);
-      const redirectTo = `/comparator/categories/${encodedCategory}/${encodedMedicine}`;
+      // Si no hay sesión, redirige a /auth/continue con redirect
+      const redirectTo = `/comparator/categories/${encodeURIComponent(category as string)}/${encodeURIComponent(medicine as string)}`;
       router.push(`/auth/continue?redirect=${encodeURIComponent(redirectTo)}`);
       return;
     }
 
+    // Se construye el payload para guardar en la base de datos
     const payload = {
       userEmail,
       medicineName: medData.name,
       pharmacy: medData.pharmacy || '',
       category: category as string,
+      imageUrl: medData.image || '',
+      medicineSlug: encodeURIComponent(medicine as string),
+      categorySlug: encodeURIComponent(category as string),
       savedAt: new Date().toISOString()
     };
 
@@ -120,6 +125,7 @@ export default function MedicineDetailPage() {
 
   return (
     <Container className="py-5">
+      {/* Botón para volver a la categoría */}
       <Button
         variant="outline-success"
         className="mb-4"
@@ -129,6 +135,7 @@ export default function MedicineDetailPage() {
       </Button>
 
       <Row className="align-items-center">
+        {/* Columna de la imagen */}
         <Col md={5} className="text-center">
           <img
             src={medData.image || 'https://via.placeholder.com/300'}
@@ -138,6 +145,7 @@ export default function MedicineDetailPage() {
           />
         </Col>
 
+        {/* Columna de información del medicamento */}
         <Col md={7}>
           <h2 className="text-success fw-bold mb-3">{medData.name.toUpperCase()}</h2>
           <h4 className="text-dark mb-2">{formatPrice(medData.price)}</h4>
@@ -149,6 +157,7 @@ export default function MedicineDetailPage() {
           </p>
           <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
 
+          {/* Botones de acción */}
           <div className="d-flex gap-2 mt-3">
             <a
               href={medData.url}
@@ -158,6 +167,7 @@ export default function MedicineDetailPage() {
             >
               Ir a farmacia
             </a>
+
             <Button
               variant="outline-danger"
               onClick={handleSaveFrequent}
