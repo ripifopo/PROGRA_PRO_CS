@@ -5,6 +5,7 @@ import re
 import time
 from datetime import datetime
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
 
 # Ruta de entrada y salida
@@ -31,7 +32,7 @@ def process_file(filepath, headers):
         products = json.load(f)
 
     if not products:
-        return []
+        return
 
     categoria = products[0].get("categoria")
     result = []
@@ -60,10 +61,7 @@ def process_file(filepath, headers):
                 price_offer = prices.get("price-sale-cl") or prices.get("price-list-cl")
                 price_normal = prices.get("price-list-cl") if prices.get("price-sale-cl") else None
 
-                if price_normal and price_normal > price_offer:
-                    discount = round((1 - price_offer / price_normal) * 100)
-                else:
-                    discount = 0
+                discount = round((1 - price_offer / price_normal) * 100) if price_normal and price_normal > price_offer else 0
 
                 result.append({
                     "id": product_id,
@@ -79,7 +77,7 @@ def process_file(filepath, headers):
                 print(f"⚠️ Error en {product_id}: {e}")
                 break
 
-            time.sleep(0.2)
+        time.sleep(0.2)
 
     # Guardar resultados
     output_path = OUTPUT_DIR / f"{categoria}.json"
@@ -88,7 +86,7 @@ def process_file(filepath, headers):
         json.dump(result, f, indent=2, ensure_ascii=False)
     print(f"✅ Guardado: {output_path}")
 
-# 🚀 Ejecutar todo
+# 🚀 Ejecutar en paralelo por archivo
 def main():
     cookie = get_cruzverde_cookie()
     headers = {
@@ -98,9 +96,20 @@ def main():
         "Cookie": cookie
     }
 
-    for file in INPUT_DIR.glob("*.json"):
-        print(f"🔍 Procesando {file.name}...")
-        process_file(file, headers)
+    files = list(INPUT_DIR.glob("*.json"))
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futures = {
+            executor.submit(process_file, file, headers.copy()): file.name
+            for file in files
+        }
+        for future in as_completed(futures):
+            name = futures[future]
+            try:
+                future.result()
+            except Exception as e:
+                print(f"❌ Error procesando {name}: {e}")
 
 if __name__ == "__main__":
     main()

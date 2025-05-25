@@ -3,12 +3,12 @@ import time
 from datetime import datetime
 from pathlib import Path
 import httpx
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Rutas de entrada/salida
 INPUT_DIR = Path("../product_jsons_limpios/salcobrand_jsons_limpios")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 OUTPUT_DIR = Path(f"../product_updates/salcobrand/{timestamp}")
-
 API_URL = "https://salcobrand.cl/api/v2/products/{}"
 
 # 🗂 Procesar un archivo de productos
@@ -65,12 +65,19 @@ def process_file(filepath):
         json.dump(result, f, indent=2, ensure_ascii=False)
     print(f"✅ Guardado: {output_path}")
 
-# 🚀 Ejecutar todo
-
+# 🚀 Ejecutar en paralelo
 def main():
-    for file in INPUT_DIR.glob("*.json"):
-        print(f"🔍 Procesando {file.name}...")
-        process_file(file)
+    files = list(INPUT_DIR.glob("*.json"))
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        futures = {executor.submit(process_file, file): file for file in files}
+        for future in as_completed(futures):
+            file = futures[future]
+            try:
+                future.result()
+            except Exception as e:
+                print(f"❌ Error procesando {file.name}: {e}")
 
 if __name__ == "__main__":
     main()

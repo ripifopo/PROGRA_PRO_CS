@@ -1,0 +1,2402 @@
+[
+  {
+    "id": 271508,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/disfruta-clasico-polvo-efervescente-1-sobre/271508.html",
+    "price_offer": 607,
+    "price_normal": 690,
+    "discount": 12
+  },
+  {
+    "id": 271509,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/disfruta-sabor-limon-polvo-efervescente-1-sobre/271509.html",
+    "price_offer": 607,
+    "price_normal": 690,
+    "discount": 12
+  },
+  {
+    "id": 26065,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/phillips-carbonato-ca-100-mg-30-comprimidos-masticable/26065.html",
+    "price_offer": 7471,
+    "price_normal": 8490,
+    "discount": 12
+  },
+  {
+    "id": 26165,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eno-limon-bicarbonato-46-22-gr-polvo-100-gr/26165.html",
+    "price_offer": 3335,
+    "price_normal": 3790,
+    "discount": 12
+  },
+  {
+    "id": 26166,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eno-regular-bicarbonato-46-13-gr-polvo-100-gr/26166.html",
+    "price_offer": 3335,
+    "price_normal": 3790,
+    "discount": 12
+  },
+  {
+    "id": 26167,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eno-limon-bicarbonato-46-22-1-sobre/26167.html",
+    "price_offer": 343,
+    "price_normal": 390,
+    "discount": 12
+  },
+  {
+    "id": 26168,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eno-regular-bicarbonato-46-13-1-sobre/26168.html",
+    "price_offer": 343,
+    "price_normal": 390,
+    "discount": 12
+  },
+  {
+    "id": 26224,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/phillips-carbonato-ca-100-mg-10-comprimidos/26224.html",
+    "price_offer": 6679,
+    "price_normal": 7590,
+    "discount": 12
+  },
+  {
+    "id": 199168,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aluminio-hidroxdo-aluminio-hidroxido-6-gel-180-ml/199168.html",
+    "price_offer": 4963,
+    "price_normal": 5640,
+    "discount": 12
+  },
+  {
+    "id": 257981,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-liquido-original-150-ml/257981.html",
+    "price_offer": 13015,
+    "price_normal": 14790,
+    "discount": 12
+  },
+  {
+    "id": 261770,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-antiacido-y-reflujo-tabletas-original-x8/261770.html",
+    "price_offer": 3890,
+    "price_normal": 5190,
+    "discount": 25
+  },
+  {
+    "id": 264176,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-doble-accion-alginato-500-mg-suspension-oral-150-ml/264176.html",
+    "price_offer": 14990,
+    "price_normal": 19590,
+    "discount": 23
+  },
+  {
+    "id": 264177,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-doble-accion-8-comprimidos/264177.html",
+    "price_offer": 3863,
+    "price_normal": 4390,
+    "discount": 12
+  },
+  {
+    "id": 266808,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-antiacido-reflujo-liquido-original-300-ml/266808.html",
+    "price_offer": 21551,
+    "price_normal": 24490,
+    "discount": 12
+  },
+  {
+    "id": 268686,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gaviscon-sachet-original-10-ml-12-sachets/268686.html",
+    "price_offer": 11695,
+    "price_normal": 13290,
+    "discount": 12
+  },
+  {
+    "id": 383409,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gastroaliv-subsalicilato-de-bismuto-262-5-mg-15-ml-suspension-oral-240-ml-sabor-menta-cherry/383409.html",
+    "price_offer": 7390,
+    "price_normal": 8990,
+    "discount": 18
+  },
+  {
+    "id": 754178,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/basico-bicarbonato-de-500-gr/754178.html",
+    "price_offer": 5890,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 754192,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/basico-bicarbonato-de-200-gr/754192.html",
+    "price_offer": 3990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 199072,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/loperamida-2-mg-6-comprimidos/199072.html",
+    "price_offer": 1188,
+    "price_normal": 1350,
+    "discount": 12
+  },
+  {
+    "id": 57019,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/libraxin-clordiazepoxido-5-mg-30-grageas/57019.html",
+    "price_offer": 22519,
+    "price_normal": 25590,
+    "discount": 12
+  },
+  {
+    "id": 6005,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aero-itan-simeticona-100-mg-20-capsulas/6005.html",
+    "price_offer": 18295,
+    "price_normal": 20790,
+    "discount": 12
+  },
+  {
+    "id": 42040,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mareamin-dimenhidrinato-100-mg-20-comprimidos/42040.html",
+    "price_offer": 12751,
+    "price_normal": 14490,
+    "discount": 12
+  },
+  {
+    "id": 275985,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-lactasa-9000-ui-60-comprimidos/275985.html",
+    "price_offer": 17855,
+    "price_normal": 20290,
+    "discount": 12
+  },
+  {
+    "id": 287257,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biotiplus-probioticos-6-5-bufc-15-capsulas/287257.html",
+    "price_offer": 12927,
+    "price_normal": 14690,
+    "discount": 12
+  },
+  {
+    "id": 292064,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/forflow-fosfato-de-sodio-fosfato-disodico-16-0-gr-gr-solucion-enema-133-ml/292064.html",
+    "price_offer": 8686,
+    "price_normal": 9870,
+    "discount": 12
+  },
+  {
+    "id": 288121,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-compuesto-metamizol-300-mg-ml-gotas-orales-30-ml/288121.html",
+    "price_offer": 5990,
+    "price_normal": 8790,
+    "discount": 32
+  },
+  {
+    "id": 261741,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-16-mg-30-comprimidos/261741.html",
+    "price_offer": 43375,
+    "price_normal": 49290,
+    "discount": 12
+  },
+  {
+    "id": 299198,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mecolzine-mesalazina-500-mg-30-supositorios/299198.html",
+    "price_offer": 90807,
+    "price_normal": 103190,
+    "discount": 12
+  },
+  {
+    "id": 546271,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-adulto-con-probiotico-prebioticos-vitaminas-minerales-y-extracto-edelberry-30-capsulas/546271.html",
+    "price_offer": 12290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 538170,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/disfruta-sal-efervescente-clasico-polvo-para-preparacion-oral-100-gr/538170.html",
+    "price_offer": 3290,
+    "price_normal": 4690,
+    "discount": 30
+  },
+  {
+    "id": 275984,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-lactasa-9000-ui-30-comprimidos/275984.html",
+    "price_offer": 13543,
+    "price_normal": 15390,
+    "discount": 12
+  },
+  {
+    "id": 272074,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/prucalex-prucaloprida-2-mg-30-comprimidos-recubiertos/272074.html",
+    "price_offer": 52175,
+    "price_normal": 59290,
+    "discount": 12
+  },
+  {
+    "id": 275032,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/protium-transit-probioticos-30-capsulas/275032.html",
+    "price_offer": 20759,
+    "price_normal": 23590,
+    "discount": 12
+  },
+  {
+    "id": 263990,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/normix-rifaximina-200-mg-24-comprimidos-recubierto/263990.html",
+    "price_offer": 46279,
+    "price_normal": 52590,
+    "discount": 12
+  },
+  {
+    "id": 6025,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diaren-nifuroxazida-200-mg-suspension-100-ml/6025.html",
+    "price_offer": 19703,
+    "price_normal": 22390,
+    "discount": 12
+  },
+  {
+    "id": 268292,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-protectis-probioticos-30-comprimidos-masticables-sabor-limon/268292.html",
+    "price_offer": 22686,
+    "price_normal": 25780,
+    "discount": 12
+  },
+  {
+    "id": 287516,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vintix-saccharomyces-boulardii-250-mg-10-capsulas/287516.html",
+    "price_offer": 12223,
+    "price_normal": 13890,
+    "discount": 12
+  },
+  {
+    "id": 269345,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-odd-mesalazina-1-5-gr-30-sobres-con-liberacion-prolongada/269345.html",
+    "price_offer": 107879,
+    "price_normal": 122590,
+    "discount": 12
+  },
+  {
+    "id": 264509,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ciruelax-forte-cassia-angustifolia-125-mg-24-comprimidos/264509.html",
+    "price_offer": 4490,
+    "price_normal": 6390,
+    "discount": 30
+  },
+  {
+    "id": 266008,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mecolzine-mesalazina-500-mg-100-comprimidos/266008.html",
+    "price_offer": 75495,
+    "price_normal": 85790,
+    "discount": 12
+  },
+  {
+    "id": 267357,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-plus-probioticos-30-capsulas/267357.html",
+    "price_offer": 15390,
+    "price_normal": 21990,
+    "discount": 30
+  },
+  {
+    "id": 293728,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-probioticos-gotas-8-ml/293728.html",
+    "price_offer": 23091,
+    "price_normal": 26240,
+    "discount": 12
+  },
+  {
+    "id": 193030,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buton-papaverina-40-mg-10-comprimidos/193030.html",
+    "price_offer": 3467,
+    "price_normal": 3940,
+    "discount": 12
+  },
+  {
+    "id": 275395,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/betina-betahistina-24-mg-30-comprimidos/275395.html",
+    "price_offer": 32551,
+    "price_normal": 36990,
+    "discount": 12
+  },
+  {
+    "id": 15363,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactulosa-65-solucion-200-ml/15363.html",
+    "price_offer": 8765,
+    "price_normal": 9960,
+    "discount": 12
+  },
+  {
+    "id": 525715,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/purescience-probiotico-high-potency/525715.html",
+    "price_offer": 31990,
+    "price_normal": 34990,
+    "discount": 9
+  },
+  {
+    "id": 294394,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/imecol-nifuroxazida-200-mg-16-comprimidos/294394.html",
+    "price_offer": 6943,
+    "price_normal": 7890,
+    "discount": 12
+  },
+  {
+    "id": 538172,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/disfruta-sal-efervescente-limon-polvo-para-preparacion-oral-100-gr/538172.html",
+    "price_offer": 3290,
+    "price_normal": 4690,
+    "discount": 30
+  },
+  {
+    "id": 270840,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/perenteryl-pediatrico-polvo-liofilizado-250-mg-10-sobres/270840.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 256770,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/plazolit-propinoxato-pargeverina-clorhidrato-5-mg-ml-solucion-15-ml/256770.html",
+    "price_offer": 3731,
+    "price_normal": 4240,
+    "discount": 12
+  },
+  {
+    "id": 257651,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vertigoheel-ambra-10-gotas-30-ml/257651.html",
+    "price_offer": 20583,
+    "price_normal": 23390,
+    "discount": 12
+  },
+  {
+    "id": 277284,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bioflora-saccharomyces-250-mg-10-capsulas/277284.html",
+    "price_offer": 9990,
+    "price_normal": 13290,
+    "discount": 25
+  },
+  {
+    "id": 6171,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idon-domperidona-10-mg-ml-gotas-15-ml/6171.html",
+    "price_offer": 10551,
+    "price_normal": 11990,
+    "discount": 12
+  },
+  {
+    "id": 67397,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dislep-levosulpirida-25-mg-20-comprimidos/67397.html",
+    "price_offer": 21111,
+    "price_normal": 23990,
+    "discount": 12
+  },
+  {
+    "id": 292568,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vitomit-doxilamina-piridoxina-clorhidrato-b6-10-mg-30-comprimidos/292568.html",
+    "price_offer": 12927,
+    "price_normal": 14690,
+    "discount": 12
+  },
+  {
+    "id": 255781,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idon-domperidona-10-mg-30-capsulas/255781.html",
+    "price_offer": 13455,
+    "price_normal": 15290,
+    "discount": 12
+  },
+  {
+    "id": 263906,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/docivin-domperidona-10-mg-30-capsulas/263906.html",
+    "price_offer": 5271,
+    "price_normal": 5990,
+    "discount": 12
+  },
+  {
+    "id": 161018,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-clorhidrato-5-mg-ml-compuesto-solucion-inyectable-1-ml-2-ampollas/161018.html",
+    "price_offer": 4919,
+    "price_normal": 5590,
+    "discount": 12
+  },
+  {
+    "id": 161028,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-compuesto-pargeverina-0-6-g-100-ml-gotas-15-ml/161028.html",
+    "price_offer": 6990,
+    "price_normal": 8490,
+    "discount": 18
+  },
+  {
+    "id": 12174,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gastrolen-clordiazepoxido-5-mg-30-comprimidos-recubierto/12174.html",
+    "price_offer": 12751,
+    "price_normal": 14490,
+    "discount": 12
+  },
+  {
+    "id": 199280,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicerina-0-91-gr-20-supositorios-1-4/199280.html",
+    "price_offer": 4092,
+    "price_normal": 4650,
+    "discount": 12
+  },
+  {
+    "id": 33035,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/axant-lactulosa-lactulosa-65-solucion-oral-200-ml/33035.html",
+    "price_offer": 10155,
+    "price_normal": 11540,
+    "discount": 12
+  },
+  {
+    "id": 199401,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/carbon-sulfaguanidina-carbon-127-mg-10-comprimidos/199401.html",
+    "price_offer": 695,
+    "price_normal": 790,
+    "discount": 12
+  },
+  {
+    "id": 295509,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-probioticos-con-vitamina-d-gotas-5-ml/295509.html",
+    "price_offer": 24631,
+    "price_normal": 27990,
+    "discount": 12
+  },
+  {
+    "id": 57229,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bilaxil-granulado-plantago-2-2-gr-solucion-oral-400-gr/57229.html",
+    "price_offer": 34135,
+    "price_normal": 38790,
+    "discount": 12
+  },
+  {
+    "id": 51086,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ciruelax-ciruela-4-4-gr-jalea-oral-600-gr/51086.html",
+    "price_offer": 7490,
+    "price_normal": 9340,
+    "discount": 20
+  },
+  {
+    "id": 31025,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vaselina-liquida-medicinal-200-ml/31025.html",
+    "price_offer": 3247,
+    "price_normal": 3690,
+    "discount": 12
+  },
+  {
+    "id": 86035,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/budenofalk-budesonida-3-mg-100-capsulas/86035.html",
+    "price_offer": 150207,
+    "price_normal": 170690,
+    "discount": 12
+  },
+  {
+    "id": 535871,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pylobiotic-probiotico-bifidobacterieum-longum-cepa-bi-05tm-1x109-ufc-30-capsulas/535871.html",
+    "price_offer": 17239,
+    "price_normal": 19590,
+    "discount": 12
+  },
+  {
+    "id": 158006,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/fenokomp-39-fenoftaleina-50-mg-90-comprimidos/158006.html",
+    "price_offer": 6151,
+    "price_normal": 6990,
+    "discount": 12
+  },
+  {
+    "id": 199281,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/glicerina-2-3-gr-10-supositorios-gigantes/199281.html",
+    "price_offer": 6054,
+    "price_normal": 6880,
+    "discount": 12
+  },
+  {
+    "id": 268208,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/metoclopramida-10-mg-24-comprimidos/268208.html",
+    "price_offer": 1751,
+    "price_normal": 1990,
+    "discount": 12
+  },
+  {
+    "id": 546265,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-woman-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-cranberry-30-comprimidos/546265.html",
+    "price_offer": 13290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 252693,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-forte-pargeverina-10-mg-gotas-20-ml/252693.html",
+    "price_offer": 6490,
+    "price_normal": 8590,
+    "discount": 24
+  },
+  {
+    "id": 259605,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/endofalk-potasio-0-18-gr-6-sobres/259605.html",
+    "price_offer": 26743,
+    "price_normal": 30390,
+    "discount": 12
+  },
+  {
+    "id": 272620,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/domperidona-10-mg-20-comprimidos-genericos/272620.html",
+    "price_offer": 1355,
+    "price_normal": 1540,
+    "discount": 12
+  },
+  {
+    "id": 6373,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trim-trimebutino-300-mg-30-comprimidos-liberacion-prolongada/6373.html",
+    "price_offer": 37391,
+    "price_normal": 42490,
+    "discount": 12
+  },
+  {
+    "id": 86013,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-mesalazina-500-mg-100-comprimidos-recubierto/86013.html",
+    "price_offer": 116459,
+    "price_normal": 132340,
+    "discount": 12
+  },
+  {
+    "id": 260601,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buscapina-perlas-escopolamina-10-mg-10-capsulas-blandas/260601.html",
+    "price_offer": 8351,
+    "price_normal": 9490,
+    "discount": 12
+  },
+  {
+    "id": 546267,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-kids-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-edelberry-30-comprimidos-masticables-sabor-berries/546267.html",
+    "price_offer": 12290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 251733,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aloe-lax-aloina-130-mg-50-capsulas/251733.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 268516,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/fibrasol-naranja-psyllium-68-polvo-200-gr/268516.html",
+    "price_offer": 15479,
+    "price_normal": 17590,
+    "discount": 12
+  },
+  {
+    "id": 287517,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vintix-saccharomyces-boulardii-250-mg-polvo-para-uso-oral-10-sobres/287517.html",
+    "price_offer": 11519,
+    "price_normal": 13090,
+    "discount": 12
+  },
+  {
+    "id": 271210,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/contumax-3350-macrogol-3350-7-gr-15-sobres-solucion-oral/271210.html",
+    "price_offer": 25247,
+    "price_normal": 28690,
+    "discount": 12
+  },
+  {
+    "id": 297459,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/enterol-s-saccharomyces-boulardii-250-mg-suspension-oral-10-sobres/297459.html",
+    "price_offer": 10991,
+    "price_normal": 12490,
+    "discount": 12
+  },
+  {
+    "id": 193069,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/coliper-loperamida-2-mg-6-comprimidos/193069.html",
+    "price_offer": 3643,
+    "price_normal": 4140,
+    "discount": 12
+  },
+  {
+    "id": 289730,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ciruelax-minitabs-cassia-angustifolia-75-mg-100-comprimidos/289730.html",
+    "price_offer": 8990,
+    "price_normal": 13590,
+    "discount": 34
+  },
+  {
+    "id": 270841,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/perenteryl-250-mg-10-capsulas/270841.html",
+    "price_offer": 15479,
+    "price_normal": 17590,
+    "discount": 12
+  },
+  {
+    "id": 257645,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/heel-spascupreel-citrullus-30-mg-50-comprimidos/257645.html",
+    "price_offer": 22190,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 252752,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutino-200-mg-30-comprimidos/252752.html",
+    "price_offer": 22871,
+    "price_normal": 25990,
+    "discount": 12
+  },
+  {
+    "id": 277283,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bioflora-saccharomyces-250-mg-10-sobres-suspension-oral/277283.html",
+    "price_offer": 9990,
+    "price_normal": 11590,
+    "discount": 14
+  },
+  {
+    "id": 295740,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/muno-start-probioticos-vitaminas-1-5gr-30-sticks/295740.html",
+    "price_offer": 27623,
+    "price_normal": 31390,
+    "discount": 12
+  },
+  {
+    "id": 254961,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hidrasec-racecadotrilo-100-mg-9-capsulas/254961.html",
+    "price_offer": 14511,
+    "price_normal": 16490,
+    "discount": 12
+  },
+  {
+    "id": 273399,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-probioticos-polvo-para-suspension-oral-14-sachets/273399.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 290371,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/enterol-s-saccharomyces-boulardii-250-mg-10-capsulas/290371.html",
+    "price_offer": 10551,
+    "price_normal": 11990,
+    "discount": 12
+  },
+  {
+    "id": 73023,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutino-200-mg-50-comprimidos/73023.html",
+    "price_offer": 24895,
+    "price_normal": 28290,
+    "discount": 12
+  },
+  {
+    "id": 252692,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-pargeverina-5-mg-ml-gotas-20-ml/252692.html",
+    "price_offer": 6327,
+    "price_normal": 7190,
+    "discount": 12
+  },
+  {
+    "id": 256613,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-forte-pargeverina-10-mg-10-comprimidos/256613.html",
+    "price_offer": 8990,
+    "price_normal": 10890,
+    "discount": 17
+  },
+  {
+    "id": 264366,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-24-mg-30-comprimidos/264366.html",
+    "price_offer": 46631,
+    "price_normal": 52990,
+    "discount": 12
+  },
+  {
+    "id": 24167,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-8-mg-60-comprimidos/24167.html",
+    "price_offer": 49183,
+    "price_normal": 55890,
+    "discount": 12
+  },
+  {
+    "id": 542680,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/kaditur-otilonio-40-mg-40-comprimidos-recubiertos/542680.html",
+    "price_offer": 24543,
+    "price_normal": 27890,
+    "discount": 12
+  },
+  {
+    "id": 33009,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/fosfosoda-jengibre-limon-bifosfato-na-18-solucion-oral-45-ml/33009.html",
+    "price_offer": 8967,
+    "price_normal": 10190,
+    "discount": 12
+  },
+  {
+    "id": 6018,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diaren-nifuroxazida-200-mg-20-comprimidos/6018.html",
+    "price_offer": 10639,
+    "price_normal": 12090,
+    "discount": 12
+  },
+  {
+    "id": 41047,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolcopin-escopolamina-16-66-mg-gotas-15-ml/41047.html",
+    "price_offer": 7119,
+    "price_normal": 8090,
+    "discount": 12
+  },
+  {
+    "id": 268045,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lax-3350-macrogol-3350-17-gr-polvo-7-sobres/268045.html",
+    "price_offer": 16359,
+    "price_normal": 18590,
+    "discount": 12
+  },
+  {
+    "id": 546269,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-senior-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-ginseng-30-capsulas/546269.html",
+    "price_offer": 13490,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 539959,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pure-science-probiotico-con-cranberry-30-capsulas/539959.html",
+    "price_offer": 25863,
+    "price_normal": 29390,
+    "discount": 12
+  },
+  {
+    "id": 398300,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-atb-probioticos-30-000m-ufc-30-capsulas/398300.html",
+    "price_offer": 19087,
+    "price_normal": 21690,
+    "discount": 12
+  },
+  {
+    "id": 296457,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aloe-vera-90-capsulas/296457.html",
+    "price_offer": 15990,
+    "price_normal": 19290,
+    "discount": 17
+  },
+  {
+    "id": 199400,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/carbon-sulfaguanidina-carbon-127-mg-20-comprimidos/199400.html",
+    "price_offer": 2631,
+    "price_normal": 2990,
+    "discount": 12
+  },
+  {
+    "id": 267907,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ciruelax-minitabs-extracto-seco-cassia-angustifolia-75-mg-60-comprimidos-recubiertos/267907.html",
+    "price_offer": 6490,
+    "price_normal": 7890,
+    "discount": 18
+  },
+  {
+    "id": 27130,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aerogastrol-metoclopramida-20-capsulas/27130.html",
+    "price_offer": 10991,
+    "price_normal": 12490,
+    "discount": 12
+  },
+  {
+    "id": 272596,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bion-bb-suspension-oleosa-probioticos-gotas-5-gr/272596.html",
+    "price_offer": 23531,
+    "price_normal": 26740,
+    "discount": 12
+  },
+  {
+    "id": 261496,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/moviplus-difenidol-25-mg-30-comprimidos/261496.html",
+    "price_offer": 20407,
+    "price_normal": 23190,
+    "discount": 12
+  },
+  {
+    "id": 274650,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vivera-sobres-8-unidades/274650.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 273060,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ciruelax-forte-cassia-angustifolia-extracto-seco-125-mg-60-comprimidos/273060.html",
+    "price_offer": 9671,
+    "price_normal": 10990,
+    "discount": 12
+  },
+  {
+    "id": 275394,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/betina-betahistina-16-mg-30-comprimidos/275394.html",
+    "price_offer": 24719,
+    "price_normal": 28090,
+    "discount": 12
+  },
+  {
+    "id": 258961,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/plazolit-forte-propinoxato-10-mg-gotas-15-ml/258961.html",
+    "price_offer": 4567,
+    "price_normal": 5190,
+    "discount": 12
+  },
+  {
+    "id": 73022,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutina-maleato-200-mg-10-comprimidos/73022.html",
+    "price_offer": 14863,
+    "price_normal": 16890,
+    "discount": 12
+  },
+  {
+    "id": 258395,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-lactobacillus-reuteri-0-ufc-gotas-5-ml/258395.html",
+    "price_offer": 21991,
+    "price_normal": 24990,
+    "discount": 12
+  },
+  {
+    "id": 161017,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-5-mg-ml-gotas-15-ml/161017.html",
+    "price_offer": 6490,
+    "price_normal": 7540,
+    "discount": 14
+  },
+  {
+    "id": 161140,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-forte-pargeverina-10-mg-ml-gotas-15-ml/161140.html",
+    "price_offer": 5007,
+    "price_normal": 5690,
+    "discount": 12
+  },
+  {
+    "id": 292500,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/alflorex-30-capsulas/292500.html",
+    "price_offer": 22044,
+    "price_normal": 25050,
+    "discount": 12
+  },
+  {
+    "id": 253807,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/docivin-domperidona-10-mg-ml-solucion-15-ml/253807.html",
+    "price_offer": 6327,
+    "price_normal": 7190,
+    "discount": 12
+  },
+  {
+    "id": 199342,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trimebutino-100-mg-20-comprimidos/199342.html",
+    "price_offer": 2279,
+    "price_normal": 2590,
+    "discount": 12
+  },
+  {
+    "id": 297885,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/proflora-suspension-bebible-oral-5ml-10-minibotellas/297885.html",
+    "price_offer": 15875,
+    "price_normal": 18040,
+    "discount": 12
+  },
+  {
+    "id": 1050,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/tensoliv-clordiazepoxido-5-mg-30-comprimidos/1050.html",
+    "price_offer": 9690,
+    "price_normal": 16560,
+    "discount": 41
+  },
+  {
+    "id": 6372,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trim-trimebutino-300-mg-10-comprimidos-liberacion-prolongada/6372.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 262565,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pluriamin-doxilamina-10-mg-30-comprimidos/262565.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 540299,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/corplus-a-base-de-probioticos-y-vitamina-d-capsulas-14-67gr-30-comprimidos/540299.html",
+    "price_offer": 27280,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 525714,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/purescience-probiotic-daily/525714.html",
+    "price_offer": 29990,
+    "price_normal": 31990,
+    "discount": 6
+  },
+  {
+    "id": 86021,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-mesalazina-500-mg-30-supositorios/86021.html",
+    "price_offer": 116855,
+    "price_normal": 132790,
+    "discount": 12
+  },
+  {
+    "id": 289738,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/normix-rifaximina-polimorfo-200-mg-12-comprimidos-recubierto/289738.html",
+    "price_offer": 19967,
+    "price_normal": 22690,
+    "discount": 12
+  },
+  {
+    "id": 18089,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/azulfidine-sulfasalazina-500-mg-100-comprimidos-ranurado/18089.html",
+    "price_offer": 85351,
+    "price_normal": 96990,
+    "discount": 12
+  },
+  {
+    "id": 264640,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vertium-difenidol-clorhidrato-25-mg-40-comprimidos/264640.html",
+    "price_offer": 21551,
+    "price_normal": 24490,
+    "discount": 12
+  },
+  {
+    "id": 6359,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/doloverina-mebeverina-200-mg-20-comprimidos-de-liberacion-prolongada/6359.html",
+    "price_offer": 26919,
+    "price_normal": 30590,
+    "discount": 12
+  },
+  {
+    "id": 6018,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diaren-nifuroxazida-200-mg-20-comprimidos/6018.html",
+    "price_offer": 10639,
+    "price_normal": 12090,
+    "discount": 12
+  },
+  {
+    "id": 6025,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diaren-nifuroxazida-200-mg-suspension-100-ml/6025.html",
+    "price_offer": 19703,
+    "price_normal": 22390,
+    "discount": 12
+  },
+  {
+    "id": 86013,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-mesalazina-500-mg-100-comprimidos-recubierto/86013.html",
+    "price_offer": 116459,
+    "price_normal": 132340,
+    "discount": 12
+  },
+  {
+    "id": 86021,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-mesalazina-500-mg-30-supositorios/86021.html",
+    "price_offer": 116855,
+    "price_normal": 132790,
+    "discount": 12
+  },
+  {
+    "id": 86035,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/budenofalk-budesonida-3-mg-100-capsulas/86035.html",
+    "price_offer": 150207,
+    "price_normal": 170690,
+    "discount": 12
+  },
+  {
+    "id": 193069,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/coliper-loperamida-2-mg-6-comprimidos/193069.html",
+    "price_offer": 3643,
+    "price_normal": 4140,
+    "discount": 12
+  },
+  {
+    "id": 199072,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/loperamida-2-mg-6-comprimidos/199072.html",
+    "price_offer": 1188,
+    "price_normal": 1350,
+    "discount": 12
+  },
+  {
+    "id": 199400,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/carbon-sulfaguanidina-carbon-127-mg-20-comprimidos/199400.html",
+    "price_offer": 2631,
+    "price_normal": 2990,
+    "discount": 12
+  },
+  {
+    "id": 199401,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/carbon-sulfaguanidina-carbon-127-mg-10-comprimidos/199401.html",
+    "price_offer": 695,
+    "price_normal": 790,
+    "discount": 12
+  },
+  {
+    "id": 254961,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hidrasec-racecadotrilo-100-mg-9-capsulas/254961.html",
+    "price_offer": 14511,
+    "price_normal": 16490,
+    "discount": 12
+  },
+  {
+    "id": 258395,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-lactobacillus-reuteri-0-ufc-gotas-5-ml/258395.html",
+    "price_offer": 21991,
+    "price_normal": 24990,
+    "discount": 12
+  },
+  {
+    "id": 263990,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/normix-rifaximina-200-mg-24-comprimidos-recubierto/263990.html",
+    "price_offer": 46279,
+    "price_normal": 52590,
+    "discount": 12
+  },
+  {
+    "id": 266008,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mecolzine-mesalazina-500-mg-100-comprimidos/266008.html",
+    "price_offer": 75495,
+    "price_normal": 85790,
+    "discount": 12
+  },
+  {
+    "id": 268292,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-protectis-probioticos-30-comprimidos-masticables-sabor-limon/268292.html",
+    "price_offer": 22686,
+    "price_normal": 25780,
+    "discount": 12
+  },
+  {
+    "id": 269345,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-odd-mesalazina-1-5-gr-30-sobres-con-liberacion-prolongada/269345.html",
+    "price_offer": 107879,
+    "price_normal": 122590,
+    "discount": 12
+  },
+  {
+    "id": 270840,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/perenteryl-pediatrico-polvo-liofilizado-250-mg-10-sobres/270840.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 270841,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/perenteryl-250-mg-10-capsulas/270841.html",
+    "price_offer": 15479,
+    "price_normal": 17590,
+    "discount": 12
+  },
+  {
+    "id": 272596,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bion-bb-suspension-oleosa-probioticos-gotas-5-gr/272596.html",
+    "price_offer": 23531,
+    "price_normal": 26740,
+    "discount": 12
+  },
+  {
+    "id": 274650,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vivera-sobres-8-unidades/274650.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 277283,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bioflora-saccharomyces-250-mg-10-sobres-suspension-oral/277283.html",
+    "price_offer": 9990,
+    "price_normal": 11590,
+    "discount": 14
+  },
+  {
+    "id": 277284,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bioflora-saccharomyces-250-mg-10-capsulas/277284.html",
+    "price_offer": 9990,
+    "price_normal": 13290,
+    "discount": 25
+  },
+  {
+    "id": 287257,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biotiplus-probioticos-6-5-bufc-15-capsulas/287257.html",
+    "price_offer": 12927,
+    "price_normal": 14690,
+    "discount": 12
+  },
+  {
+    "id": 287516,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vintix-saccharomyces-boulardii-250-mg-10-capsulas/287516.html",
+    "price_offer": 12223,
+    "price_normal": 13890,
+    "discount": 12
+  },
+  {
+    "id": 287517,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vintix-saccharomyces-boulardii-250-mg-polvo-para-uso-oral-10-sobres/287517.html",
+    "price_offer": 11519,
+    "price_normal": 13090,
+    "discount": 12
+  },
+  {
+    "id": 289738,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/normix-rifaximina-polimorfo-200-mg-12-comprimidos-recubierto/289738.html",
+    "price_offer": 19967,
+    "price_normal": 22690,
+    "discount": 12
+  },
+  {
+    "id": 290371,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/enterol-s-saccharomyces-boulardii-250-mg-10-capsulas/290371.html",
+    "price_offer": 10551,
+    "price_normal": 11990,
+    "discount": 12
+  },
+  {
+    "id": 292500,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/alflorex-30-capsulas/292500.html",
+    "price_offer": 22044,
+    "price_normal": 25050,
+    "discount": 12
+  },
+  {
+    "id": 294394,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/imecol-nifuroxazida-200-mg-16-comprimidos/294394.html",
+    "price_offer": 6943,
+    "price_normal": 7890,
+    "discount": 12
+  },
+  {
+    "id": 295509,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biogaia-probioticos-con-vitamina-d-gotas-5-ml/295509.html",
+    "price_offer": 24631,
+    "price_normal": 27990,
+    "discount": 12
+  },
+  {
+    "id": 295740,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/muno-start-probioticos-vitaminas-1-5gr-30-sticks/295740.html",
+    "price_offer": 27623,
+    "price_normal": 31390,
+    "discount": 12
+  },
+  {
+    "id": 297459,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/enterol-s-saccharomyces-boulardii-250-mg-suspension-oral-10-sobres/297459.html",
+    "price_offer": 10991,
+    "price_normal": 12490,
+    "discount": 12
+  },
+  {
+    "id": 297885,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/proflora-suspension-bebible-oral-5ml-10-minibotellas/297885.html",
+    "price_offer": 15875,
+    "price_normal": 18040,
+    "discount": 12
+  },
+  {
+    "id": 299198,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mecolzine-mesalazina-500-mg-30-supositorios/299198.html",
+    "price_offer": 90807,
+    "price_normal": 103190,
+    "discount": 12
+  },
+  {
+    "id": 383409,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gastroaliv-subsalicilato-de-bismuto-262-5-mg-15-ml-suspension-oral-240-ml-sabor-menta-cherry/383409.html",
+    "price_offer": 7390,
+    "price_normal": 8990,
+    "discount": 18
+  },
+  {
+    "id": 561371,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactobasan-9000-fcc-lactasa-60-comprimidos/561371.html",
+    "price_offer": 14212,
+    "price_normal": 16150,
+    "discount": 12
+  },
+  {
+    "id": 391794,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/solbiot-probioticos-30-capsulas/391794.html",
+    "price_offer": 20319,
+    "price_normal": 23090,
+    "discount": 12
+  },
+  {
+    "id": 392438,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/muno-gotas-10ml-30-dosis/392438.html",
+    "price_offer": 22871,
+    "price_normal": 25990,
+    "discount": 12
+  },
+  {
+    "id": 535871,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pylobiotic-probiotico-bifidobacterieum-longum-cepa-bi-05tm-1x109-ufc-30-capsulas/535871.html",
+    "price_offer": 17239,
+    "price_normal": 19590,
+    "discount": 12
+  },
+  {
+    "id": 566677,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/enterogermina-10-viales/566677.html",
+    "price_offer": 16890,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 398300,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-atb-probioticos-30-000m-ufc-30-capsulas/398300.html",
+    "price_offer": 19087,
+    "price_normal": 21690,
+    "discount": 12
+  },
+  {
+    "id": 540299,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/corplus-a-base-de-probioticos-y-vitamina-d-capsulas-14-67gr-30-comprimidos/540299.html",
+    "price_offer": 27280,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 534360,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gastroaliv-sabor-menta-cherry-262-mg-10-comprimidos-masticables/534360.html",
+    "price_offer": 4391,
+    "price_normal": 4990,
+    "discount": 12
+  },
+  {
+    "id": 18089,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/azulfidine-sulfasalazina-500-mg-100-comprimidos-ranurado/18089.html",
+    "price_offer": 85351,
+    "price_normal": 96990,
+    "discount": 12
+  },
+  {
+    "id": 268462,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/salofalk-odd-mesalazina-1000-mg-10-supositorios/268462.html",
+    "price_offer": 98182,
+    "price_normal": 111570,
+    "discount": 12
+  },
+  {
+    "id": 24167,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-8-mg-60-comprimidos/24167.html",
+    "price_offer": 49183,
+    "price_normal": 55890,
+    "discount": 12
+  },
+  {
+    "id": 41047,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolcopin-escopolamina-16-66-mg-gotas-15-ml/41047.html",
+    "price_offer": 7119,
+    "price_normal": 8090,
+    "discount": 12
+  },
+  {
+    "id": 42040,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/mareamin-dimenhidrinato-100-mg-20-comprimidos/42040.html",
+    "price_offer": 12751,
+    "price_normal": 14490,
+    "discount": 12
+  },
+  {
+    "id": 161017,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-5-mg-ml-gotas-15-ml/161017.html",
+    "price_offer": 6490,
+    "price_normal": 7540,
+    "discount": 14
+  },
+  {
+    "id": 161018,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-clorhidrato-5-mg-ml-compuesto-solucion-inyectable-1-ml-2-ampollas/161018.html",
+    "price_offer": 4919,
+    "price_normal": 5590,
+    "discount": 12
+  },
+  {
+    "id": 161028,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-compuesto-pargeverina-0-6-g-100-ml-gotas-15-ml/161028.html",
+    "price_offer": 6990,
+    "price_normal": 8490,
+    "discount": 18
+  },
+  {
+    "id": 161140,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-forte-pargeverina-10-mg-ml-gotas-15-ml/161140.html",
+    "price_offer": 5007,
+    "price_normal": 5690,
+    "discount": 12
+  },
+  {
+    "id": 193030,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buton-papaverina-40-mg-10-comprimidos/193030.html",
+    "price_offer": 3467,
+    "price_normal": 3940,
+    "discount": 12
+  },
+  {
+    "id": 252692,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-pargeverina-5-mg-ml-gotas-20-ml/252692.html",
+    "price_offer": 6327,
+    "price_normal": 7190,
+    "discount": 12
+  },
+  {
+    "id": 252693,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-forte-pargeverina-10-mg-gotas-20-ml/252693.html",
+    "price_offer": 6490,
+    "price_normal": 8590,
+    "discount": 24
+  },
+  {
+    "id": 256613,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-forte-pargeverina-10-mg-10-comprimidos/256613.html",
+    "price_offer": 8990,
+    "price_normal": 10890,
+    "discount": 17
+  },
+  {
+    "id": 256770,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/plazolit-propinoxato-pargeverina-clorhidrato-5-mg-ml-solucion-15-ml/256770.html",
+    "price_offer": 3731,
+    "price_normal": 4240,
+    "discount": 12
+  },
+  {
+    "id": 257645,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/heel-spascupreel-citrullus-30-mg-50-comprimidos/257645.html",
+    "price_offer": 22190,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 257651,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vertigoheel-ambra-10-gotas-30-ml/257651.html",
+    "price_offer": 20583,
+    "price_normal": 23390,
+    "discount": 12
+  },
+  {
+    "id": 258961,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/plazolit-forte-propinoxato-10-mg-gotas-15-ml/258961.html",
+    "price_offer": 4567,
+    "price_normal": 5190,
+    "discount": 12
+  },
+  {
+    "id": 261496,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/moviplus-difenidol-25-mg-30-comprimidos/261496.html",
+    "price_offer": 20407,
+    "price_normal": 23190,
+    "discount": 12
+  },
+  {
+    "id": 261741,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-16-mg-30-comprimidos/261741.html",
+    "price_offer": 43375,
+    "price_normal": 49290,
+    "discount": 12
+  },
+  {
+    "id": 262565,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pluriamin-doxilamina-10-mg-30-comprimidos/262565.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 264366,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/microser-betahistina-24-mg-30-comprimidos/264366.html",
+    "price_offer": 46631,
+    "price_normal": 52990,
+    "discount": 12
+  },
+  {
+    "id": 275394,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/betina-betahistina-16-mg-30-comprimidos/275394.html",
+    "price_offer": 24719,
+    "price_normal": 28090,
+    "discount": 12
+  },
+  {
+    "id": 275395,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/betina-betahistina-24-mg-30-comprimidos/275395.html",
+    "price_offer": 32551,
+    "price_normal": 36990,
+    "discount": 12
+  },
+  {
+    "id": 288121,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-compuesto-metamizol-300-mg-ml-gotas-orales-30-ml/288121.html",
+    "price_offer": 5990,
+    "price_normal": 8790,
+    "discount": 32
+  },
+  {
+    "id": 292568,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vitomit-doxilamina-piridoxina-clorhidrato-b6-10-mg-30-comprimidos/292568.html",
+    "price_offer": 12927,
+    "price_normal": 14690,
+    "discount": 12
+  },
+  {
+    "id": 293723,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/detrucalm-flavoxato-clorhidrato-200-mg-10-comprimidos/293723.html",
+    "price_offer": 10990,
+    "price_normal": 12590,
+    "discount": 13
+  },
+  {
+    "id": 41053,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dipatropin-10-comprimidos/41053.html",
+    "price_offer": 5095,
+    "price_normal": 5790,
+    "discount": 12
+  },
+  {
+    "id": 40092,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/kanacitrin-citrato-de-potasio-monohidratado-3-3-gr-sobre-solucion-oral-50-sobres/40092.html",
+    "price_offer": 36291,
+    "price_normal": 41240,
+    "discount": 12
+  },
+  {
+    "id": 40104,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/spasmex-trospio-cloruro-30-mg-30-comprimidos-recubierto/40104.html",
+    "price_offer": 35191,
+    "price_normal": 39990,
+    "discount": 12
+  },
+  {
+    "id": 31050,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buton-adulto-papaverina-40-mg-100-comprimidos/31050.html",
+    "price_offer": 3467,
+    "price_normal": 3940,
+    "discount": 12
+  },
+  {
+    "id": 87012,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bladuril-flavoxato-clorhidrato-200-mg-20-comprimidos-recubiertos/87012.html",
+    "price_offer": 19439,
+    "price_normal": 22090,
+    "discount": 12
+  },
+  {
+    "id": 161067,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-5-mg-ml-solucion-inyectable-2-ampollas/161067.html",
+    "price_offer": 6239,
+    "price_normal": 7090,
+    "discount": 12
+  },
+  {
+    "id": 260020,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eltoven-tolterodina-2-mg-30-comprimidos-recubierto/260020.html",
+    "price_offer": 21903,
+    "price_normal": 24890,
+    "discount": 12
+  },
+  {
+    "id": 558305,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/noretis-16-mg-30-comprimidos/558305.html",
+    "price_offer": 24631,
+    "price_normal": 27990,
+    "discount": 12
+  },
+  {
+    "id": 270004,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/urostop-tolterodina-tartrato-2-mg-30-comprimidos/270004.html",
+    "price_offer": 17459,
+    "price_normal": 19840,
+    "discount": 12
+  },
+  {
+    "id": 400049,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/solicend-solifenacina-succinato-5-mg-10-comprimidos-recubiertos/400049.html",
+    "price_offer": 15831,
+    "price_normal": 17990,
+    "discount": 12
+  },
+  {
+    "id": 41030,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/phoslo-acetato-de-calcio-667-mg-60-comprimidos/41030.html",
+    "price_offer": 12839,
+    "price_normal": 14590,
+    "discount": 12
+  },
+  {
+    "id": 250955,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/uricont-oxibutinina-clorhidrato-5-mg-40-comprimidos/250955.html",
+    "price_offer": 5690,
+    "price_normal": 21390,
+    "discount": 73
+  },
+  {
+    "id": 87142,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/nordox-fenilazodiaminopiridina-200-mg-14-comprimidos/87142.html",
+    "price_offer": 22871,
+    "price_normal": 25990,
+    "discount": 12
+  },
+  {
+    "id": 268697,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lisur-flavoxato-clorhidrato-200-mg-20-comprimidos-recubierto/268697.html",
+    "price_offer": 18471,
+    "price_normal": 20990,
+    "discount": 12
+  },
+  {
+    "id": 267173,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vesicare-solifenacina-succinato-5-mg-10-comprimidos/267173.html",
+    "price_offer": 19703,
+    "price_normal": 22390,
+    "discount": 12
+  },
+  {
+    "id": 274330,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/urodial-flavoxato-clorhidrato-200-mg-10-comprimidos/274330.html",
+    "price_offer": 9231,
+    "price_normal": 10490,
+    "discount": 12
+  },
+  {
+    "id": 268611,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/detrucalm-flavoxato-clorhidrato-200-mg-30-comprimidos/268611.html",
+    "price_offer": 18990,
+    "price_normal": 21790,
+    "discount": 13
+  },
+  {
+    "id": 260831,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/uricont-tu-oxibutinina-clorhidrato-10-mg-30-comprimidos/260831.html",
+    "price_offer": 31654,
+    "price_normal": 35970,
+    "discount": 12
+  },
+  {
+    "id": 87102,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/urazol-oxibutinina-clorhidrato-5-mg-30-comprimidos/87102.html",
+    "price_offer": 19351,
+    "price_normal": 21990,
+    "discount": 12
+  },
+  {
+    "id": 260601,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buscapina-perlas-escopolamina-10-mg-10-capsulas-blandas/260601.html",
+    "price_offer": 8351,
+    "price_normal": 9490,
+    "discount": 12
+  },
+  {
+    "id": 264640,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vertium-difenidol-clorhidrato-25-mg-40-comprimidos/264640.html",
+    "price_offer": 21551,
+    "price_normal": 24490,
+    "discount": 12
+  },
+  {
+    "id": 1050,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/tensoliv-clordiazepoxido-5-mg-30-comprimidos/1050.html",
+    "price_offer": 9690,
+    "price_normal": 16560,
+    "discount": 41
+  },
+  {
+    "id": 6005,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aero-itan-simeticona-100-mg-20-capsulas/6005.html",
+    "price_offer": 18295,
+    "price_normal": 20790,
+    "discount": 12
+  },
+  {
+    "id": 6372,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trim-trimebutino-300-mg-10-comprimidos-liberacion-prolongada/6372.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 6373,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trim-trimebutino-300-mg-30-comprimidos-liberacion-prolongada/6373.html",
+    "price_offer": 37391,
+    "price_normal": 42490,
+    "discount": 12
+  },
+  {
+    "id": 12174,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gastrolen-clordiazepoxido-5-mg-30-comprimidos-recubierto/12174.html",
+    "price_offer": 12751,
+    "price_normal": 14490,
+    "discount": 12
+  },
+  {
+    "id": 27130,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aerogastrol-metoclopramida-20-capsulas/27130.html",
+    "price_offer": 10991,
+    "price_normal": 12490,
+    "discount": 12
+  },
+  {
+    "id": 57019,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/libraxin-clordiazepoxido-5-mg-30-grageas/57019.html",
+    "price_offer": 22519,
+    "price_normal": 25590,
+    "discount": 12
+  },
+  {
+    "id": 73022,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutina-maleato-200-mg-10-comprimidos/73022.html",
+    "price_offer": 14863,
+    "price_normal": 16890,
+    "discount": 12
+  },
+  {
+    "id": 73023,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutino-200-mg-50-comprimidos/73023.html",
+    "price_offer": 24895,
+    "price_normal": 28290,
+    "discount": 12
+  },
+  {
+    "id": 161017,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-pargeverina-5-mg-ml-gotas-15-ml/161017.html",
+    "price_offer": 6490,
+    "price_normal": 7540,
+    "discount": 14
+  },
+  {
+    "id": 161028,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-compuesto-pargeverina-0-6-g-100-ml-gotas-15-ml/161028.html",
+    "price_offer": 6990,
+    "price_normal": 8490,
+    "discount": 18
+  },
+  {
+    "id": 161140,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/viadil-forte-pargeverina-10-mg-ml-gotas-15-ml/161140.html",
+    "price_offer": 5007,
+    "price_normal": 5690,
+    "discount": 12
+  },
+  {
+    "id": 193030,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/buton-papaverina-40-mg-10-comprimidos/193030.html",
+    "price_offer": 3467,
+    "price_normal": 3940,
+    "discount": 12
+  },
+  {
+    "id": 252692,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-pargeverina-5-mg-ml-gotas-20-ml/252692.html",
+    "price_offer": 6327,
+    "price_normal": 7190,
+    "discount": 12
+  },
+  {
+    "id": 252752,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dolpic-trimebutino-200-mg-30-comprimidos/252752.html",
+    "price_offer": 22871,
+    "price_normal": 25990,
+    "discount": 12
+  },
+  {
+    "id": 256770,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/plazolit-propinoxato-pargeverina-clorhidrato-5-mg-ml-solucion-15-ml/256770.html",
+    "price_offer": 3731,
+    "price_normal": 4240,
+    "discount": 12
+  },
+  {
+    "id": 267357,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-plus-probioticos-30-capsulas/267357.html",
+    "price_offer": 15390,
+    "price_normal": 21990,
+    "discount": 30
+  },
+  {
+    "id": 273399,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-probioticos-polvo-para-suspension-oral-14-sachets/273399.html",
+    "price_offer": 21287,
+    "price_normal": 24190,
+    "discount": 12
+  },
+  {
+    "id": 275032,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/protium-transit-probioticos-30-capsulas/275032.html",
+    "price_offer": 20759,
+    "price_normal": 23590,
+    "discount": 12
+  },
+  {
+    "id": 288121,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/bevitex-compuesto-metamizol-300-mg-ml-gotas-orales-30-ml/288121.html",
+    "price_offer": 5990,
+    "price_normal": 8790,
+    "discount": 32
+  },
+  {
+    "id": 293728,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-probioticos-gotas-8-ml/293728.html",
+    "price_offer": 23091,
+    "price_normal": 26240,
+    "discount": 12
+  },
+  {
+    "id": 559196,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pantab-40-mg-30-comprimidos-con-recubrimiento-enterico/559196.html",
+    "price_offer": 17990,
+    "price_normal": 27690,
+    "discount": 35
+  },
+  {
+    "id": 542680,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/kaditur-otilonio-40-mg-40-comprimidos-recubiertos/542680.html",
+    "price_offer": 24543,
+    "price_normal": 27890,
+    "discount": 12
+  },
+  {
+    "id": 272133,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/movidol-mebeverina-200-mg-30-capsulas-liberacion-prolongada/272133.html",
+    "price_offer": 25247,
+    "price_normal": 28690,
+    "discount": 12
+  },
+  {
+    "id": 383412,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/multiflora-advance-30-capsulas/383412.html",
+    "price_offer": 23135,
+    "price_normal": 26290,
+    "discount": 12
+  },
+  {
+    "id": 6359,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/doloverina-mebeverina-200-mg-20-comprimidos-de-liberacion-prolongada/6359.html",
+    "price_offer": 26919,
+    "price_normal": 30590,
+    "discount": 12
+  },
+  {
+    "id": 525715,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/purescience-probiotico-high-potency/525715.html",
+    "price_offer": 31990,
+    "price_normal": 34990,
+    "discount": 9
+  },
+  {
+    "id": 561888,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/digestion-papaya-mas-enzimas-digestivas-60-capsulas/561888.html",
+    "price_offer": 6790,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 297941,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactibiane-reference-30-capsulas/297941.html",
+    "price_offer": 27271,
+    "price_normal": 30990,
+    "discount": 12
+  },
+  {
+    "id": 297942,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactibiane-tolerance-30-capsulas/297942.html",
+    "price_offer": 26391,
+    "price_normal": 29990,
+    "discount": 12
+  },
+  {
+    "id": 539959,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pure-science-probiotico-con-cranberry-30-capsulas/539959.html",
+    "price_offer": 25863,
+    "price_normal": 29390,
+    "discount": 12
+  },
+  {
+    "id": 525714,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/purescience-probiotic-daily/525714.html",
+    "price_offer": 29990,
+    "price_normal": 31990,
+    "discount": 6
+  },
+  {
+    "id": 287397,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/clorofila-menta-200-comprimidos-masticables/287397.html",
+    "price_offer": 14090,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 557190,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/eva-suplemento-alimentario-probioticos-cranberry-30-capsulas/557190.html",
+    "price_offer": 17990,
+    "price_normal": 21490,
+    "discount": 16
+  },
+  {
+    "id": 557191,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/flora-suplemento-alimentario-probioticos-30-capsulas/557191.html",
+    "price_offer": 15990,
+    "price_normal": 18990,
+    "discount": 16
+  },
+  {
+    "id": 549996,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/citrato-de-potasio-600-mg-60-capsulas/549996.html",
+    "price_offer": 8990,
+    "price_normal": 9990,
+    "discount": 10
+  },
+  {
+    "id": 555375,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gummies-prebiotic-fiber-60-gomitas-sin-gluten-sabor-maracuya/555375.html",
+    "price_offer": 16990,
+    "price_normal": 19990,
+    "discount": 15
+  },
+  {
+    "id": 296457,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aloe-vera-90-capsulas/296457.html",
+    "price_offer": 15990,
+    "price_normal": 19290,
+    "discount": 17
+  },
+  {
+    "id": 557195,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/geabiotics-mini-probioticos-4-cepas-5-billones-cfu-30-comprimidos-masticables-sabor-naranja/557195.html",
+    "price_offer": 12990,
+    "price_normal": 15490,
+    "discount": 16
+  },
+  {
+    "id": 558214,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gummies-probiotic-60-gomitas-veganas-sabor-frutilla/558214.html",
+    "price_offer": 16990,
+    "price_normal": 19990,
+    "discount": 15
+  },
+  {
+    "id": 276462,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/s-h-o-e-sabor-limon-10-tabletas-efervescentes/276462.html",
+    "price_offer": 5990,
+    "price_normal": 7490,
+    "discount": 20
+  },
+  {
+    "id": 540628,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactasa-9000-fcc-60-comprimidos/540628.html",
+    "price_offer": 13990,
+    "price_normal": 15990,
+    "discount": 13
+  },
+  {
+    "id": 287401,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/levadura-de-cerveza-natural-500-mg-100-capsulas/287401.html",
+    "price_offer": 9990,
+    "price_normal": 17190,
+    "discount": 42
+  },
+  {
+    "id": 561930,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/fibra-con-cacao-sin-azucar-300-gr/561930.html",
+    "price_offer": 9790,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 561931,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aloe-vera-gel-30-capsulas/561931.html",
+    "price_offer": 5990,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 6175,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idon-domperidona-5-mg-suspension-100-ml/6175.html",
+    "price_offer": 15127,
+    "price_normal": 17190,
+    "discount": 12
+  },
+  {
+    "id": 561371,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/lactobasan-9000-fcc-lactasa-60-comprimidos/561371.html",
+    "price_offer": 14212,
+    "price_normal": 16150,
+    "discount": 12
+  },
+  {
+    "id": 275985,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-lactasa-9000-ui-60-comprimidos/275985.html",
+    "price_offer": 17855,
+    "price_normal": 20290,
+    "discount": 12
+  },
+  {
+    "id": 386183,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-lactasa-4500-ui-gotas-15-ml/386183.html",
+    "price_offer": 13490,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 1426,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/restol-domperidona-10-mg-gotas-20-ml/1426.html",
+    "price_offer": 5535,
+    "price_normal": 6290,
+    "discount": 12
+  },
+  {
+    "id": 546271,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-adulto-con-probiotico-prebioticos-vitaminas-minerales-y-extracto-edelberry-30-capsulas/546271.html",
+    "price_offer": 12290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 275984,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-lactasa-9000-ui-30-comprimidos/275984.html",
+    "price_offer": 13543,
+    "price_normal": 15390,
+    "discount": 12
+  },
+  {
+    "id": 257630,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/heel-gastricumeel-argentum-30-mg-50-comprimidos/257630.html",
+    "price_offer": 25770,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 257640,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/heel-nux-vomica-heelaccord-nux-vomica-0-2-gotas-30-ml/257640.html",
+    "price_offer": 21390,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 6171,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idon-domperidona-10-mg-ml-gotas-15-ml/6171.html",
+    "price_offer": 10551,
+    "price_normal": 11990,
+    "discount": 12
+  },
+  {
+    "id": 67397,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dislep-levosulpirida-25-mg-20-comprimidos/67397.html",
+    "price_offer": 21111,
+    "price_normal": 23990,
+    "discount": 12
+  },
+  {
+    "id": 255781,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idon-domperidona-10-mg-30-capsulas/255781.html",
+    "price_offer": 13455,
+    "price_normal": 15290,
+    "discount": 12
+  },
+  {
+    "id": 263906,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/docivin-domperidona-10-mg-30-capsulas/263906.html",
+    "price_offer": 5271,
+    "price_normal": 5990,
+    "discount": 12
+  },
+  {
+    "id": 6337,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/digenil-pancreatina-230-mg-10-capsulas/6337.html",
+    "price_offer": 7603,
+    "price_normal": 8640,
+    "discount": 12
+  },
+  {
+    "id": 292063,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/levogastrol-levosulpirida-25-mg-30-comprimidos/292063.html",
+    "price_offer": 26831,
+    "price_normal": 30490,
+    "discount": 12
+  },
+  {
+    "id": 268208,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/metoclopramida-10-mg-24-comprimidos/268208.html",
+    "price_offer": 1751,
+    "price_normal": 1990,
+    "discount": 12
+  },
+  {
+    "id": 546265,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-woman-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-cranberry-30-comprimidos/546265.html",
+    "price_offer": 13290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 272620,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/domperidona-10-mg-20-comprimidos-genericos/272620.html",
+    "price_offer": 1355,
+    "price_normal": 1540,
+    "discount": 12
+  },
+  {
+    "id": 386353,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-probi-tst-10-billones-de-probioticos-30-capsulas/386353.html",
+    "price_offer": 16887,
+    "price_normal": 19190,
+    "discount": 12
+  },
+  {
+    "id": 386476,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diavital-probi-kln-2-billones-de-probioticos-fibra-30-capsulas/386476.html",
+    "price_offer": 15919,
+    "price_normal": 18090,
+    "discount": 12
+  },
+  {
+    "id": 263652,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/creon-10-000-pancreatina-150-mg-20-capsulas/263652.html",
+    "price_offer": 24455,
+    "price_normal": 27790,
+    "discount": 12
+  },
+  {
+    "id": 546269,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-senior-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-ginseng-30-capsulas/546269.html",
+    "price_offer": 13490,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 253807,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/docivin-domperidona-10-mg-ml-solucion-15-ml/253807.html",
+    "price_offer": 6327,
+    "price_normal": 7190,
+    "discount": 12
+  },
+  {
+    "id": 199342,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/trimebutino-100-mg-20-comprimidos/199342.html",
+    "price_offer": 2279,
+    "price_normal": 2590,
+    "discount": 12
+  },
+  {
+    "id": 158073,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dig-herbal-cynara-sco-0-5-ml-60-comprimidos/158073.html",
+    "price_offer": 10463,
+    "price_normal": 11890,
+    "discount": 12
+  },
+  {
+    "id": 67398,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dislep-levosulpirida-2-5-gotas-20-ml/67398.html",
+    "price_offer": 17943,
+    "price_normal": 20390,
+    "discount": 12
+  },
+  {
+    "id": 259105,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/diolasa-enzima-lactasa-9000-ui-30-comprimidos/259105.html",
+    "price_offer": 19087,
+    "price_normal": 21690,
+    "discount": 12
+  },
+  {
+    "id": 551391,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probioticos-prebioticos-y-fibra-60-capsulas/551391.html",
+    "price_offer": 14990,
+    "price_normal": 15990,
+    "discount": 6
+  },
+  {
+    "id": 546267,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/probiplus-kids-con-probioticos-prebioticos-vitaminas-minerales-y-extracto-edelberry-30-comprimidos-masticables-sabor-berries/546267.html",
+    "price_offer": 12290,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 6037,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/itan-metoclopramida-10-mg-30-comprimidos/6037.html",
+    "price_offer": 10991,
+    "price_normal": 12490,
+    "discount": 12
+  }
+]
