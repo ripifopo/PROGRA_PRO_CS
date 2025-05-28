@@ -14,15 +14,26 @@ export async function POST(req: NextRequest) {
 
     const collection = await frequentMedicinesCollection;
 
+    // Verifica si ya existe este medicamento para ese usuario
+    const exists = await collection.findOne({
+      userEmail: body.userEmail,
+      medicineName: body.medicineName,
+      pharmacy: body.pharmacy
+    });
+
+    if (exists) {
+      return NextResponse.json({ message: 'Ya has guardado este medicamento.' }, { status: 409 });
+    }
+
     await collection.insertOne({
       userEmail: body.userEmail,
       medicineName: body.medicineName,
       pharmacy: body.pharmacy,
       category: body.category,
       imageUrl: body.imageUrl || null,
-      pharmacyUrl: body.pharmacyUrl || null,         // ✅ Nueva propiedad: URL a la web de la farmacia
       medicineSlug: body.medicineSlug || null,
       categorySlug: body.categorySlug || null,
+      pharmacyUrl: body.pharmacyUrl || null,
       savedAt: new Date()
     });
 
