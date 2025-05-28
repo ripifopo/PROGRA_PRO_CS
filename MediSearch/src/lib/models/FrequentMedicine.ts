@@ -7,4 +7,5 @@ export interface FrequentMedicine {
   imageUrl?: string;
   medicineSlug?: string;
   categorySlug?: string;
+  pharmacyUrl?: string;
 }

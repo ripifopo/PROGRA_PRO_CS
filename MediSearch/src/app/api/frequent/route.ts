@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
     const medicines = await collection
       .find({ userEmail: email })
       .sort({ savedAt: -1 })
-      .limit(5)
+      //.limit(5)
       .toArray();
 
     return NextResponse.json(medicines, { status: 200 });

@@ -103,6 +103,7 @@ export default function MedicineDetailPage() {
       imageUrl: medData.image || '',
       medicineSlug: encodeURIComponent(medicine as string),
       categorySlug: encodeURIComponent(category as string),
+      pharmacyUrl: medData.url || '', // Nueva propiedad añadida para guardar la URL de la farmacia
       savedAt: new Date().toISOString()
     };
 
