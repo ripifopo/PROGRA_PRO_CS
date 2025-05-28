@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { FaPills, FaHeartbeat, FaStethoscope, FaEdit } from 'react-icons/fa';
+import { XCircleFill } from 'react-bootstrap-icons';
 import { useLoading } from '../../context/LoadingContext.tsx';
 
-// Interfaz que define la estructura del perfil del usuario
 interface UserProfile {
   email: string;
   name: string;
@@ -18,7 +18,17 @@ interface UserProfile {
   icon?: string;
 }
 
-// Íconos disponibles para que el usuario seleccione
+interface FrequentMedicine {
+  _id: string;
+  userEmail: string;
+  medicineName: string;
+  pharmacy: string;
+  category: string;
+  imageUrl?: string;
+  pharmacyUrl?: string;
+  savedAt: string;
+}
+
 const availableIcons = {
   pills: <FaPills size={40} color="#218754" />,
   heartbeat: <FaHeartbeat size={40} color="#218754" />,
@@ -27,57 +37,48 @@ const availableIcons = {
 
 export default function ProfilePage() {
   const router = useRouter();
-  const { isLoading, setLoading } = useLoading(); // Hook de carga global
-
+  const { isLoading, setLoading } = useLoading();
   const [user, setUser] = useState<UserProfile | null>(null);
   const [selectedIcon, setSelectedIcon] = useState<keyof typeof availableIcons>('pills');
   const [showIconSelector, setShowIconSelector] = useState(false);
+  const [frequentList, setFrequentList] = useState<FrequentMedicine[]>([]);
 
-  // Calcula la edad desde la fecha de nacimiento
-  const calculateAge = (birthday: string) => {
-    const birthDate = new Date(birthday);
-    const today = new Date();
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age;
-  };
-
-  // Carga inicial del perfil desde localStorage y validación del token
   useEffect(() => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
       const userData = localStorage.getItem('userProfile');
-
       if (!token || !userData) throw new Error();
-
       const parsed = JSON.parse(userData);
-      if (!parsed || typeof parsed !== 'object') throw new Error();
-
       setUser(parsed);
-
-      // Carga el ícono previamente guardado por el usuario
       const savedIcon = parsed.email ? localStorage.getItem(`icon-${parsed.email}`) : null;
       if (savedIcon && Object.keys(availableIcons).includes(savedIcon)) {
         setSelectedIcon(savedIcon as keyof typeof availableIcons);
       } else if (parsed.icon && Object.keys(availableIcons).includes(parsed.icon)) {
         setSelectedIcon(parsed.icon);
       }
+      fetch(`/api/frequent?email=${parsed.email}`)
+        .then(res => res.json())
+        .then(setFrequentList);
     } catch {
-      // Si falla, elimina sesión y redirige
       toast.error('Sesión inválida. Inicia sesión nuevamente.');
       localStorage.removeItem('token');
       localStorage.removeItem('userProfile');
       router.push('/auth/login');
     } finally {
-      setTimeout(() => setLoading(false), 500); // Da tiempo al loader para mostrarse
+      setTimeout(() => setLoading(false), 500);
     }
   }, [router, setLoading]);
 
-  // Cierra la sesión del usuario
+  const calculateAge = (birthday: string) => {
+    const birthDate = new Date(birthday);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) age--;
+    return age;
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userProfile');
@@ -85,7 +86,6 @@ export default function ProfilePage() {
     router.push('/auth/login');
   };
 
-  // Cambia el ícono seleccionado y lo guarda en localStorage
   const handleIconChange = (icon: keyof typeof availableIcons) => {
     setSelectedIcon(icon);
     if (user?.email) {
@@ -93,41 +93,44 @@ export default function ProfilePage() {
     }
   };
 
-  // Si está cargando o no se ha cargado el perfil, no renderiza el contenido
-  if (isLoading || !user) {
-    return null;
-  }
+  const capitalizeCategory = (text: string) => {
+    return decodeURIComponent(text)
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  };
+
+  const handleDelete = async (id: string) => {
+    try {
+      const res = await fetch(`/api/frequent?id=${id}`, { method: 'DELETE' });
+      if (res.ok) {
+        toast.success('Medicamento eliminado');
+        setFrequentList(prev => prev.filter(m => m._id !== id));
+      } else {
+        toast.error('Error al eliminar medicamento');
+      }
+    } catch {
+      toast.error('Error al eliminar medicamento');
+    }
+  };
+
+  if (isLoading || !user) return null;
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="card shadow-lg p-4 position-relative" style={{ maxWidth: '600px', width: '100%' }}>
-        {/* Botón para cerrar sesión */}
-        <button
-          onClick={handleLogout}
-          className="btn btn-sm btn-danger position-absolute"
-          style={{ top: '20px', right: '20px' }}
-        >
+    <div className="container py-5">
+      <div className="card shadow-lg p-4 position-relative mx-auto" style={{ maxWidth: '600px' }}>
+        <button onClick={handleLogout} className="btn btn-sm btn-danger position-absolute" style={{ top: '20px', right: '20px' }}>
           Cerrar sesión
         </button>
 
         <h2 className="text-center text-success mb-3">Mi Perfil</h2>
-
-        {/* Avatar del perfil con opción de cambiar ícono */}
         <div className="text-center mb-3">
-          <div
-            className="rounded-circle bg-light d-flex justify-content-center align-items-center mx-auto"
-            style={{ width: '80px', height: '80px' }}
-          >
+          <div className="rounded-circle bg-light d-flex justify-content-center align-items-center mx-auto" style={{ width: '80px', height: '80px' }}>
             {availableIcons[selectedIcon]}
           </div>
-
-          <button
-            className="btn btn-link text-success mt-1"
-            onClick={() => setShowIconSelector(!showIconSelector)}
-          >
+          <button className="btn btn-link text-success mt-1" onClick={() => setShowIconSelector(!showIconSelector)}>
             <FaEdit className="me-1" /> Editar ícono
           </button>
-
           {showIconSelector && (
             <div className="d-flex justify-content-center mt-2 gap-2">
               {Object.entries(availableIcons).map(([key, icon]) => (
@@ -135,38 +138,48 @@ export default function ProfilePage() {
                   key={key}
                   onClick={() => handleIconChange(key as keyof typeof availableIcons)}
                   className="btn btn-outline-success btn-sm rounded-circle"
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    padding: 0,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center'
-                  }}
-                >
+                  style={{ width: '40px', height: '40px' }}>
                   {icon}
                 </button>
               ))}
             </div>
           )}
         </div>
-
-        {/* Datos del usuario */}
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">
-            <strong>Nombre:</strong> {user.name} {user.lastname}
-          </li>
-          <li className="list-group-item">
-            <strong>Correo:</strong> {user.email}
-          </li>
-          <li className="list-group-item">
-            <strong>Edad:</strong> {calculateAge(user.birthday)} años
-          </li>
-          <li className="list-group-item">
-            <strong>Región:</strong> {user.region}
-          </li>
+          <li className="list-group-item"><strong>Nombre:</strong> {user.name} {user.lastname}</li>
+          <li className="list-group-item"><strong>Correo:</strong> {user.email}</li>
+          <li className="list-group-item"><strong>Edad:</strong> {calculateAge(user.birthday)} años</li>
+          <li className="list-group-item"><strong>Región:</strong> {user.region}</li>
         </ul>
       </div>
+
+      {frequentList.length > 0 && (
+        <div className="mt-5">
+          <h3 className="text-center my-5 fw-bold text-dark" style={{ fontSize: '1.8rem', letterSpacing: '0.5px' }}>
+  🩺 Tus Medicamentos Frecuentes
+</h3>
+          {frequentList.map((med) => (
+            <div key={med._id} className="d-flex align-items-center justify-content-between bg-light shadow-sm rounded p-3 mb-3">
+              <div className="d-flex align-items-center gap-3">
+                <img src={med.imageUrl || 'https://via.placeholder.com/100'} alt={med.medicineName} style={{ height: '90px', width: '100px', objectFit: 'contain' }} />
+                <div>
+                  <h6 className="text-success fw-bold mb-1 text-uppercase">{med.medicineName}</h6>
+                  <p className="mb-0"><strong>Farmacia:</strong> {med.pharmacy}</p>
+                  <p className="mb-0"><strong>Categoría:</strong> {capitalizeCategory(med.category)}</p>
+                </div>
+              </div>
+              <button
+                className="btn btn-link text-danger"
+                style={{ fontSize: '1.4rem' }}
+                title="Eliminar medicamento"
+                onClick={() => handleDelete(med._id)}
+              >
+                <XCircleFill />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
