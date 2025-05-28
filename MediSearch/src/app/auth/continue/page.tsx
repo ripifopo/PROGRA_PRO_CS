@@ -36,33 +36,40 @@ export default function ContinueAuthPage() {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center min-vh-100 bg-light">
-      <Card className="p-5 shadow-lg border-0" style={{ maxWidth: '500px', width: '100%' }}>
-        <h3 className="text-center text-success fw-bold mb-3">
-          ¡Guarda tu medicamento frecuente!
-        </h3>
-        <p className="text-center text-muted mb-4">
-          Para guardar este medicamento, inicia sesión o crea una cuenta.
-        </p>
+    <div className="d-flex justify-content-center align-items-center min-vh-100 bg-white">
+      <div className="shadow-lg rounded-4 p-5 text-center" style={{ maxWidth: '520px', width: '100%' }}>
+        {/* Ícono y título */}
+        <div className="mb-4">
+          <div className="bg-success bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center mb-3" style={{ width: '70px', height: '70px' }}>
+            <FaUserPlus size={32} className="text-success" />
+          </div>
+          <h3 className="fw-bold text-success">¡Guarda tu medicamento frecuente!</h3>
+          <p className="text-muted mt-2">
+            Para guardar este medicamento, inicia sesión o crea una cuenta en MediSearch.
+          </p>
+        </div>
 
+        {/* Botones */}
         <div className="d-grid gap-3">
           <Button
-            variant="success"
-            className="d-flex align-items-center justify-content-center gap-2"
+            size="lg"
+            variant="outline-success"
+            className="d-flex align-items-center justify-content-center gap-2 py-2"
             onClick={handleGoToLogin}
           >
             <FaSignInAlt /> Iniciar sesión
           </Button>
 
           <Button
-            variant="outline-secondary"
-            className="d-flex align-items-center justify-content-center gap-2"
+            size="lg"
+            variant="success"
+            className="d-flex align-items-center justify-content-center gap-2 py-2"
             onClick={handleGoToRegister}
           >
             <FaUserPlus /> Crear cuenta
           </Button>
         </div>
-      </Card>
-    </Container>
+      </div>
+    </div>
   );
 }
