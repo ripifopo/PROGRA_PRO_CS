@@ -29,3 +29,6 @@ export const medicinesCollection: Promise<Collection> = clientPromise.then(clien
 export const frequentMedicinesCollection: Promise<Collection> = clientPromise.then(client =>
   client.db("medisearch").collection("frequent_medicines")
 );
+export const alertsCollection: Promise<Collection> = clientPromise.then(client =>
+  client.db("medisearch").collection("alerts")
+);
