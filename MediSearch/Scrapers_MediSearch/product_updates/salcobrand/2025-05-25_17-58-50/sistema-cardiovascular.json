@@ -1,0 +1,3066 @@
+[
+  {
+    "id": 47249,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-de-brazo",
+    "price_offer": 28999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47252,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-de-muneca",
+    "price_offer": 21699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 59634,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/my-omegared-60-capsulas",
+    "price_offer": 24999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 8195,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/aspirina-100mg-42-comprimidos",
+    "price_offer": 5199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26096,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acebron-b-acenocumarol-4mg-20-comprimidos",
+    "price_offer": 21899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 18246,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardioaspirina-100-ec-20-comprimidos-recubiertos",
+    "price_offer": 8699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24895,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/xarelto-r-20mg-rivaroxaban-28-comprimidos-recubiertos",
+    "price_offer": 72999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 51770,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-acetilsalicilico-b-100mg-100-comprimidos",
+    "price_offer": 4699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26920,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amiodarona-b-200mg-20-comprimidos",
+    "price_offer": 9399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50155,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rivoxa-b-rivaroxaban-10mg-10-comprimidos-recubiertos",
+    "price_offer": 32399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48402,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/flunarizina-10-mg",
+    "price_offer": 12599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47173,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/clopidogrel-75-mg-30-comprimidos-recubiertos",
+    "price_offer": 9499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60603,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/warfarina-b-5mg-30-comprimidos",
+    "price_offer": 21999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44503,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-ezetimiba-simvastatina",
+    "price_offer": 44299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25048,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diondel-flecainida-100mg-50-comprimidos",
+    "price_offer": 47199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24899,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/xarelto-r-10mg-rivaroxaban-10-comprimidos-recubiertos",
+    "price_offer": 42999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 18411,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/disgren-aas-81mg-30-comprimidos-recubiertos",
+    "price_offer": 3799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58183,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/metorene-b-clortalidona-12-5mg-30-comprimidos",
+    "price_offer": 5399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25052,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cavamed-warfarina-5mg-30-comprimidos",
+    "price_offer": 34099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24893,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/xarelto-r-15mg-rivaroxaban-28-comprimidos-recubiertos",
+    "price_offer": 69999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50719,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/xaroban-b-rivaroxaban-15mg-30-comprimidos-recubiertos",
+    "price_offer": 44099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25045,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diondel-flecainida-100mg-20-comprimidos",
+    "price_offer": 20599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49436,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/vastarel-mr-trimetazidina-35mg-30-comprimidos-prolongados",
+    "price_offer": 24699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25025,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cilosvitae-b-cilostazol-100mg-28-comprimidos",
+    "price_offer": 27999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46565,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rivoxa-b-rivaroxaban-20mg-30-comprimidos-recubiertos",
+    "price_offer": 66299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24707,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/pradaxa-dabigatran-150mg-60-capsulas",
+    "price_offer": 87999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55182,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rixovitae-b-rivaroxaban-20mg-28-comprimidos-recubiertos",
+    "price_offer": 43799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 8358,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ginkgo-max-ginkgo-biloba-80mg-30-capsulas",
+    "price_offer": 9599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44817,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-propafenona-150-mg",
+    "price_offer": 31799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60952,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rovartal-20-10-plus-ezetimiba-rosuvastatina-30-comprimidos",
+    "price_offer": 43999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48138,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cilosvitae-b-cilostazol-50mg-28-comprimidos",
+    "price_offer": 12999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25661,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/fluxus-flunarizina-10mg-60-comprimidos",
+    "price_offer": 29999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60950,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rovartal-10-10-plus-ezetimiba-rosuvastatina-30-comprimidos",
+    "price_offer": 33999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 54926,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-am-16-5-candesartan-amlodipino-30-capsulas",
+    "price_offer": 38299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24709,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/pradaxa-dabigatran-110mg-60-capsulas",
+    "price_offer": 87999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48605,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/zetirol-b-10mg-28-comprimidos",
+    "price_offer": 40999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44505,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-ezetimiba",
+    "price_offer": 39899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55169,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rixovitae-b-rivaroxaban-10mg-10-comprimidos-recubiertos",
+    "price_offer": 32599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46885,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/trombex-b-rivaroxaban-10mg-10-comprimidos-recubiertos",
+    "price_offer": 35999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50502,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/firialta-10-mg-x-28-comprimidos-recubiertos",
+    "price_offer": 60099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25290,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/konakion-mm-fitomenadiona-10mg-ml-inyectable-5-ampollas",
+    "price_offer": 22199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48963,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/clopivitae-b-clopidrogrel-75mg-28-comprimidos",
+    "price_offer": 16199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55167,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rixovitae-b-rivaroxaban-15mg-28-comprimidos-recubiertos",
+    "price_offer": 39899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24712,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/pradaxa-dabigatran-150mg-30-capsulas",
+    "price_offer": 62299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50768,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ismo-r-isosorbida-mononitrato-20mg-30-comprimidos",
+    "price_offer": 20399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46889,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-rivaroxaban-20-mg",
+    "price_offer": 62399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46563,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rivoxa-b-rivaroxaban-15mg-30-comprimidos-recubiertos",
+    "price_offer": 60899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24483,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-acetil-salici-lico-b-100mg-100-comprimidos",
+    "price_offer": 3099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58870,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ribex-b-rivaroxaban-10mg-15-comprimidos-recubiertos",
+    "price_offer": 40999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 54928,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-am-16-10-candesartan-amlodipino-30-capsulas",
+    "price_offer": 38299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44499,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-fenofibrato-simvastatina",
+    "price_offer": 36099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58872,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ribex-b-rivaroxaban-20mg-15-comprimidos-recubiertos",
+    "price_offer": 44999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46887,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/trombex-b-rivaroxaban-15mg-28-comprimidos-recubiertos",
+    "price_offer": 57099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25323,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurogrel-b-clopidogrel-75mg-35-comprimidos-recubiertos",
+    "price_offer": 40799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44819,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-propafenona-300-mg",
+    "price_offer": 47299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50500,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/firalta-20-mg-x-28-comprimidos-recubiertos",
+    "price_offer": 60799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48483,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/zetirol-b-10-20-28-comprimidos",
+    "price_offer": 46499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25658,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/clauter-b-cilostazol-100mg-30-comprimidos",
+    "price_offer": 31199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 54924,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-am-8-5-candesartan-amlodipino-30-capsulas",
+    "price_offer": 34799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60988,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ribex-b-rivaroxaban-15mg-30-comprimidos-recubiertos",
+    "price_offer": 39899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27626,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-160mg-56-comprimidos-recubiertos",
+    "price_offer": 80899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26632,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ilostal-r-cilostazol-50mg-30-comprimidos",
+    "price_offer": 24299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49981,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/verquvo-vericiguat-2-5mg-14-comprimidos-recubiertos",
+    "price_offer": 81899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34278,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/octanate-factor-viii-500ui-inyectable-1-ampolla",
+    "price_offer": 193099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 61214,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/pixar-apixaban-5mg-60-comprimidos-recubiertos",
+    "price_offer": 73599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 61212,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/pixar-apixaban-2-5mg-60-comprimidos-recubiertos",
+    "price_offer": 72499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47221,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/repatha-140mg-1ml-2sol-inyectables",
+    "price_offer": 624199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34282,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/factor-viii-1000ui-facton-von-willebrand-inyectable",
+    "price_offer": 334899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58185,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/metorene-b-clortalidona-25mg-30-comprimidos",
+    "price_offer": 9499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 53827,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/zometa-acido-zoledronico-4mg-5ml-inyectable-1-ampolla",
+    "price_offer": 262999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49983,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/verquvo-vericiguat-10mg-28-comprimidos-recubiertos",
+    "price_offer": 150599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48480,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/clopidogrel-b-75mg-30-comprimidos-recubiertos",
+    "price_offer": 11699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50780,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/novoeight-turoctocog-alfa-500ui-inyectable",
+    "price_offer": 187399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49697,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/verquvo-5mg-28-comprimidos-recubiertos",
+    "price_offer": 151399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58211,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-b-20mg-30-comprimidos-recubiertos",
+    "price_offer": 8699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60916,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/nuwiq-1000ui-recombinante-inyectable-1-frasco-ampolla",
+    "price_offer": 320699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49141,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/piclokare-b-75mg-28-comprimidos-recubiertos",
+    "price_offer": 13299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 49434,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/somazina-citicolina-1000mg-solucion-oral-10-sobres",
+    "price_offer": 59599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58364,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/sulfato-ferroso-200mg-20-comprimidos",
+    "price_offer": 2899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60886,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/heliofol-acido-folico-5mg-30-comprimidos",
+    "price_offer": 1490,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25845,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ferranem-30-capsulas-prolongadas",
+    "price_offer": 5840,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25122,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hepta-epoetina-alfa-4000ui-inyectable-1-jeringa-prellenada",
+    "price_offer": 11999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27098,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hierro-100mg-oral-solido-dc3b413b-fe6a-4902-9920-413d0be4e51a",
+    "price_offer": 31299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25126,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-folico-hierro-oral-solido-865a4d7c-4246-45a9-840c-638d2e427e18",
+    "price_offer": 21899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27420,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ferrigot-sulfato-ferroso-125mg-ml-oral-gotas-30ml",
+    "price_offer": 9799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25217,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/folifer-30-capsulas",
+    "price_offer": 17099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 37252,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-folico-hierro-oral-solido-d4b12fb1-0d1a-4045-b6bb-1190fbebdb79",
+    "price_offer": 17999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46956,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidroxicarbamida-500mg-100-capsulas",
+    "price_offer": 86199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25120,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hepta-epoetina-alfa-2000ui-inyectable-1-jeringa-prellenada",
+    "price_offer": 7999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46930,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/maltofer-hierro-50mg-5ml-jarabe-100ml",
+    "price_offer": 26799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24808,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/legofer-proteinsuccinilato-ferrico-40mg-15ml-10-frascos",
+    "price_offer": 24399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27100,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/maltofer-hierro-100mg-10-frascos-5ml-bebibles",
+    "price_offer": 29299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46996,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/adeline-b-lenalidomida-10mg-21-capsulas",
+    "price_offer": 1785999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 59732,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/mircera-epoetina-beta-50mcg-0-3ml-1-jeringa-prellenada",
+    "price_offer": 98699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56475,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/mircera-metoxipolietilenglicol-epoetina-beta-150mcg-inyectable-1-jeringa-prellenada",
+    "price_offer": 296499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56473,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/mircera-metoxipolietilenglicol-epoetina-beta-100mcg-inyectable-1-jeringa-prellenada",
+    "price_offer": 197199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25623,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ferranim-30-capsulas-blandas",
+    "price_offer": 9899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60605,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losartan-b-50mg-30-comprimidos",
+    "price_offer": 2599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48469,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losartan-hidroclorotiazida-b-50-12-5-30-comprimidos-recubiertos",
+    "price_offer": 9199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55987,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalapril-b-10mg-20-comprimidos-recubiertos",
+    "price_offer": 1399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28656,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalten-b-enalapril-5mg-30-comprimidos",
+    "price_offer": 22799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28743,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardiolen-b-verapamilo-120mg-20-capsulas",
+    "price_offer": 27499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28745,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardiolen-b-verapamilo-80mg-20-capsulas",
+    "price_offer": 33799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28652,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-d-telmisartan-hidroclorotiazida-80-12-5-30-comprimidos",
+    "price_offer": 27899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28651,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-d-telmisartan-hidroclorotiazida-40-12-5-30-comprimidos",
+    "price_offer": 24199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26922,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atenolol-b-100mg-20-capsulas",
+    "price_offer": 2799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26924,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/captopril",
+    "price_offer": 5499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 9037,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/simperten-d-50-12-5",
+    "price_offer": 29399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 51891,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/xaroban-b-rivaroxaban-20mg-30-comprimidos-recubiertos",
+    "price_offer": 47599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47007,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-30-comprimidos",
+    "price_offer": 2299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 52118,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidralazina-b-50mg-30-comprimidos",
+    "price_offer": 4299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50031,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/isquelium-b-acenocumarol-4mg-30-comprimidos",
+    "price_offer": 5120,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46948,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-b-30com",
+    "price_offer": 1899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28413,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/irbevitae-b-irbesartan-150mg-28-comprimidos-recubiertos",
+    "price_offer": 28899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28766,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltux-hct-olmesartan-hidroclorotiazida-20mg-12-5mg-28-comprimidos-recubiertos",
+    "price_offer": 21199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 36375,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/espironolactona-b-25mg-20-comprimidos",
+    "price_offer": 1799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28872,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisopril-bisoprolol-2-5mg-30-comprimidos-recubiertos",
+    "price_offer": 14699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27311,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/betaloc-zok-metoprolol-50mg-30-comprimidos-prolongados",
+    "price_offer": 38199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 9035,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/simperten-d-100-25",
+    "price_offer": 31999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28414,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/irbesartan-300mg-oral-solido",
+    "price_offer": 30599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28873,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisopril-bisoprolol-5mg-30-comprimidos-recubiertos",
+    "price_offer": 19499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50690,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisoprolol-2-5mg-30-comprimidos-recubiertos",
+    "price_offer": 7199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28874,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valsartan-160mg-oral-solido",
+    "price_offer": 16999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28871,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisopril-bisoprolol-1-25mg-30-comprimidos-recubiertos",
+    "price_offer": 7699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 36585,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valax-b-valsartan-80mg-30-comprimidos-recubiertos",
+    "price_offer": 18299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28669,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-b-candesartan-16mg-30-comprimidos",
+    "price_offer": 40299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 36636,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valax-d-valsartan-160-12-5-30-comprimidos-recubiertos",
+    "price_offer": 18499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28769,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltux-b-olmesartan-40mg-28-comprimidos-recubiertos",
+    "price_offer": 24699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60504,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losartan-b-100mg-30-comprimidos-recubiertos",
+    "price_offer": 3090,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50069,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisoprolol-b-1-25mg-30-comprimidos-recubiertos",
+    "price_offer": 10799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 45539,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cordiax-40-b-telmisartan-40mg-40-comprimidos",
+    "price_offer": 26599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48207,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisoprolol-b-5-mg-x-30-comprimidos-recubiertos",
+    "price_offer": 11699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 45541,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cordiax-80-b-telmisartan-80mg-40-comprimidos",
+    "price_offer": 33399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28654,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-b-telmisartan-80mg-30-comprimidos",
+    "price_offer": 32399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56236,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltuxam-hct-40-5-12-5-olmesartan-amlodipino-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 26999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 43202,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltuxam-b-olmesartan-amlodipino-40-5-28-comprimidos-recubiertos",
+    "price_offer": 23999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28366,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/oltan-amlo-amlodipino-olmesartan-30-comprimidos-recubiertos",
+    "price_offer": 22299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33981,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valax-d-valsartan-160-25-30-comprimidos-recubiertos",
+    "price_offer": 18399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29249,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-r-bisoprolol-2-5mg-28-comprimidos-recubiertos",
+    "price_offer": 37599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28653,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-b-telmisartan-40mg-30-comprimidos",
+    "price_offer": 23399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47025,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardioplus-b-olmesartan-40mg-40-comprimidos-recubiertos",
+    "price_offer": 24499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28674,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dualten-b-carvedilol-6-25mg-30-comprimidos",
+    "price_offer": 9999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28660,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalten-b-enalapril-20mg-30-comprimidos",
+    "price_offer": 29199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 52746,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/minopel-minoxidil-5-solucion-topica-60ml",
+    "price_offer": 15199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33986,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valaxam-d-valsartan-160-5-12-5-30-comprimidos-recubiertos",
+    "price_offer": 41299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44811,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardioplus-d-40-12-5-olmesartan-40-comprimidos-recubiertos",
+    "price_offer": 28899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 43200,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltuxam-b-olmesartan-amlodipino-40-10-28-comprimidos-recubiertos",
+    "price_offer": 23199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46561,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-olmesartan-medoxomilo-9a6fbed7-e9c3-4a70-ad4c-851ac18c8d63",
+    "price_offer": 18199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 36638,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valaxam-valsartan-160-5-30-comprimidos-recubiertos",
+    "price_offer": 35099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55157,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tensuren-b-am-telmisartan-amlodipino-80mg-5mg-30-comprimidos",
+    "price_offer": 29999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46933,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acetazolamida-250mg-x20com",
+    "price_offer": 5699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28428,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/corentel-b-bisoprolol-2-5mg-30-comprimidos-recubiertos",
+    "price_offer": 19199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28305,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/micardis-plus-telmisartan-hidroclorotiazida-80-12-5-28-comprimidos",
+    "price_offer": 52999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28670,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-d-candesartan-hidroclorotiazida-16-12-5-30-comprimidos",
+    "price_offer": 41799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 8947,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/doox-b-nebivolol-5mg-30-comprimidos",
+    "price_offer": 23999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48133,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardioplus-b-olmesartan-20mg-40-comprimidos-recubiertos",
+    "price_offer": 22199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58864,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisocor-b-bisoprolol-2-5mg-30-comprimidos-recubiertos",
+    "price_offer": 13699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28429,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losapres-b-losartan-50mg-30-comprimidos-recubiertos",
+    "price_offer": 28099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 59496,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-am-telmisartan-amlodipino-80-5-30-comprimidos",
+    "price_offer": 31599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 37444,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valax-b-valsartan-320mg-30-comprimidos-recubiertos",
+    "price_offer": 20699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27315,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/betaloc-zok-metoprolol-25mg-30-comprimidos-prolongados",
+    "price_offer": 33199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27610,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/entresto-50mg-sacubitrilo-valsartan-28-comprimidos-recubiertos",
+    "price_offer": 76799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46555,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/carvas-b-olmesartan-20mg-30-comprimidos-recubiertos",
+    "price_offer": 14199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56234,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltuxam-hct-40-10-25-olmesartan-amlodipino-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 29999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55983,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/olmesartan-hidroclorotiazida-20-12-5mg-30-comprimidos-recubiertos",
+    "price_offer": 15799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28684,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-d-candesartan-cilexetilo-hidroclorotiazida-32-12-5-30-comprimidos",
+    "price_offer": 48499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28403,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/candesartan-16mg-hidroclorotiazida-12-5mg-oral-solido-c7e959d9-13b8-46a3-8535-0107b5848bb8",
+    "price_offer": 26599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55995,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/olmesartan-hidroclorotiazida-40-12-5mg-30-comprimidos-recubiertos",
+    "price_offer": 18999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58862,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisocor-b-bisoprolol-5mg-30-comprimidos-recubiertos",
+    "price_offer": 16499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58860,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisocor-b-bisoprolol-1-25mg-30-comprimidos-recubiertos",
+    "price_offer": 6699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50151,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cordiax-40-5-telmisartan-amlodipino-40-comprimidos",
+    "price_offer": 33799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55979,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/olmesartan-b-40mg-30-comprimidos-recubiertos",
+    "price_offer": 17799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 43198,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/iltuxam-b-olmesartan-amlodipino-20-5-28-comprimidos-recubiertos",
+    "price_offer": 22499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34973,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-d-5-160-12-5-28-comprimidos-recubiertos",
+    "price_offer": 70399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28686,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-b-bisoprolol-2-5mg-35-comprimidos-recubiertos",
+    "price_offer": 21499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28678,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidrium-furosemida-amilorida-40mg-5mg-20-comprimidos",
+    "price_offer": 16699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28671,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-b-candesartan-8mg-30-comprimidos",
+    "price_offer": 37399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33985,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valaxam-valsartan-160-10-30-comprimidos-recubiertos",
+    "price_offer": 35799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47003,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisoprolol-fumarato-30-comprimidos",
+    "price_offer": 7799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55155,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tensuren-b-am-telmisartan-amlodipino-80mg-10mg-30-comprimidos",
+    "price_offer": 29999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28676,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-b-candesartan-32mg-30-comprimidos",
+    "price_offer": 44099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28355,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidroronol-hidroclorotiazida-50mg-24-comprimidos",
+    "price_offer": 6999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 8911,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amplex-5-160-amlodipino-valsartan-30-comprimidos-recubiertos",
+    "price_offer": 35699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44813,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardioplus-d-20-12-5-olmesartan-40-comprimidos-recubiertos",
+    "price_offer": 27099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28434,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/corentel-5-bisoprolol-5mg-30-comprimidos-recubiertos",
+    "price_offer": 23199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28195,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ivabradina-5mg-oral-solido",
+    "price_offer": 33299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28688,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-b-bisoprolol-5mg-35-comprimidos-recubiertos",
+    "price_offer": 26099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28431,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losapres-d-50-12-5-losartan-hidroclorotiazida-30-comprimidos-recubiertos",
+    "price_offer": 25899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55624,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/olmesartan-b-20mg-30-comprimidos-recubiertos",
+    "price_offer": 12599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50707,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hiprex-v-b-25-160-x-30-comprimidos-recubiertos",
+    "price_offer": 32799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28964,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acerdil-lisinopril-20mg-30-comprimidos",
+    "price_offer": 38399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29299,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/inspra-esplerenona-25mg-30-comprimidos-recubiertos",
+    "price_offer": 24799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29125,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hyzaar-forte-hidroclorotiazida-losartan-30-comprimidos-recubiertos",
+    "price_offer": 31899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44829,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-valsartan-80-mg",
+    "price_offer": 20599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27313,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/betaloc-zok-metoprolol-100mg-30-comprimidos-prolongados",
+    "price_offer": 52699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28942,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acerdil-lisinopril-10mg-30-comprimidos",
+    "price_offer": 27699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28940,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acerdil-lisinopril-5mg-30-comprimidos",
+    "price_offer": 16599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29247,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-r-bisoprolol-5mg-28-comprimidos-recubiertos",
+    "price_offer": 44699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28672,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dualten-b-carvedilol-12-5mg-30-comprimidos",
+    "price_offer": 22899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28682,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/blox-d-candesartan-cilexetilo-hidroclorotiazida-8-12-5-30-comprimidos",
+    "price_offer": 28799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28647,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-am-bisoprolol-amlodipino-5-5-35-comprimidos-recubiertos",
+    "price_offer": 21499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 59821,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-am-telmisartan-amlodipino-40-5-30-comprimidos",
+    "price_offer": 24899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28664,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalten-d-enalapril-hidroclorotiazida-10-25-30-comprimidos",
+    "price_offer": 27699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29327,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardura-r-doxazosina-1mg-14-comprimidos",
+    "price_offer": 19599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28668,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-d-bisoprolol-hidroclorotiazida-5-6-25-35-comprimidos-recubiertos",
+    "price_offer": 21699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55306,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidroclorotiazida-50mg-20-comprimidos",
+    "price_offer": 1499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28299,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/micardis-amlo-80-10-telmisartan-amlodipino-28-comprimidos",
+    "price_offer": 50899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 8909,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amplex-10-160-amlodipino-valsartan-30-comprimidos-recubiertos",
+    "price_offer": 36999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28673,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dualten-b-carvedilol-25mg-30-comprimidos",
+    "price_offer": 21899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58215,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cordiax-am-80-5-40-comprimidos",
+    "price_offer": 31999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28680,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-d-bisoprolol-hidroclorotiazida-2-5-6-25-35-comprimidos-recubiertos",
+    "price_offer": 17299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58173,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/oltan-b-amlo-d-40-5-12-5-30-comprimidos-recubiertos",
+    "price_offer": 23999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47054,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bisoprolol-fumarato-30-comprimidos-1313e07c-21b5-447b-89c5-c6d6b2772c75",
+    "price_offer": 11099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28311,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/micardis-r-telmisartan-40mg-28-comprimidos",
+    "price_offer": 53999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28772,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/nabila-b-nebivolol-5mg-28-comprimidos",
+    "price_offer": 25599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 40096,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/furosemida-b-40mg-12-comprimidos",
+    "price_offer": 1199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55151,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tensuren-b-am-telmisartan-amlodipino-40mg-5mg-30-comprimidos",
+    "price_offer": 29999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46559,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-olmesartan-medoxomilo-d3770295-fb52-4524-a4b2-3e44108a9419",
+    "price_offer": 15699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27606,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-d-amlodipino-valsartan-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 64399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34975,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-d-10-160-12-5-28-comprimidos-recubiertos",
+    "price_offer": 63999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55202,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardipres-b-40-5-amlodipino-olmesartan-30-comprimidos-recubiertos",
+    "price_offer": 19899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 36583,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valaxam-d-valsartan-160-10-12-5-30-comprimidos-recubiertos",
+    "price_offer": 35699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29128,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hyzaar-losartan-potasico-hidroclorotiazida-30-comprimidos-recubiertos",
+    "price_offer": 31099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27388,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ramipres-ramipril-2-5mg-30-comprimidos",
+    "price_offer": 25999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50153,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cordiax-80-10-telmisartan-amlodipino-40-comprimidos",
+    "price_offer": 36299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44827,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-valsartan-160-mg",
+    "price_offer": 22899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28685,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-b-bisoprolol-1-25mg-14-comprimidos-recubiertos",
+    "price_offer": 10999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29300,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/inspra-esplerenona-50mg-30-comprimidos-recubiertos",
+    "price_offer": 43499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28307,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/micardis-plus-40-12-5-telmisartan-hidroclorotiazida-28-comprimidos",
+    "price_offer": 52999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28203,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/coversyl-a-perindropil-arginina-5mg-30-comprimidos-recubiertos",
+    "price_offer": 27399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44825,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-valsartan-320-mg",
+    "price_offer": 24399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29126,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cozaar-r-losartan-50mg-30-comprimidos-recubiertos",
+    "price_offer": 34199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29328,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardura-r-doxazosina-4mg-14-comprimidos",
+    "price_offer": 31499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27614,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/entresto-sacubitrilo-valsartan-100mg-56-comprimidos-recubiertos",
+    "price_offer": 138999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 59823,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tellmi-am-telmisartan-amlodipino-80-10-30-comprimidos",
+    "price_offer": 31599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28690,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-b-bisoprolol-10mg-35-comprimidos-recubiertos",
+    "price_offer": 26599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28747,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/corasol-d-hidroclorotiazida-telmisartan-30-comprimidos",
+    "price_offer": 15999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28658,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalten-b-enalapril-10mg-30-comprimidos",
+    "price_offer": 20899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60450,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-r-bisoprolol-1-25mg-30-comprimidos-recubiertos",
+    "price_offer": 21899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50189,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/duomo-b-doxazosina-4mg-30-comprimidos-recubiertos",
+    "price_offer": 12499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44821,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/vartalan-d-forte-valsartan-42-comprimidos-recubiertos",
+    "price_offer": 19299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29244,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-am-5-5mg-bisoprolol-amlodipino-30-comprimidos",
+    "price_offer": 49099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28944,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acerdil-d-lisinopril-hidroclorotiazida-30-comprimidos",
+    "price_offer": 39599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28205,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/coveram-amlodipino-perindropil-arginina-5mg-5mg-30-comprimidos",
+    "price_offer": 33199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27636,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-d-320-12-5-valsartan-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 56099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50729,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/nebilet-d-5-12-5-x-28-comprimidos-recubiertos",
+    "price_offer": 29499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44795,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/valaxam-d-valsartan-320-10-25-30-comprimidos-recubiertos",
+    "price_offer": 34999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28649,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/eurocor-am-bisoprolol-amlodipino-5-10-35-comprimidos-recubiertos",
+    "price_offer": 19299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27638,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-d-80-12-5-valsartan-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 65799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55198,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardipres-b-40-10-amlodipino-olmesartan-30-comprimidos-recubiertos",
+    "price_offer": 18499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44496,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/principio-activo-hidroclorotiazida-valsartan",
+    "price_offer": 101799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27643,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-5-80-amlodipino-valsartan-56-comprimidos-recubiertos",
+    "price_offer": 89899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28201,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/coversyl-a-perindropil-arginina-10mg-30-comprimidos-recubiertos",
+    "price_offer": 30799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 60990,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/biprosel-b-bisoprolol-1-25mg-30-comprmidos-recubiertos",
+    "price_offer": 10799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28197,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/procoralan-ivabradina-7-5mg-28-comprimidos-recubiertos",
+    "price_offer": 46999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 39667,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/natrilix-sr-indapamida-1-5mg-60-comprimidos-prolongados",
+    "price_offer": 32399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27613,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-80mg-28-comprimidos-recubiertos",
+    "price_offer": 64099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28207,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/coveram-amlodipino-perindropil-arginina-5mg-10mg-30-comprimidos",
+    "price_offer": 37799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27645,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-10mg-valsartan-320mg-oral-solido",
+    "price_offer": 57999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27637,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-160mg-28-comprimidos-recubiertos",
+    "price_offer": 56899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27633,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-d-320-25-valsartan-hidroclorotiazida-28-comprimidos-recubiertos",
+    "price_offer": 53599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44823,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/vartalan-d-valsartan-42-comprimidos-recubiertos",
+    "price_offer": 18699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29325,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardura-xl-doxazosina-4mg-30-comprimidos-prolongados",
+    "price_offer": 61899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29245,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-am-bisoprolol-amlodipino-30-comprimidos",
+    "price_offer": 49899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27647,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-5-320-amlodipino-valsartan-28-comprimidos-recubiertos",
+    "price_offer": 58099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34979,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-10-160-amlodipino-valsartan-56-comprimidos-recubiertos",
+    "price_offer": 91799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29246,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/concor-r-bisoprolol-10mg-28-comprimidos-recubiertos",
+    "price_offer": 53899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28662,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalten-dn-enalapril-hidroclorotiazida-20-12-5-30-comprimidos",
+    "price_offer": 36599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 50413,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-10mg-x-30-comprimidos",
+    "price_offer": 2399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27618,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/exforge-5-160-amlodipino-valsartan-56-comprimidos-recubiertos",
+    "price_offer": 113599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29285,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/norvasc-r-amlodipino-5mg-30-comprimidos",
+    "price_offer": 52199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 34977,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-d-160-25-valsartan-hidroclorotiazida-56-comprimidos-recubiertos",
+    "price_offer": 86799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29283,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/norvasc-r-amlodipino-5mg-60-comprimidos",
+    "price_offer": 90499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27627,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-80mg-56-comprimidos-recubiertos",
+    "price_offer": 88599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29284,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/norvasc-r-amlodipino-10mg-30-comprimidos",
+    "price_offer": 68799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27626,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-160mg-56-comprimidos-recubiertos",
+    "price_offer": 80899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48130,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ziac-r-2-5mg-x30-comprimidos-recubiertos",
+    "price_offer": 55799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27648,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-5mg-valsartan-320mg-oral-solido",
+    "price_offer": 87399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 55200,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardipres-b-20-5-amlodipino-olmesartan-30-comprimidos-recubiertos",
+    "price_offer": 18999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29127,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cozaar-r-losartan-100mg-30-comprimidos-recubiertos",
+    "price_offer": 34999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 61117,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/meprokem-b-metoprolol-25mg-30-comprimidos-prolongados",
+    "price_offer": 27799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48157,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/vartalan-d-plus-valsartan-160-25-42-comprimidos-recubiertos",
+    "price_offer": 25499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48155,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ziac-r-10mg-30-comprimidos-recubiertos",
+    "price_offer": 57099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27307,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/splendil-felodipino-5mg-30-comprimidos",
+    "price_offer": 47799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33750,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/betaloc-zok-metoprolol-200mg-30-comprimidos-prolongados",
+    "price_offer": 51699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 61115,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/meprokem-b-metoprolol-50mg-30-comprimidos-prolongados",
+    "price_offer": 14380,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48146,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ziac-r-5mg-x-30-comprimidos-recubiertos",
+    "price_offer": 69899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27612,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/entresto-100mg-sacubitrilo-valsartan-28-comprimidos-recubiertos",
+    "price_offer": 72799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27616,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/entresto-200mg-sacubitrilo-valsartan-56-comprimidos-recubiertos",
+    "price_offer": 140699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 29083,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losartan-b-50mg-30-comprimidos-recubiertos",
+    "price_offer": 2599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27650,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tareg-r-valsartan-320mg-28-comprimidos-recubiertos",
+    "price_offer": 60599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47027,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/losartan-b-30com",
+    "price_offer": 4199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48465,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/enalapril-b-10mg-20-comprimidos",
+    "price_offer": 1299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47044,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/lorsartan-potasico-hidroclorotiazida-30-comprimidos-recubiertos",
+    "price_offer": 7099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58468,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardiosmile-ecopack-por-60-sachets",
+    "price_offer": 37499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44980,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/cardiosmile-x30-sachet",
+    "price_offer": 24899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26379,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/gemfibrozilo-600mg-oral-solido-54f1e4e3-8653-444c-9666-15ba2d4a5e92",
+    "price_offer": 4899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48362,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ciprofibrato-100mg-oral-solido-bb84f49d-12c2-4865-b25d-483c08e51538",
+    "price_offer": 12799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26340,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-20mg-oral-solido-f3c08119-46f8-464c-8e87-a5e7df5912cb",
+    "price_offer": 2299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26377,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/gemfibrozilo-300mg-oral-solido-43059b3b-b652-4a1f-90d4-a72baa8bb7d1",
+    "price_offer": 4899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 9025,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosvel-10mg-de-60-comprimidos",
+    "price_offer": 21899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47239,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-10-mg-30-comprimidos-recubiertos",
+    "price_offer": 7999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 47237,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-20-mg-30-comprimidos-recubiertos",
+    "price_offer": 11499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26339,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-10mg-oral-solido-6129d702-cbc4-41b6-bf31-be9c34b3a82b",
+    "price_offer": 2699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 9027,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosvel-20mg",
+    "price_offer": 22099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 57780,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-b-40mg-30-comprimidos-recubiertos-cenabast",
+    "price_offer": 2299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 9023,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosvel-10mg-de-30-comprimidos",
+    "price_offer": 17499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26450,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ferbex-b-fenofibrato-200mg-30-capsulas",
+    "price_offer": 29599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33401,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/colmibe-atorvastatina-ezetimiba-20mg-10mg-30-comprimidos",
+    "price_offer": 44599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25313,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/fibrotina-lidose-fenofibrato-160mg-pravastatina-40mg-30-capsulas",
+    "price_offer": 36199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26401,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/lovastatina-20mg-oral-solido",
+    "price_offer": 2899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25320,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rux-b-rosuvastatina-10mg-30-comprimidos-recubiertos",
+    "price_offer": 25399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25309,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/fibrolow-lidose-fenofibrato-200mg-30-capsulas",
+    "price_offer": 28999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25311,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rux-b-rosuvastatina-5mg-30-comprimidos-recubiertos",
+    "price_offer": 12899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26465,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ezetrol-ezetimiba-10mg-30-comprimidos",
+    "price_offer": 56199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27402,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-20mg-oral-solido-dfce716a-df1f-42d2-be9a-9b716c308a97",
+    "price_offer": 22799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28215,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/omacor-1000mg-28-capsulas-blandas",
+    "price_offer": 30799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26634,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ciprofibrato-100mg-oral-solido-c9e3d5d6-40f3-4daa-b8cb-b3f4673e57c0",
+    "price_offer": 36599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25322,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rux-b-rosuvastatina-20mg-30-comprimidos-recubiertos",
+    "price_offer": 40099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 39675,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-10mg-oral-solido-7c92a752-cfbc-4042-963a-8a9e0e403384",
+    "price_offer": 18999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33411,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/colmibe-atorvastatina-ezetimiba-40mg-10mg-30-comprimidos",
+    "price_offer": 47599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 33399,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/colmibe-atorvastatina-ezetimiba-10mg-10mg-30-comprimidos",
+    "price_offer": 40799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26462,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ezetimiba-10mg-simvastatina-20mg-oral-solido",
+    "price_offer": 58299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25042,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dublina-ciprofibrato-100mg-30-comprimidos",
+    "price_offer": 34899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25907,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-40mg-oral-solido-bc2fc924-9b3d-4225-a9b2-a2d3e0c8c33e",
+    "price_offer": 35099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 52124,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-b-80-mg-x-30-comprimidos-recubiertos",
+    "price_offer": 8999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25321,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rux-b-rosuvastatina-10mg-60-comprimidos-recubiertos",
+    "price_offer": 39299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25909,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-80mg-oral-solido-99cbd98b-2cdf-46cc-92d5-b46f5bfd5335",
+    "price_offer": 39199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56385,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvitae-plus-10-10-ezetimiba-rosuvastatina-30-comprimidos",
+    "price_offer": 33599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25039,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-10mg-oral-solido-85a1ff4c-5ed8-498c-a926-5eb3695660de",
+    "price_offer": 21299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25653,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/bezafibrato-400mg-oral-solido",
+    "price_offer": 40999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26464,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ezetimiba-10mg-simvastatina-10mg-oral-solido",
+    "price_offer": 60699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27337,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/crestor-tablets-r-rosuvastatina-10mg-30-comprimidos-recubiertos",
+    "price_offer": 57499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26635,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ciprofibrato-100mg-oral-solido-0244e694-d5a9-469e-b7f0-abdc15e455f4",
+    "price_offer": 61999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25040,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-20mg-oral-solido-0e67d897-9a23-43ea-8185-9283b85132ca",
+    "price_offer": 31199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26707,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-20mg-oral-solido-2546c01b-6ebc-4da1-b3c1-97d8150fecea",
+    "price_offer": 81999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26708,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-10mg-oral-solido-6a8f1c8c-401f-4b20-beae-4d6e6d4f2e90",
+    "price_offer": 77599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 46994,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/resincolestiramina-colestiramina-4g-polvo-solucion-oral-50-sobres",
+    "price_offer": 72899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 61174,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/zetirol-s-ezetimiba-simvastatina-10-10mg-28-comprimidos",
+    "price_offer": 45499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26458,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ezetimiba-10mg-simvastatina-40mg-oral-solido",
+    "price_offer": 81799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27339,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/crestor-tablets-r-rosuvastatina-5mg-30-comprimidos-recubiertos",
+    "price_offer": 29699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26706,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-10mg-oral-solido-500038db-3a9f-4875-a67f-85aefee002e9",
+    "price_offer": 55699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28213,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-acetilsalicilico-100mg-atorvastatina-20mg-ramipril-10mg-oral-solido",
+    "price_offer": 28099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 58372,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvastatina-b-10mg-30-comprimidos-recubiertos",
+    "price_offer": 7899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28211,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-acetilsalicilico-100mg-atorvastatina-20mg-ramipril-5mg-oral-solido",
+    "price_offer": 27199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26711,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-40mg-oral-solido-b9b3cb18-0f78-4e52-bc90-70ab7ddd3e43",
+    "price_offer": 76299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26460,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ezetimiba-10mg-oral-solido",
+    "price_offer": 61699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26710,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-80mg-oral-solido",
+    "price_offer": 87799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28209,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/acido-acetilsalicilico-100mg-atorvastatina-20mg-ramipril-2-5mg-oral-solido",
+    "price_offer": 28099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27338,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/crestor-tablets-r-rosuvastatina-20mg-30-comprimidos-recubiertos",
+    "price_offer": 79999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26709,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/lipitor-r-atorvastatina-20mg-60-comprimidos-recubiertos",
+    "price_offer": 112699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28168,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/ursofalk-acido-ursodesoxicolico-500mg-50-comprimidos-recubiertos",
+    "price_offer": 146899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26782,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-10mg-atorvastatina-20mg-oral-solido",
+    "price_offer": 84899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26778,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/amlodipino-5mg-atorvastatina-10mg-oral-solido",
+    "price_offer": 83999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26784,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/caduet-5-20-amlodipino-atorvastatina-30-comprimidos-recubiertos",
+    "price_offer": 79399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28245,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/monascus-purpureus-400mg-oral-solido",
+    "price_offer": 17799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 56387,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosuvitae-plus-20-10-ezetimiba-rosuvastatina-30-comprimidos",
+    "price_offer": 41399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25308,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-20mg-oral-solido-8ed29f76-6708-41c4-9f2c-0cf9f23fb358",
+    "price_offer": 47399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 57015,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/sybrava-284mg-1-5ml-inyectable-1-jeringa-prellenada",
+    "price_offer": 986199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 26780,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/caduet-10-10-amlodipino-atorvastatina-30-comprimidos-recubiertos",
+    "price_offer": 83799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25316,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/atorvastatina-20mg-oral-solido-22379d00-5a90-4a84-9f22-082f6af9e710",
+    "price_offer": 33699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24745,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/rosumed-rosuvastatina-10mg-60-comprimidos-recubiertos",
+    "price_offer": 20999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 53451,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/tomapresion-brazo-omron-hem712",
+    "price_offer": 70699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 12449,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-para-el-brazo-bm-28",
+    "price_offer": 35999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 41975,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-dee-brazo",
+    "price_offer": 27999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 43986,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-bua-6150-we",
+    "price_offer": 63999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 41977,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-arterial-de-muneca-zenmed",
+    "price_offer": 21999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 43638,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/oximetro-de-pulso",
+    "price_offer": 19999,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 44013,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-de-muneca-hem6124",
+    "price_offer": 47799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48855,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/toma-presion-esfigmo-dig-brazalet-micr",
+    "price_offer": 32199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25012,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diosmina-450mg-hesperidina-50mg-oral-solido-8d5719fe-dc17-4abe-aaf9-5a015a6f9cce",
+    "price_offer": 34899,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25190,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dipemina-diosmina-hesperidina-450mg-50mg-60-comprimidos-recubiertos",
+    "price_offer": 37399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25771,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidrosmina-200mg-oral-solido",
+    "price_offer": 40299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 28239,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/daflon-500mg-60-comprimidos-recubiertos",
+    "price_offer": 73299,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25011,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diosmina-450mg-hesperidina-50mg-oral-solido-66cd42a6-1112-48a5-99f5-472299a1b06b",
+    "price_offer": 21399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 20999,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/variplex-de-60-comprimidos",
+    "price_offer": 17399,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25773,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/hidrosmina-2-topico-semisolido",
+    "price_offer": 28699,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 48105,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/daflon-1000mg-30-comprimidos-recubiertos",
+    "price_offer": 73599,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25189,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/dipemina-diosmina-hesperidina-450mg-50mg-30-comprimidos-recubiertos",
+    "price_offer": 26499,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24836,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/doxium-dobesilato-de-calcio-500mg-60-capsulas",
+    "price_offer": 64799,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 27134,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diosmina-450mg-flavonoides-50mg-oral-solido-7b8f6458-7d87-41a7-b74e-beb6c46b9ee6",
+    "price_offer": 67199,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 25729,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/diosmina-450mg-hesperidina-50mg-oral-solido-96c15c6f-04cb-4ff9-a00b-a1bb150f03ad",
+    "price_offer": 46099,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 24835,
+    "farmacia": "salcobrand",
+    "url": "https://salcobrand.cl/products/doxium-dobesilato-de-calcio-500mg-30-capsulas",
+    "price_offer": 55599,
+    "price_normal": null,
+    "discount": 0
+  }
+]

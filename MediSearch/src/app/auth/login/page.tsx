@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useLoading } from '../../../context/LoadingContext.tsx';
+import { useAuth } from '../../../context/AuthContext'; // ✅ Importamos el contexto de autenticación
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setLoading } = useLoading();
+  const { login } = useAuth(); // ✅ Obtenemos la función login() del contexto
 
   // Estado del formulario de login
   const [formData, setFormData] = useState({
@@ -80,6 +82,8 @@ export default function LoginPage() {
           region: result.user.region,
           comuna: result.user.comuna
         }));
+
+        login(); // ✅ Activamos el contexto global para reflejar el estado logueado
 
         // Redirección segura
         const redirect = searchParams.get('redirect');

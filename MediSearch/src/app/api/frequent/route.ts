@@ -1,38 +1,91 @@
-// Archivo: src/app/api/frequent/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 import { frequentMedicinesCollection } from '../../../lib/mongodb.ts';
 import { FrequentMedicine } from '../../../lib/models/FrequentMedicine.ts';
+import { ObjectId } from 'mongodb';
 
-// API que permite registrar un medicamento como frecuente
+// POST: Guarda un nuevo medicamento frecuente
 export async function POST(req: NextRequest) {
   try {
-    // Se extraen los datos JSON enviados desde el frontend
     const body: FrequentMedicine = await req.json();
 
-    // Validación: se aseguran los campos mínimos requeridos
     if (!body.userEmail || !body.medicineName || !body.pharmacy || !body.category) {
       return NextResponse.json({ message: 'Faltan campos obligatorios.' }, { status: 400 });
     }
 
-    // Se accede a la colección de medicamentos frecuentes
     const collection = await frequentMedicinesCollection;
 
-    // Se inserta el nuevo medicamento en la base de datos con fecha de guardado
+    // Verifica si ya existe este medicamento para ese usuario
+    const exists = await collection.findOne({
+      userEmail: body.userEmail,
+      medicineName: body.medicineName,
+      pharmacy: body.pharmacy
+    });
+
+    if (exists) {
+      return NextResponse.json({ message: 'Ya has guardado este medicamento.' }, { status: 409 });
+    }
+
     await collection.insertOne({
       userEmail: body.userEmail,
       medicineName: body.medicineName,
       pharmacy: body.pharmacy,
       category: body.category,
+      imageUrl: body.imageUrl || null,
+      medicineSlug: body.medicineSlug || null,
+      categorySlug: body.categorySlug || null,
+      pharmacyUrl: body.pharmacyUrl || null,
       savedAt: new Date()
     });
 
-    // Respuesta exitosa
     return NextResponse.json({ message: 'Medicamento guardado como frecuente.' }, { status: 201 });
 
   } catch (error) {
-    // Registro y respuesta ante errores del servidor
     console.error('Error al guardar medicamento frecuente:', error);
+    return NextResponse.json({ message: 'Error interno del servidor' }, { status: 500 });
+  }
+}
+
+// GET: Obtiene los medicamentos frecuentes por email
+export async function GET(req: NextRequest) {
+  try {
+    const email = req.nextUrl.searchParams.get('email');
+    if (!email) {
+      return NextResponse.json({ message: 'Email no proporcionado.' }, { status: 400 });
+    }
+
+    const collection = await frequentMedicinesCollection;
+    const medicines = await collection
+      .find({ userEmail: email })
+      .sort({ savedAt: -1 })
+      //.limit(5)
+      .toArray();
+
+    return NextResponse.json(medicines, { status: 200 });
+
+  } catch (error) {
+    console.error('Error al obtener medicamentos frecuentes:', error);
+    return NextResponse.json({ message: 'Error interno del servidor' }, { status: 500 });
+  }
+}
+
+// DELETE: Elimina un medicamento frecuente por ID
+export async function DELETE(req: NextRequest) {
+  try {
+    const id = req.nextUrl.searchParams.get('id');
+    if (!id) {
+      return NextResponse.json({ message: 'ID no proporcionado.' }, { status: 400 });
+    }
+
+    const collection = await frequentMedicinesCollection;
+    const result = await collection.deleteOne({ _id: new ObjectId(id) });
+
+    if (result.deletedCount === 1) {
+      return NextResponse.json({ message: 'Medicamento eliminado correctamente.' }, { status: 200 });
+    } else {
+      return NextResponse.json({ message: 'Medicamento no encontrado.' }, { status: 404 });
+    }
+  } catch (error) {
+    console.error('Error al eliminar medicamento frecuente:', error);
     return NextResponse.json({ message: 'Error interno del servidor' }, { status: 500 });
   }
 }

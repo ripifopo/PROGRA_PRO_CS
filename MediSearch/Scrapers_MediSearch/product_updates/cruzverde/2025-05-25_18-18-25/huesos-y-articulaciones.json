@@ -1,0 +1,434 @@
+[
+  {
+    "id": 267562,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-calcio-500-mg-vitamina-d3-800-ui-60-capsulas/267562.html",
+    "price_offer": 18559,
+    "price_normal": 21090,
+    "discount": 12
+  },
+  {
+    "id": 385961,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hidroferol-calcifediol-0-266-mg-3-capsulas-blandas/385961.html",
+    "price_offer": 26391,
+    "price_normal": 29990,
+    "discount": 12
+  },
+  {
+    "id": 15379,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-forte-calcio-450-mg-vitamina-d-175-ui-60-capsulas/15379.html",
+    "price_offer": 13103,
+    "price_normal": 14890,
+    "discount": 12
+  },
+  {
+    "id": 386770,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-flex-colageno-hidrolizado-polvo-suspension-oral-30-sobres/386770.html",
+    "price_offer": 17990,
+    "price_normal": 23940,
+    "discount": 25
+  },
+  {
+    "id": 254533,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-plus-calcio-500-mg-vitamina-d-400-ui-60-capsulas/254533.html",
+    "price_offer": 19791,
+    "price_normal": 22490,
+    "discount": 12
+  },
+  {
+    "id": 15337,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-calcio-320-mg-60-capsulas/15337.html",
+    "price_offer": 16157,
+    "price_normal": 18360,
+    "discount": 12
+  },
+  {
+    "id": 259834,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/pluscal-calcio-316-mg-30-comprimidos/259834.html",
+    "price_offer": 24191,
+    "price_normal": 27490,
+    "discount": 12
+  },
+  {
+    "id": 265350,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/citracal-max-citrato-de-calcio-60-comprimidos-recubierto/265350.html",
+    "price_offer": 14951,
+    "price_normal": 16990,
+    "discount": 12
+  },
+  {
+    "id": 15287,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-calcio-320-mg-30-capsulas/15287.html",
+    "price_offer": 9407,
+    "price_normal": 10690,
+    "discount": 12
+  },
+  {
+    "id": 15491,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-plus-calcio-500-mg-vitamina-d-400-ui-30-capsulas/15491.html",
+    "price_offer": 14203,
+    "price_normal": 16140,
+    "discount": 12
+  },
+  {
+    "id": 252432,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/vitamin-d-calcio-500-mg-30-capsulas/252432.html",
+    "price_offer": 12575,
+    "price_normal": 14290,
+    "discount": 12
+  },
+  {
+    "id": 15342,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-d-forte-calcio-450-mg-30-capsulas/15342.html",
+    "price_offer": 9645,
+    "price_normal": 10960,
+    "discount": 12
+  },
+  {
+    "id": 1506,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/calcefor-d-forte-calcio-1250-mg-60-capsulas/1506.html",
+    "price_offer": 13983,
+    "price_normal": 15890,
+    "discount": 12
+  },
+  {
+    "id": 15341,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-forte-calcio-450-mg-30-capsulas/15341.html",
+    "price_offer": 12311,
+    "price_normal": 13990,
+    "discount": 12
+  },
+  {
+    "id": 15286,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/elcal-calcio-320-mg-30-capsulas/15286.html",
+    "price_offer": 14775,
+    "price_normal": 16790,
+    "discount": 12
+  },
+  {
+    "id": 1103,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/calcefor-carbonato-de-calcio-500-mg-30-comprimidos/1103.html",
+    "price_offer": 10331,
+    "price_normal": 11740,
+    "discount": 12
+  },
+  {
+    "id": 1377,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/calcefor-d-calcio-320-mg-vitamina-d3-1-25-mg-30-capsulas/1377.html",
+    "price_offer": 7735,
+    "price_normal": 8790,
+    "discount": 12
+  },
+  {
+    "id": 253732,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/caprimida-d-calcio-320-mg-vitamina-d3-125-ui-30-capsulas/253732.html",
+    "price_offer": 6415,
+    "price_normal": 7290,
+    "discount": 12
+  },
+  {
+    "id": 6350,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/caldeval-calcio-1250-mg-vitamina-d3-400-ui-30-comprimidos-masticables/6350.html",
+    "price_offer": 8527,
+    "price_normal": 9690,
+    "discount": 12
+  },
+  {
+    "id": 6369,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/caldeval-calcio-500-mg-vitamina-d3-400-ui-60-comprimidos-masticables/6369.html",
+    "price_offer": 13895,
+    "price_normal": 15790,
+    "discount": 12
+  },
+  {
+    "id": 266322,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/reumazine-hidroxicloroquina-sulfato-200-mg-30-comprimidos/266322.html",
+    "price_offer": 23091,
+    "price_normal": 26240,
+    "discount": 12
+  },
+  {
+    "id": 273919,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/artrosome-c-d-colageno-hidrolizado-30-sobres/273919.html",
+    "price_offer": 18119,
+    "price_normal": 20590,
+    "discount": 12
+  },
+  {
+    "id": 266589,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/gelicart-colageno-hidrolizado-100-10-gr-30-sobres/266589.html",
+    "price_offer": 26831,
+    "price_normal": 30490,
+    "discount": 12
+  },
+  {
+    "id": 51166,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/finartrit-glucosamina-500-mg-60-comprimidos/51166.html",
+    "price_offer": 14863,
+    "price_normal": 16890,
+    "discount": 12
+  },
+  {
+    "id": 87163,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dinaflex-duo-glucosamina-sulfato-500-mg-60-capsulas/87163.html",
+    "price_offer": 26831,
+    "price_normal": 30490,
+    "discount": 12
+  },
+  {
+    "id": 293717,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/beautip-d-calcio-sumplemento-alimentario-7-3-gr-30-sobres-sabor-blueberry/293717.html",
+    "price_offer": 13990,
+    "price_normal": 19990,
+    "discount": 30
+  },
+  {
+    "id": 259469,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ilinol-hidroxicloroquina-sulfato-200-mg-30-comprimidos/259469.html",
+    "price_offer": 29471,
+    "price_normal": 33490,
+    "discount": 12
+  },
+  {
+    "id": 258501,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/artrilab-leflunomida-20-mg-30-comprimidos-recubierto/258501.html",
+    "price_offer": 63439,
+    "price_normal": 72090,
+    "discount": 12
+  },
+  {
+    "id": 256143,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/artrotin-leflunomida-20-mg-30-comprimidos-recubierto/256143.html",
+    "price_offer": 64935,
+    "price_normal": 73790,
+    "discount": 12
+  },
+  {
+    "id": 289895,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hidrolageno-q10-colageno-hidrolizado-30-sobres-sabor-naranja/289895.html",
+    "price_offer": 16990,
+    "price_normal": 23390,
+    "discount": 27
+  },
+  {
+    "id": 276468,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/cosentyx-secukinumab-150-mg-ml-en-1-autoinyector-prellenado/276468.html",
+    "price_offer": 449390,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 290017,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/biosul-colageno-nativo-40-mg-30-capsulas/290017.html",
+    "price_offer": 21463,
+    "price_normal": 24390,
+    "discount": 12
+  },
+  {
+    "id": 253108,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/finartrit-sabor-naranja-glucosamina-1200-mg-30-sobres/253108.html",
+    "price_offer": 27095,
+    "price_normal": 30790,
+    "discount": 12
+  },
+  {
+    "id": 294145,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/genacol-xtra-doble-accion-colageno-hidrolizado-90-capsulas/294145.html",
+    "price_offer": 27975,
+    "price_normal": 31790,
+    "discount": 12
+  },
+  {
+    "id": 263058,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/genacol-colageno-hidrolizado-90-capsulas/263058.html",
+    "price_offer": 25687,
+    "price_normal": 29190,
+    "discount": 12
+  },
+  {
+    "id": 258245,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/piascledine-persea-gratissima-300-mg-30-capsulas/258245.html",
+    "price_offer": 29911,
+    "price_normal": 33990,
+    "discount": 12
+  },
+  {
+    "id": 257623,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/arthrozeel-cartilago-0-3-mg-50-comprimidos/257623.html",
+    "price_offer": 18559,
+    "price_normal": 21090,
+    "discount": 12
+  },
+  {
+    "id": 258589,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/finartrit-forte-glucosamina-750-mg-60-comprimidos/258589.html",
+    "price_offer": 19351,
+    "price_normal": 21990,
+    "discount": 12
+  },
+  {
+    "id": 263890,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/heel-arthozeel-cartilago-0-3-mg-5-ampollas/263890.html",
+    "price_offer": 26743,
+    "price_normal": 30390,
+    "discount": 12
+  },
+  {
+    "id": 264211,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/parflex-colageno-10-mg-30-capsulas/264211.html",
+    "price_offer": 18031,
+    "price_normal": 20490,
+    "discount": 12
+  },
+  {
+    "id": 66219,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/condrosulf-condroitin-sulfato-sodico-800-mg-30-comprimidos/66219.html",
+    "price_offer": 53847,
+    "price_normal": 61190,
+    "discount": 12
+  },
+  {
+    "id": 87172,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dinaflex-duo-forte-glucosamina-1200-mg-30-sobres/87172.html",
+    "price_offer": 37479,
+    "price_normal": 42590,
+    "discount": 12
+  },
+  {
+    "id": 273908,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/hidrolageno-colageno-hidrolizado-30-sobres-sabor-naranja/273908.html",
+    "price_offer": 16975,
+    "price_normal": 19290,
+    "discount": 12
+  },
+  {
+    "id": 18172,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/azulfidine-en-sulfasalazina-500-mg-100-comprimidos/18172.html",
+    "price_offer": 85351,
+    "price_normal": 96990,
+    "discount": 12
+  },
+  {
+    "id": 269134,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ibanox-ibandronato-sodico-150-mg-1-comprimido-recubierto/269134.html",
+    "price_offer": 28239,
+    "price_normal": 32090,
+    "discount": 12
+  },
+  {
+    "id": 256568,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dronaval-acido-ibandronico-150-mg-3-comprimidos/256568.html",
+    "price_offer": 58599,
+    "price_normal": 66590,
+    "discount": 12
+  },
+  {
+    "id": 255152,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/fosval-alendronato-70-mg-12-comprimidos/255152.html",
+    "price_offer": 28459,
+    "price_normal": 32340,
+    "discount": 12
+  },
+  {
+    "id": 256609,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ibames-acido-ibandronico-150-mg-1-comprimido/256609.html",
+    "price_offer": 46103,
+    "price_normal": 52390,
+    "discount": 12
+  },
+  {
+    "id": 255613,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/idena-acido-ibandronico-150-mg-1-comprimido-recubierto/255613.html",
+    "price_offer": 30087,
+    "price_normal": 34190,
+    "discount": 12
+  },
+  {
+    "id": 253085,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/aldrox-acido-alendronico-70-mg-10-comprimidos-recubiertos/253085.html",
+    "price_offer": 10590,
+    "price_normal": 18240,
+    "discount": 42
+  },
+  {
+    "id": 267573,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/ibames-cd-biterapia-ac-ibandronico-150-mg-30-capsulas/267573.html",
+    "price_offer": 37831,
+    "price_normal": 42990,
+    "discount": 12
+  },
+  {
+    "id": 57072,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/rocaltrol-calcitriol-0-25-mcg-30-capsulas-blandas/57072.html",
+    "price_offer": 45790,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 57073,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/rocaltrol-calcitriol-0-5-mcg-30-capsulas-blandas/57073.html",
+    "price_offer": 62790,
+    "price_normal": null,
+    "discount": 0
+  },
+  {
+    "id": 269233,
+    "farmacia": "cruzverde",
+    "url": "https://www.cruzverde.cl/dronaval-pack-biterapia-61-comprimidos/269233.html",
+    "price_offer": 28063,
+    "price_normal": 31890,
+    "discount": 12
+  }
+]
