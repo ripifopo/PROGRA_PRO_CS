@@ -2,17 +2,35 @@
 
 import { NextResponse } from "next/server";
 import { medicinesCollection } from "../../../lib/mongodb.ts";
+import { normalizeCategoryName } from "../../../lib/utils/normalizeCategories.ts";
 
-// Ruta API que maneja la obtención de medicamentos disponibles
+// Ruta API que entrega medicamentos agrupados por farmacia y categoría
 export async function GET() {
   try {
-    // Se accede a la colección de medicamentos en la base de datos
-    const medicines = await (await medicinesCollection).find({}).toArray();
+    const collection = await medicinesCollection;
+    const pharmacies = await collection.find({}).toArray();
 
-    // Se responde con el listado completo de medicamentos en formato JSON
-    return NextResponse.json(medicines);
+    const result = pharmacies.map((pharmacy) => {
+      const normalizedCategories: Record<string, any[]> = {};
+
+      for (const rawCategory in pharmacy.categories) {
+        const normalized = normalizeCategoryName(rawCategory);
+
+        if (!normalizedCategories[normalized]) {
+          normalizedCategories[normalized] = [];
+        }
+
+        normalizedCategories[normalized].push(...pharmacy.categories[rawCategory]);
+      }
+
+      return {
+        pharmacy: pharmacy.pharmacy,
+        categories: normalizedCategories
+      };
+    });
+
+    return NextResponse.json(result);
   } catch (error) {
-    // Manejo de errores en caso de fallo durante la carga de datos
     console.error("Error cargando medicamentos:", error);
     return NextResponse.json({ message: "Error interno" }, { status: 500 });
   }

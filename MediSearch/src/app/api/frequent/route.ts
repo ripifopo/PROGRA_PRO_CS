@@ -1,3 +1,5 @@
+// Archivo: src/app/api/frequent/route.ts
+
 import { NextRequest, NextResponse } from 'next/server';
 import { frequentMedicinesCollection } from '../../../lib/mongodb.ts';
 import { FrequentMedicine } from '../../../lib/models/FrequentMedicine.ts';
@@ -8,16 +10,17 @@ export async function POST(req: NextRequest) {
   try {
     const body: FrequentMedicine = await req.json();
 
-    if (!body.userEmail || !body.medicineName || !body.pharmacy || !body.category) {
+    // Validación mínima requerida
+    if (!body.userEmail || !body.medicineId || !body.pharmacy || !body.category) {
       return NextResponse.json({ message: 'Faltan campos obligatorios.' }, { status: 400 });
     }
 
     const collection = await frequentMedicinesCollection;
 
-    // Verifica si ya existe este medicamento para ese usuario
+    // Verifica si ya existe este medicamento para ese usuario por ID
     const exists = await collection.findOne({
       userEmail: body.userEmail,
-      medicineName: body.medicineName,
+      medicineId: body.medicineId,
       pharmacy: body.pharmacy
     });
 
@@ -25,9 +28,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Ya has guardado este medicamento.' }, { status: 409 });
     }
 
+    // Inserta el nuevo medicamento frecuente
     await collection.insertOne({
       userEmail: body.userEmail,
-      medicineName: body.medicineName,
+      medicineId: body.medicineId,
+      medicineName: body.medicineName || null,
       pharmacy: body.pharmacy,
       category: body.category,
       imageUrl: body.imageUrl || null,
@@ -57,7 +62,6 @@ export async function GET(req: NextRequest) {
     const medicines = await collection
       .find({ userEmail: email })
       .sort({ savedAt: -1 })
-      //.limit(5)
       .toArray();
 
     return NextResponse.json(medicines, { status: 200 });
@@ -68,7 +72,7 @@ export async function GET(req: NextRequest) {
   }
 }
 
-// DELETE: Elimina un medicamento frecuente por ID
+// DELETE: Elimina un medicamento frecuente por ID del documento
 export async function DELETE(req: NextRequest) {
   try {
     const id = req.nextUrl.searchParams.get('id');

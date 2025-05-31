@@ -1,5 +1,3 @@
-// Archivo: src/app/comparator/categories/[category]/[medicine]/page.tsx
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -7,30 +5,29 @@ import { useParams, useRouter } from 'next/navigation';
 import { useLoading } from '../../../../../context/LoadingContext.tsx';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { FaHeart, FaBell } from 'react-icons/fa'; // Iconos
+import { FaHeart, FaBell } from 'react-icons/fa';
 
-// Tipo de dato que representa la estructura de un medicamento
 interface Medicine {
+  id: number;
   name: string;
-  price: string;
+  offer_price: string;
+  normal_price: string;
   image: string;
   url: string;
-  form: string;
-  stock: number;
+  stock: string;
   pharmacy?: string;
 }
 
 export default function MedicineDetailPage() {
-  const { category, medicine } = useParams(); // Obtiene parámetros de la URL
+  const { category, medicine } = useParams();
   const router = useRouter();
   const { setLoading } = useLoading();
 
-  const [medData, setMedData] = useState<Medicine | null>(null);        // Datos del medicamento
-  const [userEmail, setUserEmail] = useState<string | null>(null);      // Correo del usuario
-  const [isFrequent, setIsFrequent] = useState<boolean>(false);         // Estado si es frecuente
-  const [isAlerted, setIsAlerted] = useState<boolean>(false);           // Estado si ya tiene alerta
+  const [medData, setMedData] = useState<Medicine | null>(null);
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [isFrequent, setIsFrequent] = useState<boolean>(false);
+  const [isAlerted, setIsAlerted] = useState<boolean>(false);
 
-  // Carga y valida los datos del medicamento y su estado
   useEffect(() => {
     const fetchAndMatchMedicine = async () => {
       try {
@@ -39,19 +36,15 @@ export default function MedicineDetailPage() {
         if (!res.ok) throw new Error();
         const data = await res.json();
 
-        const decodedCategory = decodeURIComponent(category as string);
-        const decodedName = decodeURIComponent(medicine as string);
+        const decodedId = parseInt(decodeURIComponent(medicine as string));
         let found: Medicine | null = null;
 
         for (const pharmacy of data) {
-          const categories = pharmacy.categories || {};
-          for (const [catName, meds] of Object.entries(categories)) {
-            if (catName.toLowerCase() === decodedCategory.toLowerCase()) {
-              for (const med of meds as any[]) {
-                if (med.name === decodedName) {
-                  found = { ...med, pharmacy: pharmacy.pharmacy };
-                  break;
-                }
+          for (const category of Object.values(pharmacy.categories || {})) {
+            for (const med of category as any[]) {
+              if (med.id === decodedId) {
+                found = { ...med, pharmacy: pharmacy.pharmacy };
+                break;
               }
             }
             if (found) break;
@@ -68,23 +61,18 @@ export default function MedicineDetailPage() {
           const email = parsed?.email || null;
           setUserEmail(email);
 
-          // Verifica si es frecuente
           const freqRes = await fetch(`/api/frequent?email=${email}`);
           const freqData = await freqRes.json();
-          const alreadyExists = freqData.some(
-            (item: any) => item.medicineName === found?.name && item.pharmacy === found?.pharmacy
-          );
-          setIsFrequent(alreadyExists);
+          setIsFrequent(freqData.some((item: any) =>
+            item.medicineId === found?.id && item.pharmacy === found?.pharmacy
+          ));
 
-          // Verifica si ya tiene alerta
           const alertRes = await fetch(`/api/alerts?email=${email}`);
           const alertData = await alertRes.json();
-          const alreadyAlerted = alertData.some(
-            (item: any) => item.medicineName === found?.name && item.pharmacy === found?.pharmacy
-          );
-          setIsAlerted(alreadyAlerted);
+          setIsAlerted(alertData.some((item: any) =>
+            item.medicineId === found?.id && item.pharmacy === found?.pharmacy
+          ));
         }
-
       } catch {
         toast.error('Medicamento no encontrado.');
         router.push(`/comparator/categories/${category}`);
@@ -96,23 +84,26 @@ export default function MedicineDetailPage() {
     fetchAndMatchMedicine();
   }, [medicine, category, router, setLoading]);
 
-  // Formatea precios con puntos de miles
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
-    const cleanPrice = price.replace(/[^0-9]/g, '');
-    return '$' + cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    const clean = price.replace(/[^0-9]/g, '');
+    return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // Guarda el medicamento como frecuente
-  const handleSaveFrequent = async () => {
-    if (!userEmail || !medData) {
-      const redirectTo = `/comparator/categories/${encodeURIComponent(category as string)}/${encodeURIComponent(medicine as string)}`;
-      router.push(`/auth/continue?redirect=${encodeURIComponent(redirectTo)}`);
-      return;
-    }
+  const calculateDiscount = () => {
+    if (!medData) return null;
+    const offer = parseInt(medData.offer_price.replace(/\D/g, ''));
+    const normal = parseInt(medData.normal_price.replace(/\D/g, ''));
+    if (!normal || normal === 0 || offer >= normal) return null;
+    const discount = Math.round(100 - (offer / normal) * 100);
+    return discount;
+  };
 
+  const handleSaveFrequent = async () => {
+    if (!userEmail || !medData) return;
     const payload = {
       userEmail,
+      medicineId: medData.id,
       medicineName: medData.name,
       pharmacy: medData.pharmacy || '',
       category: category as string,
@@ -129,7 +120,6 @@ export default function MedicineDetailPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-
       if (res.ok) {
         setIsFrequent(true);
         toast.success('Guardado como frecuente.');
@@ -141,33 +131,27 @@ export default function MedicineDetailPage() {
     }
   };
 
-  // Crea alerta de precio y descuento
   const handleCreateAlert = async () => {
-    if (!userEmail || !medData) {
-      const redirectTo = `/comparator/categories/${encodeURIComponent(category as string)}/${encodeURIComponent(medicine as string)}`;
-      router.push(`/auth/continue?redirect=${encodeURIComponent(redirectTo)}`);
-      return;
-    }
-
+    if (!userEmail || !medData) return;
     const payload = {
       userEmail,
+      medicineId: medData.id,
       medicineName: medData.name,
       pharmacy: medData.pharmacy || '',
       category: category as string,
       medicineSlug: encodeURIComponent(medicine as string),
       categorySlug: encodeURIComponent(category as string),
-      pharmacyUrl: medData.url || '',         // ← importante para redirigir
-      imageUrl: medData.image || '',          // ← necesario para mostrar la imagen
+      pharmacyUrl: medData.url || '',
+      imageUrl: medData.image || '',
       createdAt: new Date().toISOString()
     };
-    
+
     try {
       const res = await fetch('/api/alerts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-
       if (res.ok) {
         setIsAlerted(true);
         toast.success('Alerta creada correctamente.');
@@ -181,19 +165,15 @@ export default function MedicineDetailPage() {
 
   if (!medData) return null;
 
+  const discount = calculateDiscount();
+
   return (
     <Container className="py-5">
-      {/* Botón para volver */}
-      <Button
-        variant="outline-success"
-        className="mb-4"
-        onClick={() => router.push(`/comparator/categories/${category}`)}
-      >
+      <Button variant="outline-success" className="mb-4" onClick={() => router.push(`/comparator/categories/${category}`)}>
         ← Volver a Medicamentos
       </Button>
 
       <Row className="align-items-center">
-        {/* Imagen del medicamento */}
         <Col md={5} className="text-center">
           <img
             src={medData.image || 'https://via.placeholder.com/300'}
@@ -203,21 +183,28 @@ export default function MedicineDetailPage() {
           />
         </Col>
 
-        {/* Info del medicamento */}
         <Col md={7}>
-          <h2 className="text-success fw-bold mb-3">{medData.name.toUpperCase()}</h2>
-          <h4 className="text-dark mb-2">{formatPrice(medData.price)}</h4>
+          <h2 className="text-success fw-bold mb-3">{medData.name?.toUpperCase() || 'Sin nombre'}</h2>
+
+          {medData.offer_price !== medData.normal_price && medData.normal_price !== '$0' ? (
+            <>
+              <h5 className="text-muted text-decoration-line-through">{formatPrice(medData.normal_price)}</h5>
+              <h4 className="text-danger fw-bold">{formatPrice(medData.offer_price)}</h4>
+              {discount && <span className="badge bg-success">{discount}% de descuento</span>}
+            </>
+          ) : (
+            <h4 className="text-dark fw-bold">{formatPrice(medData.offer_price)}</h4>
+          )}
+
           <p className="mb-2">
             <strong>Stock:</strong>{' '}
-            <span style={{ color: medData.stock > 0 ? 'green' : 'red' }}>
-              ⬤ {medData.stock > 0 ? 'Disponible' : 'Sin stock'}
+            <span style={{ color: medData.stock === 'yes' ? 'green' : 'red' }}>
+              ⬤ {medData.stock === 'yes' ? 'Disponible' : 'Sin stock'}
             </span>
           </p>
           <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
 
-          {/* Botones de acción */}
           <div className="d-flex align-items-center gap-3 mt-3">
-            {/* Ir a la farmacia */}
             <a
               href={medData.url}
               target="_blank"
@@ -236,7 +223,6 @@ export default function MedicineDetailPage() {
               🏪 Ir a la farmacia
             </a>
 
-            {/* Corazón de frecuente */}
             <button
               className="d-flex justify-content-center align-items-center"
               onClick={handleSaveFrequent}
@@ -253,7 +239,6 @@ export default function MedicineDetailPage() {
               <FaHeart size={20} color={isFrequent ? 'white' : 'black'} />
             </button>
 
-            {/* Campanita para crear alerta */}
             <button
               className="d-flex justify-content-center align-items-center"
               onClick={handleCreateAlert}

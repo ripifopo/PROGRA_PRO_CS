@@ -2,35 +2,29 @@
 
 import { NextResponse } from "next/server";
 import { medicinesCollection } from "../../../lib/mongodb.ts";
+import { normalizeCategoryName } from "../../../lib/utils/normalizeCategories.ts";
 
-// API que maneja la obtención dinámica de categorías de medicamentos
+// API que devuelve las categorías agrupadas y normalizadas
 export async function GET() {
   try {
-    // Se accede a la colección de medicamentos en la base de datos
     const collection = await medicinesCollection;
-
-    // Se buscan todos los documentos de farmacias disponibles
     const pharmacies = await collection.find({}).toArray();
 
-    // Conjunto utilizado para almacenar categorías únicas
     const categorySet = new Set<string>();
 
-    // Se recorren todas las farmacias para extraer las categorías
     pharmacies.forEach((pharmacy) => {
       if (pharmacy.categories) {
-        for (const category in pharmacy.categories) {
-          if (category) categorySet.add(category);
+        for (const rawCategory in pharmacy.categories) {
+          const normalized = normalizeCategoryName(rawCategory);
+          categorySet.add(normalized);
         }
       }
     });
 
-    // Se convierte el conjunto en un arreglo para enviarlo como respuesta
-    const categories = Array.from(categorySet);
+    const categories = Array.from(categorySet).sort();
 
-    // Respuesta exitosa con el listado de categorías únicas
     return NextResponse.json(categories);
   } catch (error) {
-    // Manejo de errores internos en la carga de categorías
     console.error("Error cargando categorías:", error);
     return NextResponse.json({ message: "Error interno" }, { status: 500 });
   }

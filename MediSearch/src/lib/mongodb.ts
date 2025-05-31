@@ -1,34 +1,17 @@
-import { MongoClient, Db, Collection } from "mongodb";
+// Para uso en Next.js (no usar "npm:" ni Deno imports)
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const uri = process.env.MONGODB_URI;
-if (!uri) {
-  throw new Error("No se encontró la URI de conexión a MongoDB");
-}
+if (!uri) throw new Error("No se encontró MONGODB_URI");
 
-declare global {
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
+const client = new MongoClient(uri);
+const db = client.db("medisearch");
 
-let clientPromise: Promise<MongoClient>;
-
-if (!global._mongoClientPromise) {
-  const client = new MongoClient(uri);
-  global._mongoClientPromise = client.connect();
-}
-
-clientPromise = global._mongoClientPromise;
-
-export const usersCollection: Promise<Collection> = clientPromise.then(client =>
-  client.db("medisearch").collection("users")
-);
-
-export const medicinesCollection: Promise<Collection> = clientPromise.then(client =>
-  client.db("medisearch").collection("medicines")
-);
-
-export const frequentMedicinesCollection: Promise<Collection> = clientPromise.then(client =>
-  client.db("medisearch").collection("frequent_medicines")
-);
-export const alertsCollection: Promise<Collection> = clientPromise.then(client =>
-  client.db("medisearch").collection("alerts")
-);
+export const medicinesCollection = db.collection("medicines");
+export const priceHistoryCollection = db.collection("price_history");
+export const usersCollection = db.collection("users");
+export const frequentMedicinesCollection = db.collection("frequent_medicines");
+export const alertsCollection = db.collection("alerts");
