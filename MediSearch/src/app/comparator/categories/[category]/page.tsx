@@ -1,184 +1,292 @@
-'use client'
+// ✅ Página de categoría con filtros, búsqueda, paginación, imagenes y botón funcional "Ver detalles"
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { Button, Card, Container, Row, Col, Form } from 'react-bootstrap'
+'use client';
 
-// Este componente representa la página que visualiza los medicamentos de una categoría específica
-export default function CategoryPage({ params }: { params: { category: string } }) {
-  const router = useRouter()
+import { useEffect, useState } from 'react';
+import { useRouter, useParams } from 'next/navigation';
+import Link from 'next/link';
+import { Button, Card, Container, Row, Col, Form, Spinner, Badge } from 'react-bootstrap';
+import { normalizeCategoryName } from '@/lib/utils/normalizeCategories';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
-  // Lista completa de medicamentos agrupados por farmacia
-  const [medicines, setMedicines] = useState<any[]>([])
+export default function CategoryPage() {
+  const router = useRouter();
+  const { category: rawCategory } = useParams();
 
-  // Estado del campo de búsqueda
-  const [search, setSearch] = useState('')
+  const [category, setCategory] = useState('');
+  const [medicines, setMedicines] = useState<any[]>([]);
+  const [search, setSearch] = useState('');
+  const [pharmacyFilter, setPharmacyFilter] = useState<string[]>([]);
+  const [sort, setSort] = useState<'asc' | 'desc'>('asc');
+  const [sortDiscount, setSortDiscount] = useState<'asc' | 'desc' | ''>('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
 
-  // Filtro de farmacia seleccionado
-  const [pharmacyFilter, setPharmacyFilter] = useState('')
+  const [minPrice, setMinPrice] = useState(1);
+  const [maxPrice, setMaxPrice] = useState(1000000);
+  const [minDiscount, setMinDiscount] = useState(0);
+  const [maxDiscount, setMaxDiscount] = useState(100);
 
-  // Orden actual de los precios (ascendente o descendente)
-  const [sort, setSort] = useState<'asc' | 'desc'>('asc')
+  const medicinesPerPage = 12;
+  const indexOfLastMedicine = currentPage * medicinesPerPage;
+  const indexOfFirstMedicine = indexOfLastMedicine - medicinesPerPage;
 
-  // Página actual de la paginación
-  const [currentPage, setCurrentPage] = useState(1)
-
-  // Valores de paginación
-  const medicinesPerPage = 12
-  const indexOfLastMedicine = currentPage * medicinesPerPage
-  const indexOfFirstMedicine = indexOfLastMedicine - medicinesPerPage
-
-  // Categoría actual extraída desde los parámetros de URL
-  const [category, setCategory] = useState('')
-
-  // Al montar el componente, se decodifica el parámetro de categoría desde la URL
+  // 🔁 Cargar y normalizar la categoría
   useEffect(() => {
-    async function unwrapParams() {
-      const { category } = await params
-      setCategory(decodeURIComponent(category))
-    }
-    unwrapParams()
-  }, [params])
+    if (!rawCategory) return;
+    const raw = decodeURIComponent(rawCategory as string);
+    const normalized = normalizeCategoryName(raw);
+    setCategory(normalized);
+  }, [rawCategory]);
 
-  // Se obtiene la lista completa de medicamentos desde la API
+  // 📦 Cargar medicamentos y calcular precio máximo de la categoría
   useEffect(() => {
     const fetchMedicines = async () => {
-      try {
-        const res = await fetch('/api/medicines')
-        const data = await res.json()
-        setMedicines(data)
-      } catch (error) {
-        console.error('Error cargando medicamentos:', error)
-      }
-    }
-    fetchMedicines()
-  }, [])
+      setLoading(true);
+      const res = await fetch('/api/medicines');
+      const data = await res.json();
+      setMedicines(data);
 
-  // Función para dar formato a los precios con puntos de miles
+      const prices = data.flatMap((pharmacy: any) =>
+        Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
+          if (cat.toLowerCase() !== category.toLowerCase()) return [];
+          return meds
+            .map((med) => parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0'))
+            .filter((p) => p > 0);
+        })
+      );
+
+      const maxDetected = Math.max(...prices);
+      setMinPrice(1);
+      setMaxPrice(isFinite(maxDetected) && maxDetected > 0 ? maxDetected : 1000000);
+      setLoading(false);
+    };
+
+    fetchMedicines();
+  }, [category]);
+
+  // 💰 Formato CLP
   const formatPrice = (price: string) => {
-    if (!price || price === '$0') return 'Sin precio disponible'
-    const cleanPrice = price.replace(/[^0-9]/g, '')
-    return '$' + cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-  }
+    if (!price || price === '$0') return 'No disponible';
+    const clean = price.replace(/[^0-9]/g, '');
+    return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  };
 
-  // Filtra medicamentos que pertenezcan a la categoría seleccionada,
-  // que coincidan con la búsqueda por nombre y, si corresponde, por farmacia
+  // 🧠 Filtrar y ordenar medicamentos
   const filteredMedicines = medicines.flatMap((pharmacy: any) => {
     return Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
       if (cat.toLowerCase() === category.toLowerCase()) {
-        return meds.map((med) => ({
-          ...med,
-          pharmacy: pharmacy.pharmacy, // Se añade el nombre de la farmacia a cada medicamento
-        }))
+        return meds.map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
       }
-      return []
-    })
+      return [];
+    });
   })
-    .filter((med) =>
-      med.name?.toLowerCase().includes(search.toLowerCase()) &&
-      (pharmacyFilter ? med.pharmacy?.toLowerCase() === pharmacyFilter.toLowerCase() : true)
-    )
-    .sort((a, b) => {
-      const priceA = parseInt(a.price?.replace(/[^0-9]/g, '') || '0')
-      const priceB = parseInt(b.price?.replace(/[^0-9]/g, '') || '0')
-      return sort === 'asc' ? priceA - priceB : priceB - priceA
+    .filter((med) => {
+      const offer = parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0');
+      const discount = parseInt(med.discount || 0);
+      const pharmacyOk = pharmacyFilter.length === 0 || pharmacyFilter.includes(med.pharmacy);
+      return (
+        med.name?.toLowerCase().includes(search.toLowerCase()) &&
+        pharmacyOk &&
+        offer >= minPrice &&
+        offer <= maxPrice &&
+        discount >= minDiscount &&
+        discount <= maxDiscount
+      );
     })
+    .sort((a, b) => {
+      const priceA = parseInt(a.offer_price?.replace(/[^0-9]/g, '') || '0');
+      const priceB = parseInt(b.offer_price?.replace(/[^0-9]/g, '') || '0');
+      return sort === 'asc' ? priceA - priceB : priceB - priceA;
+    })
+    .sort((a, b) => {
+      if (!sortDiscount) return 0;
+      return sortDiscount === 'asc' ? a.discount - b.discount : b.discount - a.discount;
+    });
 
-  // Se obtienen los medicamentos que se deben mostrar en la página actual
-  const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine)
-  const totalPages = Math.ceil(filteredMedicines.length / medicinesPerPage)
+  const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
+  const totalPages = Math.ceil(filteredMedicines.length / medicinesPerPage);
+
+  const togglePharmacy = (value: string) => {
+    setCurrentPage(1);
+    setPharmacyFilter((prev) =>
+      prev.includes(value) ? prev.filter((p) => p !== value) : [...prev, value]
+    );
+  };
+
+  const resetFilters = () => {
+    setSearch('');
+    setPharmacyFilter([]);
+    setSort('asc');
+    setSortDiscount('');
+    setMinPrice(1);
+    setMaxPrice(1000000);
+    setMinDiscount(0);
+    setMaxDiscount(100);
+    setCurrentPage(1);
+  };
 
   return (
     <Container className="py-5">
-      {/* Botón para volver a la lista general de categorías */}
       <Button variant="outline-success" className="mb-4" onClick={() => router.push('/comparator/categories')}>
         ← Volver a Categorías
       </Button>
 
-      {/* Título y descripción de la categoría */}
-      <h1 className="text-center text-success fw-bold mb-2">{category.toUpperCase()}</h1>
-      <p className="text-center text-muted mb-4">Explora medicamentos de la categoría seleccionada</p>
-
-      {/* Filtros de búsqueda y orden */}
-      <Row className="justify-content-center mb-4">
-        <Col md={4} className="mb-2">
+      <div className="mb-4">
+        <Col md={9} className="mx-auto text-center d-flex flex-column align-items-center">
+          <h1 className="text-success fw-bold display-5">{category.toUpperCase()}</h1>
+          <p className="text-muted fs-5 mb-3">Explora medicamentos disponibles en esta categoría</p>
           <Form.Control
             type="text"
             placeholder="Buscar medicamento..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            className="w-100 w-md-75"
           />
         </Col>
-        <Col md={3} className="mb-2">
-          <Form.Select value={pharmacyFilter} onChange={(e) => setPharmacyFilter(e.target.value)}>
-            <option value="">Todas las farmacias</option>
-            <option value="Cruz Verde">Cruz Verde</option>
-            <option value="Farmacia Ahumada">Farmacia Ahumada</option>
-            <option value="Salcobrand">Salcobrand</option>
-          </Form.Select>
+      </div>
+
+      <Row>
+        {/* Panel lateral de filtros */}
+        <Col md={3}>
+          <Card className="p-3 shadow-sm mb-4">
+            <h5 className="fw-bold mb-3">Filtros avanzados</h5>
+
+            <div className="mb-3">
+              <strong>Farmacias</strong>
+              {['Cruz Verde', 'Salcobrand', 'Farmacia Ahumada'].map((pharm) => (
+                <Form.Check
+                  key={pharm}
+                  type="checkbox"
+                  label={pharm}
+                  checked={pharmacyFilter.includes(pharm)}
+                  onChange={() => togglePharmacy(pharm)}
+                />
+              ))}
+            </div>
+
+            <div className="mb-4">
+              <strong>Rango de precio</strong>
+              <Slider
+                range
+                min={1}
+                max={maxPrice}
+                step={500}
+                value={[minPrice, maxPrice]}
+                onChange={([min, max]) => {
+                  setMinPrice(min);
+                  setMaxPrice(max);
+                }}
+              />
+              <div className="d-flex justify-content-between">
+                <span>${minPrice}</span>
+                <span>${maxPrice}</span>
+              </div>
+            </div>
+
+            <div className="mb-4">
+              <strong>Rango de descuento (%)</strong>
+              <Slider
+                range
+                min={0}
+                max={100}
+                step={1}
+                value={[minDiscount, maxDiscount]}
+                onChange={([min, max]) => {
+                  setMinDiscount(min);
+                  setMaxDiscount(max);
+                }}
+              />
+              <div className="d-flex justify-content-between">
+                <span>{minDiscount}%</span>
+                <span>{maxDiscount}%</span>
+              </div>
+            </div>
+
+            <Form.Select className="mt-2" value={sort} onChange={(e) => setSort(e.target.value as 'asc' | 'desc')}>
+              <option value="asc">Menor precio</option>
+              <option value="desc">Mayor precio</option>
+            </Form.Select>
+
+            <Form.Select className="mt-2" value={sortDiscount} onChange={(e) => setSortDiscount(e.target.value as any)}>
+              <option value="">No ordenar por descuento</option>
+              <option value="asc">Menor descuento</option>
+              <option value="desc">Mayor descuento</option>
+            </Form.Select>
+
+            <Button variant="outline-danger" className="mt-3 w-100" onClick={resetFilters}>
+              Reiniciar filtros
+            </Button>
+          </Card>
         </Col>
-        <Col md={3} className="mb-2">
-          <Form.Select value={sort} onChange={(e) => setSort(e.target.value as 'asc' | 'desc')}>
-            <option value="asc">Menor precio</option>
-            <option value="desc">Mayor precio</option>
-          </Form.Select>
+
+        {/* Panel de resultados */}
+        <Col md={9}>
+          {loading ? (
+            <div className="text-center my-5">
+              <Spinner animation="border" variant="success" />
+              <p className="mt-3">Cargando medicamentos...</p>
+            </div>
+          ) : currentMedicines.length === 0 ? (
+            <div className="text-center my-5">
+              <h4>No se encontraron medicamentos en esta categoría</h4>
+              <p>Intenta ajustar los filtros o buscar otro término.</p>
+            </div>
+          ) : (
+            <Row className="g-4">
+              {currentMedicines.map((med, index) => {
+                const offer = med.offer_price || '$0';
+                const normal = med.normal_price || '$0';
+                const hasDiscount = offer !== normal && normal !== '$0';
+                const imageUrl = med.image && med.image.trim() !== '' ? med.image : 'https://via.placeholder.com/150';
+
+                return (
+                  <Col key={`${med.id}-${index}`} md={6} lg={4}>
+                    <Card className="shadow-sm h-100">
+                      <Card.Img variant="top" src={imageUrl} style={{ height: '150px', objectFit: 'contain' }} />
+                      <Card.Body className="text-center">
+                        <h5 className="text-success fw-bold">{med.name || 'Sin nombre'}</h5>
+                        <p className="text-muted mb-1">{med.pharmacy}</p>
+                        {hasDiscount && (
+                          <p className="text-muted text-decoration-line-through">
+                            {formatPrice(normal)}
+                          </p>
+                        )}
+                        <p className="text-danger fw-bold fs-5">{formatPrice(offer)}</p>
+                        {parseInt(med.discount) > 0 && (
+                          <Badge bg="success" className="mb-2">
+                            {med.discount}% de descuento
+                          </Badge>
+                        )}
+                        <Link
+                          href={`/comparator/categories/${encodeURIComponent(category)}/${encodeURIComponent(med.id || '0')}`}
+                          className="btn btn-outline-success w-100 mt-2"
+                        >
+                          Ver detalles
+                        </Link>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                );
+              })}
+            </Row>
+          )}
+
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <div className="d-flex justify-content-center mt-4 align-items-center gap-3">
+              <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage((prev) => prev - 1)}>
+                Anterior
+              </Button>
+              <span className="fw-semibold">Página {currentPage} de {totalPages}</span>
+              <Button variant="outline-secondary" disabled={currentPage === totalPages} onClick={() => setCurrentPage((prev) => prev + 1)}>
+                Siguiente
+              </Button>
+            </div>
+          )}
         </Col>
       </Row>
-
-      {/* Resultado de búsqueda o mensaje de error */}
-      {currentMedicines.length === 0 ? (
-        <p className="text-center text-muted">No se encontraron medicamentos en esta categoría.</p>
-      ) : (
-        <Row className="g-4">
-          {currentMedicines.map((med, index) => (
-            <Col key={index} sm={6} md={4} lg={3}>
-              {/* Cada tarjeta redirige al detalle del medicamento, usando su nombre codificado como parámetro */}
-              <Link
-                href={`/comparator/categories/${encodeURIComponent(category)}/${encodeURIComponent(med.name)}`}
-                className="text-decoration-none"
-              >
-                <Card className="h-100 text-center shadow-sm border-0">
-                  <Card.Img
-                    variant="top"
-                    src={med.image || 'https://via.placeholder.com/150'}
-                    style={{ height: '120px', objectFit: 'contain' }}
-                    alt={med.name}
-                  />
-                  <Card.Body>
-                    <Card.Title className="text-success fw-bold">
-                      {med.name?.charAt(0).toUpperCase() + med.name?.slice(1)}
-                    </Card.Title>
-                    <Card.Text className="text-muted mb-1">{med.pharmacy}</Card.Text>
-                    <Card.Text className="fw-semibold fs-5 text-dark">{formatPrice(med.price)}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </Col>
-          ))}
-        </Row>
-      )}
-
-      {/* Paginación al final de la página */}
-      {totalPages > 1 && (
-        <div className="d-flex justify-content-center mt-4">
-          <Button
-            variant="outline-success"
-            className="me-2"
-            disabled={currentPage === 1}
-            onClick={() => setCurrentPage((prev) => prev - 1)}
-          >
-            Anterior
-          </Button>
-          <Button
-            variant="outline-success"
-            disabled={currentPage === totalPages}
-            onClick={() => setCurrentPage((prev) => prev + 1)}
-          >
-            Siguiente
-          </Button>
-        </div>
-      )}
     </Container>
-  )
+  );
 }

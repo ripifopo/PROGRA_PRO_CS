@@ -31,10 +31,15 @@ export async function POST(req: NextRequest) {
     const data: Alert = await req.json();
     const collection = await alertsCollection;
 
-    // Verifica si ya hay una alerta idéntica
+    // Validación de campos obligatorios
+    if (!data.userEmail || !data.medicineId || !data.pharmacy || !data.category) {
+      return NextResponse.json({ message: 'Faltan campos obligatorios.' }, { status: 400 });
+    }
+
+    // Verifica si ya existe una alerta para ese usuario y ese ID en esa farmacia
     const exists = await collection.findOne({
       userEmail: data.userEmail,
-      medicineName: data.medicineName,
+      medicineId: data.medicineId,
       pharmacy: data.pharmacy
     });
 
@@ -42,9 +47,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Ya existe esta alerta.' }, { status: 409 });
     }
 
-    await collection.insertOne({ ...data, createdAt: new Date().toISOString() });
+    // Inserta la nueva alerta
+    await collection.insertOne({
+      userEmail: data.userEmail,
+      medicineId: data.medicineId,
+      medicineName: data.medicineName || null,
+      pharmacy: data.pharmacy,
+      category: data.category,
+      medicineSlug: data.medicineSlug || null,
+      categorySlug: data.categorySlug || null,
+      pharmacyUrl: data.pharmacyUrl || null,
+      imageUrl: data.imageUrl || null,
+      createdAt: new Date().toISOString()
+    });
 
-    return NextResponse.json({ message: 'Alerta creada correctamente.' });
+    return NextResponse.json({ message: 'Alerta creada correctamente.' }, { status: 201 });
+
   } catch (error) {
     console.error('[POST ALERT ERROR]', error);
     return NextResponse.json({ message: 'Error al crear alerta.' }, { status: 500 });

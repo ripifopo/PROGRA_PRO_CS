@@ -1,103 +1,122 @@
 // Archivo: src/lib/insertMedicines.ts
 
 import { MongoClient } from "npm:mongodb";
-import { load } from "https://deno.land/std@0.224.0/dotenv/mod.ts";
+import { normalizeCategoryName } from "./utils/normalizeCategories.ts";
 
-// Carga el .env
-const env = await load({ envPath: "./.env" });
+// URI fija desde archivo .env cargado por ejecución CLI con --env
+const uri = Deno.env.get("MONGODB_URI");
+if (!uri) throw new Error("❌ No se encontró MONGODB_URI en las variables de entorno");
 
-// Obtiene la URI de conexión
-const uri = env.MONGODB_URI;
-if (!uri) {
-  throw new Error("No se encontró la URI de conexión a MongoDB");
-}
-
-// Conecta a MongoDB
 const client = new MongoClient(uri);
+const db = client.db("medisearch");
 
-// Ruta donde están los JSONs
-const productJsonsLimpiosPath = "./Scrapers_MediSearch/product_jsons_limpios";
+const medicinesCollection = db.collection("medicines");
+const priceHistoryCollection = db.collection("price_history");
+
+// Ruta de los scrapeos por farmacia y fecha
+const updatesPath = "./Scrapers_MediSearch/product_updates";
 
 // Función principal
-async function insertMedicines() {
+async function insertMedicinesFromUpdates() {
   try {
-    const db = client.db("medisearch");
-    const collection = db.collection("medicines");
+    console.log("✨ Conectado a la base de datos");
 
-    console.log("🔵 Conectado a la base de datos.");
+    await medicinesCollection.deleteMany({});
+    console.log("🧹 Colección de medicamentos reiniciada");
 
-    // Borra todos los documentos anteriores
-    await collection.deleteMany({});
-    console.log("🧹 Base de datos de medicamentos limpiada.");
+    for await (const pharmacyDir of Deno.readDir(updatesPath)) {
+      if (!pharmacyDir.isDirectory) continue;
 
-    // Lee cada carpeta de farmacia
-    for await (const pharmacyFolder of Deno.readDir(productJsonsLimpiosPath)) {
-      if (!pharmacyFolder.isDirectory) continue;
+      const pharmacyName = transformarNombreFarmacia(pharmacyDir.name);
+      const pathFarmacia = `${updatesPath}/${pharmacyDir.name}`;
 
-      const pharmacyName = pharmacyFolder.name.replace("_jsons_limpios", "");
-      const pharmacyPath = `${productJsonsLimpiosPath}/${pharmacyFolder.name}`;
-
-      // Estructura para esta farmacia
-      const pharmacyDocument: any = {
-        pharmacy: transformarNombreFarmacia(pharmacyName),
-        categories: {},
-      };
-
-      // Lee todos los archivos de categorías
-      for await (const categoryFile of Deno.readDir(pharmacyPath)) {
-        if (!categoryFile.isFile || !categoryFile.name.endsWith(".json")) continue;
-
-        const categoryName = categoryFile.name.replace(".json", "").replace(/-/g, " ");
-
-        const filePath = `${pharmacyPath}/${categoryFile.name}`;
-        const fileData = await Deno.readTextFile(filePath);
-        const parsed = JSON.parse(fileData);
-        const medicines = Array.isArray(parsed) ? parsed : [parsed];
-
-        // Procesa cada medicamento
-        const cleanedMedicines = medicines.map((med) => ({
-          name: med.name || "",
-          price: limpiarPrecio(med.offer_price),
-          image: med.image || "",
-          url: med.url || "",
-          form: med.pharmaceutical_form || "",
-          stock: med.in_stock === "Yes" ? 1 : 0,
-          description: limpiarDescripcion(med.description),
-        }));
-
-        // Agrega la categoría a este documento de farmacia
-        pharmacyDocument.categories[categoryName] = cleanedMedicines;
+      const archivos: string[] = [];
+      for await (const fechaDir of Deno.readDir(pathFarmacia)) {
+        if (fechaDir.isDirectory) archivos.push(fechaDir.name);
       }
 
-      // Inserta este documento en la base de datos
-      await collection.insertOne(pharmacyDocument);
-      console.log(`✅ Insertados medicamentos de la farmacia: ${pharmacyDocument.pharmacy}`);
+      archivos.sort((a, b) => b.localeCompare(a));
+      const archivoMasReciente = archivos[0];
+
+      const farmaciaDoc: any = {
+        pharmacy: pharmacyName,
+        categories: {}
+      };
+
+      const priceHistoryDoc: any = {
+        pharmacy: pharmacyName,
+        snapshots: {}
+      };
+
+      for (const fechaFolder of archivos) {
+        const fullFolderPath = `${pathFarmacia}/${fechaFolder}`;
+        const snapshot = {};
+
+        for await (const archivo of Deno.readDir(fullFolderPath)) {
+          if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
+
+          const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
+          const categoryName = normalizeCategoryName(categoryRaw);
+          const jsonPath = `${fullFolderPath}/${archivo.name}`;
+
+          const rawData = await Deno.readTextFile(jsonPath);
+          const parsed = JSON.parse(rawData);
+          const productos = Array.isArray(parsed) ? parsed : [parsed];
+
+          const meds = productos.map((med) => ({
+            pharmacy: pharmacyName,
+            id: med.id || null,
+            url: med.url || "",
+            offer_price: `$${med.price_offer ?? 0}`,
+            normal_price: `$${med.price_normal ?? 0}`,
+            discount: med.discount ?? 0,
+            name: med.name || "",
+            category: categoryName,
+            image: med.image || "",
+            stock: med.stock ?? ""
+          }));
+
+          // Guardar en medicines solo el scrapeo más reciente
+          if (fechaFolder === archivoMasReciente) {
+            if (!farmaciaDoc.categories[categoryName]) {
+              farmaciaDoc.categories[categoryName] = [];
+            }
+            farmaciaDoc.categories[categoryName].push(...meds);
+          }
+
+          // Guardar todos los scrapeos en price_history (compacto)
+          if (!snapshot[categoryName]) snapshot[categoryName] = [];
+          snapshot[categoryName].push(
+            ...meds.map((m) => ({
+              id: m.id,
+              name: m.name,
+              offer_price: m.offer_price,
+              normal_price: m.normal_price,
+              discount: m.discount
+            }))
+          );
+        }
+
+        priceHistoryDoc.snapshots[fechaFolder] = snapshot;
+      }
+
+      // Inserción final en la base de datos
+      await medicinesCollection.insertOne(farmaciaDoc);
+      await priceHistoryCollection.insertOne(priceHistoryDoc);
+
+      console.log(`✅ Procesado: ${pharmacyName}`);
     }
 
-    console.log("✅ Todos los medicamentos fueron insertados exitosamente.");
-  } catch (error) {
-    console.error("❌ Error al insertar medicamentos:", error);
+    console.log("✅ Todos los medicamentos fueron actualizados correctamente.");
+  } catch (err) {
+    console.error("❌ Error al insertar desde product_updates:", err);
   } finally {
     await client.close();
     console.log("🔵 Conexión cerrada.");
   }
 }
 
-// Función para limpiar precios
-function limpiarPrecio(precio: any): string {
-  if (precio == null || precio === "" || isNaN(precio)) return "$0";
-  return `$${precio}`;
-}
-
-// Función para limpiar descripción
-function limpiarDescripcion(desc: string | null | undefined): string {
-  if (!desc || desc.toLowerCase().includes("error")) {
-    return "";
-  }
-  return desc;
-}
-
-// Función para transformar el nombre de la farmacia
+// Utilidad para nombrar farmacias con formato legible
 function transformarNombreFarmacia(nombre: string): string {
   if (nombre.toLowerCase() === "cruzverde") return "Cruz Verde";
   if (nombre.toLowerCase() === "salcobrand") return "Salcobrand";
@@ -105,5 +124,7 @@ function transformarNombreFarmacia(nombre: string): string {
   return nombre;
 }
 
-// Ejecuta inmediatamente si corre el script
-insertMedicines();
+// Ejecutar si corre directo
+insertMedicinesFromUpdates()
+  .then(() => Deno.exit(0))
+  .catch(() => Deno.exit(1));

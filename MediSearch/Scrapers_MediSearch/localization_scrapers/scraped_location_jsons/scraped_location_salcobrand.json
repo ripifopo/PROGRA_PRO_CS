@@ -1,0 +1,3634 @@
+[
+  {
+    "address": "Portal Bulnes N° 445",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-15:00\nDomingo: Cerrado",
+    "latitude": -33.438048,
+    "longitude": -70.64962799999999
+  },
+  {
+    "address": "Avda. Providencia N° 1365",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.4282564,
+    "longitude": -70.61900709999999
+  },
+  {
+    "address": "Avda. Pedro Montt N° 1804",
+    "comuna": "Valparaíso",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 08:30-19:30\nDomingo: Cerrado",
+    "latitude": -33.0467518,
+    "longitude": -71.6184253
+  },
+  {
+    "address": "Avda. Apoquindo N° 5855 - 5879",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4088948,
+    "longitude": -70.56916
+  },
+  {
+    "address": "Avda. Vitacura N° 6710, Mall / Strip Center",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -33.3884296,
+    "longitude": -70.5678463
+  },
+  {
+    "address": "Avda. Pajaritos N° 1924,Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -33.5096284,
+    "longitude": -70.7572102
+  },
+  {
+    "address": "Uno Sur N° 1403, 7 Oriente",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -35.4277832,
+    "longitude": -71.6571727
+  },
+  {
+    "address": "Avda. Independencia N° 798",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Domingo: 00:01-23:59",
+    "latitude": -34.1695041,
+    "longitude": -70.7462593
+  },
+  {
+    "address": "Avda. Manuel Rodríguez N° 796",
+    "comuna": "San fernando",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -34.5876505,
+    "longitude": -70.9867774
+  },
+  {
+    "address": "Avda. Tomas Moro N° 20",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4083914,
+    "longitude": -70.55182359999999
+  },
+  {
+    "address": "Arturo Prat N° 70",
+    "comuna": "Rengo",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 10:30-20:30\nDomingo: Cerrado",
+    "latitude": -34.1698402,
+    "longitude": -70.7578789
+  },
+  {
+    "address": "Aldunate N°1447",
+    "comuna": "Coquimbo",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: 09:00-18:30",
+    "latitude": -29.9569151,
+    "longitude": -71.3393074
+  },
+  {
+    "address": "Avda. Vicuña Mackenna N° 180",
+    "comuna": "Ovalle",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -30.6029408,
+    "longitude": -71.20064959999999
+  },
+  {
+    "address": "Manuel Bulnes N° 501",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -38.738452,
+    "longitude": -72.58894459999999
+  },
+  {
+    "address": "Camilo Henríquez N° 450",
+    "comuna": "Valdivia",
+    "region": "DE LOS RÍOS",
+    "horario": "Lunes a Viernes: 09:00-20:45\nSábado: 09:00-20:00\nDomingo: 09:00-19:00",
+    "latitude": -39.8135964,
+    "longitude": -73.24528699999999
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N° 799",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4430733,
+    "longitude": -70.64759529999999
+  },
+  {
+    "address": "Paseo Latorre N°2-6, Esquina Avda. Valparaiso",
+    "comuna": "Villa alemana",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -33.0442864,
+    "longitude": -71.37387580000001
+  },
+  {
+    "address": "Vivar N°647",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:00\nJueves: Cerrado",
+    "latitude": -20.2143382,
+    "longitude": -70.148614
+  },
+  {
+    "address": "Avda. Ortúzar N° 548",
+    "comuna": "Melipilla",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-19:00",
+    "latitude": -33.686654,
+    "longitude": -71.2154539
+  },
+  {
+    "address": "Claudio Vicuña N° 790",
+    "comuna": "Quilpué",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-19:00",
+    "latitude": -33.0464889,
+    "longitude": -71.44269070000001
+  },
+  {
+    "address": "Barros Arana N° 762 - 774",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -36.8260021,
+    "longitude": -73.04912039999999
+  },
+  {
+    "address": "Avda. Prat N° 656",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:30",
+    "latitude": -23.6493099,
+    "longitude": -70.396137
+  },
+  {
+    "address": "Avda. Las Condes N° 12145",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 00:01-23:59",
+    "latitude": -33.3746293,
+    "longitude": -70.5218307
+  },
+  {
+    "address": "Avda. Vitacura N° 8111",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.385641,
+    "longitude": -70.5559117
+  },
+  {
+    "address": "Chacabuco N° 393",
+    "comuna": "Copiapó",
+    "region": "ATACAMA",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 09:00-19:00",
+    "latitude": -27.366626,
+    "longitude": -70.3332155
+  },
+  {
+    "address": "Arturo Prat N° 573 - 575",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.5928438,
+    "longitude": -70.70494620000001
+  },
+  {
+    "address": "Avda. La Florida N° 9871,Servicentro (Bencinera)",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:00-20:30",
+    "latitude": -33.5481195,
+    "longitude": -70.5680242
+  },
+  {
+    "address": "Avda. Manquehue Norte N° 1410, Hospital / Clínica / Centro Medico",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:30-14:00\nDomingo: Cerrado",
+    "latitude": -33.3919269,
+    "longitude": -70.572525
+  },
+  {
+    "address": "Avda. Zenteno N° 1530",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -40.5846915,
+    "longitude": -73.12138929999999
+  },
+  {
+    "address": "Santa Blanca N° 1996",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -33.3551567,
+    "longitude": -70.5321534
+  },
+  {
+    "address": "Avda. Manuel Montt N° 1140",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 00:01-23:59",
+    "latitude": -33.4382999,
+    "longitude": -70.6156656
+  },
+  {
+    "address": "Avda. Capitan Arturo Prat N° 2305",
+    "comuna": "San javier",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -35.5954849,
+    "longitude": -71.72972299999999
+  },
+  {
+    "address": "Avda. Camilo Henríquez N° 3296 Local 173 177,Mall / Strip Center",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:00-21:30\nDomingo: 10:00-20:30\nViernes: 10:00-21:30",
+    "latitude": -33.5698349,
+    "longitude": -70.55668969999999
+  },
+  {
+    "address": "Urmeneta N° 580 Local 106 (Interior Mall)",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -41.4717265,
+    "longitude": -72.94315259999999
+  },
+  {
+    "address": "Avda. Las Condes N° 8231",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-21:00",
+    "latitude": -33.3983044,
+    "longitude": -70.551147
+  },
+  {
+    "address": "Arauco N° 697,Supermercado",
+    "comuna": "Valdivia",
+    "region": "DE LOS RÍOS",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -39.816407,
+    "longitude": -73.24058600000001
+  },
+  {
+    "address": "Avda. Balmaceda N° 4168",
+    "comuna": "Renca",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4039935,
+    "longitude": -70.706028
+  },
+  {
+    "address": "Anibal Pinto N° 650",
+    "comuna": "Parral",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 10:00-20:00\nSábado: 10:00-14:30\nDomingo: Cerrado",
+    "latitude": -36.1404472,
+    "longitude": -71.8236264
+  },
+  {
+    "address": "Antonio Varas N° 599",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -41.47268469999999,
+    "longitude": -72.94321169999999
+  },
+  {
+    "address": "Avda. Cuarto Centenario N° 933",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:30-20:30\nSábado: 10:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.417108,
+    "longitude": -70.5544287
+  },
+  {
+    "address": "Avda. Alemania N° 815",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:45\nSábado: 10:00-21:00\nDomingo: 11:00-20:00\nJueves: 09:00-21:00\nViernes: 09:00-21:00",
+    "latitude": -38.7338771,
+    "longitude": -72.61387619999999
+  },
+  {
+    "address": "Avda. Colón N° 6064",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-22:00\nSábado y Domingo: 09:00-22:00",
+    "latitude": -33.4167334,
+    "longitude": -70.5654961
+  },
+  {
+    "address": "Avda. Providencia N° 2203",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.421639,
+    "longitude": -70.6096486
+  },
+  {
+    "address": "Rafael Casanova N° 199 Esquina Casino",
+    "comuna": "Santa cruz",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -34.64102,
+    "longitude": -71.367359
+  },
+  {
+    "address": "Avda. Independencia N° 902 y 906",
+    "comuna": "Independencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Gran Avenida. Jose Miguel Carrera N° 6701",
+    "comuna": "La cisterna",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.5188461,
+    "longitude": -70.6594321
+  },
+  {
+    "address": "Carretera General San Martin KM.6.3,Servicentro (Bencinera)",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 09:00-20:00",
+    "latitude": -33.201297,
+    "longitude": -70.673473
+  },
+  {
+    "address": "Avda. Padre Hurtado N° 40",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 00:01-23:59",
+    "latitude": -33.3941372,
+    "longitude": -70.5458286
+  },
+  {
+    "address": "Avda. La Dehesa N°2035 Local 1 y 1A, Mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 11:00-21:00\nLunes: 08:30-15:00",
+    "latitude": -33.3521523,
+    "longitude": -70.51812660000002
+  },
+  {
+    "address": "Avda. Francisco Bilbao N°8750 Local 3048, Supermercado",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:00-20:30",
+    "latitude": -33.4287187,
+    "longitude": -70.5405628
+  },
+  {
+    "address": "Avda. Pedro Fontova N°7777 Local 2, Mall / Strip Center",
+    "comuna": "Huechuraba",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.3482398,
+    "longitude": -70.6702166
+  },
+  {
+    "address": "Estado N° 54",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 10:00-16:00\nDomingo: Cerrado\nViernes: 08:00-21:00",
+    "latitude": -33.4424784,
+    "longitude": -70.6492027
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 399 Local 121, exterior, al lado de Cine / Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:00-20:30\nDomingo: 11:00-20:00",
+    "latitude": -33.4566384,
+    "longitude": -70.7662137
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 1463, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4006416,
+    "longitude": -70.58692289999999
+  },
+  {
+    "address": "Avda. Los Leones N° 1185",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4302487,
+    "longitude": -70.602851
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 1737 Local N° 1005, Mall / Strip Center",
+    "comuna": "Huechuraba",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-21:00\nDomingo: 09:00-20:00\nViernes: 09:00-21:00",
+    "latitude": -33.3988434,
+    "longitude": -70.58712430000001
+  },
+  {
+    "address": "Avda. Apoquindo N° 4671",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 10:00-17:00\nDomingo: Cerrado",
+    "latitude": -33.4131426,
+    "longitude": -70.5807516
+  },
+  {
+    "address": "Avda. La Dehesa N°1445 Local 1034, Mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 08:30-21:00\nDomingo: 09:00-20:30\nViernes: 08:30-21:00",
+    "latitude": -33.3575796,
+    "longitude": -70.5152664
+  },
+  {
+    "address": "Avda. Camilo Henríquez N° 4583, Servicentro (Bencinera)",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:00-20:00",
+    "latitude": -33.5541154,
+    "longitude": -70.5625237
+  },
+  {
+    "address": "Avda. Jorge Alessandri N°20040 L106-110, Mall / Strip Center",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.5506346,
+    "longitude": -70.700597
+  },
+  {
+    "address": "Av. La Montaña N° 2528 con Gral San Martin, Valle Grande",
+    "comuna": "Lampa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:30-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.3246122,
+    "longitude": -70.7466604
+  },
+  {
+    "address": "Las Terrazas N° 1203 - 1205, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 10:00-20:30\nDomingo: 10:30-20:30",
+    "latitude": -33.3924837,
+    "longitude": -70.5149203
+  },
+  {
+    "address": "Gerónimo de Alderete n° 1280",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.3919195,
+    "longitude": -70.5630637
+  },
+  {
+    "address": "Baldomero Lillo N° 1872 Pob. San Rafael",
+    "comuna": "La pintana",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5826057,
+    "longitude": -70.6318627
+  },
+  {
+    "address": "Avda. Chile España N°597",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4494813,
+    "longitude": -70.5978511
+  },
+  {
+    "address": "Juan de Dios Malebran N°1750 Local 5, Mall / Strip Center",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.595122,
+    "longitude": -70.59029559999999
+  },
+  {
+    "address": "Avda. Antonio Varas N° 2108",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:30-21:00",
+    "latitude": -33.4465888,
+    "longitude": -70.6109362
+  },
+  {
+    "address": "Avda. Cristóbal Colón N° 4299 - 4317",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4238065,
+    "longitude": -70.5806336
+  },
+  {
+    "address": "Avda. Presidente Kennedy N° 9001 Local 2110, Segundo piso Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:30\nViernes: 10:00-21:00",
+    "latitude": -33.3908732,
+    "longitude": -70.5462835
+  },
+  {
+    "address": "Avda. Francisco Bilbao N°4144 Local 160, Supermercado",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:00-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4313383,
+    "longitude": -70.5787598
+  },
+  {
+    "address": "Avda. Irarrazaval N°4123",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:30-21:00",
+    "latitude": -33.4558717,
+    "longitude": -70.5867674
+  },
+  {
+    "address": "Avda. Jose Domingo Cañas N° 1701, Mall / Strip Center",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4566054,
+    "longitude": -70.6138502
+  },
+  {
+    "address": "Martín de Zamora N°2911 al 2939",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4245259,
+    "longitude": -70.5925762
+  },
+  {
+    "address": "Avda. Jorge Alessandri N°20040 L-137-145, Supermercado",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 08:30-21:00\nDomingo: 11:00-20:00\nViernes: 08:30-21:00",
+    "latitude": -33.6316638,
+    "longitude": -70.7103613
+  },
+  {
+    "address": "Avda. Los Trapenses N° 3023 Local 8, Mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:00-21:00\nSábado: 10:00-18:00\nDomingo: Cerrado",
+    "latitude": -33.3476455,
+    "longitude": -70.5422286
+  },
+  {
+    "address": "Avda. Consistorial N° 3477 Local 9, Mall / Strip Center",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.4891702,
+    "longitude": -70.55034690000001
+  },
+  {
+    "address": "Avda. Vicuña Mackenna N° 6100, Mall / Strip Center",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:30\nViernes: 10:00-21:00",
+    "latitude": -33.5113041,
+    "longitude": -70.61021579999999
+  },
+  {
+    "address": "Avda. Príncipe de Gales N°9140 Local 214, Mall / Strip Center",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:30",
+    "latitude": -33.440621,
+    "longitude": -70.534975
+  },
+  {
+    "address": "Avda. Nueva Costanera N°3885 - 3895",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 10:00-18:00\nDomingo: 10:00-20:00",
+    "latitude": -33.3987812,
+    "longitude": -70.59767049999999
+  },
+  {
+    "address": "Avda. Chicureo LT 2 C 3 Local D",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.2857633,
+    "longitude": -70.6799462
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 1501, Mall / Strip Center",
+    "comuna": "Cerrillos",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.5167962,
+    "longitude": -70.7192548
+  },
+  {
+    "address": "Antupirén N°8340 Local 1, Mall / Strip Center",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.4788237,
+    "longitude": -70.5454772
+  },
+  {
+    "address": "Avda. La Plaza Nº 590 L-11, Supermercado",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.3901522,
+    "longitude": -70.498938
+  },
+  {
+    "address": "San Francisco de Borja Nº 122 B-174 Y 176, Mall / Strip Center",
+    "comuna": "Estación central",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado y Domingo: 09:00-20:00",
+    "latitude": -33.4529941,
+    "longitude": -70.6802104
+  },
+  {
+    "address": "San Pablo N° 6183",
+    "comuna": "Lo prado",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-19:00",
+    "latitude": -33.4440324,
+    "longitude": -70.72304419999999
+  },
+  {
+    "address": "Avda. Rojas Magallanes N° 1280, Mall / Strip Center",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5354246,
+    "longitude": -70.574043
+  },
+  {
+    "address": "Avda. Suecia N° 3071, Esquina Sucre",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4481914,
+    "longitude": -70.6007082
+  },
+  {
+    "address": "Avda. 5 de Abril N° 27, Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-19:00\nSábado: 09:00-19:00\nDomingo: 10:00-18:00",
+    "latitude": -33.51058630000001,
+    "longitude": -70.7579461
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 1001 L- 1015, Supermercado",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-20:30",
+    "latitude": -33.4859442,
+    "longitude": -70.7514392
+  },
+  {
+    "address": "Avda. Macul N° 3430 Local 1",
+    "comuna": "Macul",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -33.4854587,
+    "longitude": -70.5991988
+  },
+  {
+    "address": "Avda. Las Condes N° 14184, 14151 local 1, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.3685821,
+    "longitude": -70.5010509
+  },
+  {
+    "address": "Calle Puente N° 689 LOCAL .119, Mall / Strip Center",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.4353069,
+    "longitude": -70.6508444
+  },
+  {
+    "address": "Eyzaguirre N° 599",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5943003,
+    "longitude": -70.705814
+  },
+  {
+    "address": "Avda. Providencia N° 2593",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-18:00\nDomingo: Cerrado\nViernes: 09:00-21:00",
+    "latitude": -33.4188994,
+    "longitude": -70.6028463
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N°3470 L- 101-103-105-107, Mall / Strip Center",
+    "comuna": "Estación central",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -33.4527746,
+    "longitude": -70.6824628
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 399 L.311-313-315, Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:00-20:30\nSábado: 10:00-21:00\nDomingo: 10:30-20:30\nViernes: 10:00-21:00",
+    "latitude": -33.4813538,
+    "longitude": -70.7518532
+  },
+  {
+    "address": "Padre Hurtado N° 1621 Local 3-4-5, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.4254755,
+    "longitude": -70.55581769999999
+  },
+  {
+    "address": "Avda. Apoquindo N°5240 L-2",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 10:00-15:45\nDomingo: Cerrado",
+    "latitude": -33.4104941,
+    "longitude": -70.57386710000002
+  },
+  {
+    "address": "Gran Avenida N° 8877",
+    "comuna": "La cisterna",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5383332,
+    "longitude": -70.66500959999999
+  },
+  {
+    "address": "Maipú N° 355",
+    "comuna": "Copiapó",
+    "region": "ATACAMA",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -27.3661899,
+    "longitude": -70.33460079999999
+  },
+  {
+    "address": "Carlos Ossandón Nº 1300",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-22:00\nSábado: 09:00-22:00\nDomingo: 10:00-22:00",
+    "latitude": -33.441381,
+    "longitude": -70.54325419999999
+  },
+  {
+    "address": "Gran Avenida N° 5617-5627, Mall / Strip Center",
+    "comuna": "San miguel",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.5056034,
+    "longitude": -70.6557691
+  },
+  {
+    "address": "Avda. Larraín N° 6563, Supermercado",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4526607,
+    "longitude": -70.56222079999999
+  },
+  {
+    "address": "Avda. Vicuña Mackenna N° 11091, Mall / Strip Center",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -33.5141444,
+    "longitude": -70.6081087
+  },
+  {
+    "address": "Avda. Jorge Guerra N° 16190 L-1, El Abrazo, Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:30-20:00\nDomingo: 09:30-19:00",
+    "latitude": -33.5533414,
+    "longitude": -70.7777693
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 33 L-120 y 121, Estación de Metro",
+    "comuna": "La cisterna",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5384135,
+    "longitude": -70.6636748
+  },
+  {
+    "address": "Avda. Tobalaba N° 12175 Local 101, Mall / Strip Center",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.4871425,
+    "longitude": -70.55917149999999
+  },
+  {
+    "address": "Avda. Vicuña Mackenna N°6331 L-5, Supermercado",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:30",
+    "latitude": -33.5141444,
+    "longitude": -70.6081087
+  },
+  {
+    "address": "Lyon N° 1848",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4379343,
+    "longitude": -70.6034781
+  },
+  {
+    "address": "Teatinos N° 316",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.4399455,
+    "longitude": -70.6552068
+  },
+  {
+    "address": "Avda. Manquehue Norte N° 457 L-1, Supermercado",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-20:30",
+    "latitude": -33.4040522,
+    "longitude": -70.568393
+  },
+  {
+    "address": "Avda. Apoquindo N° 3363 L-2",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4167384,
+    "longitude": -70.59488259999999
+  },
+  {
+    "address": "Avda. Buin Maipo N° 3147 L-4, Supermercado",
+    "comuna": "Buin",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 09:00-19:00",
+    "latitude": -33.731065,
+    "longitude": -70.7746145
+  },
+  {
+    "address": "Avda. Concha y Toro N° 3854 L-1053, Supermercado",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-20:30",
+    "latitude": -33.5711381,
+    "longitude": -70.5847144
+  },
+  {
+    "address": "Plaza de Armas N° 489",
+    "comuna": "Melipilla",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -33.6855597,
+    "longitude": -71.2146204
+  },
+  {
+    "address": "Avda. Américo Vespucio N° 1737 L- P-1285, P-1281, Mall / Strip Center",
+    "comuna": "Huechuraba",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 10:00-21:00\nDomingo: 10:00-20:00\nViernes: 09:00-21:00",
+    "latitude": -33.3988434,
+    "longitude": -70.58712430000001
+  },
+  {
+    "address": "Patagonia N° 99",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4092593,
+    "longitude": -70.5439942
+  },
+  {
+    "address": "Huérfanos N° 1199 Esq. Morande",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-15:00\nDomingo: Cerrado",
+    "latitude": -33.439897,
+    "longitude": -70.6536358
+  },
+  {
+    "address": "Libertad N° 1348 Local 39, Mall / Strip Center",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.0260179,
+    "longitude": -71.50704089999999
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N° 965",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-19:30\nDomingo: Cerrado",
+    "latitude": -33.4429733,
+    "longitude": -70.6498668
+  },
+  {
+    "address": "Avda. Valparaíso N° 490",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:30\nDomingo: Cerrado",
+    "latitude": -33.037219,
+    "longitude": -71.58156860000001
+  },
+  {
+    "address": "Avda. Vitacura N° 3920, Mall / Strip Center",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.40028849999999,
+    "longitude": -70.5922861
+  },
+  {
+    "address": "Avda. Independencia N° 615",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -34.1698446,
+    "longitude": -70.7436807
+  },
+  {
+    "address": "Gran Avenida N°4004, Supermercado",
+    "comuna": "San miguel",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 09:00-20:00",
+    "latitude": -33.4900972,
+    "longitude": -70.6511658
+  },
+  {
+    "address": "Avda. Salvador N°95 Local 1",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-14:00\nDomingo: Cerrado",
+    "latitude": -33.434844,
+    "longitude": -70.6262947
+  },
+  {
+    "address": "José Joaquín Pérez N° 205",
+    "comuna": "La calera",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:30\nDomingo: 10:00-19:00",
+    "latitude": -32.7880821,
+    "longitude": -71.18958359999999
+  },
+  {
+    "address": "Picarte N° 301",
+    "comuna": "Valdivia",
+    "region": "DE LOS RÍOS",
+    "horario": "Lunes a Viernes: 09:00-20:45\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -39.8141857,
+    "longitude": -73.245526
+  },
+  {
+    "address": "Germán Riesco N° 902",
+    "comuna": "San vicente tagua tagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado y Domingo: 10:00-18:30",
+    "latitude": -34.4387796,
+    "longitude": -71.080942
+  },
+  {
+    "address": "Santa Teresa N°683 Local 104-106, Mall / Strip Center",
+    "comuna": "Los andes",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-19:45",
+    "latitude": -32.8359742,
+    "longitude": -70.6039991
+  },
+  {
+    "address": "Freire N° 586",
+    "comuna": "Constitución",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:30-19:00\nDomingo: 10:00-18:30",
+    "latitude": -35.3318776,
+    "longitude": -72.4110219
+  },
+  {
+    "address": "Eleuterio Ramírez N° 2031",
+    "comuna": "Calama",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: Cerrado",
+    "latitude": -22.462837,
+    "longitude": -68.92593699999999
+  },
+  {
+    "address": "Manuel Montt N° 1077 - 1079",
+    "comuna": "Tome",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.6227216,
+    "longitude": -72.9456153
+  },
+  {
+    "address": "Pedro Aguirre Cerda N° 681",
+    "comuna": "Lota",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-18:00",
+    "latitude": -37.0917895,
+    "longitude": -73.1574278
+  },
+  {
+    "address": "Padre Hurtado N° 751",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4011136,
+    "longitude": -70.5446355
+  },
+  {
+    "address": "Avda. Concha y Toro N° 242",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-19:00",
+    "latitude": -33.6097515,
+    "longitude": -70.5758511
+  },
+  {
+    "address": "Príncipe de Gales N° 7215",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4389084,
+    "longitude": -70.5571174
+  },
+  {
+    "address": "Nueva Providencia N° 1355",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4292997,
+    "longitude": -70.6187923
+  },
+  {
+    "address": "Avda.Vicuña Mackenna N° 7304 - 7308 Local 24 - 25",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-18:00\nDomingo: Cerrado",
+    "latitude": -33.52149,
+    "longitude": -70.60016
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N° 5155",
+    "comuna": "Lo prado",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 11:00-19:00",
+    "latitude": -33.4572917,
+    "longitude": -70.7060612
+  },
+  {
+    "address": "Santos Dumont N° 999, Hospital / Clínica / Centro Medico",
+    "comuna": "Recoleta",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.4200542,
+    "longitude": -70.6530942
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N° 1511, Hospital / Clínica / Centro Medico",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-19:30\nSábado: 09:00-13:00\nDomingo: Cerrado\nViernes: 08:30-18:30",
+    "latitude": -33.4446802,
+    "longitude": -70.65764469999999
+  },
+  {
+    "address": "Avda.Concha y Toro N° 3779, Hospital / Clínica / Centro Medico",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-19:00\nSábado: 09:00-13:00\nDomingo: Cerrado\nViernes: 09:00-18:00",
+    "latitude": -33.5740375,
+    "longitude": -70.5826933
+  },
+  {
+    "address": "Carretera El Cobre Presidente Frei N°750 L1069, Mall / Strip Center",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-21:00\nDomingo: 10:00-20:30",
+    "latitude": -34.1853813,
+    "longitude": -70.725947
+  },
+  {
+    "address": "Avda. Jose Miguel Carrera N° 5728, Hospital / Clínica / Centro Medico",
+    "comuna": "San miguel",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-19:00\nSábado: 09:00-13:00\nDomingo: Cerrado\nViernes: 08:30-18:30",
+    "latitude": -33.5065168,
+    "longitude": -70.6554288
+  },
+  {
+    "address": "Alberto Llona N°1770, Hospital / Clínica / Centro Medico",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-19:30\nSábado: 09:00-13:00\nDomingo: Cerrado\nViernes: 08:30-18:30",
+    "latitude": -33.5119801,
+    "longitude": -70.7558262
+  },
+  {
+    "address": "Avda.Vicuña Mackenna N° 7747, Hospital / Clínica / Centro Medico",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-19:00\nSábado: 09:00-13:00\nDomingo: Cerrado\nViernes: 09:00-19:00",
+    "latitude": -33.5255489,
+    "longitude": -70.59767180000001
+  },
+  {
+    "address": "Avda.Tabancura N° 1141, Hospital / Clínica / Centro Medico",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-13:00\nDomingo: Cerrado",
+    "latitude": -33.3827612,
+    "longitude": -70.5351482
+  },
+  {
+    "address": "Irarrázaval N° 2305, Hospital / Clínica / Centro Medico",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-18:30\nSábado: 09:00-12:30\nDomingo: Cerrado",
+    "latitude": -33.4541786,
+    "longitude": -70.6070694
+  },
+  {
+    "address": "El Rodeo N° 13442, Mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-21:00",
+    "latitude": -33.3510332,
+    "longitude": -70.50975150000001
+  },
+  {
+    "address": "Saturnino Epulef N°1505, Supermercado",
+    "comuna": "Villarrica",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 09:30-20:00",
+    "latitude": -39.2911025,
+    "longitude": -72.2217884
+  },
+  {
+    "address": "Ahumada N° 101",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -33.4419029,
+    "longitude": -70.65060199999999
+  },
+  {
+    "address": "Avda. Alemania N°600 Local 1, Mall / Strip Center",
+    "comuna": "Los angeles",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-18:00",
+    "latitude": -37.4689629,
+    "longitude": -72.3403919
+  },
+  {
+    "address": "Cuarto Centenario N° 1016, Supermercado",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:00-21:00\nDomingo: 09:00-20:00",
+    "latitude": -33.4182516,
+    "longitude": -70.5542719
+  },
+  {
+    "address": "Avda. Vicuña Mackenna N° 9101, Mall / Strip Center",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:30-20:00",
+    "latitude": -33.5397603,
+    "longitude": -70.5914104
+  },
+  {
+    "address": "Huérfanos N° 900",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.439506,
+    "longitude": -70.6494891
+  },
+  {
+    "address": "Ramón Carrasco N° 292 - 294",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -36.789764,
+    "longitude": -73.0596894
+  },
+  {
+    "address": "San Pedro de la Paz, Camino el Venado N° 716, Mall / Strip Center",
+    "comuna": "San pedro de la paz",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 10:00-19:00",
+    "latitude": -36.8496005,
+    "longitude": -73.0958978
+  },
+  {
+    "address": "Carampangue Nº 681 L- 4 y 5, Supermercado",
+    "comuna": "San fernando",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -34.5856658,
+    "longitude": -70.9904571
+  },
+  {
+    "address": "Camilo Henríquez N° 288-298 / Local 5 y 6",
+    "comuna": "Villarrica",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 08:30-21:30\nSábado: 09:00-21:00\nDomingo: Cerrado",
+    "latitude": -39.2803498,
+    "longitude": -72.2253681
+  },
+  {
+    "address": "Avda. Valparaíso N°1982 L-7 Centro Comercial Villa Alemana, Mall / Strip Center",
+    "comuna": "Villa alemana",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.045162,
+    "longitude": -71.390652
+  },
+  {
+    "address": "Coquimbo N° 712, Hospital / Clínica / Centro Medico",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -23.6546892,
+    "longitude": -70.40187809999999
+  },
+  {
+    "address": "Urmeneta N° 68",
+    "comuna": "Limache",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:30-19:30",
+    "latitude": -32.9851133,
+    "longitude": -71.2762838
+  },
+  {
+    "address": "Combate de las Coimas N° 210",
+    "comuna": "San felipe",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -32.7507126,
+    "longitude": -70.724388
+  },
+  {
+    "address": "Esmeralda N° 299",
+    "comuna": "Los andes",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -32.8333121,
+    "longitude": -70.5974267
+  },
+  {
+    "address": "Independencia N° 495",
+    "comuna": "Linares",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -35.8464491,
+    "longitude": -71.5959967
+  },
+  {
+    "address": "Antonio Varas N°549",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -41.4726536,
+    "longitude": -72.9422029
+  },
+  {
+    "address": "Cienfuegos N° 491",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Viernes: 09:00-19:30\nSábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -29.9030384,
+    "longitude": -71.2473425
+  },
+  {
+    "address": "Barros Arana N° 779",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-18:00\nDomingo: Cerrado",
+    "latitude": -36.8259115,
+    "longitude": -73.0489758
+  },
+  {
+    "address": "Vicuña Mackenna N° 46",
+    "comuna": "Ovalle",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:00-19:00",
+    "latitude": -30.602423,
+    "longitude": -71.1993177
+  },
+  {
+    "address": "Bulnes N° 532",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:45\nSábado: Cerrado\nDomingo: 10:00-19:00",
+    "latitude": -38.7388847,
+    "longitude": -72.5892203
+  },
+  {
+    "address": "Colón N° 598",
+    "comuna": "Arica",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: Cerrado",
+    "latitude": -18.4783417,
+    "longitude": -70.31879320000002
+  },
+  {
+    "address": "El Arenal N°411 Local 1010, Supermercado",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 11:00-20:00\nDomingo: 10:00-20:00\nViernes: 11:00-20:00",
+    "latitude": -35.4290123,
+    "longitude": -71.6717409
+  },
+  {
+    "address": "Peña N°856",
+    "comuna": "Curicó",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-18:30\nSábado y Domingo: Cerrado",
+    "latitude": -34.9819842,
+    "longitude": -71.2417929
+  },
+  {
+    "address": "Ignacio Serrano N° 593",
+    "comuna": "San carlos",
+    "region": "ÑUBLE",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-14:30, 15:00-19:00",
+    "latitude": -36.4257044,
+    "longitude": -71.9574665
+  },
+  {
+    "address": "Victoria N°520",
+    "comuna": "Cauquenes",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-19:00\nSábado: 09:00-14:00\nDomingo: Cerrado",
+    "latitude": -35.9674859,
+    "longitude": -72.3167909
+  },
+  {
+    "address": "Colipi N° 484 L- G103-104",
+    "comuna": "Copiapó",
+    "region": "ATACAMA",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -27.3668648,
+    "longitude": -70.3317355
+  },
+  {
+    "address": "Arturo Prat N° 553 - 555",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:30",
+    "latitude": -23.6484033,
+    "longitude": -70.3968702
+  },
+  {
+    "address": "Barros Arana N°709",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-18:00\nDomingo: Cerrado",
+    "latitude": -36.8263438,
+    "longitude": -73.0499177
+  },
+  {
+    "address": "Colón N°412",
+    "comuna": "Los ángeles",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-19:00\nDomingo: 10:00-18:00",
+    "latitude": -37.4689726,
+    "longitude": -72.3510642
+  },
+  {
+    "address": "21 de Mayo N°298-300",
+    "comuna": "Arica",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:30",
+    "latitude": -18.4782802,
+    "longitude": -70.3188746
+  },
+  {
+    "address": "Del Salvador N°400",
+    "comuna": "Puerto varas",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -41.317803,
+    "longitude": -72.9849528
+  },
+  {
+    "address": "Bulevar Plaza del Trébol L-26, Mall / Strip Center",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00\nViernes: 10:00-20:00",
+    "latitude": -36.7927984,
+    "longitude": -73.06557570000001
+  },
+  {
+    "address": "Arturo Prat N°1120",
+    "comuna": "Vallenar",
+    "region": "ATACAMA",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -28.5770827,
+    "longitude": -70.7582841
+  },
+  {
+    "address": "Tarapacá N° 671 - 683",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -20.2140328,
+    "longitude": -70.14876439999999
+  },
+  {
+    "address": "Eleuterio Ramírez N° 935",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -40.5733396,
+    "longitude": -73.1344245
+  },
+  {
+    "address": "Centenario N° 102",
+    "comuna": "San antonio",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-19:30\nDomingo: 10:00-17:30",
+    "latitude": -33.580647,
+    "longitude": -71.6117098
+  },
+  {
+    "address": "Avda. Bories N° 971 - 972",
+    "comuna": "Punta arenas",
+    "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -53.16124319999999,
+    "longitude": -70.90759349999999
+  },
+  {
+    "address": "Manuel Montt N° 401",
+    "comuna": "Coronel",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-19:00\nViernes: 09:00-19:00",
+    "latitude": -37.0266726,
+    "longitude": -73.1473702
+  },
+  {
+    "address": "Francisco Bilbao N° 326",
+    "comuna": "Coyhaique",
+    "region": "AISÉN DEL GRAL. CARLOS IBAÑEZ DEL CAMPO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": -45.57224,
+    "longitude": -72.07015
+  },
+  {
+    "address": "Avda. Bories N° 683",
+    "comuna": "Punta arenas",
+    "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -53.1587675,
+    "longitude": -70.9048207
+  },
+  {
+    "address": "Juan Soler Manfredini N° 54 L 3-4, Mall / Strip Center",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -41.4739009,
+    "longitude": -72.9352423
+  },
+  {
+    "address": "Avda. Libertad N°1217 - 1223",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -33.0101038,
+    "longitude": -71.5490027
+  },
+  {
+    "address": "Uno Sur N°1201 L-3",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -35.4276272,
+    "longitude": -71.6599415
+  },
+  {
+    "address": "Avda. Valparaíso N° 612 - 619",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-18:30",
+    "latitude": -33.0372089,
+    "longitude": -71.5815425
+  },
+  {
+    "address": "Avda. San Martín N° 369",
+    "comuna": "Castro",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -42.4822738,
+    "longitude": -73.7633806
+  },
+  {
+    "address": "El Roble N°699",
+    "comuna": "Chillán",
+    "region": "ÑUBLE",
+    "horario": "Lunes a Viernes: 09:00-21:30\nSábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -36.60896,
+    "longitude": 72.10185
+  },
+  {
+    "address": "Freire N°707",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-18:00\nDomingo: Cerrado",
+    "latitude": -36.8252324,
+    "longitude": -73.0503401
+  },
+  {
+    "address": "Manuel Montt N° 701 - 725",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-18:00\nDomingo: Cerrado",
+    "latitude": -38.7381684,
+    "longitude": -72.5917904
+  },
+  {
+    "address": "Avda. Pedro Montt N° 1898",
+    "comuna": "Valparaíso",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -33.046956,
+    "longitude": -71.6172117
+  },
+  {
+    "address": "Manuel Rodríguez N° 911",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -38.7364818,
+    "longitude": -72.5884186
+  },
+  {
+    "address": "Avda. Borgono N°14410",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -32.9527174,
+    "longitude": -71.5469926
+  },
+  {
+    "address": "Paseo Indepedencia N° 548-566",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -34.1700711,
+    "longitude": -70.7427616
+  },
+  {
+    "address": "Mensoza N° 477 Local 117-120, Mall / Strip Center",
+    "comuna": "Los angeles",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -37.4679758,
+    "longitude": -72.3536733
+  },
+  {
+    "address": "Avenida Arturo Prat N° 1732, Servicentro (Bencinera)",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -20.2410862,
+    "longitude": -70.1439977
+  },
+  {
+    "address": "Centeno N°21, Mall / Strip Center",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -23.6380331,
+    "longitude": -70.3957684
+  },
+  {
+    "address": "Avda. Providencia N° 102 L- 3",
+    "comuna": "San antonio",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-18:30",
+    "latitude": -33.6164814,
+    "longitude": -71.61237120000001
+  },
+  {
+    "address": "Colón N° 236",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-17:00\nDomingo: Cerrado\nViernes: 10:00-20:00",
+    "latitude": -36.7128824,
+    "longitude": -73.1141731
+  },
+  {
+    "address": "Avda. Paul Harris N°1155 L- 3, Supermercado",
+    "comuna": "Chillán",
+    "region": "ÑUBLE",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -36.59358539999999,
+    "longitude": -72.0785794
+  },
+  {
+    "address": "Pedro Aguirre Cerda N° 1055 L- 6, Mall / Strip Center",
+    "comuna": "San pedro de la paz",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 10:00-19:00",
+    "latitude": -36.8391448,
+    "longitude": -73.0966346
+  },
+  {
+    "address": "Jorge Montt N° 2300, Servicentro (Bencinera)",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.0004196,
+    "longitude": -71.54889419999999
+  },
+  {
+    "address": "Autopista Talcahuano N° 7001, Servicentro (Bencinera)",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.7668053,
+    "longitude": -73.0853632
+  },
+  {
+    "address": "Michimalongo 1300 , Servicentro (Bencinera)",
+    "comuna": "San pedro de la paz",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 10:00-18:00",
+    "latitude": -36.8430132,
+    "longitude": -73.0988136
+  },
+  {
+    "address": "Avda.Circunvalación Oriente N°1055 L-155 y 156, Mall / Strip Center",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -35.4273297,
+    "longitude": -71.6263097
+  },
+  {
+    "address": "Plaza Perú N°111-115 L- 2 Y 3",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-17:00\nDomingo: Cerrado",
+    "latitude": -36.8271899,
+    "longitude": -73.04033129999999
+  },
+  {
+    "address": "Manuel Rodríguez N° 575",
+    "comuna": "Chiguayante",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-20:00\nDomingo: 10:00-18:00",
+    "latitude": -36.9257459,
+    "longitude": -73.024873
+  },
+  {
+    "address": "Monseñor Ramón Munita N°1625, Local 8 y 9, Mall / Strip Center",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -41.45477959999999,
+    "longitude": -72.93533359999999
+  },
+  {
+    "address": "Avda. España N° 703",
+    "comuna": "Curicó",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -34.9854511,
+    "longitude": -71.2255586
+  },
+  {
+    "address": "Avda. Vicuña Mackenna Oriente N° 7110 Local 110, Mall / Strip Center",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.51761,
+    "longitude": -70.59808
+  },
+  {
+    "address": "Chorrillos N°402",
+    "comuna": "Angol",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-19:00\nSábado: 10:00-18:30\nDomingo: 10:00-18:00",
+    "latitude": -37.7981604,
+    "longitude": -72.7078872
+  },
+  {
+    "address": "Parcela 69/Ruta 5 .Vega sur. L-1009, Supermercado",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Viernes: 08:30-20:45\nSábado y Domingo: 09:00-20:45",
+    "latitude": -29.9159041,
+    "longitude": -71.2585251
+  },
+  {
+    "address": "Avda. Bernardo Ohiggins N° 201 L- 72, Mall / Strip Center",
+    "comuna": "Curicó",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -34.991083,
+    "longitude": -71.2449731
+  },
+  {
+    "address": "Avda. Argentina N° 805 L-1013,Supermercado",
+    "comuna": "Los andes",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -32.8281709,
+    "longitude": -70.60211029999999
+  },
+  {
+    "address": "Pudeto N° 301",
+    "comuna": "Ancud",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -41.86880300000001,
+    "longitude": -73.826284
+  },
+  {
+    "address": "Gregorio Cordovez N° 601",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-20:00",
+    "latitude": -29.9032029,
+    "longitude": -71.2488249
+  },
+  {
+    "address": "Cesar de Ercilla N°1075, L-1868, Supermercado",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -40.5803425,
+    "longitude": -73.1153762
+  },
+  {
+    "address": "Avda. Granaderos N°1464, Hospital / Clínica / Centro Medico",
+    "comuna": "Calama",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-15:00\nDomingo: Cerrado",
+    "latitude": -22.4662339,
+    "longitude": -68.9301281
+  },
+  {
+    "address": "Balmaceda N° 3242 L-104, Mall / Strip Center",
+    "comuna": "Calama",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-21:00\nDomingo: 09:00-20:00\nViernes: 09:00-21:00",
+    "latitude": -22.4497402,
+    "longitude": -68.9215313
+  },
+  {
+    "address": "Francisco Ramírez N°1 Esquina Avda. Argentina",
+    "comuna": "Chillán",
+    "region": "ÑUBLE",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -36.6083415,
+    "longitude": -72.0952545
+  },
+  {
+    "address": "Avda. Portal de San Pedro N°6950, Mall / Strip Center",
+    "comuna": "San pedro de la paz",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.8841256,
+    "longitude": -73.1402671
+  },
+  {
+    "address": "Avda. Argentina N°51 L- 2017, Mall / Strip Center",
+    "comuna": "Valparaíso",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.043982,
+    "longitude": -71.6044787
+  },
+  {
+    "address": "Manuel Antonio Matta N° 2503",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -23.6502328,
+    "longitude": -70.39663039999999
+  },
+  {
+    "address": "Recreo N°620, Supermercado",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:00-20:30",
+    "latitude": -34.15936,
+    "longitude": -70.73817
+  },
+  {
+    "address": "Avda. Alberto Solari N°1400 L-104-B, Mall / Strip Center",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-21:00\nDomingo: 10:00-20:00\nViernes: 09:00-21:00",
+    "latitude": -29.9121849,
+    "longitude": -71.258673
+  },
+  {
+    "address": "1 Sur N° 1599",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-19:00",
+    "latitude": -35.42796,
+    "longitude": -71.6543
+  },
+  {
+    "address": "Avda. Chorrillos N° 1759 Local 1051, Supermercado",
+    "comuna": "Calama",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-21:00",
+    "latitude": -22.4545242,
+    "longitude": -68.9214793
+  },
+  {
+    "address": "Avda. Libertador Bernardo O'Higgins N° 717 L-1 y 2, Mall / Strip Center",
+    "comuna": "Pucón",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 10:00-20:00\nDomingo: 11:00-19:00",
+    "latitude": -39.275467,
+    "longitude": -71.97194689999999
+  },
+  {
+    "address": "Avda. Alemania N° 0671 L - 1107, Mall / Strip Center",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Domingo: 10:00-20:30\nLunes: Cerrado",
+    "latitude": -38.7349423,
+    "longitude": -72.6108163
+  },
+  {
+    "address": "Avda. Padre Hurtado 3 Locales b4B-5- 6 del 1°Piso, Mall / Strip Center",
+    "comuna": "Machalí",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -34.1773692,
+    "longitude": -70.6956776
+  },
+  {
+    "address": "Santiago del Apostol N° 4063 Local 15-16 y 17, Mall / Strip Center",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 08:30-20:00\nDomingo: 09:00-19:00",
+    "latitude": -29.9437402,
+    "longitude": -71.2465683
+  },
+  {
+    "address": "Avda. 8 Oriente N°720 L-1 y 2, Mall / Strip Center",
+    "comuna": "Chiguayante",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-20:00\nViernes: 09:00-19:00",
+    "latitude": -29.9425681,
+    "longitude": -71.2486918
+  },
+  {
+    "address": "Vivar N° 1902-1912",
+    "comuna": "Calama",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:30\nDomingo: 09:30-20:00",
+    "latitude": -22.4617269,
+    "longitude": -68.9246174
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N°4850, Hospital / Clínica / Centro Medico",
+    "comuna": "Estación central",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-14:00\nDomingo: Cerrado",
+    "latitude": -33.4568054,
+    "longitude": -70.7020497
+  },
+  {
+    "address": "Avda. Cristóbal Colón N°6550 L-6, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.4169858,
+    "longitude": -70.56061559999999
+  },
+  {
+    "address": "Barros Arana N° 1080 Local 0401, Mall / Strip Center",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Domingo: 09:30-20:00",
+    "latitude": -36.824374,
+    "longitude": -73.045214
+  },
+  {
+    "address": "Campo de Deporte N° 180",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:30-21:00",
+    "latitude": -33.4553268,
+    "longitude": -70.6090268
+  },
+  {
+    "address": "Avda. Las Industrias N° 300 L-117, Mall / Strip Center",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-19:30",
+    "latitude": -41.4604554,
+    "longitude": -72.9529551
+  },
+  {
+    "address": "Avda. Volcán Puntiagudo N° 100 l-108, Mall / Strip Center",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-19:30",
+    "latitude": -41.4539981,
+    "longitude": -72.9236518
+  },
+  {
+    "address": "Avda. Ohiggins N° 1101",
+    "comuna": "Talagante",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:00\nDomingo: 09:00-19:30",
+    "latitude": -33.6639536,
+    "longitude": -70.92954591
+  },
+  {
+    "address": "San Martín N° 608-612",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-17:00\nDomingo: Cerrado",
+    "latitude": -36.8288061,
+    "longitude": -73.0496043
+  },
+  {
+    "address": "Ignacio Serrano N° 574, Mall / Strip Center",
+    "comuna": "Castro",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -42.4795858,
+    "longitude": -73.762029
+  },
+  {
+    "address": "San Francisco N° 666 Local 103-104, Mall / Strip Center",
+    "comuna": "Puerto varas",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -41.3192982,
+    "longitude": -72.98560359999999
+  },
+  {
+    "address": "Balmaceda N° 3045-3075 Local 1, Mall / Strip Center",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -29.9287142,
+    "longitude": -71.2586968
+  },
+  {
+    "address": "Esmeralda N° 731",
+    "comuna": "La unión",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -40.2944602,
+    "longitude": -73.0808921
+  },
+  {
+    "address": "Ruta A16 / Tarapacá N° 3350 l-3, Mall / Strip Center",
+    "comuna": "Alto hospicio",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -20.2585155,
+    "longitude": -70.0726409
+  },
+  {
+    "address": "Roger de Flor N° 2800 L-D y E",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-15:00\nDomingo: Cerrado\nJueves: 09:00-21:00",
+    "latitude": -33.41667,
+    "longitude": -70.600708
+  },
+  {
+    "address": "Balmaceda N° 157",
+    "comuna": "Buin",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -33.7329469,
+    "longitude": -70.7383545
+  },
+  {
+    "address": "Saavedra N° 561",
+    "comuna": "Cañete",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-19:30\nSábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -37.8017665,
+    "longitude": -73.4003013
+  },
+  {
+    "address": "Avda. Manuel Rodríguez N° 901",
+    "comuna": "San fernando",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -34.587873,
+    "longitude": -70.9852314
+  },
+  {
+    "address": "Matta Oriente N° 301 L-2, Mall / Strip Center",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.4547489,
+    "longitude": -70.6275129
+  },
+  {
+    "address": "José Joaquín Pérez N° 152",
+    "comuna": "Calera",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -32.7887134,
+    "longitude": -71.1895704
+  },
+  {
+    "address": "Plaza Anibal Pinto N° 1191 1199 L-1 y 2",
+    "comuna": "Valparaíso",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 10:00-17:00\nDomingo: Cerrado",
+    "latitude": -33.0431711,
+    "longitude": -71.62430950000001
+  },
+  {
+    "address": "Pedro Aguirre Cerda N° 421 L-1 y 2",
+    "comuna": "Angol",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Sábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -37.7984206,
+    "longitude": -72.7109112
+  },
+  {
+    "address": "Santa Cruz N° 813",
+    "comuna": "Traiguén",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-19:00\nSábado: 10:00-21:00\nDomingo: Cerrado\nViernes: 10:00-21:00",
+    "latitude": -38.2495613,
+    "longitude": -72.6711534
+  },
+  {
+    "address": "Mar Tirreno N° 3349 L-2039, Mall / Strip Center",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:00-20:30\nDomingo: 10:30-20:00",
+    "latitude": -33.4854188,
+    "longitude": -70.5768504
+  },
+  {
+    "address": "Libertad N°269",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-18:00\nDomingo: Cerrado",
+    "latitude": -33.0198738,
+    "longitude": -71.5510207
+  },
+  {
+    "address": "Avda. Libertador Bernardo Ohiggins N° 1395",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.4444715,
+    "longitude": -70.6579839
+  },
+  {
+    "address": "Avda. Providencia N° 1694 L-1",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.4264223,
+    "longitude": -70.615601
+  },
+  {
+    "address": "21 de Mayo N° 5628, Mall / Strip Center",
+    "comuna": "La cruz",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -32.823481,
+    "longitude": -71.2284172
+  },
+  {
+    "address": "Fundo La Hijuela de Algarrobal l-11 B, Mall / Strip Center",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 10:00-20:00\nViernes: 08:30-22:00",
+    "latitude": -33.2777018,
+    "longitude": -70.7036105
+  },
+  {
+    "address": "Avda. Apoquindo N° 3472",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 10:00-17:00\nDomingo: Cerrado",
+    "latitude": -33.4160299,
+    "longitude": -70.593881
+  },
+  {
+    "address": "San Martín N° 675 Local 2 y 3, Mall / Strip Center",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:45\nSábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -38.7388525,
+    "longitude": -72.6115981
+  },
+  {
+    "address": "Avda. Camino Las Flores N° 12640, Mall / Strip Center Local 6 y 7",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: Cerrado",
+    "latitude": -33.3943032,
+    "longitude": -70.515951
+  },
+  {
+    "address": "Los Carrera Poniente N°301 L-B 1012-1016-1020, Mall / Strip Center",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -36.8312983,
+    "longitude": -73.066402
+  },
+  {
+    "address": "Baquedano N° 502, Mall / Strip Center",
+    "comuna": "Paine",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.8086459,
+    "longitude": -70.7418034
+  },
+  {
+    "address": "Compañía N° 1214 L-102-103, Mall / Strip Center",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 10:00-20:00\nDomingo: 11:00-19:00",
+    "latitude": -33.4424692,
+    "longitude": -70.69556589999999
+  },
+  {
+    "address": "Avda. Camilo Henríquez N° 3692 L-BH 140-144, Mall / Strip Center",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:30-20:30\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.5758256,
+    "longitude": -70.55396429999999
+  },
+  {
+    "address": "Avda. Curauma Norte S/N Local 2, Mall / Strip Center",
+    "comuna": "Valparaíso",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -33.1294585,
+    "longitude": -71.5656119
+  },
+  {
+    "address": "Prolongación Cosme Churraca N°75 L-13-14-15, Mall / Strip Center",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -36.78795520000001,
+    "longitude": -73.0517472
+  },
+  {
+    "address": "Avda. El Parque Central Poniente N°121",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:30",
+    "latitude": -33.5549066,
+    "longitude": -70.7946853
+  },
+  {
+    "address": "Avda. Héroes de la Concepción N°2555, Mall / Strip Center",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Viernes: 10:00-20:00\nSábado: 10:00-21:00\nDomingo: 09:00-20:00\nViernes: 10:00-21:00",
+    "latitude": -20.2321567,
+    "longitude": -70.1452085
+  },
+  {
+    "address": "San Francisco N° 521 Local 1, Mall / Strip Center",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4512936,
+    "longitude": -70.6468174
+  },
+  {
+    "address": "Marinez de Rosas N° 720 L-1",
+    "comuna": "Panguipulli",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 10:00-20:00\nDomingo: Cerrado",
+    "latitude": -39.6425568,
+    "longitude": -72.33198879999999
+  },
+  {
+    "address": "Avda. Providencia N° 2301 Local 7-8-9",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-15:00\nDomingo: Cerrado",
+    "latitude": -33.4208901,
+    "longitude": -70.6080249
+  },
+  {
+    "address": "Manuel Montt N° 150-360 Local 2",
+    "comuna": "Coronel",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: Cerrado",
+    "latitude": -37.0263143,
+    "longitude": -73.1478778
+  },
+  {
+    "address": "Toesca N° 1844-1882 L-3 y 4, Mall / Strip Center",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4533675,
+    "longitude": -70.6609689
+  },
+  {
+    "address": "Avda. Ohiggins N° 581 Local 27. Mall Arauco Quilicura, Mall / Strip Center",
+    "comuna": "Quilicura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:00-20:30\nDomingo: 11:00-20:00",
+    "latitude": -33.3670048,
+    "longitude": -70.7305677
+  },
+  {
+    "address": "Puente N° 670",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": -33.4354354,
+    "longitude": -70.6518998
+  },
+  {
+    "address": "Avda. Santa María N° 6750 Local 11-12-13",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": -33.3773676,
+    "longitude": -70.5722275
+  },
+  {
+    "address": "Eleuterio Ramirez N° 1027",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -40.5733752,
+    "longitude": -73.1327211
+  },
+  {
+    "address": "Avda. Larraín N° 5862 Local 1076-1080, Mall / Strip Center",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.4533161,
+    "longitude": -70.5690072
+  },
+  {
+    "address": "Avda. Diego Portales N° 702 Local 1",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -33.0266888,
+    "longitude": -71.57134409999999
+  },
+  {
+    "address": "Colón N° 787",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.5939603,
+    "longitude": -70.6856249
+  },
+  {
+    "address": "Santa Clara N° 354 Local 115, Mall / Strip Center",
+    "comuna": "Huechuraba",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-18:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.3896168,
+    "longitude": -70.61939679999999
+  },
+  {
+    "address": "Avda. La Plaza N° 2501, Hospital / Clínica / Centro Medico",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 08:30-13:00\nDomingo: Cerrado",
+    "latitude": -33.4026972,
+    "longitude": -70.507784
+  },
+  {
+    "address": "Avenida España N° 01395 Local 3",
+    "comuna": "Punta arenas",
+    "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:00",
+    "latitude": -33.4059379,
+    "longitude": -70.5061399
+  },
+  {
+    "address": "Prolongación Benavente N° 1075 Local 1210, Mall / Strip Center",
+    "comuna": "Ovalle",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:30-20:00\nDomingo: 10:00-20:00",
+    "latitude": -30.6038193,
+    "longitude": -71.1993909
+  },
+  {
+    "address": "Salesianos N° 1334 Local 1",
+    "comuna": "San miguel",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.4909557,
+    "longitude": -70.6571941
+  },
+  {
+    "address": "José Délano N° 10492-10497-10515-10533-10545 Local 116, Mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.3564604,
+    "longitude": -70.53945759999999
+  },
+  {
+    "address": "Avda. Chamisero N° 15135 Local 4, Mall / Strip Center",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.3222872,
+    "longitude": -70.6463969
+  },
+  {
+    "address": "AVDA.PAJARITOS N° 2624, LOCAL1,2,3,4, Mall / Strip Center",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:00\nDomingo: 10:00-19:00",
+    "latitude": -33.5954995,
+    "longitude": -70.8786125
+  },
+  {
+    "address": "Calle Bernardo Ohiggins N° 812 Local 2",
+    "comuna": "Lautaro",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: Cerrado",
+    "latitude": -38.531089,
+    "longitude": -72.43945099999999
+  },
+  {
+    "address": "Rosario Norte N° 532 Local 103",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.404904,
+    "longitude": -70.572863
+  },
+  {
+    "address": "Diego Portales N° 2090",
+    "comuna": "Olmué",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -32.9964944,
+    "longitude": -71.1889914
+  },
+  {
+    "address": "Portugal N° 174",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 00:01-23:59",
+    "latitude": -33.444598,
+    "longitude": -70.6365752
+  },
+  {
+    "address": "Avda. Tobalaba N° 1375 Local 1",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4267677,
+    "longitude": -70.5907119
+  },
+  {
+    "address": "Avda. Manantiales N° 1121, Local 1, Mall / Strip Center",
+    "comuna": "Concón",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-19:30\nDomingo: 10:00-19:00",
+    "latitude": -32.930605,
+    "longitude": -71.5198108
+  },
+  {
+    "address": "Avenida Huanhuali N° 999 Local 1",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -29.9164445,
+    "longitude": -71.2444914
+  },
+  {
+    "address": "Maipu N° 0110 Local BS-144-148/BH 148-152, Mall / Strip Center",
+    "comuna": "Copiapó",
+    "region": "ATACAMA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-21:00\nDomingo: 10:00-20:00\nViernes: 09:00-21:00",
+    "latitude": -27.3693267,
+    "longitude": -70.33958419999999
+  },
+  {
+    "address": "Tobalaba N° 5151, Mall / Strip Center",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: Cerrado",
+    "latitude": -33.4366644,
+    "longitude": -70.5774101
+  },
+  {
+    "address": "Mamuel Montt N° 1600 Local 104, Mall / Strip Center",
+    "comuna": "Coronel",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -36.9980915,
+    "longitude": -73.16239639999999
+  },
+  {
+    "address": "Colón N° 1500 Local 7 y 8, Mall / Strip Center",
+    "comuna": "Puerto varas",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -41.3327726,
+    "longitude": -72.9642586
+  },
+  {
+    "address": "Maquehue N° 1244 Local 5 y 6,Mall / Strip Center",
+    "comuna": "Padre las casas",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-19:00\nDomingo: 10:00-18:00\nLunes: Cerrado",
+    "latitude": -38.7697008,
+    "longitude": -72.59698879999999
+  },
+  {
+    "address": "Avda. Ohiggins N° 358 Local 1 Strip Center Patio Quilicura",
+    "comuna": "Quilicura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.3602388,
+    "longitude": -70.7299258
+  },
+  {
+    "address": "Luis Pasteur N° 5479",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.3933609,
+    "longitude": -70.5812084
+  },
+  {
+    "address": "MANUEL ANTONIO MATTA N° 2001 AL 2013, LOCAL 5, Mall / Strip Center",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-20:30",
+    "latitude": -23.6535454,
+    "longitude": -70.4010062
+  },
+  {
+    "address": "ALCAZAR 635, LOCAL 1, Supermercado",
+    "comuna": "Los angeles",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 10:00-20:00\nSábado y Domingo: 10:00-19:00",
+    "latitude": -37.4797908,
+    "longitude": -72.36294269999999
+  },
+  {
+    "address": "Almirante Riveros N° 1202 , Local 3 y 4, Mall / Strip Center",
+    "comuna": "San bernardo",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33.6154668,
+    "longitude": -70.6855733
+  },
+  {
+    "address": "Avda. Jorge Alessandri N° 3177, Mall / Strip Center",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.7802354,
+    "longitude": -73.0587082
+  },
+  {
+    "address": "HOTU MATUA",
+    "comuna": "Isla de pascua",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 09:00-15:00",
+    "latitude": -27.1591733,
+    "longitude": -109.4279859
+  },
+  {
+    "address": "Hamburgo N° 671 Local 1, Mall / Strip Center",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4483823,
+    "longitude": -70.576549
+  },
+  {
+    "address": "6 Poniente N° 150 Local 1",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -33.0200102,
+    "longitude": -71.55854339999999
+  },
+  {
+    "address": "Avenida Libertador Bernardo Ohiggins 3250",
+    "comuna": "Estación central",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4515423,
+    "longitude": -70.6794899
+  },
+  {
+    "address": "Avenida Colin N°665",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -35.4426495,
+    "longitude": -71.6852943
+  },
+  {
+    "address": "Oficina Petronila N° 195 Local A y B, Mall / Strip Center",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -23.5621849,
+    "longitude": -70.39524519999999
+  },
+  {
+    "address": "Avda. Bernardo Ohiggins 701, Mall / Strip Center",
+    "comuna": "San fernando",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -34.586671,
+    "longitude": -70.9852153
+  },
+  {
+    "address": "Los Carrera N° 1302 Local 1",
+    "comuna": "Quilpué",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-17:00\nDomingo: Cerrado",
+    "latitude": -33.0484639,
+    "longitude": -71.4357292
+  },
+  {
+    "address": "Avda. Balmaceda N° 2355 Local BF 100, costado acceso mall por calle maipú",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado y Domingo: 10:00-20:00",
+    "latitude": -23.6460605,
+    "longitude": -70.40082199999999
+  },
+  {
+    "address": "Avda. balmaceda N° 2355 L-BS 101-105, en estacionamiento subterraneo",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 10:00-20:30\nSábado: 10:00-20:00\nDomingo: 11:00-20:30\nViernes: 10:00-21:00",
+    "latitude": -23.6460605,
+    "longitude": -70.40082199999999
+  },
+  {
+    "address": "Avda. Jorge Alessandri N° 3177 Local 1-2-3 /Bulevar / Zona Bancaria",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.7802354,
+    "longitude": -73.0587082
+  },
+  {
+    "address": "Avda. Vitacura N° 2710 Local 102",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado y Domingo: Cerrado",
+    "latitude": -33.4157331,
+    "longitude": -70.6044045
+  },
+  {
+    "address": "Libertad 1348 Mall Marina Arauco, Modulo Eucerin SB",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:30\nViernes: 10:00-21:00",
+    "latitude": -33.0087184,
+    "longitude": -71.5509128
+  },
+  {
+    "address": "Avda. Cristóbal Colón N° 4299 - 4317",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: Cerrado",
+    "latitude": -33.4238065,
+    "longitude": -70.5806336
+  },
+  {
+    "address": "Avda. Padre Hurtado Sur N° 875 L-BS1421 BS1425",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-21:00\nViernes: 10:30-21:00",
+    "latitude": -33.4137563,
+    "longitude": -70.5402596
+  },
+  {
+    "address": "Posta de Salud, Manzana 16, sitio 7",
+    "comuna": "Juan fernández",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Viernes: 09:00-17:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.6414001,
+    "longitude": -78.84609929999999
+  },
+  {
+    "address": "Ohiggins N° 800 Local 2 Interior Tottus Quilicura",
+    "comuna": "Quilicura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.3543439,
+    "longitude": -70.7336269
+  },
+  {
+    "address": "Avda. General Baquedano N° 86 Local 2264 y 2268. Mall Vivo Coquimbo, 2do Piso",
+    "comuna": "Coquimbo",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -29.9584668,
+    "longitude": -71.3379351
+  },
+  {
+    "address": "Avda. Circunvalación Sur S/N Esquina Sipson Local desde el 8 al 13",
+    "comuna": "Valdivia",
+    "region": "DE LOS RÍOS",
+    "horario": "Lunes a Sábado: 09:00-20:45\nDomingo: 10:00-20:00",
+    "latitude": -39.8418437,
+    "longitude": -73.2457235
+  },
+  {
+    "address": "Alcantara N° 44",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.4156471,
+    "longitude": -70.5894527
+  },
+  {
+    "address": "Luis Thayer Ojeda N° 146 Local 2, Hospital / Clínica / Centro Medico",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 10:00-21:00",
+    "latitude": -33.4180325,
+    "longitude": -70.6042003
+  },
+  {
+    "address": "Manuel Bulnes N° 699",
+    "comuna": "Puerto natales",
+    "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -51.72705,
+    "longitude": -72.501676
+  },
+  {
+    "address": "General Velasquez 9981",
+    "comuna": "San bernardo",
+    "region": "REGIÓN",
+    "horario": "Lunes a Domingo: CERRADO",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Diego Portales N° 157 Local 112-113-114.115. Strip Center",
+    "comuna": "Arica",
+    "region": "ARICA Y PARINACOTA",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -18.478951,
+    "longitude": -70.3002425
+  },
+  {
+    "address": "Apoquindo N° 4610 Local 1",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 10:00-15:00\nDomingo: Cerrado",
+    "latitude": -33.4130295,
+    "longitude": -70.5842577
+  },
+  {
+    "address": "Providencia N° 2006 Local 3",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 10:00-19:00\nDomingo: Cerrado",
+    "latitude": -33.4234285,
+    "longitude": -70.6146327
+  },
+  {
+    "address": "Diagonal Rancagua N° 910 Local 4 y 5",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4394546,
+    "longitude": -70.6232655
+  },
+  {
+    "address": "Camino el Alba N° 11969 Local 211, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4018761,
+    "longitude": -70.5165323
+  },
+  {
+    "address": "Av. Padre Sergio Correa N° 14.500 L. 5 y 6., Mall / Strip Center",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.2852484,
+    "longitude": -70.6695702
+  },
+  {
+    "address": "Avda. Independencia N° 565 L-TM 50, 313847701, Mall / Strip Center",
+    "comuna": "Independencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:00-20:00\nSábado: 10:00-20:30\nDomingo: 10:30-19:30\nViernes: 10:00-20:30",
+    "latitude": -33.424421,
+    "longitude": -70.654957
+  },
+  {
+    "address": "Avenida Angamos B° 02170 Local 103, Mall / Strip Center",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -23.69537,
+    "longitude": -70.41584
+  },
+  {
+    "address": "Avda. Macul N° 3019 Local 2,3 y 4, Mall / Strip Center",
+    "comuna": "Macul",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.485799,
+    "longitude": -70.601307
+  },
+  {
+    "address": "Bandera N° 200",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 10:00-16:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Vicuña Mackenna N° 475-477",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: 09:00-18:30\nDomingo: Cerrado",
+    "latitude": -33.0,
+    "longitude": 44.0
+  },
+  {
+    "address": "Avenida José Joaquin Perez N° 12010 L- 1220, Mall / Strip Center",
+    "comuna": "Calera",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -33.5889925,
+    "longitude": -71.6134548
+  },
+  {
+    "address": "Avenida 21 de Mayo N° 950 Local 7, Mall / Strip Center",
+    "comuna": "San antonio",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": -33.5889925,
+    "longitude": -71.6134548
+  },
+  {
+    "address": "DIRECCIÓN",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Roosevelt N° 1702",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 09:00-20:00\nDomingo: 09:30-19:30",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Errazuriz N° 999 Local J1096",
+    "comuna": "Valdivia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado y Domingo: 10:00-20:30",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Chacabuco N° 270-274-278",
+    "comuna": "Quillota",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-18:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Ahumada N° 280- 286",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -33.4396,
+    "longitude": -70.65105
+  },
+  {
+    "address": "Juan Soler Manfredeni N° 131 L-100 A, Espacio Salcobrand / Mall / Strip Center",
+    "comuna": "Puerto montt",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Isidora Goyenechea N° 3280 Local 3",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 10:00-19:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "2 Norte N° 3587 Local 2",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-18:30",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Departamental N° 1455 Local A, Hospital / Clínica / Centro Medico",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 08:00-14:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Alcalde Rene Soriano n° 2855 Local 8, Supermercado",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 09:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Bulnes N° 413 Y 427",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 09:00-15:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Isidoro Dubournais N° 198 Y 195",
+    "comuna": "El quisco",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 09:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Caletera Oriente Autopista Los Libertadores N° 22909 Local3, Mall / Strip Center",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Carmen N° 1220 L-117, Mall / Strip Center",
+    "comuna": "Curicó",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Esmeralda N° 332 Y 334",
+    "comuna": "Arauco",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "El Llano Subercaseaux N° 35119 A, Local 2007, Supermercado",
+    "comuna": "San miguel",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 08:30-21:00\nDomingo: 09:00-20:00\nViernes: 08:30-21:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Ruta 5/ Esquina Regimiento Arica S/N L-Tm1004",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -299484736.0,
+    "longitude": -712834877.0
+  },
+  {
+    "address": "Avda Las Parcelas 990 Local 1,2 y 3",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-19:30\nDomingo: 10:00-20:00",
+    "latitude": -29.92321,
+    "longitude": -71.20921
+  },
+  {
+    "address": "General Lagos S N° 545",
+    "comuna": "Victoria",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:00\nSábado: 10:00-19:00\nDomingo: 10:00-18:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Larrín N° 5862 L-BM 916-920-924, Mall / Strip Center",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 10:30-20:00\nViernes: 10:30-21:00",
+    "latitude": -334524377.0,
+    "longitude": -705694704.0
+  },
+  {
+    "address": "Avda. Diego Portales N° 640 L-BH 1121/BH 1125/BH 1129/BH 1133 5X/U3. Mall",
+    "comuna": "Arica",
+    "region": "ARICA Y PARINACOTA",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Copayapu N° 2406, Mall / Strip Center",
+    "comuna": "Copiapó",
+    "region": "ATACAMA",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 09:00-19:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Quechereguas N° 1897 Local 2",
+    "comuna": "Molina",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Sta. María N° 6902 Local 16-18-19, mall / Strip Center",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-20:30\nDomingo: 10:00-20:30",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda Ortuzar N° 314, mall / Strip Center",
+    "comuna": "Pichilemu",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "14 Norte N° 976 L- 034, Supermercado",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 08:30-20:45\nDomingo: 09:00-20:45",
+    "latitude": -33.00952,
+    "longitude": -71.54566
+  },
+  {
+    "address": "Avda Providencia N° 2128-2132, mall / Strip Center",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado: 10:00-19:00\nDomingo: Cerrado",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Los Trapenses N°3515 Local 217, mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Av. Presidente Kennedy 5601 local 2. 18, Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Irarrazaval N° 2700",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 10:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Camilo Henriquez N° 515",
+    "comuna": "Villarrica",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado: 09:00-20:30\nDomingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Virginia Subercaseaux N° 447, Local 2, mall / Strip Center",
+    "comuna": "Pirque",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 09:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Avda. Apoquindo N° 3363 L-1",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: Cerrado",
+    "latitude": 33.4166925,
+    "longitude": -70.5970985
+  },
+  {
+    "address": "Av. Einstein Esquina Miguel Ramirez N°287 L- 110 Rancagua, Mall / Strip Center",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Domingo: 09:00-20:30",
+    "latitude": -34.17277726175386,
+    "longitude": -70.7177131727534
+  },
+  {
+    "address": "Avda. Angamos N° 745, Local 2050, Supermercado",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Domingo: 08:00-21:00",
+    "latitude": -33.4478304,
+    "longitude": -70.6406479
+  },
+  {
+    "address": "Compañía N° 1579, Local 1",
+    "comuna": "Santiago",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:00\nSábado: 10:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.4390513,
+    "longitude": -70.6615278
+  },
+  {
+    "address": "Avda. Paseo Pie Andino N° 5855 Local 4 y 8, mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-21:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Freire 2414, local 1095, El Belloto, mall / Strip Center",
+    "comuna": "Quilpué",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:30",
+    "latitude": -33.0451706,
+    "longitude": -71.4256059
+  },
+  {
+    "address": "Avda. Pablo Neruda N° 2189 Local 101-102-103",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Viernes: 09:00-20:30\nSábado: Cerrado\nDomingo: 11:00-20:00\nViernes: Cerrado",
+    "latitude": -38.7372077,
+    "longitude": -72.6337624
+  },
+  {
+    "address": "Avda. San Juan N° 6, Santa Teresita, local 1, mall / Strip Center",
+    "comuna": "Machalí",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Domingo: 09:00-20:30",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Av. Apoquindo 4400 y 4411, locales 144 146 y 148, mall / Subcentro",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Cuevas 483 Local 101, Mall / Strip Center",
+    "comuna": "Rancagua",
+    "region": "DEL LIBERTADOR GRAL. BERNARDO O'HIGGINS",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-20:00",
+    "latitude": -34.1687936,
+    "longitude": -70.7439607
+  },
+  {
+    "address": "Avda. Francisco Bilbao N° 3634 Local 3, Mall / Strip Center",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 11:00-21:00",
+    "latitude": -20.0,
+    "longitude": 259127.0
+  },
+  {
+    "address": "Avda. Presidente Kennedy N° 9001 Local 1013, Primer piso Mall / Strip Center",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: 10:00-21:00",
+    "latitude": -33.3908788,
+    "longitude": -70.54839
+  },
+  {
+    "address": "Camino Los Trapenses N°2140, mall / Strip Center",
+    "comuna": "Lo barnechea",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.3547823,
+    "longitude": -70.539323
+  },
+  {
+    "address": "Av. Presidene Kennedy N° 5413 local 202",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:00-20:30\nSábado: 10:00-21:00\nDomingo: 11:00-20:30",
+    "latitude": -33.40122,
+    "longitude": -70.5800577
+  },
+  {
+    "address": "Av. Americo Vespucio N° 1077, Hospital / Clínica / Centro Medico",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-16:00\nDomingo: Cerrado",
+    "latitude": -33.478555,
+    "longitude": -70.754396
+  },
+  {
+    "address": "Marbella lote A, Mall / Strip Center",
+    "comuna": "Puchuncaví",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 09:00-20:00",
+    "latitude": -32.6730265,
+    "longitude": -71.4266467
+  },
+  {
+    "address": "Avda. Camino Chicureo Lote A-2 S/N Local 1 (Clínica), Hospital / Clínica / Centro Medico",
+    "comuna": "Colina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-20:30\nSábado: 08:00-14:30\nDomingo: Cerrado",
+    "latitude": -33.2847921,
+    "longitude": -70.654159
+  },
+  {
+    "address": "Av Ricardo Lyon N° 111 local 6 - Providencia, Mall Panorámico.",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 10:00-20:00\nDomingo: 11:00-17:00",
+    "latitude": -33.4226772,
+    "longitude": -70.6095167
+  },
+  {
+    "address": "Tienda Dermocoaching - Av. Independencia N° 565 local TM 127",
+    "comuna": "Independencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.4217445,
+    "longitude": -70.6602558
+  },
+  {
+    "address": "Tadeo Haenke N° 1706, local 31, mall / Strip Center",
+    "comuna": "Iquique",
+    "region": "TARAPACÁ",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -20.2381055,
+    "longitude": -70.1279218
+  },
+  {
+    "address": "Tienda Dermocoaching- Avenida Varela 1524",
+    "comuna": "Coquimbo",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -29.9580132,
+    "longitude": -71.3376633
+  },
+  {
+    "address": "Avda. Vicente Méndez N° 1545 locales 1500 y 1504, mall / Strip Center",
+    "comuna": "Chillán",
+    "region": "ÑUBLE",
+    "horario": "Lunes a Sábado: 09:30-20:00\nDomingo: 10:00-20:00",
+    "latitude": -36.5888433,
+    "longitude": -72.0769491
+  },
+  {
+    "address": "Tienda Dermocoaching - Avda. Vicuña Mackenna N° 7110 TM 129",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.5176418,
+    "longitude": -70.5986268
+  },
+  {
+    "address": "Av. Americo Vespucio N° 1737 MOD -120, Modulo Eucerin SB",
+    "comuna": "Huechuraba",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.3659827,
+    "longitude": -70.7607108
+  },
+  {
+    "address": "Avda. Concón Reñaca N° 3850, Local 1001",
+    "comuna": "Concón",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-19:30",
+    "latitude": -32.933913,
+    "longitude": -71.536497
+  },
+  {
+    "address": "Avda. Andres Bello N° 2447 local 1117, Costanera Center Piso 1",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:00-21:00\nDomingo: 09:00-21:00",
+    "latitude": -33.4178145,
+    "longitude": -70.6077984
+  },
+  {
+    "address": "Plaza Yungay N° 609 L-2053",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Domingo: 10:00-20:30\nViernes: 10:00-21:00",
+    "latitude": -41.47391,
+    "longitude": -72.93525
+  },
+  {
+    "address": "Avda. Apoquindo N° 2730 Local S-301, Salcobrand MUT",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-20:00",
+    "latitude": -33.417715,
+    "longitude": -70.601536
+  },
+  {
+    "address": "Irarrazaval N° 2700",
+    "comuna": "Ñuñoa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: Cerrado",
+    "latitude": -33.45399,
+    "longitude": -70.60342
+  },
+  {
+    "address": "Tienda Dermocoaching - Avda. Circunvalacion 30 Oriente N° 1055 Local 1117 / DERMOCOACHING",
+    "comuna": "Talca",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -35.432674,
+    "longitude": -71.630371
+  },
+  {
+    "address": "Calle Arturo Prat N° 496 local A",
+    "comuna": "Curicó",
+    "region": "DEL MAULE",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 10:00-20:00",
+    "latitude": -34.982818,
+    "longitude": -71.2496396
+  },
+  {
+    "address": "Avda. Ramón Picarte N°422, local 104 Tienda Dermocoaching",
+    "comuna": "Valdivia",
+    "region": "DE LOS RÍOS",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -39.814353,
+    "longitude": -73.2434913
+  },
+  {
+    "address": "14 Norte N° 976 Local 244 mall Marina oriente Tienda Dermocoaching",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -33.0103518,
+    "longitude": -71.5457304
+  },
+  {
+    "address": "Avda. La Montaña N° 2394 L-21, Valle Grande",
+    "comuna": "Lampa",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 09:00-21:00",
+    "latitude": -333231.253,
+    "longitude": -707460.614
+  },
+  {
+    "address": "Avda. Nueva Providencia N° 1919 Local N°1",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-21:00\nDomingo: Cerrado",
+    "latitude": -334255.789,
+    "longitude": -70613.305
+  },
+  {
+    "address": "Barros Arana N° 494 LC-04",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Viernes: 08:30-20:30\nSábado: 09:00-17:30\nDomingo: Cerrado",
+    "latitude": -36827.517,
+    "longitude": -73052.58
+  },
+  {
+    "address": "Avda. Luis Pasteur 6709 L-101,102,103",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:30-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -3338.765,
+    "longitude": -7057.708
+  },
+  {
+    "address": "Avda. Andres Bello N° 2447 local 136, Costanera center Planta Baja",
+    "comuna": "Providencia",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-20:30",
+    "latitude": -3341.537,
+    "longitude": -7060.643
+  },
+  {
+    "address": "Guillermo Ulriksen 2965, local 102 y local 101",
+    "comuna": "La serena",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 09:00-19:00",
+    "latitude": -2990.208,
+    "longitude": -7125.209
+  },
+  {
+    "address": "Avda. Sanchez Fontecilla N°12200 Local 1013",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -334882.901,
+    "longitude": -705579.683
+  },
+  {
+    "address": "Pedro Aguirre Cerda 9440 Local 1412",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -2357.965,
+    "longitude": -7038.995
+  },
+  {
+    "address": "Avda. Vicuña Mackenna 8733, Local 1",
+    "comuna": "La florida",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 09:30-20:00",
+    "latitude": -33535.721,
+    "longitude": -70593.284
+  },
+  {
+    "address": "Del Aleli N° 2011 Local 2",
+    "comuna": "Quilpué",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -3305534435095.05,
+    "longitude": -7142656497112.17
+  },
+  {
+    "address": "Alvaro Casanova N° 594 L-11 -12",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:30-20:30\nDomingo: 10:00-20:00",
+    "latitude": -33468.791,
+    "longitude": -70523.484
+  },
+  {
+    "address": "Avda. Carlos condell 1687 L-C23&C24B, Mall Paseo Shopping Quillota",
+    "comuna": "Quillota",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -32896716394100.7,
+    "longitude": -712435287558.256
+  },
+  {
+    "address": "Avda. Colon 180 , Local N° 2024, Portal",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Domingo: 09:30-19:30\nViernes: 09:30-20:00",
+    "latitude": -36.7129507,
+    "longitude": -73.1144283
+  },
+  {
+    "address": "Avda. Perez Gacitua N°279 L TM El Morro L16-17",
+    "comuna": "Talcahuano",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Sábado: 09:00-20:30\nDomingo: 10:00-20:00\nLunes: 10:00-20:30",
+    "latitude": -3672792157831.85,
+    "longitude": -7310866784540.36
+  },
+  {
+    "address": "Avda. Manquehue Norte N° 1985",
+    "comuna": "Vitacura",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 09:00-21:00\nSábado y Domingo: 10:00-21:00",
+    "latitude": -33387.421,
+    "longitude": -705783.861
+  },
+  {
+    "address": "Apoquindo N°5720 local A",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "21 de Mayo N° 4540 A, B, C, D",
+    "comuna": "Peñaflor",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-19:00",
+    "latitude": null,
+    "longitude": null
+  },
+  {
+    "address": "Plazuela Yungay 609. Local 1033 (Portal Osorno)/ Dermocoaching",
+    "comuna": "Osorno",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Domingo: 10:00-20:00",
+    "latitude": -40.5746849,
+    "longitude": -73.1297782
+  },
+  {
+    "address": "Av.Kennedy N° 5413 - L 413 Tienda Dermocoaching",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-21:00",
+    "latitude": -33.401866,
+    "longitude": -70.576884
+  },
+  {
+    "address": "Av. Americo Vespucio 1501 Local A-281, Dermocoaching / Mall",
+    "comuna": "Cerrillos",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.5171784,
+    "longitude": -70.7144692
+  },
+  {
+    "address": "Los Militares 5953",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: Cerrado",
+    "latitude": -33.40606087376699,
+    "longitude": -70.56951499325407
+  },
+  {
+    "address": "Avenida 1 Norte N° 2901, local 4044, Viña del Mar",
+    "comuna": "Viña del mar",
+    "region": "VALPARAÍSO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.0354283,
+    "longitude": -71.5235401
+  },
+  {
+    "address": "Avenida Angamos 745 local 1044 ,Tienda Dermocoaching",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Domingo: 10:00-21:00",
+    "latitude": -23.6674897,
+    "longitude": -70.4049004
+  },
+  {
+    "address": "Avda. Americo Vespucio 399 Local 639, Tienda Dermocoaching",
+    "comuna": "Maipú",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 08:00-21:00\nSábado y Domingo: 10:00-20:00",
+    "latitude": -33.4839353,
+    "longitude": -70.7504253
+  },
+  {
+    "address": "Avda. Balmaceda N° 2355 MOD. MP 116, Modulo Eucerin SB",
+    "comuna": "Antofagasta",
+    "region": "ANTOFAGASTA",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 10:30-20:00\nViernes: 10:30-21:00",
+    "latitude": -23.64504,
+    "longitude": -70.40263
+  },
+  {
+    "address": "Avda. Larrain N° 5862 Mod. MP 1110, Modulo Eucerin SB",
+    "comuna": "La reina",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Viernes: 10:30-20:30\nSábado: 10:30-21:00\nDomingo: 11:00-20:00\nViernes: 10:30-21:00",
+    "latitude": -33.45215,
+    "longitude": -70.56942
+  },
+  {
+    "address": "Avenida Manquehue Sur N° 1581 Local C",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.424814,
+    "longitude": -70.5647435
+  },
+  {
+    "address": "Carlos Richter N°134",
+    "comuna": "Frutillar",
+    "region": "DE LOS LAGOS",
+    "horario": "Lunes a Sábado: 09:00-20:00\nDomingo: 10:00-20:00",
+    "latitude": -41.1264204,
+    "longitude": -73.059505
+  },
+  {
+    "address": "Avda. Waldo Alcalde N° 401 Local 5",
+    "comuna": "Coquimbo",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Sábado: 08:30-21:00\nDomingo: 09:00-20:30",
+    "latitude": -29.9786662,
+    "longitude": -71.2618796
+  },
+  {
+    "address": "av. alemania N°0671 local 1019 Tienda Dermocoaching",
+    "comuna": "Temuco",
+    "region": "DE LA ARAUCANÍA",
+    "horario": "Lunes a Domingo: 10:00-21:00",
+    "latitude": -38.7335708,
+    "longitude": -72.6106617
+  },
+  {
+    "address": "Avda. Consistorial 5791 Local 1a-1b-2",
+    "comuna": "Peñalolén",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 09:00-21:00",
+    "latitude": -33.49923342148014,
+    "longitude": -70.55258522607353
+  },
+  {
+    "address": "Calle Constitución N° 400, Provincia del Choapa",
+    "comuna": "Illapel",
+    "region": "COQUIMBO",
+    "horario": "Lunes a Domingo: 08:00-21:00",
+    "latitude": -31.631262512949014,
+    "longitude": -71.16474522883487
+  },
+  {
+    "address": "Avda. Camilo Henríquez 3692 local D 144 y D 146, Tienda Dermocoaching",
+    "comuna": "Puente alto",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Sábado: 08:00-21:00\nDomingo: 10:00-20:00",
+    "latitude": -33.56937132489642,
+    "longitude": -70.55745897968924
+  },
+  {
+    "address": "Avda.Francisco Bilbao 8898, local 3020 - Tienda Dermocoaching",
+    "comuna": "Las condes",
+    "region": "METROPOLITANA DE SANTIAGO",
+    "horario": "Lunes a Domingo: 10:00-21:00",
+    "latitude": -70.54060598650696,
+    "longitude": -33.42790808775421
+  },
+  {
+    "address": "Bulevar Plaza del Trébol L-26, Modulo Eucerin",
+    "comuna": "Concepción",
+    "region": "DEL BIOBÍO",
+    "horario": "Lunes a Domingo: 10:00-20:30",
+    "latitude": -36.79119545164442,
+    "longitude": -73.06764371959841
+  }
+]
