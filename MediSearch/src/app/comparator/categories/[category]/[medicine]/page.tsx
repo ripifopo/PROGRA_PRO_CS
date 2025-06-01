@@ -7,6 +7,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { FaHeart, FaBell } from 'react-icons/fa';
 
+// Interfaz para tipar los datos del medicamento
 interface Medicine {
   id: number;
   name: string;
@@ -19,26 +20,33 @@ interface Medicine {
 }
 
 export default function MedicineDetailPage() {
+  // Obtiene parámetros de la URL y herramientas de navegación
   const { category, medicine } = useParams();
   const router = useRouter();
   const { setLoading } = useLoading();
 
+  // Estados locales del componente
   const [medData, setMedData] = useState<Medicine | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [isFrequent, setIsFrequent] = useState<boolean>(false);
   const [isAlerted, setIsAlerted] = useState<boolean>(false);
 
+  // Efecto al montar el componente
   useEffect(() => {
     const fetchAndMatchMedicine = async () => {
       try {
         setLoading(true);
+
+        // Llama a la API con todos los medicamentos agrupados por farmacia
         const res = await fetch('/api/medicines');
         if (!res.ok) throw new Error();
         const data = await res.json();
 
+        // Decodifica el ID del medicamento desde la URL
         const decodedId = parseInt(decodeURIComponent(medicine as string));
         let found: Medicine | null = null;
 
+        // Busca el medicamento en las categorías anidadas de cada farmacia
         for (const pharmacy of data) {
           for (const category of Object.values(pharmacy.categories || {})) {
             for (const med of category as any[]) {
@@ -55,18 +63,21 @@ export default function MedicineDetailPage() {
         if (!found) throw new Error();
         setMedData(found);
 
+        // Recupera el perfil del usuario desde localStorage
         const stored = localStorage.getItem('userProfile');
         if (stored) {
           const parsed = JSON.parse(stored);
           const email = parsed?.email || null;
           setUserEmail(email);
 
+          // Consulta si el medicamento ya es frecuente
           const freqRes = await fetch(`/api/frequent?email=${email}`);
           const freqData = await freqRes.json();
           setIsFrequent(freqData.some((item: any) =>
             item.medicineId === found?.id && item.pharmacy === found?.pharmacy
           ));
 
+          // Consulta si ya existe una alerta creada
           const alertRes = await fetch(`/api/alerts?email=${email}`);
           const alertData = await alertRes.json();
           setIsAlerted(alertData.some((item: any) =>
@@ -74,6 +85,7 @@ export default function MedicineDetailPage() {
           ));
         }
       } catch {
+        // En caso de error, redirige a la categoría
         toast.error('Medicamento no encontrado.');
         router.push(`/comparator/categories/${category}`);
       } finally {
@@ -84,12 +96,14 @@ export default function MedicineDetailPage() {
     fetchAndMatchMedicine();
   }, [medicine, category, router, setLoading]);
 
+  // Formatea los precios (con puntos y símbolo $)
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
     const clean = price.replace(/[^0-9]/g, '');
     return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
+  // Calcula el porcentaje de descuento si corresponde
   const calculateDiscount = () => {
     if (!medData) return null;
     const offer = parseInt(medData.offer_price.replace(/\D/g, ''));
@@ -99,8 +113,15 @@ export default function MedicineDetailPage() {
     return discount;
   };
 
+  // Guarda el medicamento como frecuente
   const handleSaveFrequent = async () => {
-    if (!userEmail || !medData) return;
+    if (!userEmail || !medData) {
+      // Redirige a página de autenticación si no hay sesión iniciada
+      const currentPath = `/comparator/categories/${category}/${medicine}`;
+      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
+      return;
+    }
+
     const payload = {
       userEmail,
       medicineId: medData.id,
@@ -131,8 +152,14 @@ export default function MedicineDetailPage() {
     }
   };
 
+  // Crea una alerta para el medicamento
   const handleCreateAlert = async () => {
-    if (!userEmail || !medData) return;
+    if (!userEmail || !medData) {
+      const currentPath = `/comparator/categories/${category}/${medicine}`;
+      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
+      return;
+    }
+
     const payload = {
       userEmail,
       medicineId: medData.id,
@@ -169,11 +196,13 @@ export default function MedicineDetailPage() {
 
   return (
     <Container className="py-5">
+      {/* Botón de retorno */}
       <Button variant="outline-success" className="mb-4" onClick={() => router.push(`/comparator/categories/${category}`)}>
         ← Volver a Medicamentos
       </Button>
 
       <Row className="align-items-center">
+        {/* Imagen del medicamento */}
         <Col md={5} className="text-center">
           <img
             src={medData.image || 'https://via.placeholder.com/300'}
@@ -183,9 +212,11 @@ export default function MedicineDetailPage() {
           />
         </Col>
 
+        {/* Información y botones */}
         <Col md={7}>
           <h2 className="text-success fw-bold mb-3">{medData.name?.toUpperCase() || 'Sin nombre'}</h2>
 
+          {/* Precios y descuento */}
           {medData.offer_price !== medData.normal_price && medData.normal_price !== '$0' ? (
             <>
               <h5 className="text-muted text-decoration-line-through">{formatPrice(medData.normal_price)}</h5>
@@ -196,6 +227,7 @@ export default function MedicineDetailPage() {
             <h4 className="text-dark fw-bold">{formatPrice(medData.offer_price)}</h4>
           )}
 
+          {/* Stock y farmacia */}
           <p className="mb-2">
             <strong>Stock:</strong>{' '}
             <span style={{ color: medData.stock === 'yes' ? 'green' : 'red' }}>
@@ -204,6 +236,7 @@ export default function MedicineDetailPage() {
           </p>
           <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
 
+          {/* Botones de acción */}
           <div className="d-flex align-items-center gap-3 mt-3">
             <a
               href={medData.url}
@@ -223,6 +256,7 @@ export default function MedicineDetailPage() {
               🏪 Ir a la farmacia
             </a>
 
+            {/* Botón de frecuente */}
             <button
               className="d-flex justify-content-center align-items-center"
               onClick={handleSaveFrequent}
@@ -239,6 +273,7 @@ export default function MedicineDetailPage() {
               <FaHeart size={20} color={isFrequent ? 'white' : 'black'} />
             </button>
 
+            {/* Botón de alerta */}
             <button
               className="d-flex justify-content-center align-items-center"
               onClick={handleCreateAlert}
@@ -252,7 +287,7 @@ export default function MedicineDetailPage() {
                 cursor: 'pointer'
               }}
             >
-              <FaBell size={18} color={isAlerted ? 'black' : 'black'} />
+              <FaBell size={18} color="black" />
             </button>
           </div>
         </Col>
