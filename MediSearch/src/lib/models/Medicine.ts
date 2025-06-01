@@ -1,16 +1,22 @@
 // Archivo: src/lib/models/Medicine.ts
 
-// Modelo TypeScript corregido para reflejar exactamente lo scrapeado
-export interface Medicine {
-  pharmacy: string;           // Nombre de la farmacia ("ahumada", "cruzverde", "salcobrand")
-  name: string;               // Nombre del medicamento
-  price: string;              // Precio como string, porque puede venir formateado
-  description?: string;       // Descripción del producto (opcional)
-  form?: string;              // Forma farmacéutica (comprimido, jarabe, etc)
-  category?: string;          // Categoría general (ej: "anticonceptivos", "bienestar-sexual")
-  stock?: string;             // Stock disponible (opcional) como string ("yes", "no")
-  image?: string;             // URL de la imagen (opcional)
-  url?: string;               // URL del producto en la farmacia (opcional)
-  offer_price?: string;       // Precio oferta (opcional) como string
-  normal_price?: string;      // Precio normal (opcional) como string
+// Representa la estructura final en la colección `medicines`
+export interface MedicineDocument {
+  pharmacy: string; // Ej: "Cruz Verde", "Salcobrand"
+  categories: {
+    [category: string]: MedicineEntry[]; // Cada categoría contiene un array de medicamentos
+  };
+}
+
+// Información detallada del medicamento
+export interface MedicineEntry {
+  id: number | null;             // ID del producto
+  name: string;                  // Nombre del medicamento
+  offer_price: string;           // Precio de oferta (ej: "$1990")
+  normal_price: string;          // Precio normal (ej: "$2490")
+  discount: number;              // Porcentaje de descuento
+  url: string;                   // Enlace al producto
+  image: string;                 // URL de la imagen
+  stock: string;                 // Ej: "yes", "no"
+  category: string;              // Categoría del medicamento (normalizada)
 }

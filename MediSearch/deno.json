@@ -3,6 +3,6 @@
     "mongodb": "npm:mongodb"
   },
   "tasks": {
-    "insert-medicines": "deno run --allow-read --allow-env --allow-net src/lib/insertMedicines.ts"
+    "insert-medicines": "deno run --allow-read --allow-env --allow-net --env=.env src/lib/insertMedicines.ts"
   }
 }
