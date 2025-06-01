@@ -1,9 +1,11 @@
+// ✅ Página de categoría con filtros, búsqueda, paginación, imagenes y botón funcional "Ver detalles"
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import { Button, Card, Container, Row, Col, Form, Spinner } from 'react-bootstrap';
+import { Button, Card, Container, Row, Col, Form, Spinner, Badge } from 'react-bootstrap';
 import { normalizeCategoryName } from '@/lib/utils/normalizeCategories';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -21,8 +23,8 @@ export default function CategoryPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(50000);
+  const [minPrice, setMinPrice] = useState(1);
+  const [maxPrice, setMaxPrice] = useState(1000000);
   const [minDiscount, setMinDiscount] = useState(0);
   const [maxDiscount, setMaxDiscount] = useState(100);
 
@@ -30,7 +32,7 @@ export default function CategoryPage() {
   const indexOfLastMedicine = currentPage * medicinesPerPage;
   const indexOfFirstMedicine = indexOfLastMedicine - medicinesPerPage;
 
-  // Normaliza la categoría desde los parámetros
+  // 🔁 Cargar y normalizar la categoría
   useEffect(() => {
     if (!rawCategory) return;
     const raw = decodeURIComponent(rawCategory as string);
@@ -38,26 +40,40 @@ export default function CategoryPage() {
     setCategory(normalized);
   }, [rawCategory]);
 
-  // Obtiene los medicamentos desde la API
+  // 📦 Cargar medicamentos y calcular precio máximo de la categoría
   useEffect(() => {
     const fetchMedicines = async () => {
       setLoading(true);
       const res = await fetch('/api/medicines');
       const data = await res.json();
       setMedicines(data);
+
+      const prices = data.flatMap((pharmacy: any) =>
+        Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
+          if (cat.toLowerCase() !== category.toLowerCase()) return [];
+          return meds
+            .map((med) => parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0'))
+            .filter((p) => p > 0);
+        })
+      );
+
+      const maxDetected = Math.max(...prices);
+      setMinPrice(1);
+      setMaxPrice(isFinite(maxDetected) && maxDetected > 0 ? maxDetected : 1000000);
       setLoading(false);
     };
-    fetchMedicines();
-  }, []);
 
-  // Formato de precio en CLP
+    fetchMedicines();
+  }, [category]);
+
+  // 💰 Formato CLP
   const formatPrice = (price: string) => {
-    if (!price || price === '$0') return 'Sin precio disponible';
+    if (!price || price === '$0') return 'No disponible';
     const clean = price.replace(/[^0-9]/g, '');
     return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // Filtro de medicamentos
+  // 🧠 Filtrar y ordenar medicamentos
   const filteredMedicines = medicines.flatMap((pharmacy: any) => {
     return Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
       if (cat.toLowerCase() === category.toLowerCase()) {
@@ -92,7 +108,6 @@ export default function CategoryPage() {
   const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
   const totalPages = Math.ceil(filteredMedicines.length / medicinesPerPage);
 
-  // Alterna farmacias seleccionadas
   const togglePharmacy = (value: string) => {
     setCurrentPage(1);
     setPharmacyFilter((prev) =>
@@ -100,14 +115,13 @@ export default function CategoryPage() {
     );
   };
 
-  // Reinicia todos los filtros
   const resetFilters = () => {
     setSearch('');
     setPharmacyFilter([]);
     setSort('asc');
     setSortDiscount('');
-    setMinPrice(0);
-    setMaxPrice(50000);
+    setMinPrice(1);
+    setMaxPrice(1000000);
     setMinDiscount(0);
     setMaxDiscount(100);
     setCurrentPage(1);
@@ -115,12 +129,10 @@ export default function CategoryPage() {
 
   return (
     <Container className="py-5">
-      {/* Botón volver */}
       <Button variant="outline-success" className="mb-4" onClick={() => router.push('/comparator/categories')}>
         ← Volver a Categorías
       </Button>
 
-      {/* Título, subtítulo y barra de búsqueda centrados */}
       <div className="mb-4">
         <Col md={9} className="mx-auto text-center d-flex flex-column align-items-center">
           <h1 className="text-success fw-bold display-5">{category.toUpperCase()}</h1>
@@ -136,67 +148,62 @@ export default function CategoryPage() {
       </div>
 
       <Row>
-        {/* Filtros */}
+        {/* Panel lateral de filtros */}
         <Col md={3}>
-          <h5 className="fw-bold">Filtros avanzados</h5>
+          <Card className="p-3 shadow-sm mb-4">
+            <h5 className="fw-bold mb-3">Filtros avanzados</h5>
 
-          {/* Farmacias */}
-          <div className="mb-3">
-            <strong>Farmacias</strong>
-            {['Cruz Verde', 'Salcobrand', 'Farmacia Ahumada'].map((pharm) => (
-              <Form.Check
-                key={pharm}
-                type="checkbox"
-                label={pharm}
-                checked={pharmacyFilter.includes(pharm)}
-                onChange={() => togglePharmacy(pharm)}
+            <div className="mb-3">
+              <strong>Farmacias</strong>
+              {['Cruz Verde', 'Salcobrand', 'Farmacia Ahumada'].map((pharm) => (
+                <Form.Check
+                  key={pharm}
+                  type="checkbox"
+                  label={pharm}
+                  checked={pharmacyFilter.includes(pharm)}
+                  onChange={() => togglePharmacy(pharm)}
+                />
+              ))}
+            </div>
+
+            <div className="mb-4">
+              <strong>Rango de precio</strong>
+              <Slider
+                range
+                min={1}
+                max={maxPrice}
+                step={500}
+                value={[minPrice, maxPrice]}
+                onChange={([min, max]) => {
+                  setMinPrice(min);
+                  setMaxPrice(max);
+                }}
               />
-            ))}
-          </div>
-
-          {/* Precio */}
-          <div className="mb-4">
-            <strong>Rango de precio</strong>
-            <Slider
-              range
-              min={0}
-              max={50000}
-              step={500}
-              value={[minPrice, maxPrice]}
-              onChange={([min, max]) => {
-                setMinPrice(min);
-                setMaxPrice(max);
-              }}
-            />
-            <div className="d-flex justify-content-between">
-              <span>${minPrice}</span>
-              <span>${maxPrice}</span>
+              <div className="d-flex justify-content-between">
+                <span>${minPrice}</span>
+                <span>${maxPrice}</span>
+              </div>
             </div>
-          </div>
 
-          {/* Descuento */}
-          <div className="mb-4">
-            <strong>Rango de descuento (%)</strong>
-            <Slider
-              range
-              min={0}
-              max={100}
-              step={1}
-              value={[minDiscount, maxDiscount]}
-              onChange={([min, max]) => {
-                setMinDiscount(min);
-                setMaxDiscount(max);
-              }}
-            />
-            <div className="d-flex justify-content-between">
-              <span>{minDiscount}%</span>
-              <span>{maxDiscount}%</span>
+            <div className="mb-4">
+              <strong>Rango de descuento (%)</strong>
+              <Slider
+                range
+                min={0}
+                max={100}
+                step={1}
+                value={[minDiscount, maxDiscount]}
+                onChange={([min, max]) => {
+                  setMinDiscount(min);
+                  setMaxDiscount(max);
+                }}
+              />
+              <div className="d-flex justify-content-between">
+                <span>{minDiscount}%</span>
+                <span>{maxDiscount}%</span>
+              </div>
             </div>
-          </div>
 
-          {/* Ordenamiento */}
-          <div className="mb-3">
-            <strong>Ordenar por:</strong>
             <Form.Select className="mt-2" value={sort} onChange={(e) => setSort(e.target.value as 'asc' | 'desc')}>
               <option value="asc">Menor precio</option>
               <option value="desc">Mayor precio</option>
@@ -207,72 +214,59 @@ export default function CategoryPage() {
               <option value="asc">Menor descuento</option>
               <option value="desc">Mayor descuento</option>
             </Form.Select>
-          </div>
 
-          {/* Botón de reinicio */}
-          <Button variant="outline-danger" className="mt-3 w-100" onClick={resetFilters}>
-            Reiniciar filtros
-          </Button>
+            <Button variant="outline-danger" className="mt-3 w-100" onClick={resetFilters}>
+              Reiniciar filtros
+            </Button>
+          </Card>
         </Col>
 
-        {/* Resultados */}
+        {/* Panel de resultados */}
         <Col md={9}>
           {loading ? (
-            <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '300px' }}>
-              <Spinner animation="border" variant="success" role="status">
-                <span className="visually-hidden">Cargando...</span>
-              </Spinner>
+            <div className="text-center my-5">
+              <Spinner animation="border" variant="success" />
+              <p className="mt-3">Cargando medicamentos...</p>
             </div>
           ) : currentMedicines.length === 0 ? (
-            <p className="text-center text-muted">No se encontraron medicamentos en esta categoría.</p>
+            <div className="text-center my-5">
+              <h4>No se encontraron medicamentos en esta categoría</h4>
+              <p>Intenta ajustar los filtros o buscar otro término.</p>
+            </div>
           ) : (
             <Row className="g-4">
               {currentMedicines.map((med, index) => {
                 const offer = med.offer_price || '$0';
                 const normal = med.normal_price || '$0';
-                const hasBothPrices = offer !== normal && normal !== '$0';
+                const hasDiscount = offer !== normal && normal !== '$0';
+                const imageUrl = med.image && med.image.trim() !== '' ? med.image : 'https://via.placeholder.com/150';
 
                 return (
-                  <Col key={index} sm={6} md={4} lg={3}>
-                    <Link
-                      href={`/comparator/categories/${encodeURIComponent(category)}/${encodeURIComponent(med.id || '0')}`}
-                      className="text-decoration-none"
-                    >
-                      <Card className="h-100 text-center shadow-sm border-0">
-                        <Card.Img
-                          variant="top"
-                          src={med.image || 'https://via.placeholder.com/150'}
-                          style={{ height: '120px', objectFit: 'contain' }}
-                          alt={med.name || 'Medicamento'}
-                        />
-                        <Card.Body>
-                          <Card.Title className="text-success fw-bold">
-                            {med.name || 'Sin nombre'}
-                          </Card.Title>
-                          <Card.Text className="text-muted mb-1">{med.pharmacy}</Card.Text>
-
-                          {hasBothPrices ? (
-                            <>
-                              <Card.Text className="text-muted text-decoration-line-through">
-                                {formatPrice(normal)}
-                              </Card.Text>
-                              <Card.Text className="fw-semibold fs-5 text-danger mb-1">
-                                {formatPrice(offer)}
-                              </Card.Text>
-                              {med.discount > 0 && (
-                                <Card.Text className="text-success small">
-                                  {med.discount}% de descuento
-                                </Card.Text>
-                              )}
-                            </>
-                          ) : (
-                            <Card.Text className="fw-semibold fs-5 text-dark">
-                              {formatPrice(offer !== '$0' ? offer : normal)}
-                            </Card.Text>
-                          )}
-                        </Card.Body>
-                      </Card>
-                    </Link>
+                  <Col key={`${med.id}-${index}`} md={6} lg={4}>
+                    <Card className="shadow-sm h-100">
+                      <Card.Img variant="top" src={imageUrl} style={{ height: '150px', objectFit: 'contain' }} />
+                      <Card.Body className="text-center">
+                        <h5 className="text-success fw-bold">{med.name || 'Sin nombre'}</h5>
+                        <p className="text-muted mb-1">{med.pharmacy}</p>
+                        {hasDiscount && (
+                          <p className="text-muted text-decoration-line-through">
+                            {formatPrice(normal)}
+                          </p>
+                        )}
+                        <p className="text-danger fw-bold fs-5">{formatPrice(offer)}</p>
+                        {parseInt(med.discount) > 0 && (
+                          <Badge bg="success" className="mb-2">
+                            {med.discount}% de descuento
+                          </Badge>
+                        )}
+                        <Link
+                          href={`/comparator/categories/${encodeURIComponent(category)}/${encodeURIComponent(med.id || '0')}`}
+                          className="btn btn-outline-success w-100 mt-2"
+                        >
+                          Ver detalles
+                        </Link>
+                      </Card.Body>
+                    </Card>
                   </Col>
                 );
               })}
@@ -281,20 +275,12 @@ export default function CategoryPage() {
 
           {/* Paginación */}
           {totalPages > 1 && (
-            <div className="d-flex justify-content-center mt-4">
-              <Button
-                variant="outline-success"
-                className="me-2"
-                disabled={currentPage === 1}
-                onClick={() => setCurrentPage((prev) => prev - 1)}
-              >
+            <div className="d-flex justify-content-center mt-4 align-items-center gap-3">
+              <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage((prev) => prev - 1)}>
                 Anterior
               </Button>
-              <Button
-                variant="outline-success"
-                disabled={currentPage === totalPages}
-                onClick={() => setCurrentPage((prev) => prev + 1)}
-              >
+              <span className="fw-semibold">Página {currentPage} de {totalPages}</span>
+              <Button variant="outline-secondary" disabled={currentPage === totalPages} onClick={() => setCurrentPage((prev) => prev + 1)}>
                 Siguiente
               </Button>
             </div>
