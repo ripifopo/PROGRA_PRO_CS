@@ -34,7 +34,9 @@ def process_file(filepath, headers):
     if not products:
         return
 
+    # Extraer categoría y subcategoría desde el primer producto
     categoria = products[0].get("categoria")
+    subcategoria = products[0].get("subcategoria")
     result = []
 
     for product in products:
@@ -60,13 +62,24 @@ def process_file(filepath, headers):
                 prices = data.get("prices", {})
                 price_offer = prices.get("price-sale-cl") or prices.get("price-list-cl")
                 price_normal = prices.get("price-list-cl") if prices.get("price-sale-cl") else None
-
                 discount = round((1 - price_offer / price_normal) * 100) if price_normal and price_normal > price_offer else 0
+
+                # Nuevos campos añadidos
+                name = data.get("name")
+                image = data.get("metaTags", {}).get("ogImage")
+                bioequivalent = data.get("isBioequivalent") is True
+                full_api_url = api_url
 
                 result.append({
                     "id": product_id,
                     "farmacia": farmacia,
                     "url": url,
+                    "api_url": full_api_url,
+                    "name": name,
+                    "image": image,
+                    "bioequivalent": bioequivalent,
+                    "category": categoria,
+                    "subcategory": subcategoria,
                     "price_offer": price_offer,
                     "price_normal": price_normal,
                     "discount": discount
