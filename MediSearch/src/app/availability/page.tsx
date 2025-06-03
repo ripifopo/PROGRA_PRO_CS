@@ -1,56 +1,69 @@
-// Archivo: src/app/availability/page.tsx
-
 'use client';
 
-// Importaciones necesarias
 import { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useLoading } from '../../context/LoadingContext.tsx';
 import { GeoAlt } from 'react-bootstrap-icons';
+import { BsPersonFill } from 'react-icons/bs'; // Ícono de persona rellena
 
-// Token de acceso de Mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
 export default function AvailabilityPage() {
-  // Referencias a contenedor del mapa y marcadores
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markerRef = useRef<mapboxgl.Marker | null>(null);
   const destinationMarkerRef = useRef<mapboxgl.Marker | null>(null);
   const routeLayerId = 'route';
 
-  // Estados locales
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [searchAddress, setSearchAddress] = useState('');
   const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
   const [selectedPharmacy, setSelectedPharmacy] = useState('all');
   const { setLoading } = useLoading();
 
-  // Retorna estilo de mapa según modo oscuro o claro
   const getMapStyle = () => isDarkMode ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/streets-v12';
 
-  // Centra el mapa en coordenadas dadas
   const centerMap = (coords: [number, number]) => {
     mapRef.current?.flyTo({ center: coords, zoom: 14 });
   };
 
-  // Centra el mapa en la ubicación actual del usuario
   const goToUserLocation = () => {
     if (userCoords) centerMap(userCoords);
   };
 
-  // Crea un marcador en el mapa (usuario o destino)
-  const createMarker = (coords: [number, number], isDestination = false) => {
+  const createMarker = (coords: [number, number], isDestination = false, isUser = false) => {
     const el = document.createElement('div');
-    el.style.width = '18px';
-    el.style.height = '18px';
-    el.style.borderRadius = '50%';
-    el.style.backgroundColor = isDestination ? '#6c63ff' : '#198754';
-    el.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
-    el.style.cursor = 'pointer';
 
-    const popup = new mapboxgl.Popup({ offset: 25 }).setText(isDestination ? 'Destino' : 'Estás aquí');
+    if (isUser) {
+      el.style.width = '42px';
+      el.style.height = '42px';
+      el.style.backgroundColor = '#fff';
+      el.style.border = '3px solid #2563eb';
+      el.style.borderRadius = '50%';
+      el.style.display = 'flex';
+      el.style.justifyContent = 'center';
+      el.style.alignItems = 'center';
+      el.style.boxShadow = '0 6px 12px rgba(37, 99, 235, 0.5)';
+      el.style.color = '#2563eb';
+      el.style.fontSize = '24px';
+
+      const reactIcon = document.createElement('div');
+      reactIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="#2563eb" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"/></svg>`;
+      reactIcon.style.width = '24px';
+      reactIcon.style.height = '24px';
+      el.appendChild(reactIcon);
+    } else {
+      el.style.width = '18px';
+      el.style.height = '18px';
+      el.style.borderRadius = '50%';
+      el.style.backgroundColor = isDestination ? '#6c63ff' : '#198754';
+      el.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+    }
+
+    const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+      isDestination ? 'Destino' : isUser ? 'Estás aquí' : ''
+    );
 
     const marker = new mapboxgl.Marker({ element: el })
       .setLngLat(coords)
@@ -60,13 +73,12 @@ export default function AvailabilityPage() {
     if (isDestination) {
       destinationMarkerRef.current?.remove();
       destinationMarkerRef.current = marker;
-    } else {
+    } else if (isUser) {
       markerRef.current?.remove();
       markerRef.current = marker;
     }
   };
 
-  // Dibuja una ruta entre dos puntos
   const drawRoute = async (from: [number, number], to: [number, number]) => {
     const query = `https://api.mapbox.com/directions/v5/mapbox/driving/${from[0]},${from[1]};${to[0]},${to[1]}?steps=true&geometries=geojson&access_token=${mapboxgl.accessToken}`;
     const res = await fetch(query);
@@ -94,62 +106,72 @@ export default function AvailabilityPage() {
       id: routeLayerId,
       type: 'line',
       source: routeLayerId,
-      layout: {
-        'line-join': 'round',
-        'line-cap': 'round',
-      },
-      paint: {
-        'line-color': '#1d4ed8',
-        'line-width': 5,
-      },
+      layout: { 'line-join': 'round', 'line-cap': 'round' },
+      paint: { 'line-color': '#1d4ed8', 'line-width': 5 },
     });
   };
-  // Guarda y referencia los marcadores creados para poder limpiarlos
-  const ahumadaMarkersRef = useRef<mapboxgl.Marker[]>([]);
 
-  // Limpia los marcadores de farmacias Ahumada del mapa
-  const clearFarmaciasAhumada = () => {
-    ahumadaMarkersRef.current.forEach((marker) => marker.remove());
-    ahumadaMarkersRef.current = [];
-  };
-
-  // Carga farmacias Ahumada desde JSON y renderiza en el mapa
-  const loadFarmaciasAhumada = async () => {
+  const loadFarmacias = async (
+    jsonPath: string,
+    color: string,
+    markerArrayRef: React.MutableRefObject<mapboxgl.Marker[]>,
+    opts: { latKey: string; lngKey: string; comunaKey: string; horarioKey: string }
+  ) => {
     try {
-      const res = await fetch("/data/farmacias_ahumada.json");
+      const res = await fetch(jsonPath);
       const farmacias = await res.json();
 
-      farmacias.forEach((f: any) => {
-        if (f.latitude && f.longitude) {
-          const el = document.createElement("div");
-          el.style.width = "16px";
-          el.style.height = "16px";
-          el.style.borderRadius = "50%";
-          el.style.backgroundColor = "red";
-          el.style.boxShadow = "0 0 6px rgba(0,0,0,0.4)";
-          el.style.cursor = "pointer";
+      farmacias.forEach((f: any, index: number) => {
+        const lat = parseFloat(f[opts.latKey]);
+        const lng = parseFloat(f[opts.lngKey]);
 
-          const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
-            <strong>${f.name}</strong><br/>
-            ${f.address}, ${f.city}<br/>
-            ☎ ${f.phone}<br/>
-            🕐 ${f.hours?.replace(/<[^>]+>/g, " ")}
-          `);
+        console.log(`[${jsonPath}] Farmacia ${index + 1}:`, { lat, lng });
 
-          const marker = new mapboxgl.Marker({ element: el })
-            .setLngLat([f.longitude, f.latitude])
-            .setPopup(popup)
-            .addTo(mapRef.current!);
+        if (isNaN(lat) || isNaN(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
 
-          ahumadaMarkersRef.current.push(marker);
-        }
+        const el = document.createElement('div');
+        el.style.width = '16px';
+        el.style.height = '16px';
+        el.style.borderRadius = '50%';
+        el.style.backgroundColor = color;
+        el.style.boxShadow = '0 0 6px rgba(0,0,0,0.4)';
+        el.style.cursor = 'pointer';
+
+        const name = f.name || `Farmacia ${index + 1}`;
+        const address = f.address || 'Dirección no disponible';
+        const comuna = f[opts.comunaKey] || '';
+        const phone = f.phone || '';
+        const horario = f[opts.horarioKey] || '';
+
+        let popupHtml = `<strong>${name}</strong><br/>${address}, ${comuna}<br/>`;
+        if (phone) popupHtml += `☎ ${phone}<br/>`;
+        if (horario) popupHtml += `🕐 ${horario}`;
+
+        const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(popupHtml);
+
+        const marker = new mapboxgl.Marker({ element: el })
+          .setLngLat([lng, lat])
+          .setPopup(popup)
+          .addTo(mapRef.current!);
+
+        markerArrayRef.current.push(marker);
       });
     } catch (error) {
-      console.error("Error al cargar farmacias Ahumada:", error);
+      console.error(`Error al cargar ${jsonPath}:`, error);
     }
   };
 
-  // Maneja búsqueda de dirección y traza ruta
+  const ahumadaMarkersRef = useRef<mapboxgl.Marker[]>([]);
+  const cruzverdeMarkersRef = useRef<mapboxgl.Marker[]>([]);
+  const salcobrandMarkersRef = useRef<mapboxgl.Marker[]>([]);
+
+  const clearMarkers = () => {
+    [...ahumadaMarkersRef.current, ...cruzverdeMarkersRef.current, ...salcobrandMarkersRef.current].forEach((m) => m.remove());
+    ahumadaMarkersRef.current = [];
+    cruzverdeMarkersRef.current = [];
+    salcobrandMarkersRef.current = [];
+  };
+
   const handleSearch = async () => {
     if (!searchAddress || !userCoords) return;
     setLoading(true);
@@ -169,7 +191,6 @@ export default function AvailabilityPage() {
     }
   };
 
-  // Maneja cancelación de búsqueda
   const handleCancel = () => {
     destinationMarkerRef.current?.remove();
     destinationMarkerRef.current = null;
@@ -180,10 +201,8 @@ export default function AvailabilityPage() {
     goToUserLocation();
   };
 
-  // Inicializa mapa y obtiene ubicación del usuario
   useEffect(() => {
     setLoading(true);
-
     if (!navigator.geolocation || mapRef.current || !mapContainerRef.current) {
       setLoading(false);
       return;
@@ -203,58 +222,51 @@ export default function AvailabilityPage() {
         const coords: [number, number] = [pos.coords.longitude, pos.coords.latitude];
         setUserCoords(coords);
         centerMap(coords);
-        createMarker(coords);
+        createMarker(coords, false, true);
         setLoading(false);
       },
       () => setLoading(false),
       { enableHighAccuracy: true, timeout: 10000 }
     );
   }, []);
-  // Cambia el estilo del mapa al activar/desactivar modo oscuro
+
   useEffect(() => {
-    if (mapRef.current) {
-      mapRef.current.setStyle(getMapStyle());
-    }
+    if (mapRef.current) mapRef.current.setStyle(getMapStyle());
   }, [isDarkMode]);
 
-  // Carga los marcadores cuando cambia el filtro de farmacias
   useEffect(() => {
     if (!mapRef.current) return;
-
-    clearFarmaciasAhumada();
+    clearMarkers();
 
     if (selectedPharmacy === 'ahumada') {
-      loadFarmaciasAhumada();
+      loadFarmacias('/data/farmacias_ahumada.json', 'red', ahumadaMarkersRef, {
+        latKey: 'latitude', lngKey: 'longitude', comunaKey: 'city', horarioKey: 'hours',
+      });
+    } else if (selectedPharmacy === 'cruzverde') {
+      loadFarmacias('/data/cruzverde.json', 'green', cruzverdeMarkersRef, {
+        latKey: 'lat', lngKey: 'lng', comunaKey: 'comuna', horarioKey: 'horario',
+      });
+    } else if (selectedPharmacy === 'salcobrand') {
+      loadFarmacias('/data/salcobrand.json', 'deepskyblue', salcobrandMarkersRef, {
+        latKey: 'latitude', lngKey: 'longitude', comunaKey: 'comuna', horarioKey: 'horario',
+      });
     }
-    // Aquí podrías luego agregar: if (selectedPharmacy === 'cruzverde') { ... }
   }, [selectedPharmacy]);
 
-  // Render de la página
   return (
     <div className="py-5 text-center">
       <div className="container">
-        {/* Ícono decorativo */}
         <GeoAlt size={60} className="text-primary mb-3" />
-
-        {/* Título principal */}
         <h1 className="display-5 fw-bold text-dark mb-2">Encuentra farmacias cercanas</h1>
-
-        {/* Subtítulo */}
         <p className="text-muted mb-4">¿Necesitas un medicamento? ¡Busca y compara farmacias cerca de ti!</p>
 
-        {/* Botones principales */}
         <div className="d-flex justify-content-center gap-3 mb-4 flex-wrap">
-          <a href="/comparator" className="btn btn-success btn-lg shadow d-flex align-items-center gap-2">
-            Comparar Medicamentos
-          </a>
+          <a href="/comparator" className="btn btn-success btn-lg shadow d-flex align-items-center gap-2">Comparar Medicamentos</a>
           {userCoords && (
-            <button className="btn btn-outline-primary btn-lg shadow" onClick={goToUserLocation}>
-              Volver a mi ubicación
-            </button>
+            <button className="btn btn-outline-primary btn-lg shadow" onClick={goToUserLocation}>Volver a mi ubicación</button>
           )}
         </div>
 
-        {/* Buscador de dirección y filtro de farmacia */}
         <div className="d-flex justify-content-center gap-2 mb-3 flex-wrap">
           <input
             type="text"
@@ -266,7 +278,6 @@ export default function AvailabilityPage() {
           <button className="btn btn-outline-success" onClick={handleSearch}>Buscar</button>
           <button className="btn btn-outline-danger" onClick={handleCancel}>Cancelar</button>
 
-          {/* Selector de farmacia */}
           <select
             className="form-select w-auto"
             value={selectedPharmacy}
@@ -274,12 +285,11 @@ export default function AvailabilityPage() {
           >
             <option value="all">Sin filtro</option>
             <option value="ahumada">Farmacias Ahumada</option>
-            <option value="cruzverde" disabled>Farmacias Cruz Verde</option>
-            <option value="salcobrand" disabled>Farmacias Salcobrand</option>
+            <option value="cruzverde">Farmacias Cruz Verde</option>
+            <option value="salcobrand">Farmacias Salcobrand</option>
           </select>
         </div>
 
-        {/* Switch de modo oscuro */}
         <div className="form-check form-switch d-flex justify-content-center align-items-center gap-2 mb-4">
           <input
             className="form-check-input"
@@ -291,7 +301,7 @@ export default function AvailabilityPage() {
           <label className="form-check-label" htmlFor="darkModeSwitch">Modo oscuro</label>
         </div>
       </div>
-      {/* Contenedor del mapa */}
+
       <div
         ref={mapContainerRef}
         className="w-100 mt-4"
