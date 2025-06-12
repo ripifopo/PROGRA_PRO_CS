@@ -1,5 +1,3 @@
-// Archivo: src/app/alerts/page.tsx
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -8,6 +6,7 @@ import { FaBell } from 'react-icons/fa';
 import { XCircleFill } from 'react-bootstrap-icons';
 import { toast } from 'react-toastify';
 
+// Definimos la interfaz para las alertas guardadas
 interface AlertData {
   _id: string;
   medicineName: string;
@@ -20,12 +19,19 @@ interface AlertData {
   createdAt: string;
 }
 
+// NUEVO: Creamos interfaz para el usuario verificado
+interface VerifiedUser {
+  email: string;
+  verified: boolean;
+}
+
 export default function AlertsPage() {
   const router = useRouter();
   const [emailVerified, setEmailVerified] = useState(false);
   const [alerts, setAlerts] = useState<AlertData[]>([]);
+  const [showVerifiedMessage, setShowVerifiedMessage] = useState(false); // ✅ Nuevo state para el mensaje bonito
 
-  // Capitaliza cada palabra de una cadena
+  // Capitalizamos los nombres de medicamentos o categorías
   const capitalizeWords = (text: string) => {
     return decodeURIComponent(text)
       .split(' ')
@@ -33,22 +39,61 @@ export default function AlertsPage() {
       .join(' ');
   };
 
+  // UseEffect principal para cargar datos al ingresar a la página
   useEffect(() => {
     const stored = localStorage.getItem('userProfile');
     if (stored) {
       const user = JSON.parse(stored);
-      if (user.verified) setEmailVerified(true);
 
-      fetch(`/api/alerts?email=${user.email}`)
+      // Consultamos al backend si está verificado en MongoDB
+      fetch(`/api/check-verification?email=${user.email}`)
         .then(res => res.json())
-        .then(setAlerts);
+        .then(data => {
+          if (data.verified) {
+            setEmailVerified(true);
+            setShowVerifiedMessage(true);  // ✅ Mostramos el mensajito al ingresar
+            fetch(`/api/alerts?email=${user.email}`)
+              .then(res => res.json())
+              .then(setAlerts);
+          } else {
+            setEmailVerified(false);
+          }
+        })
+        .catch(() => {
+          setEmailVerified(false);
+        });
     }
   }, []);
 
+  // Lógica de enviar el correo de verificación
   const handleVerifyEmail = async () => {
-    toast.success('Correo de verificación enviado. Revisa tu bandeja de entrada.');
+    try {
+      const stored = localStorage.getItem('userProfile');
+      if (!stored) {
+        toast.error("No se encontró el usuario.");
+        return;
+      }
+
+      const user = JSON.parse(stored);
+
+      // Consumimos la API que creamos anteriormente
+      const res = await fetch(`/api/send-verification`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: user.email }),
+      });
+
+      if (res.ok) {
+        toast.success('Correo de verificación enviado. Revisa tu bandeja de entrada.');
+      } else {
+        toast.error('Error al enviar el correo.');
+      }
+    } catch (err) {
+      toast.error('Error de red al enviar el correo.');
+    }
   };
 
+  // Eliminar alerta individual
   const handleDeleteAlert = async (id: string) => {
     try {
       const res = await fetch(`/api/alerts?id=${id}`, { method: 'DELETE' });
@@ -70,45 +115,63 @@ export default function AlertsPage() {
       </div>
 
       <h2 className="fw-bold text-success">Tus Alertas de Precio</h2>
-      {alerts.length === 0 ? (
+
+      {showVerifiedMessage && (
+        <div className="alert alert-success fw-bold mb-4">
+          ✅ Tu correo ha sido verificado correctamente.
+        </div>
+      )}
+
+      {emailVerified ? (
         <>
-          <p className="text-muted mt-2">Aún no tienes alertas activas.</p>
-          <p>
-            Podrás activar notificaciones desde el{' '}
-            <a href="/comparator" className="text-success fw-bold text-decoration-none">
-              comparador de medicamentos
-            </a>.
-          </p>
+          {alerts.length === 0 ? (
+            <>
+              <p className="text-muted mt-2">Aún no tienes alertas activas.</p>
+              <p>
+                Podrás activar notificaciones desde el{' '}
+                <a href="/comparator" className="text-success fw-bold text-decoration-none">
+                  comparador de medicamentos
+                </a>.
+              </p>
+            </>
+          ) : (
+            <div className="mt-4">
+              {alerts.map(alert => (
+                <div
+                  key={alert._id}
+                  className="d-flex align-items-center justify-content-between bg-light shadow-sm rounded p-3 mb-3"
+                >
+                  <div className="d-flex align-items-center gap-3">
+                    <img
+                      src={alert.imageUrl || 'https://via.placeholder.com/100'}
+                      alt={alert.medicineName}
+                      style={{ height: '90px', width: '100px', objectFit: 'contain' }}
+                    />
+                    <div className="text-start">
+                      <h6 className="text-success fw-bold mb-1 text-uppercase">{alert.medicineName}</h6>
+                      <p className="mb-0"><strong>Farmacia:</strong> {alert.pharmacy}</p>
+                      <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(alert.category)}</p>
+                    </div>
+                  </div>
+                  <button
+                    className="btn btn-link text-danger"
+                    style={{ fontSize: '1.4rem' }}
+                    title="Eliminar alerta"
+                    onClick={() => handleDeleteAlert(alert._id)}
+                  >
+                    <XCircleFill />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </>
       ) : (
-        <div className="mt-4">
-          {alerts.map(alert => (
-            <div
-              key={alert._id}
-              className="d-flex align-items-center justify-content-between bg-light shadow-sm rounded p-3 mb-3"
-            >
-              <div className="d-flex align-items-center gap-3">
-                <img
-                  src={alert.imageUrl || 'https://via.placeholder.com/100'}
-                  alt={alert.medicineName}
-                  style={{ height: '90px', width: '100px', objectFit: 'contain' }}
-                />
-                <div className="text-start">
-                  <h6 className="text-success fw-bold mb-1 text-uppercase">{alert.medicineName}</h6>
-                  <p className="mb-0"><strong>Farmacia:</strong> {alert.pharmacy}</p>
-                  <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(alert.category)}</p>
-                </div>
-              </div>
-              <button
-                className="btn btn-link text-danger"
-                style={{ fontSize: '1.4rem' }}
-                title="Eliminar alerta"
-                onClick={() => handleDeleteAlert(alert._id)}
-              >
-                <XCircleFill />
-              </button>
-            </div>
-          ))}
+        <div className="mb-4">
+          <p className="text-danger fw-bold">Debes verificar tu correo electrónico para activar las alertas.</p>
+          <button className="btn btn-outline-primary" onClick={handleVerifyEmail}>
+            Verificar correo para recibir alertas
+          </button>
         </div>
       )}
 
@@ -120,25 +183,7 @@ export default function AlertsPage() {
           <li>🔔 Recibir alertas cuando un medicamento baje de precio</li>
           <li>📉 Comparar precios entre versiones genéricas y de marca</li>
           <li>📩 Activar notificaciones por correo electrónico</li>
-          <li>💬 Recibir alertas por WhatsApp (próximamente)</li>
         </ul>
-      </div>
-
-      <div className="mb-4">
-        {emailVerified ? (
-          <p className="text-success fw-bold">Correo verificado correctamente.</p>
-        ) : (
-          <button className="btn btn-outline-primary" onClick={handleVerifyEmail}>
-            Verificar correo para recibir alertas
-          </button>
-        )}
-      </div>
-
-      <div className="mb-5">
-        <h6 className="fw-bold mb-2 text-dark">¿Prefieres WhatsApp?</h6>
-        <button className="btn btn-outline-success" disabled>
-          Conectar con WhatsApp Business (próximamente)
-        </button>
       </div>
     </div>
   );

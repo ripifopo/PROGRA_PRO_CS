@@ -15,3 +15,4 @@ export const priceHistoryCollection = db.collection("price_history");
 export const usersCollection = db.collection("users");
 export const frequentMedicinesCollection = db.collection("frequent_medicines");
 export const alertsCollection = db.collection("alerts");
+export const verifiedUsersCollection = db.collection("verified_users");
