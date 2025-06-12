@@ -1,0 +1,122 @@
+{
+  "sistema-nervioso": [
+    "antidepresivos",
+    "antipsicoticos",
+    "anticonvulsivantes",
+    "ansioliticos",
+    "naturales",
+    "inductores-del-sueno",
+    "estimulantes",
+    "estabilizadores-de-animo",
+    "vertigo-y-nauseas"
+  ],
+  "dolor--fiebre-e-inflamacion": [
+    "analgesicos-1",
+    "antiinflamatorios",
+    "corticoides",
+    "migraña",
+    "antigotosos-1",
+    "anestesico-local"
+  ],
+  "sistema-respiratorio-y-alergias": [
+    "antialergicos",
+    "broncodilatadores",
+    "antitusivos",
+    "descongestionantes",
+    "gripe-y-resfrios",
+    "antiasmaticos",
+    "antisepticos-orales",
+    "corticoides-inhalados"
+  ],
+  "enfermedades-especificas": [
+    "antiinfecciosos",
+    "inmunologicos",
+    "cancer",
+    "alzheimer",
+    "parkinson",
+    "covid---19",
+    "tratamiento-adicciones",
+    "trastornos-del-crecimiento"
+  ],
+  "hipertension": [
+    "antihipertensivos",
+    "diureticos",
+    "antiarritmicos"
+  ],
+  "sistema-digestivo": [
+    "probioticos",
+    "antiulcerosos",
+    "laxantes",
+    "antiespasmodicos",
+    "antiacidos",
+    "digestivos",
+    "antidiarreicos",
+    "antiinflamatorio-intestinal",
+    "rehidratantes",
+    "control-de-peso",
+    "nauseas",
+    "antiflatulentos",
+    "analgesicos-bucales",
+    "antisepticos-bucales"
+  ],
+  "dermatologicos": [
+    "antimicoticos",
+    "corticoides",
+    "antiacne",
+    "antibioticos",
+    "antisepticos-topicos",
+    "alopecia",
+    "pediculosis",
+    "antivirales",
+    "inmunomoduladores",
+    "despigmentante",
+    "regeneradores-de-tejido",
+    "verrugas-y-callos"
+  ],
+  "oftalmologicos": [
+    "lubricantes-o-lagrimas-artificiales",
+    "antiinfecciosos",
+    "antiglaucomatosos",
+    "analgesicos-oftalmicos",
+    "corticoides",
+    "descongestionantes",
+    "antihistaminicos",
+    "inmunomoduladores",
+    "midriaticos-cicloplejicos"
+  ],
+  "anticonceptivos-y-hormonas": [
+    "anticonceptivos",
+    "hormonas"
+  ],
+  "diabetes": [
+    "orales",
+    "inyectables",
+    "autocontrol-de-glicemia"
+  ],
+  "genitourinarios": [
+    "disfuncion-erectil",
+    "antimicoticos",
+    "endometriosis",
+    "prostata",
+    "tratamiento-de-fertilidad",
+    "antiespasmodicos",
+    "antibioticos",
+    "antihemorroidales"
+  ],
+  "sistema-cardiovascular": [
+    "anticoagulantes",
+    "antianemicos",
+    "vasodilatadores",
+    "antianginosos",
+    "insuficiencia-cardiaca"
+  ],
+  "huesos-y-articulaciones": [
+    "osteoporosis",
+    "relajantes-musculares",
+    "artritis-y-artrosis"
+  ],
+  "antiparasitarios-internos": [
+    "antihelminticos",
+    "antimalaricos"
+  ]
+}

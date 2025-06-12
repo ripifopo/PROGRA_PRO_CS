@@ -1,4 +1,3 @@
-import os
 import json
 import httpx
 import re
@@ -9,13 +8,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
 
 # Ruta de entrada y salida
-INPUT_DIR = Path("../product_jsons_limpios/cruzverde_jsons_limpios")
+INPUT_FILE = Path("../url_extractor/extracted_urls/cruzverde_urls.json")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 OUTPUT_DIR = Path(f"../product_updates/cruzverde/{timestamp}")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_URL = "https://api.cruzverde.cl/product-service/products/detail/{}?inventoryId=zonaS2Soriente"
 
-# 🔐 Obtener cookie válida automáticamente
 def get_cruzverde_cookie():
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -26,23 +25,17 @@ def get_cruzverde_cookie():
         browser.close()
         return "; ".join([f"{c['name']}={c['value']}" for c in cookies])
 
-# 🗂 Procesar un archivo JSON de productos
-def process_file(filepath, headers):
-    with open(filepath, "r", encoding="utf-8") as f:
-        products = json.load(f)
+def extract_id_from_url(url):
+    match = re.search(r"/(\d+)\.html", url)
+    return match.group(1) if match else None
 
-    if not products:
-        return
-
-    # Extraer categoría y subcategoría desde el primer producto
-    categoria = products[0].get("categoria")
-    subcategoria = products[0].get("subcategoria")
+def process_category(categoria, urls, headers):
     result = []
-
-    for product in products:
-        product_id = product.get("id")
-        url = product.get("url")
-        farmacia = product.get("farmacia")
+    for url in urls:
+        product_id = extract_id_from_url(url)
+        if not product_id:
+            print(f"❌ No se pudo extraer ID de: {url}")
+            continue
 
         for attempt in range(2):
             try:
@@ -64,22 +57,16 @@ def process_file(filepath, headers):
                 price_normal = prices.get("price-list-cl") if prices.get("price-sale-cl") else None
                 discount = round((1 - price_offer / price_normal) * 100) if price_normal and price_normal > price_offer else 0
 
-                # Nuevos campos añadidos
-                name = data.get("name")
-                image = data.get("metaTags", {}).get("ogImage")
-                bioequivalent = data.get("isBioequivalent") is True
-                full_api_url = api_url
-
                 result.append({
-                    "id": product_id,
-                    "farmacia": farmacia,
-                    "url": url,
-                    "api_url": full_api_url,
-                    "name": name,
-                    "image": image,
-                    "bioequivalent": bioequivalent,
-                    "category": categoria,
-                    "subcategory": subcategoria,
+                    "id": int(product_id),
+                    "pharmacy": "Farmacia Cruz Verde",
+                    "url": f"https://www.cruzverde.cl/{data.get("name")}/{product_id}.html",
+                    "api_url": api_url,
+                    "name": data.get("name"),
+                    "image": data.get("metaTags", {}).get("ogImage"),
+                    "bioequivalent": data.get("isBioequivalent") is True,
+                    "category": categoria.split("/")[0],
+                    "subcategory": categoria.split("/")[1] if "/" in categoria else None,
                     "price_offer": price_offer,
                     "price_normal": price_normal,
                     "discount": discount
@@ -87,20 +74,25 @@ def process_file(filepath, headers):
                 break
 
             except Exception as e:
-                print(f"⚠️ Error en {product_id}: {e}")
+                print(f"⚠️ Error en producto {product_id}: {e}")
                 break
 
         time.sleep(0.2)
 
-    # Guardar resultados
-    output_path = OUTPUT_DIR / f"{categoria}.json"
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
-    print(f"✅ Guardado: {output_path}")
+    if result:
+        output_path = OUTPUT_DIR / f"{categoria.split('/')[0]}.json"
+        existing = []
+        if output_path.exists():
+            with open(output_path, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(existing + result, f, indent=2, ensure_ascii=False)
+        print(f"✅ Guardado: {output_path} ({len(result)} productos)")
 
-# 🚀 Ejecutar en paralelo por archivo
 def main():
+    with open(INPUT_FILE, "r", encoding="utf-8") as f:
+        category_urls = json.load(f)
+
     cookie = get_cruzverde_cookie()
     headers = {
         "Accept": "application/json",
@@ -109,13 +101,10 @@ def main():
         "Cookie": cookie
     }
 
-    files = list(INPUT_DIR.glob("*.json"))
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
     with ThreadPoolExecutor(max_workers=6) as executor:
         futures = {
-            executor.submit(process_file, file, headers.copy()): file.name
-            for file in files
+            executor.submit(process_category, categoria, urls, headers.copy()): categoria
+            for categoria, urls in category_urls.items()
         }
         for future in as_completed(futures):
             name = futures[future]
