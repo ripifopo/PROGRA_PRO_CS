@@ -4,24 +4,20 @@ import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useLoading } from '../../../context/LoadingContext.tsx';
-import { useAuth } from '../../../context/AuthContext'; // ✅ Importamos el contexto de autenticación
+import { useAuth } from '../../../context/AuthContext';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function LoginPage() {
+export default function LoginClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setLoading } = useLoading();
-  const { login } = useAuth(); // ✅ Obtenemos la función login() del contexto
+  const { login } = useAuth();
 
-  // Estado del formulario de login
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
 
-  /**
-   * Si existe un último registro reciente, se autocompleta para facilitar el inicio de sesión.
-   */
   useEffect(() => {
     const last = localStorage.getItem('lastRegister');
     if (last) {
@@ -31,16 +27,10 @@ export default function LoginPage() {
     }
   }, []);
 
-  /**
-   * Maneja los cambios en los campos del formulario.
-   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  /**
-   * Valida que el formulario tenga todos los campos necesarios.
-   */
   const validateForm = () => {
     const { email, password } = formData;
     if (!email || !password) {
@@ -54,10 +44,6 @@ export default function LoginPage() {
     return true;
   };
 
-  /**
-   * Maneja el envío del formulario de inicio de sesión.
-   * Redirige al destino original si se especificó mediante `?redirect=`.
-   */
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -74,7 +60,6 @@ export default function LoginPage() {
       const result = await res.json();
 
       if (res.ok) {
-        // Guardado en localStorage para mantener sesión
         toast.success("Inicio de sesión exitoso.");
         localStorage.setItem('token', result.token);
         localStorage.setItem('userProfile', JSON.stringify(result.user));
@@ -83,9 +68,8 @@ export default function LoginPage() {
           comuna: result.user.comuna
         }));
 
-        login(); // ✅ Activamos el contexto global para reflejar el estado logueado
+        login();
 
-        // Redirección segura
         const redirect = searchParams.get('redirect');
         const safeRedirect = redirect ? decodeURIComponent(redirect) : '/profile';
         router.push(safeRedirect);
@@ -133,7 +117,10 @@ export default function LoginPage() {
         </div>
 
         <div className="text-center mt-2">
-          <a href={`/auth/register${searchParams.get('redirect') ? `?redirect=${searchParams.get('redirect')}` : ''}`} className="text-decoration-none">
+          <a
+            href={`/auth/register${searchParams.get('redirect') ? `?redirect=${searchParams.get('redirect')}` : ''}`}
+            className="text-decoration-none"
+          >
             ¿No tienes cuenta? Regístrate aquí
           </a>
         </div>

@@ -1,4 +1,3 @@
-// src/app/auth/register/page.tsx
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -6,12 +5,11 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useLoading } from '../../../context/LoadingContext.tsx';
 
-export default function RegisterPage() {
+export default function RegisterClient() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setLoading } = useLoading();
 
-  // Estado para los campos del formulario de registro
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -22,7 +20,6 @@ export default function RegisterPage() {
     comuna: ''
   });
 
-  // Intenta detectar automáticamente la región mediante geolocalización y Nominatim
   useEffect(() => {
     if (!navigator.geolocation) {
       toast.error('Geolocalización no soportada por tu navegador');
@@ -49,12 +46,10 @@ export default function RegisterPage() {
     );
   }, []);
 
-  // Manejador para actualizar el formulario
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Validaciones básicas del formulario
   const validateForm = () => {
     const { email, password, name, lastname, birthday, region, comuna } = formData;
 
@@ -82,7 +77,6 @@ export default function RegisterPage() {
     return true;
   };
 
-  // Enviar el formulario y redirigir con redirect conservado si corresponde
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
