@@ -1,13 +1,13 @@
-// ✅ Página de detalle del medicamento con stock dinámico y redirección inteligente
-
+// Archivo: src/app/comparator/categories/[category]/[medicine]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { useLoading } from '../../../../../context/LoadingContext.tsx';
+import { useLoading } from '../../../../../context/LoadingContext';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { FaHeart, FaBell } from 'react-icons/fa';
+import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
+import StockLocationModal from '@/app/components/StockLocationModal';
 
 // Interfaz para tipar el medicamento
 interface Medicine {
@@ -30,8 +30,9 @@ export default function MedicineDetailPage() {
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [isFrequent, setIsFrequent] = useState<boolean>(false);
   const [isAlerted, setIsAlerted] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState(false);
 
-  // 🔁 Al montar, buscar el medicamento y verificar login
+  // 🔁 Al montar la página, buscar el medicamento desde la API y verificar el login
   useEffect(() => {
     const fetchAndMatchMedicine = async () => {
       try {
@@ -92,14 +93,14 @@ export default function MedicineDetailPage() {
     fetchAndMatchMedicine();
   }, [medicine, category, router, setLoading]);
 
-  // 🧮 Formato CLP
+  // 🧮 Da formato CLP a precios
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
     const clean = price.replace(/[^0-9]/g, '');
     return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // % de descuento
+  // 🧮 Calcula porcentaje de descuento si aplica
   const calculateDiscount = () => {
     if (!medData) return null;
     const offer = parseInt(medData.offer_price.replace(/\D/g, ''));
@@ -108,7 +109,7 @@ export default function MedicineDetailPage() {
     return Math.round(100 - (offer / normal) * 100);
   };
 
-  // Guardar frecuente
+  // 🔘 Guarda el medicamento como frecuente
   const handleSaveFrequent = async () => {
     if (!userEmail || !medData) {
       const currentPath = `/comparator/categories/${category}/${medicine}`;
@@ -146,7 +147,7 @@ export default function MedicineDetailPage() {
     }
   };
 
-  // Crear alerta
+  // 🔔 Crea una alerta para el medicamento
   const handleCreateAlert = async () => {
     if (!userEmail || !medData) {
       const currentPath = `/comparator/categories/${category}/${medicine}`;
@@ -225,7 +226,7 @@ export default function MedicineDetailPage() {
 
           <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
 
-          <div className="d-flex align-items-center gap-3 mt-3">
+          <div className="d-flex align-items-center gap-3 mt-3 flex-wrap">
             <a
               href={medData.url}
               target="_blank"
@@ -275,9 +276,26 @@ export default function MedicineDetailPage() {
             >
               <FaBell size={18} color="black" />
             </button>
+
+            <Button variant="outline-success" onClick={() => setShowModal(true)}>
+              Ver stock en tu comuna
+            </Button>
+
+            <Button variant="outline-primary" onClick={() => router.push(`/availability?redirect=${encodeURIComponent(`/comparator/categories/${category}/${medicine}`)}`)}>
+              <FaMapMarkerAlt className="me-2" /> Farmacia cercana
+            </Button>
           </div>
         </Col>
       </Row>
+
+      <StockLocationModal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        onSelect={(region, commune) => {
+          toast.info(`Región: ${region}, Comuna: ${commune}`);
+        }}
+        pharmacy={medData.pharmacy || ''}
+      />
     </Container>
   );
 }
