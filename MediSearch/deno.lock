@@ -1,10 +1,8 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@types/node@20": "20.17.28",
     "npm:@types/react-dom@19": "19.0.4_@types+react@19.0.12",
-    "npm:@types/react@19": "19.0.12",
-    "npm:typescript@5": "5.8.2"
+    "npm:@types/react@19": "19.0.12"
   },
   "npm": {
     "@emnapi/runtime@1.4.0": {
@@ -174,12 +172,6 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@types/node@20.17.28": {
-      "integrity": "sha512-DHlH/fNL6Mho38jTy7/JT7sn2wnXI+wULR6PV4gy4VHLVvnrV/d3pHAMQHhc4gjdLmK2ZiPoMxzp6B3yRajLSQ==",
-      "dependencies": [
-        "undici-types"
-      ]
-    },
     "@types/react-dom@19.0.4_@types+react@19.0.12": {
       "integrity": "sha512-4fSQ8vWFkg+TGhePfUzVmat3eC14TXYSsiiDSLI0dVLsrm9gZFABjPy/Qu6TKgl1tq1Bu1yDsuQgY3A3DOjCcg==",
       "dependencies": [
@@ -263,13 +255,6 @@
       "dependencies": [
         "is-arrayish"
       ]
-    },
-    "typescript@5.8.2": {
-      "integrity": "sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==",
-      "bin": true
-    },
-    "undici-types@6.19.8": {
-      "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
     }
   },
   "remote": {
@@ -285,9 +270,9 @@
       "dependencies": [
         "npm:@mapbox/mapbox-gl-directions@^4.3.1",
         "npm:@types/mapbox-gl@^3.4.1",
-        "npm:@types/node@20",
+        "npm:@types/node@^20.19.0",
+        "npm:@types/nodemailer@^6.4.17",
         "npm:@types/react-dom@19",
-        "npm:@types/react-slider@^1.3.6",
         "npm:@types/react@19",
         "npm:axios@^1.9.0",
         "npm:bcryptjs@^3.0.2",
@@ -300,18 +285,19 @@
         "npm:mongodb@^6.15.0",
         "npm:multi-range-slider-react@^2.0.7",
         "npm:next-auth@^4.24.11",
-        "npm:next@15.2.4",
+        "npm:next@^15.2.4",
+        "npm:nodemailer@^6.10.1",
         "npm:rc-slider@^11.1.8",
         "npm:react-bootstrap-icons@^1.11.5",
         "npm:react-bootstrap-range-slider@^3.0.8",
         "npm:react-bootstrap@^2.10.10",
-        "npm:react-dom@19",
+        "npm:react-dom@^19.1.0",
         "npm:react-icons@^5.5.0",
-        "npm:react-slider@^2.0.6",
         "npm:react-toastify@^11.0.5",
         "npm:react@^19.1.0",
         "npm:swiper@^11.2.8",
-        "npm:typescript@5"
+        "npm:typescript@^5.8.3",
+        "npm:uuid@^11.1.0"
       ]
     }
   }

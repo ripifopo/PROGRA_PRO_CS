@@ -1,6 +1,6 @@
 // Archivo: src/lib/insertMedicines.ts
 
-import { MongoClient } from "npm:mongodb";
+import { MongoClient } from "mongodb"; // ✅ Esto sí funciona en Vercel;
 import { normalizeCategoryName } from "./utils/normalizeCategories.ts";
 
 // ✅ Carga la URI desde el archivo .env (pasado por --env al ejecutar)
