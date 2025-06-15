@@ -44,7 +44,6 @@ export default function CategoryPage() {
       const data = await res.json();
       setMedicines(data);
 
-      // ✅ Manejo seguro del tipado con validación por Array.isArray
       const prices = data.flatMap((pharmacy: any) => {
         const entries = Object.entries(pharmacy.categories || {});
         return entries.flatMap(([cat, meds]) => {
@@ -172,9 +171,11 @@ export default function CategoryPage() {
                 max={maxPrice}
                 step={500}
                 value={[minPrice, maxPrice]}
-                onChange={([min, max]) => {
-                  setMinPrice(min);
-                  setMaxPrice(max);
+                onChange={(value) => {
+                  if (Array.isArray(value) && value.length === 2) {
+                    setMinPrice(value[0]);
+                    setMaxPrice(value[1]);
+                  }
                 }}
               />
               <div className="d-flex justify-content-between">
@@ -191,9 +192,11 @@ export default function CategoryPage() {
                 max={100}
                 step={1}
                 value={[minDiscount, maxDiscount]}
-                onChange={([min, max]) => {
-                  setMinDiscount(min);
-                  setMaxDiscount(max);
+                onChange={(value) => {
+                  if (Array.isArray(value) && value.length === 2) {
+                    setMinDiscount(value[0]);
+                    setMaxDiscount(value[1]);
+                  }
                 }}
               />
               <div className="d-flex justify-content-between">
