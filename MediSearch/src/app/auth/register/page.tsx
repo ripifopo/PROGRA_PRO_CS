@@ -1,11 +1,19 @@
 'use client';
 
+import { Suspense, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useLoading } from '../../../context/LoadingContext.tsx';
 
-export default function RegisterClient() {
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div className="text-center my-5">Cargando formulario de registro...</div>}>
+      <RegisterHandler />
+    </Suspense>
+  );
+}
+
+function RegisterHandler() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setLoading } = useLoading();

@@ -1,13 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { useLoading } from '../../../context/LoadingContext.tsx';
 import { useAuth } from '../../../context/AuthContext';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function LoginClient() {
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="text-center my-5">Cargando formulario de ingreso...</div>}>
+      <LoginHandler />
+    </Suspense>
+  );
+}
+
+function LoginHandler() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setLoading } = useLoading();
