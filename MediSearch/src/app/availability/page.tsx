@@ -5,7 +5,8 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { useLoading } from '../../context/LoadingContext.tsx';
 import { GeoAlt } from 'react-bootstrap-icons';
-import { BsPersonFill } from 'react-icons/bs'; // Ícono de persona rellena
+import { BsPersonFill } from 'react-icons/bs';
+import type { Feature, LineString } from 'geojson';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoicmlwaWZvcG8iLCJhIjoiY204dzUyNTRhMTZwYzJzcTJmaDZ4YW9heSJ9.ZTqxKk7RvUkKYw-ViqZeBA';
 
@@ -86,7 +87,7 @@ export default function AvailabilityPage() {
     const route = data.routes?.[0]?.geometry;
     if (!route) return;
 
-    const routeGeoJSON = {
+    const routeGeoJSON: Feature<LineString> = {
       type: 'Feature',
       properties: {},
       geometry: route,
@@ -124,8 +125,6 @@ export default function AvailabilityPage() {
       farmacias.forEach((f: any, index: number) => {
         const lat = parseFloat(f[opts.latKey]);
         const lng = parseFloat(f[opts.lngKey]);
-
-        console.log(`[${jsonPath}] Farmacia ${index + 1}:`, { lat, lng });
 
         if (isNaN(lat) || isNaN(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
 
