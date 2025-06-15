@@ -12,8 +12,8 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
       <div className="container">
-        {/* Logo de MediSearch */}
-        <a className="navbar-brand fw-bold text-success" href="/">MediSearch</a>
+        {/* Logo de PharmaSearch */}
+        <a className="navbar-brand fw-bold text-success" href="/">PharmaSearch</a>
 
         {/* Botón para responsive */}
         <button

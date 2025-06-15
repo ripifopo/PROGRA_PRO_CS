@@ -1,3 +1,5 @@
+// Archivo: src/app/page.tsx o HomePage.tsx (según tu estructura)
+
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
@@ -13,7 +15,6 @@ import {
 } from 'react-bootstrap-icons';
 import { Button } from 'react-bootstrap';
 
-// Interfaz del medicamento frecuente
 interface FrequentMedicine {
   userEmail: string;
   medicineName: string;
@@ -24,7 +25,6 @@ interface FrequentMedicine {
   savedAt: string;
 }
 
-// Función para capitalizar texto
 const capitalizeCategory = (text: string) => {
   return decodeURIComponent(text)
     .split(' ')
@@ -38,7 +38,6 @@ export default function HomePage() {
   const [frequentList, setFrequentList] = useState<FrequentMedicine[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Obtener medicamentos frecuentes desde la API
   useEffect(() => {
     const stored = localStorage.getItem('userProfile');
     if (!stored) return;
@@ -63,7 +62,6 @@ export default function HomePage() {
     fetchFrequent();
   }, []);
 
-  // Función para desplazar horizontalmente
   const handleScroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       const scrollAmount = direction === 'left' ? -300 : 300;
@@ -74,7 +72,7 @@ export default function HomePage() {
   return (
     <div className="py-5 text-center container">
       <HeartPulse size={70} className="text-success mb-4" />
-      <h1 className="display-3 fw-bold text-success mb-3">Bienvenido a MediSearch</h1>
+      <h1 className="display-3 fw-bold text-success mb-3">Bienvenido a PharmaSearch</h1>
       <p className="lead text-muted mb-5">
         Compara precios, consulta disponibilidad y encuentra tu farmacia más cercana.
       </p>
@@ -159,11 +157,11 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Footer con ícono */}
+      {/* Footer */}
       <div className="mt-5 text-muted">
         <Capsule size={40} className="mb-3 text-secondary" />
         <p className="mb-0">
-          MediSearch te ayuda a cuidar tu salud, optimizar tus tratamientos y ahorrar en cada compra.
+          PharmaSearch te ayuda a cuidar tu salud, optimizar tus tratamientos y ahorrar en cada compra.
         </p>
       </div>
     </div>
