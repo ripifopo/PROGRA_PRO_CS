@@ -1,3 +1,4 @@
+// Archivo: src/app/comparator/categories/[category]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -23,12 +24,16 @@ export default function CategoryPage() {
 
   const [minPrice, setMinPrice] = useState(1);
   const [maxPrice, setMaxPrice] = useState(1000000);
+  const [priceRange, setPriceRange] = useState<[number, number]>([1, 1000000]);
+
   const [minDiscount, setMinDiscount] = useState(0);
   const [maxDiscount, setMaxDiscount] = useState(100);
+  const [discountRange, setDiscountRange] = useState<[number, number]>([0, 100]);
 
-  const medicinesPerPage = 12;
-  const indexOfLastMedicine = currentPage * medicinesPerPage;
-  const indexOfFirstMedicine = indexOfLastMedicine - medicinesPerPage;
+  const [itemsPerPage, setItemsPerPage] = useState(12);
+
+  const indexOfLastMedicine = currentPage * itemsPerPage;
+  const indexOfFirstMedicine = indexOfLastMedicine - itemsPerPage;
 
   useEffect(() => {
     if (!rawCategory) return;
@@ -47,7 +52,6 @@ export default function CategoryPage() {
       const prices = data.flatMap((pharmacy: any) => {
         const entries = Object.entries(pharmacy.categories || {});
         return entries.flatMap(([cat, meds]) => {
-          if (typeof cat !== 'string' || !Array.isArray(meds)) return [];
           if (cat.toLowerCase() !== category.toLowerCase()) return [];
           return meds
             .map((med) => parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0'))
@@ -56,28 +60,22 @@ export default function CategoryPage() {
       });
 
       const maxDetected = Math.max(...prices);
+      const maxP = isFinite(maxDetected) && maxDetected > 0 ? maxDetected : 1000000;
       setMinPrice(1);
-      setMaxPrice(isFinite(maxDetected) && maxDetected > 0 ? maxDetected : 1000000);
+      setMaxPrice(maxP);
+      setPriceRange([1, maxP]);
+      setDiscountRange([0, 100]);
       setLoading(false);
     };
 
     fetchMedicines();
   }, [category]);
 
-  const formatPrice = (price: string) => {
-    if (!price || price === '$0') return 'No disponible';
-    const clean = price.replace(/[^0-9]/g, '');
-    return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  };
-
   const filteredMedicines = medicines.flatMap((pharmacy: any) => {
     const entries = Object.entries(pharmacy.categories || {});
     return entries.flatMap(([cat, meds]) => {
-      if (typeof cat !== 'string' || !Array.isArray(meds)) return [];
-      if (cat.toLowerCase() === category.toLowerCase()) {
-        return meds.map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
-      }
-      return [];
+      if (cat.toLowerCase() !== category.toLowerCase()) return [];
+      return meds.map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
     });
   })
     .filter((med) => {
@@ -87,10 +85,10 @@ export default function CategoryPage() {
       return (
         med.name?.toLowerCase().includes(search.toLowerCase()) &&
         pharmacyOk &&
-        offer >= minPrice &&
-        offer <= maxPrice &&
-        discount >= minDiscount &&
-        discount <= maxDiscount
+        offer >= priceRange[0] &&
+        offer <= priceRange[1] &&
+        discount >= discountRange[0] &&
+        discount <= discountRange[1]
       );
     })
     .sort((a, b) => {
@@ -104,7 +102,7 @@ export default function CategoryPage() {
     });
 
   const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
-  const totalPages = Math.ceil(filteredMedicines.length / medicinesPerPage);
+  const totalPages = Math.ceil(filteredMedicines.length / itemsPerPage);
 
   const togglePharmacy = (value: string) => {
     setCurrentPage(1);
@@ -118,11 +116,15 @@ export default function CategoryPage() {
     setPharmacyFilter([]);
     setSort('asc');
     setSortDiscount('');
-    setMinPrice(1);
-    setMaxPrice(1000000);
-    setMinDiscount(0);
-    setMaxDiscount(100);
+    setPriceRange([1, maxPrice]);
+    setDiscountRange([0, 100]);
     setCurrentPage(1);
+  };
+
+  const formatPrice = (price: string) => {
+    if (!price || price === '$0') return 'No disponible';
+    const clean = price.replace(/[^0-9]/g, '');
+    return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
   return (
@@ -167,41 +169,31 @@ export default function CategoryPage() {
               <strong>Rango de precio</strong>
               <Slider
                 range
-                min={1}
+                min={minPrice}
                 max={maxPrice}
                 step={500}
-                value={[minPrice, maxPrice]}
-                onChange={(value) => {
-                  if (Array.isArray(value) && value.length === 2) {
-                    setMinPrice(value[0]);
-                    setMaxPrice(value[1]);
-                  }
-                }}
+                value={priceRange}
+                onChange={(value) => Array.isArray(value) && setPriceRange([value[0], value[1]])}
               />
               <div className="d-flex justify-content-between">
-                <span>${minPrice}</span>
-                <span>${maxPrice}</span>
+                <span>${priceRange[0]}</span>
+                <span>${priceRange[1]}</span>
               </div>
             </div>
 
             <div className="mb-4">
-              <strong>Rango de descuento (%)</strong>
+              <strong>Descuento (%)</strong>
               <Slider
                 range
                 min={0}
                 max={100}
                 step={1}
-                value={[minDiscount, maxDiscount]}
-                onChange={(value) => {
-                  if (Array.isArray(value) && value.length === 2) {
-                    setMinDiscount(value[0]);
-                    setMaxDiscount(value[1]);
-                  }
-                }}
+                value={discountRange}
+                onChange={(value) => Array.isArray(value) && setDiscountRange([value[0], value[1]])}
               />
               <div className="d-flex justify-content-between">
-                <span>{minDiscount}%</span>
-                <span>{maxDiscount}%</span>
+                <span>{discountRange[0]}%</span>
+                <span>{discountRange[1]}%</span>
               </div>
             </div>
 
@@ -214,6 +206,15 @@ export default function CategoryPage() {
               <option value="">No ordenar por descuento</option>
               <option value="asc">Menor descuento</option>
               <option value="desc">Mayor descuento</option>
+            </Form.Select>
+
+            <Form.Select className="mt-3" value={itemsPerPage} onChange={(e) => {
+              setItemsPerPage(parseInt(e.target.value));
+              setCurrentPage(1);
+            }}>
+              <option value={12}>Ver 12 medicamentos</option>
+              <option value={24}>Ver 24 medicamentos</option>
+              <option value={36}>Ver 36 medicamentos</option>
             </Form.Select>
 
             <Button variant="outline-danger" className="mt-3 w-100" onClick={resetFilters}>
@@ -230,8 +231,8 @@ export default function CategoryPage() {
             </div>
           ) : currentMedicines.length === 0 ? (
             <div className="text-center my-5">
-              <h4>No se encontraron medicamentos en esta categoría</h4>
-              <p>Intenta ajustar los filtros o buscar otro término.</p>
+              <h4>No se encontraron medicamentos</h4>
+              <p>Prueba otros filtros o términos.</p>
             </div>
           ) : (
             <Row className="g-4">
@@ -242,22 +243,18 @@ export default function CategoryPage() {
                 const imageUrl = med.image && med.image.trim() !== '' ? med.image : 'https://via.placeholder.com/150';
 
                 return (
-                  <Col key={`${med.id}-${index}`} md={6} lg={4}>
+                  <Col key={`${med.id}-${index}`} xs={12} sm={6} md={itemsPerPage === 36 ? 4 : 6} lg={itemsPerPage === 12 ? 4 : 3}>
                     <Card className="shadow-sm h-100">
                       <Card.Img variant="top" src={imageUrl} style={{ height: '150px', objectFit: 'contain' }} />
                       <Card.Body className="text-center">
                         <h5 className="text-success fw-bold">{med.name || 'Sin nombre'}</h5>
                         <p className="text-muted mb-1">{med.pharmacy}</p>
                         {hasDiscount && (
-                          <p className="text-muted text-decoration-line-through">
-                            {formatPrice(normal)}
-                          </p>
+                          <p className="text-muted text-decoration-line-through">{formatPrice(normal)}</p>
                         )}
                         <p className="text-danger fw-bold fs-5">{formatPrice(offer)}</p>
                         {parseInt(med.discount) > 0 && (
-                          <Badge bg="success" className="mb-2">
-                            {med.discount}% de descuento
-                          </Badge>
+                          <Badge bg="success" className="mb-2">{med.discount}% de descuento</Badge>
                         )}
                         <Link
                           href={`/comparator/categories/${encodeURIComponent(category)}/${encodeURIComponent(med.id || '0')}`}
@@ -275,11 +272,11 @@ export default function CategoryPage() {
 
           {totalPages > 1 && (
             <div className="d-flex justify-content-center mt-4 align-items-center gap-3">
-              <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage((prev) => prev - 1)}>
+              <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage(prev => prev - 1)}>
                 Anterior
               </Button>
               <span className="fw-semibold">Página {currentPage} de {totalPages}</span>
-              <Button variant="outline-secondary" disabled={currentPage === totalPages} onClick={() => setCurrentPage((prev) => prev + 1)}>
+              <Button variant="outline-secondary" disabled={currentPage === totalPages} onClick={() => setCurrentPage(prev => prev + 1)}>
                 Siguiente
               </Button>
             </div>
