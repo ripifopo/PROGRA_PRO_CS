@@ -1,11 +1,7 @@
-// Para uso en Next.js (no usar "npm:" ni Deno imports)
 import { MongoClient } from "mongodb";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const uri = process.env.MONGODB_URI;
-if (!uri) throw new Error("No se encontró MONGODB_URI");
+if (!uri) throw new Error("❌ No se encontró MONGODB_URI");
 
 const client = new MongoClient(uri);
 const db = client.db("medisearch");
