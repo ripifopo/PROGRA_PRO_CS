@@ -9,7 +9,7 @@ export default function CategoriesPage() {
   const [categories, setCategories] = useState<string[]>([]);
   const [ready, setReady] = useState(false);
 
-  // Capitaliza cada palabra
+  // Capitaliza cada palabra del nombre de la categoría
   const capitalizeWords = (str: string) => {
     return str
       .toLowerCase()
@@ -18,6 +18,7 @@ export default function CategoriesPage() {
       .join(' ');
   };
 
+  // Carga las categorías desde la API
   useEffect(() => {
     const fetchCategories = async () => {
       setLoading(true);
@@ -40,7 +41,7 @@ export default function CategoriesPage() {
 
   return (
     <div className="container py-5">
-      {/* Botón Volver al Comparador */}
+      {/* Botón para volver al comparador */}
       <div className="mb-4">
         <Link href="/comparator" className="btn btn-outline-success">
           ← Volver al Comparador
@@ -53,7 +54,7 @@ export default function CategoriesPage() {
         <p className="text-muted">Selecciona una categoría para explorar los medicamentos disponibles</p>
       </div>
 
-      {/* Lista de Categorías */}
+      {/* Tarjetas de categorías */}
       <div className="row justify-content-center g-4">
         {categories.map((category, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-4">
@@ -61,7 +62,7 @@ export default function CategoriesPage() {
               href={`/comparator/categories/${encodeURIComponent(category)}`}
               className="text-decoration-none"
             >
-              <div className="card h-100 shadow-sm border-0 text-center p-5 bg-light hover-shadow">
+              <div className="card h-100 shadow-sm border-0 text-center p-5 bg-light hover-effect rounded-4">
                 <h5 className="card-title text-success fw-bold">
                   {capitalizeWords(category.replace(/-/g, ' '))}
                 </h5>
@@ -71,11 +72,15 @@ export default function CategoriesPage() {
         ))}
       </div>
 
+      {/* Estilos hover y animación */}
       <style jsx>{`
-        .hover-shadow:hover {
-          box-shadow: 0 8px 20px rgba(0, 128, 0, 0.3);
-          background-color: #e6f4ea;
+        .hover-effect {
           transition: all 0.3s ease;
+        }
+        .hover-effect:hover {
+          transform: scale(1.03);
+          box-shadow: 0 12px 30px rgba(0, 128, 0, 0.2);
+          background-color: #e6f4ea;
         }
       `}</style>
     </div>

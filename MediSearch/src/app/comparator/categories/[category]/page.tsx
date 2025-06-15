@@ -1,4 +1,3 @@
-// Archivo: src/app/comparator/categories/[category]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -31,7 +30,6 @@ export default function CategoryPage() {
   const [discountRange, setDiscountRange] = useState<[number, number]>([0, 100]);
 
   const [itemsPerPage, setItemsPerPage] = useState(12);
-
   const indexOfLastMedicine = currentPage * itemsPerPage;
   const indexOfFirstMedicine = indexOfLastMedicine - itemsPerPage;
 
@@ -53,7 +51,7 @@ export default function CategoryPage() {
         const entries = Object.entries(pharmacy.categories || {});
         return entries.flatMap(([cat, meds]) => {
           if (cat.toLowerCase() !== category.toLowerCase()) return [];
-          return meds
+          return (meds as any[])
             .map((med) => parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0'))
             .filter((p) => p > 0);
         });
@@ -75,31 +73,28 @@ export default function CategoryPage() {
     const entries = Object.entries(pharmacy.categories || {});
     return entries.flatMap(([cat, meds]) => {
       if (cat.toLowerCase() !== category.toLowerCase()) return [];
-      return meds.map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
+      return (meds as any[]).map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
     });
-  })
-    .filter((med) => {
-      const offer = parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0');
-      const discount = parseInt(med.discount || 0);
-      const pharmacyOk = pharmacyFilter.length === 0 || pharmacyFilter.includes(med.pharmacy);
-      return (
-        med.name?.toLowerCase().includes(search.toLowerCase()) &&
-        pharmacyOk &&
-        offer >= priceRange[0] &&
-        offer <= priceRange[1] &&
-        discount >= discountRange[0] &&
-        discount <= discountRange[1]
-      );
-    })
-    .sort((a, b) => {
-      const priceA = parseInt(a.offer_price?.replace(/[^0-9]/g, '') || '0');
-      const priceB = parseInt(b.offer_price?.replace(/[^0-9]/g, '') || '0');
-      return sort === 'asc' ? priceA - priceB : priceB - priceA;
-    })
-    .sort((a, b) => {
-      if (!sortDiscount) return 0;
-      return sortDiscount === 'asc' ? a.discount - b.discount : b.discount - a.discount;
-    });
+  }).filter((med) => {
+    const offer = parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0');
+    const discount = parseInt(med.discount || 0);
+    const pharmacyOk = pharmacyFilter.length === 0 || pharmacyFilter.includes(med.pharmacy);
+    return (
+      med.name?.toLowerCase().includes(search.toLowerCase()) &&
+      pharmacyOk &&
+      offer >= priceRange[0] &&
+      offer <= priceRange[1] &&
+      discount >= discountRange[0] &&
+      discount <= discountRange[1]
+    );
+  }).sort((a, b) => {
+    const priceA = parseInt(a.offer_price?.replace(/[^0-9]/g, '') || '0');
+    const priceB = parseInt(b.offer_price?.replace(/[^0-9]/g, '') || '0');
+    return sort === 'asc' ? priceA - priceB : priceB - priceA;
+  }).sort((a, b) => {
+    if (!sortDiscount) return 0;
+    return sortDiscount === 'asc' ? a.discount - b.discount : b.discount - a.discount;
+  });
 
   const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
   const totalPages = Math.ceil(filteredMedicines.length / itemsPerPage);
