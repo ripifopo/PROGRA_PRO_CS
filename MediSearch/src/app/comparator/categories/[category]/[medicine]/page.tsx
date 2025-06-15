@@ -282,7 +282,7 @@ export default function MedicineDetailPage() {
             </Button>
 
             <Button variant="outline-primary" onClick={() => router.push(`/availability?redirect=${encodeURIComponent(`/comparator/categories/${category}/${medicine}`)}`)}>
-              <FaMapMarkerAlt className="me-2" /> Farmacia cercana
+              <FaMapMarkerAlt className="me-2" /> Farmacias cercanas
             </Button>
           </div>
         </Col>
