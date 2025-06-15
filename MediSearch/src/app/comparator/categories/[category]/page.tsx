@@ -1,5 +1,3 @@
-// ✅ Página de categoría con filtros, búsqueda, paginación, imagenes y botón funcional "Ver detalles"
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -32,7 +30,6 @@ export default function CategoryPage() {
   const indexOfLastMedicine = currentPage * medicinesPerPage;
   const indexOfFirstMedicine = indexOfLastMedicine - medicinesPerPage;
 
-  // 🔁 Cargar y normalizar la categoría
   useEffect(() => {
     if (!rawCategory) return;
     const raw = decodeURIComponent(rawCategory as string);
@@ -40,7 +37,6 @@ export default function CategoryPage() {
     setCategory(normalized);
   }, [rawCategory]);
 
-  // 📦 Cargar medicamentos y calcular precio máximo de la categoría
   useEffect(() => {
     const fetchMedicines = async () => {
       setLoading(true);
@@ -48,14 +44,17 @@ export default function CategoryPage() {
       const data = await res.json();
       setMedicines(data);
 
-      const prices = data.flatMap((pharmacy: any) =>
-        Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
+      // ✅ Manejo seguro del tipado con validación por Array.isArray
+      const prices = data.flatMap((pharmacy: any) => {
+        const entries = Object.entries(pharmacy.categories || {});
+        return entries.flatMap(([cat, meds]) => {
+          if (typeof cat !== 'string' || !Array.isArray(meds)) return [];
           if (cat.toLowerCase() !== category.toLowerCase()) return [];
           return meds
             .map((med) => parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0'))
             .filter((p) => p > 0);
-        })
-      );
+        });
+      });
 
       const maxDetected = Math.max(...prices);
       setMinPrice(1);
@@ -66,16 +65,16 @@ export default function CategoryPage() {
     fetchMedicines();
   }, [category]);
 
-  // 💰 Formato CLP
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'No disponible';
     const clean = price.replace(/[^0-9]/g, '');
     return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // 🧠 Filtrar y ordenar medicamentos
   const filteredMedicines = medicines.flatMap((pharmacy: any) => {
-    return Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]: [string, any[]]) => {
+    const entries = Object.entries(pharmacy.categories || {});
+    return entries.flatMap(([cat, meds]) => {
+      if (typeof cat !== 'string' || !Array.isArray(meds)) return [];
       if (cat.toLowerCase() === category.toLowerCase()) {
         return meds.map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
       }
@@ -148,7 +147,6 @@ export default function CategoryPage() {
       </div>
 
       <Row>
-        {/* Panel lateral de filtros */}
         <Col md={3}>
           <Card className="p-3 shadow-sm mb-4">
             <h5 className="fw-bold mb-3">Filtros avanzados</h5>
@@ -221,7 +219,6 @@ export default function CategoryPage() {
           </Card>
         </Col>
 
-        {/* Panel de resultados */}
         <Col md={9}>
           {loading ? (
             <div className="text-center my-5">
@@ -273,7 +270,6 @@ export default function CategoryPage() {
             </Row>
           )}
 
-          {/* Paginación */}
           {totalPages > 1 && (
             <div className="d-flex justify-content-center mt-4 align-items-center gap-3">
               <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage((prev) => prev - 1)}>
