@@ -1,10 +1,10 @@
 // Archivo: src/lib/insertMedicines.ts
 
-import { MongoClient } from "mongodb"; // ✅ Esto sí funciona en Vercel;
+import { MongoClient } from "mongodb";
 import { normalizeCategoryName } from "./utils/normalizeCategories.ts";
 
-// ✅ Carga la URI desde el archivo .env (pasado por --env al ejecutar)
-const uri = Deno.env.get("MONGODB_URI");
+// ✅ Accede correctamente a la URI desde las variables de entorno en Node.js
+const uri = process.env.MONGODB_URI;
 if (!uri) throw new Error("❌ No se encontró MONGODB_URI en las variables de entorno");
 
 const client = new MongoClient(uri);
