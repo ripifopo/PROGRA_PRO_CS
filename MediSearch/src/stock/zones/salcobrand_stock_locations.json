@@ -2,1741 +2,1741 @@
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Aisén",
-    "zoneId": 601
+    "state_id": 329
   },
   {
     "region": "Valparaíso",
     "commune": "Algarrobo",
-    "zoneId": 603
+    "state_id": 122
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Alhué",
-    "zoneId": 608
+    "state_id": 358
   },
   {
     "region": "Del Biobío",
     "commune": "Alto Biobío",
-    "zoneId": 604
+    "state_id": 231
   },
   {
     "region": "Atacama",
     "commune": "Alto del Carmen",
-    "zoneId": 595
+    "state_id": 81
   },
   {
     "region": "Tarapacá",
     "commune": "Alto Hospicio",
-    "zoneId": 602
+    "state_id": 60
   },
   {
     "region": "De Los Lagos",
     "commune": "Ancud",
-    "zoneId": 599
+    "state_id": 307
   },
   {
     "region": "Coquimbo",
     "commune": "Andacollo",
-    "zoneId": 606
+    "state_id": 86
   },
   {
     "region": "De La Araucanía",
     "commune": "Angol",
-    "zoneId": 598
+    "state_id": 274
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Antártica",
-    "zoneId": 601
+    "state_id": 342
   },
   {
     "region": "Antofagasta",
     "commune": "Antofagasta",
-    "zoneId": 593
+    "state_id": 66
   },
   {
     "region": "Del Biobío",
     "commune": "Antuco",
-    "zoneId": 604
+    "state_id": 219
   },
   {
     "region": "Arica Y Parinacota",
     "commune": "Arica",
-    "zoneId": 602
+    "state_id": 55
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Buin",
-    "zoneId": 608
+    "state_id": 354
   },
   {
     "region": "ñuble",
     "commune": "Bulnes",
-    "zoneId": 607
+    "state_id": 233
   },
   {
     "region": "Valparaíso",
     "commune": "Cabildo",
-    "zoneId": 604
+    "state_id": 112
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Cabo de Hornos",
-    "zoneId": 601
+    "state_id": 341
   },
   {
     "region": "Del Biobío",
     "commune": "Cabrero",
-    "zoneId": 604
+    "state_id": 220
   },
   {
     "region": "Antofagasta",
     "commune": "Calama",
-    "zoneId": 593
+    "state_id": 70
   },
   {
     "region": "De Los Lagos",
     "commune": "Calbuco",
-    "zoneId": 599
+    "state_id": 298
   },
   {
     "region": "Atacama",
     "commune": "Caldera",
-    "zoneId": 595
+    "state_id": 76
   },
   {
     "region": "Valparaíso",
     "commune": "Calera",
-    "zoneId": 603
+    "state_id": 117
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Calera de Tango",
-    "zoneId": 608
+    "state_id": 355
   },
   {
     "region": "Valparaíso",
     "commune": "Calle Larga",
-    "zoneId": 603
+    "state_id": 108
   },
   {
     "region": "Arica Y Parinacota",
     "commune": "Camarones",
-    "zoneId": 594
+    "state_id": 56
   },
   {
     "region": "Tarapacá",
     "commune": "Camiña",
-    "zoneId": 602
+    "state_id": 62
   },
   {
     "region": "Coquimbo",
     "commune": "Canela",
-    "zoneId": 597
+    "state_id": 91
   },
   {
     "region": "Del Biobío",
     "commune": "Cañete",
-    "zoneId": 604
+    "state_id": 213
   },
   {
     "region": "De La Araucanía",
     "commune": "Carahue",
-    "zoneId": 598
+    "state_id": 254
   },
   {
     "region": "Valparaíso",
     "commune": "Cartagena",
-    "zoneId": 603
+    "state_id": 123
   },
   {
     "region": "Valparaíso",
     "commune": "Casablanca",
-    "zoneId": 603
+    "state_id": 100
   },
   {
     "region": "De Los Lagos",
     "commune": "Castro",
-    "zoneId": 599
+    "state_id": 306
   },
   {
     "region": "Valparaíso",
     "commune": "Catemu",
-    "zoneId": 604
+    "state_id": 128
   },
   {
     "region": "Del Maule",
     "commune": "Cauquenes",
-    "zoneId": 606
+    "state_id": 180
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Cerrillos",
-    "zoneId": 608
+    "state_id": 363
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Cerro Navia",
-    "zoneId": 608
+    "state_id": 364
   },
   {
     "region": "De Los Lagos",
     "commune": "Chaitén",
-    "zoneId": 599
+    "state_id": 323
   },
   {
     "region": "Atacama",
     "commune": "Chañaral",
-    "zoneId": 595
+    "state_id": 78
   },
   {
     "region": "Del Maule",
     "commune": "Chanco",
-    "zoneId": 606
+    "state_id": 181
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Chépica",
-    "zoneId": 605
+    "state_id": 161
   },
   {
     "region": "Del Biobío",
     "commune": "Chiguayante",
-    "zoneId": 604
+    "state_id": 202
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Chile Chico",
-    "zoneId": 601
+    "state_id": 335
   },
   {
     "region": "ñuble",
     "commune": "Chillán",
-    "zoneId": 607
+    "state_id": 232
   },
   {
     "region": "ñuble",
     "commune": "Chillán Viejo",
-    "zoneId": 607
+    "state_id": 237
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Chimbarongo",
-    "zoneId": 605
+    "state_id": 162
   },
   {
     "region": "De La Araucanía",
     "commune": "Cholchol",
-    "zoneId": 598
+    "state_id": 273
   },
   {
     "region": "De Los Lagos",
     "commune": "Chonchi",
-    "zoneId": 599
+    "state_id": 308
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Cisnes",
-    "zoneId": 596
+    "state_id": 330
   },
   {
     "region": "ñuble",
     "commune": "Cobquecura",
-    "zoneId": 607
+    "state_id": 234
   },
   {
     "region": "De Los Lagos",
     "commune": "Cochamó",
-    "zoneId": 599
+    "state_id": 299
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Cochrane",
-    "zoneId": 596
+    "state_id": 332
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Codegua",
-    "zoneId": 605
+    "state_id": 138
   },
   {
     "region": "ñuble",
     "commune": "Coelemu",
-    "zoneId": 607
+    "state_id": 235
   },
   {
     "region": "ñuble",
     "commune": "Coihueco",
-    "zoneId": 607
+    "state_id": 236
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Coinco",
-    "zoneId": 605
+    "state_id": 139
   },
   {
     "region": "Del Maule",
     "commune": "Colbún",
-    "zoneId": 606
+    "state_id": 193
   },
   {
     "region": "Tarapacá",
     "commune": "Colchane",
-    "zoneId": 602
+    "state_id": 63
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Colina",
-    "zoneId": 608
+    "state_id": 348
   },
   {
     "region": "De La Araucanía",
     "commune": "Collipulli",
-    "zoneId": 598
+    "state_id": 275
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Coltauco",
-    "zoneId": 605
+    "state_id": 140
   },
   {
     "region": "Coquimbo",
     "commune": "Combarbalá",
-    "zoneId": 597
+    "state_id": 95
   },
   {
     "region": "Del Biobío",
     "commune": "Concepción",
-    "zoneId": 604
+    "state_id": 200
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Conchalí",
-    "zoneId": 608
+    "state_id": 365
   },
   {
     "region": "Valparaíso",
     "commune": "Concón",
-    "zoneId": 606
+    "state_id": 101
   },
   {
     "region": "Del Maule",
     "commune": "Constitución",
-    "zoneId": 604
+    "state_id": 171
   },
   {
     "region": "Del Biobío",
     "commune": "Contulmo",
-    "zoneId": 604
+    "state_id": 214
   },
   {
     "region": "Atacama",
     "commune": "Copiapó",
-    "zoneId": 595
+    "state_id": 75
   },
   {
     "region": "Coquimbo",
     "commune": "Coquimbo",
-    "zoneId": 597
+    "state_id": 85
   },
   {
     "region": "Del Biobío",
     "commune": "Coronel",
-    "zoneId": 604
+    "state_id": 201
   },
   {
     "region": "De Los Ríos",
     "commune": "Corral",
-    "zoneId": 600
+    "state_id": 286
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Coyhaique",
-    "zoneId": 596
+    "state_id": 327
   },
   {
     "region": "De La Araucanía",
     "commune": "Cunco",
-    "zoneId": 598
+    "state_id": 255
   },
   {
     "region": "De La Araucanía",
     "commune": "Curacautín",
-    "zoneId": 606
+    "state_id": 276
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Curacaví",
-    "zoneId": 608
+    "state_id": 359
   },
   {
     "region": "De Los Lagos",
     "commune": "Curaco de Vélez",
-    "zoneId": 599
+    "state_id": 309
   },
   {
     "region": "Del Biobío",
     "commune": "Curanilahue",
-    "zoneId": 604
+    "state_id": 215
   },
   {
     "region": "De La Araucanía",
     "commune": "Curarrehue",
-    "zoneId": 606
+    "state_id": 256
   },
   {
     "region": "Del Maule",
     "commune": "Curepto",
-    "zoneId": 606
+    "state_id": 172
   },
   {
     "region": "Del Maule",
     "commune": "Curicó",
-    "zoneId": 606
+    "state_id": 183
   },
   {
     "region": "De Los Lagos",
     "commune": "Dalcahue",
-    "zoneId": 599
+    "state_id": 310
   },
   {
     "region": "Atacama",
     "commune": "Diego de Almagro",
-    "zoneId": 595
+    "state_id": 79
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Doñihue",
-    "zoneId": 605
+    "state_id": 141
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "El Bosque",
-    "zoneId": 608
+    "state_id": 366
   },
   {
     "region": "ñuble",
     "commune": "El Carmen",
-    "zoneId": 607
+    "state_id": 238
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "El Monte",
-    "zoneId": 608
+    "state_id": 395
   },
   {
     "region": "Valparaíso",
     "commune": "El Quisco",
-    "zoneId": 603
+    "state_id": 124
   },
   {
     "region": "Valparaíso",
     "commune": "El Tabo",
-    "zoneId": 603
+    "state_id": 125
   },
   {
     "region": "Del Maule",
     "commune": "Empedrado",
-    "zoneId": 604
+    "state_id": 173
   },
   {
     "region": "De La Araucanía",
     "commune": "Ercilla",
-    "zoneId": 606
+    "state_id": 277
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Estación Central",
-    "zoneId": 608
+    "state_id": 367
   },
   {
     "region": "Del Biobío",
     "commune": "Florida",
-    "zoneId": 604
+    "state_id": 537
   },
   {
     "region": "De La Araucanía",
     "commune": "Freire",
-    "zoneId": 598
+    "state_id": 257
   },
   {
     "region": "Atacama",
     "commune": "Freirina",
-    "zoneId": 595
+    "state_id": 82
   },
   {
     "region": "De Los Lagos",
     "commune": "Fresia",
-    "zoneId": 606
+    "state_id": 300
   },
   {
     "region": "De Los Lagos",
     "commune": "Frutillar",
-    "zoneId": 599
+    "state_id": 301
   },
   {
     "region": "De Los Lagos",
     "commune": "Futaleufú",
-    "zoneId": 599
+    "state_id": 324
   },
   {
     "region": "De Los Ríos",
     "commune": "Futrono",
-    "zoneId": 600
+    "state_id": 294
   },
   {
     "region": "De La Araucanía",
     "commune": "Galvarino",
-    "zoneId": 598
+    "state_id": 258
   },
   {
     "region": "Arica Y Parinacota",
     "commune": "General Lagos",
-    "zoneId": 594
+    "state_id": 58
   },
   {
     "region": "De La Araucanía",
     "commune": "Gorbea",
-    "zoneId": 598
+    "state_id": 259
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Graneros",
-    "zoneId": 605
+    "state_id": 142
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Guaitecas",
-    "zoneId": 601
+    "state_id": 331
   },
   {
     "region": "Valparaíso",
     "commune": "Hijuelas",
-    "zoneId": 603
+    "state_id": 118
   },
   {
     "region": "De Los Lagos",
     "commune": "Hualaihué",
-    "zoneId": 599
+    "state_id": 325
   },
   {
     "region": "Del Maule",
     "commune": "Hualañé",
-    "zoneId": 599
+    "state_id": 184
   },
   {
     "region": "Del Biobío",
     "commune": "Hualpén",
-    "zoneId": 604
+    "state_id": 210
   },
   {
     "region": "Del Biobío",
     "commune": "Hualqui",
-    "zoneId": 604
+    "state_id": 203
   },
   {
     "region": "Tarapacá",
     "commune": "Huara",
-    "zoneId": 602
+    "state_id": 64
   },
   {
     "region": "Atacama",
     "commune": "Huasco",
-    "zoneId": 595
+    "state_id": 83
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Huechuraba",
-    "zoneId": 608
+    "state_id": 368
   },
   {
     "region": "Coquimbo",
     "commune": "Illapel",
-    "zoneId": 597
+    "state_id": 90
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Independencia",
-    "zoneId": 608
+    "state_id": 369
   },
   {
     "region": "Tarapacá",
     "commune": "Iquique",
-    "zoneId": 602
+    "state_id": 59
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Isla de Maipo",
-    "zoneId": 608
+    "state_id": 396
   },
   {
     "region": "Valparaíso",
     "commune": "Isla de Pascua",
-    "zoneId": 603
+    "state_id": 106
   },
   {
     "region": "Valparaíso",
     "commune": "Juan Fernández",
-    "zoneId": 603
+    "state_id": 102
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "La Cisterna",
-    "zoneId": 608
+    "state_id": 370
   },
   {
     "region": "Valparaíso",
     "commune": "La Cruz",
-    "zoneId": 603
+    "state_id": 119
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "La Estrella",
-    "zoneId": 605
+    "state_id": 155
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "La Florida",
-    "zoneId": 608
+    "state_id": 372
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "La Granja",
-    "zoneId": 608
+    "state_id": 371
   },
   {
     "region": "Coquimbo",
     "commune": "La Higuera",
-    "zoneId": 597
+    "state_id": 87
   },
   {
     "region": "Valparaíso",
     "commune": "La Ligua",
-    "zoneId": 603
+    "state_id": 111
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "La Pintana",
-    "zoneId": 608
+    "state_id": 373
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "La Reina",
-    "zoneId": 608
+    "state_id": 374
   },
   {
     "region": "Coquimbo",
     "commune": "La Serena",
-    "zoneId": 597
+    "state_id": 84
   },
   {
     "region": "De Los Ríos",
     "commune": "La Unión",
-    "zoneId": 599
+    "state_id": 293
   },
   {
     "region": "De Los Ríos",
     "commune": "Lago Ranco",
-    "zoneId": 600
+    "state_id": 295
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Lago Verde",
-    "zoneId": 601
+    "state_id": 328
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Laguna Blanca",
-    "zoneId": 601
+    "state_id": 338
   },
   {
     "region": "Del Biobío",
     "commune": "Laja",
-    "zoneId": 604
+    "state_id": 221
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Lampa",
-    "zoneId": 608
+    "state_id": 349
   },
   {
     "region": "De Los Ríos",
     "commune": "Lanco",
-    "zoneId": 600
+    "state_id": 287
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Las Cabras",
-    "zoneId": 604
+    "state_id": 143
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Las Condes",
-    "zoneId": 608
+    "state_id": 375
   },
   {
     "region": "De La Araucanía",
     "commune": "Lautaro",
-    "zoneId": 598
+    "state_id": 260
   },
   {
     "region": "Del Biobío",
     "commune": "Lebu",
-    "zoneId": 604
+    "state_id": 211
   },
   {
     "region": "Del Maule",
     "commune": "Licantén",
-    "zoneId": 606
+    "state_id": 185
   },
   {
     "region": "Valparaíso",
     "commune": "Limache",
-    "zoneId": 603
+    "state_id": 133
   },
   {
     "region": "Del Maule",
     "commune": "Linares",
-    "zoneId": 606
+    "state_id": 192
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Litueche",
-    "zoneId": 605
+    "state_id": 156
   },
   {
     "region": "Valparaíso",
     "commune": "Llaillay",
-    "zoneId": 603
+    "state_id": 129
   },
   {
     "region": "De Los Lagos",
     "commune": "Llanquihue",
-    "zoneId": 599
+    "state_id": 303
   },
   {
     "region": "Valparaíso",
     "commune": "Llay Llay",
-    "zoneId": 603
+    "state_id": 497
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Lo Barnechea",
-    "zoneId": 608
+    "state_id": 376
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Lo Espejo",
-    "zoneId": 608
+    "state_id": 377
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Lo Prado",
-    "zoneId": 608
+    "state_id": 378
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Lolol",
-    "zoneId": 605
+    "state_id": 163
   },
   {
     "region": "De La Araucanía",
     "commune": "Loncoche",
-    "zoneId": 598
+    "state_id": 261
   },
   {
     "region": "Del Maule",
     "commune": "Longaví",
-    "zoneId": 606
+    "state_id": 194
   },
   {
     "region": "De La Araucanía",
     "commune": "Lonquimay",
-    "zoneId": 598
+    "state_id": 278
   },
   {
     "region": "Del Biobío",
     "commune": "Los Alamos",
-    "zoneId": 604
+    "state_id": 216
   },
   {
     "region": "Valparaíso",
     "commune": "Los Andes",
-    "zoneId": 603
+    "state_id": 107
   },
   {
     "region": "Del Biobío",
     "commune": "Los Angeles",
-    "zoneId": 604
+    "state_id": 218
   },
   {
     "region": "De Los Ríos",
     "commune": "Los Lagos",
-    "zoneId": 600
+    "state_id": 288
   },
   {
     "region": "De Los Lagos",
     "commune": "Los Muermos",
-    "zoneId": 599
+    "state_id": 302
   },
   {
     "region": "De La Araucanía",
     "commune": "Los Sauces",
-    "zoneId": 598
+    "state_id": 279
   },
   {
     "region": "Coquimbo",
     "commune": "Los Vilos",
-    "zoneId": 597
+    "state_id": 92
   },
   {
     "region": "Del Biobío",
     "commune": "Lota",
-    "zoneId": 604
+    "state_id": 204
   },
   {
     "region": "De La Araucanía",
     "commune": "Lumaco",
-    "zoneId": 598
+    "state_id": 280
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Machalí",
-    "zoneId": 605
+    "state_id": 144
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Macul",
-    "zoneId": 608
+    "state_id": 379
   },
   {
     "region": "De Los Ríos",
     "commune": "Máfil",
-    "zoneId": 599
+    "state_id": 289
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Maipú",
-    "zoneId": 608
+    "state_id": 380
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Malloa",
-    "zoneId": 605
+    "state_id": 145
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Marchihue",
-    "zoneId": 605
+    "state_id": 157
   },
   {
     "region": "Antofagasta",
     "commune": "María Elena",
-    "zoneId": 595
+    "state_id": 74
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "María Pinto",
-    "zoneId": 608
+    "state_id": 360
   },
   {
     "region": "De Los Ríos",
     "commune": "Mariquina",
-    "zoneId": 600
+    "state_id": 290
   },
   {
     "region": "Del Maule",
     "commune": "Maule",
-    "zoneId": 606
+    "state_id": 174
   },
   {
     "region": "De Los Lagos",
     "commune": "Maullín",
-    "zoneId": 599
+    "state_id": 304
   },
   {
     "region": "Antofagasta",
     "commune": "Mejillones",
-    "zoneId": 608
+    "state_id": 67
   },
   {
     "region": "De La Araucanía",
     "commune": "Melipeuco",
-    "zoneId": 598
+    "state_id": 262
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Melipilla",
-    "zoneId": 608
+    "state_id": 361
   },
   {
     "region": "Del Maule",
     "commune": "Molina",
-    "zoneId": 606
+    "state_id": 186
   },
   {
     "region": "Coquimbo",
     "commune": "Monte Patria",
-    "zoneId": 597
+    "state_id": 96
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Mostazal",
-    "zoneId": 605
+    "state_id": 146
   },
   {
     "region": "Del Biobío",
     "commune": "Mulchén",
-    "zoneId": 604
+    "state_id": 222
   },
   {
     "region": "Del Biobío",
     "commune": "Nacimiento",
-    "zoneId": 604
+    "state_id": 223
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Nancagua",
-    "zoneId": 605
+    "state_id": 164
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Natales",
-    "zoneId": 601
+    "state_id": 346
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Navidad",
-    "zoneId": 605
+    "state_id": 158
   },
   {
     "region": "Del Biobío",
     "commune": "Negrete",
-    "zoneId": 604
+    "state_id": 224
   },
   {
     "region": "ñuble",
     "commune": "Ninhue",
-    "zoneId": 607
+    "state_id": 239
   },
   {
     "region": "ñuble",
     "commune": "Ñiquén",
-    "zoneId": 607
+    "state_id": 240
   },
   {
     "region": "Valparaíso",
     "commune": "Nogales",
-    "zoneId": 603
+    "state_id": 120
   },
   {
     "region": "De La Araucanía",
     "commune": "Nueva Imperial",
-    "zoneId": 598
+    "state_id": 263
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Ñuñoa",
-    "zoneId": 608
+    "state_id": 381
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "O'Higgins",
-    "zoneId": 596
+    "state_id": 333
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Olivar",
-    "zoneId": 605
+    "state_id": 147
   },
   {
     "region": "Antofagasta",
     "commune": "Ollagüe",
-    "zoneId": 595
+    "state_id": 71
   },
   {
     "region": "Valparaíso",
     "commune": "Olmué",
-    "zoneId": 606
+    "state_id": 136
   },
   {
     "region": "De Los Lagos",
     "commune": "Osorno",
-    "zoneId": 599
+    "state_id": 316
   },
   {
     "region": "Coquimbo",
     "commune": "Ovalle",
-    "zoneId": 597
+    "state_id": 94
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Padre Hurtado",
-    "zoneId": 608
+    "state_id": 397
   },
   {
     "region": "De La Araucanía",
     "commune": "Padre Las Casas",
-    "zoneId": 598
+    "state_id": 264
   },
   {
     "region": "Coquimbo",
     "commune": "Paiguano",
-    "zoneId": 597
+    "state_id": 88
   },
   {
     "region": "Coquimbo",
     "commune": "Paihuano",
-    "zoneId": 597
+    "state_id": 472
   },
   {
     "region": "De Los Ríos",
     "commune": "Paillaco",
-    "zoneId": 608
+    "state_id": 291
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Paine",
-    "zoneId": 608
+    "state_id": 356
   },
   {
     "region": "De Los Lagos",
     "commune": "Palena",
-    "zoneId": 599
+    "state_id": 326
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Palmilla",
-    "zoneId": 605
+    "state_id": 165
   },
   {
     "region": "De Los Ríos",
     "commune": "Panguipulli",
-    "zoneId": 600
+    "state_id": 292
   },
   {
     "region": "Valparaíso",
     "commune": "Panquehue",
-    "zoneId": 603
+    "state_id": 130
   },
   {
     "region": "Valparaíso",
     "commune": "Papudo",
-    "zoneId": 603
+    "state_id": 113
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Paredones",
-    "zoneId": 605
+    "state_id": 159
   },
   {
     "region": "Del Maule",
     "commune": "Parral",
-    "zoneId": 606
+    "state_id": 195
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Pedro Aguirre Cerda",
-    "zoneId": 608
+    "state_id": 382
   },
   {
     "region": "Del Maule",
     "commune": "Pelarco",
-    "zoneId": 606
+    "state_id": 175
   },
   {
     "region": "Del Maule",
     "commune": "Pelluhue",
-    "zoneId": 606
+    "state_id": 182
   },
   {
     "region": "ñuble",
     "commune": "Pemuco",
-    "zoneId": 607
+    "state_id": 241
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Peñaflor",
-    "zoneId": 608
+    "state_id": 398
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Peñalolén",
-    "zoneId": 608
+    "state_id": 383
   },
   {
     "region": "Del Maule",
     "commune": "Pencahue",
-    "zoneId": 608
+    "state_id": 176
   },
   {
     "region": "Del Biobío",
     "commune": "Penco",
-    "zoneId": 604
+    "state_id": 205
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Peralillo",
-    "zoneId": 605
+    "state_id": 166
   },
   {
     "region": "De La Araucanía",
     "commune": "Perquenco",
-    "zoneId": 598
+    "state_id": 265
   },
   {
     "region": "Valparaíso",
     "commune": "Petorca",
-    "zoneId": 603
+    "state_id": 114
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Peumo",
-    "zoneId": 605
+    "state_id": 148
   },
   {
     "region": "Tarapacá",
     "commune": "Pica",
-    "zoneId": 602
+    "state_id": 65
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Pichidegua",
-    "zoneId": 595
+    "state_id": 149
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Pichilemu",
-    "zoneId": 605
+    "state_id": 154
   },
   {
     "region": "ñuble",
     "commune": "Pinto",
-    "zoneId": 608
+    "state_id": 242
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Pirque",
-    "zoneId": 608
+    "state_id": 351
   },
   {
     "region": "De La Araucanía",
     "commune": "Pitrufquén",
-    "zoneId": 606
+    "state_id": 266
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Placilla",
-    "zoneId": 608
+    "state_id": 167
   },
   {
     "region": "ñuble",
     "commune": "Portezuelo",
-    "zoneId": 607
+    "state_id": 243
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Porvenir",
-    "zoneId": 601
+    "state_id": 343
   },
   {
     "region": "Tarapacá",
     "commune": "Pozo Almonte",
-    "zoneId": 602
+    "state_id": 61
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Primavera",
-    "zoneId": 601
+    "state_id": 344
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Providencia",
-    "zoneId": 608
+    "state_id": 384
   },
   {
     "region": "Valparaíso",
     "commune": "Puchuncaví",
-    "zoneId": 606
+    "state_id": 103
   },
   {
     "region": "De La Araucanía",
     "commune": "Pucón",
-    "zoneId": 606
+    "state_id": 267
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Pudahuel",
-    "zoneId": 608
+    "state_id": 385
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Puente Alto",
-    "zoneId": 608
+    "state_id": 352
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Puerto Aysen",
-    "zoneId": 601
+    "state_id": 576
   },
   {
     "region": "De Los Lagos",
     "commune": "Puerto Montt",
-    "zoneId": 599
+    "state_id": 297
   },
   {
     "region": "De Los Lagos",
     "commune": "Puerto Octay",
-    "zoneId": 599
+    "state_id": 317
   },
   {
     "region": "De Los Lagos",
     "commune": "Puerto Varas",
-    "zoneId": 599
+    "state_id": 305
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Pumanque",
-    "zoneId": 605
+    "state_id": 168
   },
   {
     "region": "Coquimbo",
     "commune": "Punitaqui",
-    "zoneId": 597
+    "state_id": 97
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Punta Arenas",
-    "zoneId": 601
+    "state_id": 337
   },
   {
     "region": "De Los Lagos",
     "commune": "Puqueldón",
-    "zoneId": 599
+    "state_id": 311
   },
   {
     "region": "De La Araucanía",
     "commune": "Purén",
-    "zoneId": 598
+    "state_id": 281
   },
   {
     "region": "De Los Lagos",
     "commune": "Purranque",
-    "zoneId": 599
+    "state_id": 318
   },
   {
     "region": "Valparaíso",
     "commune": "Putaendo",
-    "zoneId": 603
+    "state_id": 131
   },
   {
     "region": "Arica Y Parinacota",
     "commune": "Putre",
-    "zoneId": 594
+    "state_id": 57
   },
   {
     "region": "De Los Lagos",
     "commune": "Puyehue",
-    "zoneId": 599
+    "state_id": 319
   },
   {
     "region": "De Los Lagos",
     "commune": "Queilén",
-    "zoneId": 599
+    "state_id": 312
   },
   {
     "region": "De Los Lagos",
     "commune": "Quellón",
-    "zoneId": 599
+    "state_id": 313
   },
   {
     "region": "De Los Lagos",
     "commune": "Quemchi",
-    "zoneId": 599
+    "state_id": 314
   },
   {
     "region": "Del Biobío",
     "commune": "Quilaco",
-    "zoneId": 604
+    "state_id": 225
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Quilicura",
-    "zoneId": 608
+    "state_id": 386
   },
   {
     "region": "Del Biobío",
     "commune": "Quilleco",
-    "zoneId": 604
+    "state_id": 226
   },
   {
     "region": "ñuble",
     "commune": "Quillón",
-    "zoneId": 607
+    "state_id": 244
   },
   {
     "region": "Valparaíso",
     "commune": "Quillota",
-    "zoneId": 603
+    "state_id": 116
   },
   {
     "region": "Valparaíso",
     "commune": "Quilpué",
-    "zoneId": 603
+    "state_id": 134
   },
   {
     "region": "De Los Lagos",
     "commune": "Quinchao",
-    "zoneId": 606
+    "state_id": 315
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Quinta de Tilcoco",
-    "zoneId": 605
+    "state_id": 150
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Quinta Normal",
-    "zoneId": 608
+    "state_id": 387
   },
   {
     "region": "Valparaíso",
     "commune": "Quintero",
-    "zoneId": 603
+    "state_id": 104
   },
   {
     "region": "ñuble",
     "commune": "Quirihue",
-    "zoneId": 607
+    "state_id": 245
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Rancagua",
-    "zoneId": 605
+    "state_id": 137
   },
   {
     "region": "ñuble",
     "commune": "Ránquil",
-    "zoneId": 607
+    "state_id": 246
   },
   {
     "region": "Del Maule",
     "commune": "Rauco",
-    "zoneId": 606
+    "state_id": 187
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Recoleta",
-    "zoneId": 608
+    "state_id": 388
   },
   {
     "region": "De La Araucanía",
     "commune": "Renaico",
-    "zoneId": 598
+    "state_id": 282
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Renca",
-    "zoneId": 608
+    "state_id": 389
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Rengo",
-    "zoneId": 605
+    "state_id": 151
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Requínoa",
-    "zoneId": 605
+    "state_id": 152
   },
   {
     "region": "Del Maule",
     "commune": "Retiro",
-    "zoneId": 596
+    "state_id": 196
   },
   {
     "region": "Valparaíso",
     "commune": "Rinconada",
-    "zoneId": 603
+    "state_id": 109
   },
   {
     "region": "De Los Ríos",
     "commune": "Río Bueno",
-    "zoneId": 600
+    "state_id": 296
   },
   {
     "region": "Del Maule",
     "commune": "Río Claro",
-    "zoneId": 606
+    "state_id": 177
   },
   {
     "region": "Coquimbo",
     "commune": "Río Hurtado",
-    "zoneId": 597
+    "state_id": 98
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Río Ibáñez",
-    "zoneId": 596
+    "state_id": 336
   },
   {
     "region": "De Los Lagos",
     "commune": "Río Negro",
-    "zoneId": 599
+    "state_id": 320
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Río Verde",
-    "zoneId": 601
+    "state_id": 339
   },
   {
     "region": "Del Maule",
     "commune": "Romeral",
-    "zoneId": 606
+    "state_id": 188
   },
   {
     "region": "De La Araucanía",
     "commune": "Saavedra",
-    "zoneId": 598
+    "state_id": 268
   },
   {
     "region": "Del Maule",
     "commune": "Sagrada Familia",
-    "zoneId": 606
+    "state_id": 189
   },
   {
     "region": "Coquimbo",
     "commune": "Salamanca",
-    "zoneId": 597
+    "state_id": 93
   },
   {
     "region": "Valparaíso",
     "commune": "San Antonio",
-    "zoneId": 603
+    "state_id": 121
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San Bernardo",
-    "zoneId": 593
+    "state_id": 357
   },
   {
     "region": "ñuble",
     "commune": "San Carlos",
-    "zoneId": 607
+    "state_id": 247
   },
   {
     "region": "Del Maule",
     "commune": "San Clemente",
-    "zoneId": 606
+    "state_id": 178
   },
   {
     "region": "Valparaíso",
     "commune": "San Esteban",
-    "zoneId": 603
+    "state_id": 110
   },
   {
     "region": "ñuble",
     "commune": "San Fabián",
-    "zoneId": 607
+    "state_id": 248
   },
   {
     "region": "Valparaíso",
     "commune": "San Felipe",
-    "zoneId": 603
+    "state_id": 127
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "San Fernando",
-    "zoneId": 605
+    "state_id": 160
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "San Gregorio",
-    "zoneId": 607
+    "state_id": 340
   },
   {
     "region": "ñuble",
     "commune": "San Ignacio",
-    "zoneId": 607
+    "state_id": 249
   },
   {
     "region": "Del Maule",
     "commune": "San Javier",
-    "zoneId": 606
+    "state_id": 197
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San Joaquín",
-    "zoneId": 608
+    "state_id": 391
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San José de Maipo",
-    "zoneId": 608
+    "state_id": 353
   },
   {
     "region": "De Los Lagos",
     "commune": "San Juan de la Costa",
-    "zoneId": 599
+    "state_id": 321
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San Miguel",
-    "zoneId": 608
+    "state_id": 390
   },
   {
     "region": "ñuble",
     "commune": "San Nicolás",
-    "zoneId": 607
+    "state_id": 250
   },
   {
     "region": "De Los Lagos",
     "commune": "San Pablo",
-    "zoneId": 608
+    "state_id": 322
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San Pedro",
-    "zoneId": 608
+    "state_id": 362
   },
   {
     "region": "Antofagasta",
     "commune": "San Pedro de Atacama",
-    "zoneId": 593
+    "state_id": 72
   },
   {
     "region": "Del Biobío",
     "commune": "San Pedro de la Paz",
-    "zoneId": 604
+    "state_id": 206
   },
   {
     "region": "Del Maule",
     "commune": "San Rafael",
-    "zoneId": 606
+    "state_id": 179
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "San Ramón",
-    "zoneId": 608
+    "state_id": 392
   },
   {
     "region": "Del Biobío",
     "commune": "San Rosendo",
-    "zoneId": 606
+    "state_id": 227
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "San Vicente",
-    "zoneId": 605
+    "state_id": 153
   },
   {
     "region": "Del Biobío",
     "commune": "Santa Bárbara",
-    "zoneId": 604
+    "state_id": 228
   },
   {
     "region": "Del Libertador Gral. Bernardo O'higgins",
     "commune": "Santa Cruz",
-    "zoneId": 605
+    "state_id": 169
   },
   {
     "region": "Del Biobío",
     "commune": "Santa Juana",
-    "zoneId": 604
+    "state_id": 207
   },
   {
     "region": "Valparaíso",
     "commune": "Santa María",
-    "zoneId": 603
+    "state_id": 132
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Santiago",
-    "zoneId": 608
+    "state_id": 393
   },
   {
     "region": "Valparaíso",
     "commune": "Santo Domingo",
-    "zoneId": 603
+    "state_id": 126
   },
   {
     "region": "Antofagasta",
     "commune": "Sierra Gorda",
-    "zoneId": 593
+    "state_id": 68
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Talagante",
-    "zoneId": 608
+    "state_id": 399
   },
   {
     "region": "Del Maule",
     "commune": "Talca",
-    "zoneId": 606
+    "state_id": 170
   },
   {
     "region": "Del Biobío",
     "commune": "Talcahuano",
-    "zoneId": 604
+    "state_id": 208
   },
   {
     "region": "Antofagasta",
     "commune": "Taltal",
-    "zoneId": 593
+    "state_id": 69
   },
   {
     "region": "De La Araucanía",
     "commune": "Temuco",
-    "zoneId": 598
+    "state_id": 253
   },
   {
     "region": "Del Maule",
     "commune": "Teno",
-    "zoneId": 606
+    "state_id": 190
   },
   {
     "region": "De La Araucanía",
     "commune": "Teodoro Schmidt",
-    "zoneId": 598
+    "state_id": 269
   },
   {
     "region": "Atacama",
     "commune": "Tierra Amarilla",
-    "zoneId": 595
+    "state_id": 77
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Tiltil",
-    "zoneId": 608
+    "state_id": 350
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Timaukel",
-    "zoneId": 601
+    "state_id": 345
   },
   {
     "region": "Del Biobío",
     "commune": "Tirúa",
-    "zoneId": 604
+    "state_id": 217
   },
   {
     "region": "Antofagasta",
     "commune": "Tocopilla",
-    "zoneId": 593
+    "state_id": 73
   },
   {
     "region": "De La Araucanía",
     "commune": "Toltén",
-    "zoneId": 598
+    "state_id": 270
   },
   {
     "region": "Del Biobío",
     "commune": "Tomé",
-    "zoneId": 604
+    "state_id": 209
   },
   {
     "region": "Magallanes Y De La Antártica Chilena",
     "commune": "Torres del Paine",
-    "zoneId": 601
+    "state_id": 347
   },
   {
     "region": "Aisén Del Gral. Carlos Ibañez Del Campo",
     "commune": "Tortel",
-    "zoneId": 596
+    "state_id": 334
   },
   {
     "region": "De La Araucanía",
     "commune": "Traiguén",
-    "zoneId": 598
+    "state_id": 283
   },
   {
     "region": "ñuble",
     "commune": "Treguaco",
-    "zoneId": 607
+    "state_id": 251
   },
   {
     "region": "Del Biobío",
     "commune": "Tucapel",
-    "zoneId": 606
+    "state_id": 229
   },
   {
     "region": "De Los Ríos",
     "commune": "Valdivia",
-    "zoneId": 600
+    "state_id": 285
   },
   {
     "region": "Atacama",
     "commune": "Vallenar",
-    "zoneId": 595
+    "state_id": 80
   },
   {
     "region": "Valparaíso",
     "commune": "Valparaíso",
-    "zoneId": 603
+    "state_id": 99
   },
   {
     "region": "Del Maule",
     "commune": "Vichuquén",
-    "zoneId": 606
+    "state_id": 191
   },
   {
     "region": "De La Araucanía",
     "commune": "Victoria",
-    "zoneId": 598
+    "state_id": 284
   },
   {
     "region": "Coquimbo",
     "commune": "Vicuña",
-    "zoneId": 597
+    "state_id": 89
   },
   {
     "region": "De La Araucanía",
     "commune": "Vilcún",
-    "zoneId": 598
+    "state_id": 271
   },
   {
     "region": "Del Maule",
     "commune": "Villa Alegre",
-    "zoneId": 606
+    "state_id": 198
   },
   {
     "region": "Valparaíso",
     "commune": "Villa Alemana",
-    "zoneId": 603
+    "state_id": 135
   },
   {
     "region": "De La Araucanía",
     "commune": "Villarrica",
-    "zoneId": 598
+    "state_id": 272
   },
   {
     "region": "Valparaíso",
     "commune": "Viña del Mar",
-    "zoneId": 603
+    "state_id": 105
   },
   {
     "region": "Metropolitana De Santiago",
     "commune": "Vitacura",
-    "zoneId": 608
+    "state_id": 394
   },
   {
     "region": "Del Maule",
     "commune": "Yerbas Buenas",
-    "zoneId": 606
+    "state_id": 199
   },
   {
     "region": "Del Biobío",
     "commune": "Yumbel",
-    "zoneId": 604
+    "state_id": 230
   },
   {
     "region": "ñuble",
     "commune": "Yungay",
-    "zoneId": 607
+    "state_id": 252
   },
   {
     "region": "Valparaíso",
     "commune": "Zapallar",
-    "zoneId": 603
+    "state_id": 115
   }
 ]

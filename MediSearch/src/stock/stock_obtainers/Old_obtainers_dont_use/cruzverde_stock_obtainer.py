@@ -20,14 +20,16 @@ def extract_product_id(url):
     match = re.search(r'/(\d+)\.html', url)
     return match.group(1) if match else None
 
-# 🚀 Función principal compatible con stock_checker
-def obtener_stock(url_producto: str, comuna: str) -> str:
+# 🔎 Consultar stock en sucursales por comuna usando la nueva API
+def consultar_stock_nueva_api(url_producto, comuna):
     product_id = extract_product_id(url_producto)
     if not product_id:
-        return "❌ No se pudo extraer el product_id desde la URL."
+        print("❌ No se pudo extraer el product_id desde la URL.")
+        return
 
     comuna_formateada = comuna.strip().lower().replace(" ", "")
     api_url = f"https://api.cruzverde.cl/product-service/products/stores-stock?id={comuna_formateada}&productId={product_id}"
+    print(f"🌐 URL de la API: {api_url}")
 
     cookie = get_cruzverde_cookie()
     headers = {
@@ -43,14 +45,25 @@ def obtener_stock(url_producto: str, comuna: str) -> str:
 
         stores = data.get("stores", [])
         if not stores:
-            return "❌ No se encontraron tiendas o no hay stock en la comuna."
+            print("❌ No se encontraron tiendas o no hay stock en la comuna.")
+            return
 
-        resultado = f"📍 Stock en comuna: {comuna.capitalize()}\n"
+        print("\n🏥 Resultados por sucursal:")
         for store in stores:
             address = store.get("address", "Dirección desconocida")
-            stock = store.get("stock", "?")
-            resultado += f"{address} → Stock: {stock}\n"
-        return resultado.strip()
+            stock = store.get("stock", "¿?")
+            print(f"{address} → Stock: {stock}")
 
     except Exception as e:
-        return f"❌ Error al consultar la API: {e}"
+        print(f"❌ Error al consultar la API: {e}")
+
+# 🧪 Menú interactivo por consola
+if __name__ == "__main__":
+    print("📦 CONSULTA DE STOCK – FARMACIA CRUZ VERDE (NUEVA API)")
+    print("======================================================\n")
+
+    url = input("🔗 URL del producto: ").strip()
+    comuna = input("🏙️ Comuna (ej: providencia): ").strip()
+
+    print("\n🔎 Consultando stock...\n")
+    consultar_stock_nueva_api(url, comuna)

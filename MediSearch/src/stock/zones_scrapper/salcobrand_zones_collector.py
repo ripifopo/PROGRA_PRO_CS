@@ -21,7 +21,7 @@ for item in data:
     final.append({
         "region": region,
         "commune": item["commune"],
-        "zoneId": item["zones_ids"][0]
+        "state_id": item["state_id"]
     })
 
 # 💾 Guardar archivo final
