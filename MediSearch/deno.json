@@ -13,7 +13,7 @@
       "esnext"
     ],
     "strict": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
   "unstable": [
     "sloppy-imports"

@@ -25,16 +25,21 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install beautifulsoup4 playwright
+          pip install beautifulsoup4 playwright httpx
           playwright install
 
       - name: Create .env file
         run: |
-          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
-          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
-          echo "GMAIL_USER=${{ secrets.GMAIL_USER }}" >> .env
-          echo "GMAIL_PASS=${{ secrets.GMAIL_PASS }}" >> .env
-          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          cat > .env << 'EOF'
+          MONGODB_URI=${{ secrets.MONGODB_URI }}
+          JWT_SECRET=${{ secrets.JWT_SECRET }}
+          GMAIL_USER=${{ secrets.GMAIL_USER }}
+          GMAIL_PASS=${{ secrets.GMAIL_PASS }}
+          BASE_URL=${{ secrets.BASE_URL }}
+          EOF
+          echo "✅ .env file created"
+          echo "Checking .env file format:"
+          cat .env | sed 's/=.*/=***/' # Mostrar variables sin valores
         working-directory: MediSearch
 
       - name: Debug paths
@@ -48,6 +53,10 @@ jobs:
             echo "deno.json content:"
             cat deno.json
           fi
+        working-directory: MediSearch
+
+      - name: Install Deno dependencies
+        run: deno install
         working-directory: MediSearch
 
       - name: Run scrape-and-insert
