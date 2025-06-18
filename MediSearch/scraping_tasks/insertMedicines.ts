@@ -1,23 +1,23 @@
-// Archivo: src/lib/insertMedicines.ts
+/// <reference lib="deno.ns" />
+// Archivo: scraping_tasks/insertMedicines.ts
 
-import { MongoClient } from "mongodb";
-import { normalizeCategoryName } from "..\src\lib\utils\normalizeCategories.ts";
+import "https://deno.land/std@0.224.0/dotenv/load.ts?path=../.env";
+import { MongoClient } from "npm:mongodb@6.17.0";
+import { normalizeCategoryName } from "../src/lib/utils/normalizeCategories.ts";
 
-// ✅ Accede correctamente a la URI desde las variables de entorno en Node.js
-const uri = process.env.MONGODB_URI;
+// ✅ Carga y valida la URI desde .env
+const uri = Deno.env.get("MONGODB_URI");
 if (!uri) throw new Error("❌ No se encontró MONGODB_URI en las variables de entorno");
 
 const client = new MongoClient(uri);
 const db = client.db("medisearch");
 
-// Colecciones utilizadas
 const medicinesCollection = db.collection("medicines");
 const priceHistoryCollection = db.collection("price_history");
 
-// 📁 Ruta donde están almacenados los scrapeos por farmacia y fecha
-const updatesPath = "./Scrapers_MediSearch/product_updates";
+const updatesPath = "../Scrapers_MediSearch/product_updates";
 
-// 🔧 Función auxiliar para transformar nombres de farmacias
+// 🔧 Nombre bonito de farmacia
 function transformarNombreFarmacia(nombre: string): string {
   const lower = nombre.toLowerCase();
   if (lower === "cruzverde") return "Cruz Verde";
@@ -26,12 +26,11 @@ function transformarNombreFarmacia(nombre: string): string {
   return nombre;
 }
 
-// 🔧 Formateo seguro de precios a CLP (acepta número o string)
+// 💲 Formato CLP
 function formatPriceCLP(value: any): string {
   const num = typeof value === "string" ? parseInt(value.replace(/\D/g, '')) :
               typeof value === "number" ? value : 0;
-  if (!isFinite(num) || isNaN(num)) return "$0";
-  return `$${num.toLocaleString("es-CL")}`;
+  return isFinite(num) ? `$${num.toLocaleString("es-CL")}` : "$0";
 }
 
 // 🧠 Función principal
@@ -39,7 +38,6 @@ async function insertMedicinesFromUpdates() {
   try {
     console.log("✨ Conectado a la base de datos");
 
-    // 🧹 Limpia la colección de medicamentos (reemplazo completo)
     await medicinesCollection.deleteMany({});
     console.log("🧽 Colección de medicamentos reiniciada");
 
@@ -54,23 +52,20 @@ async function insertMedicinesFromUpdates() {
         if (fechaDir.isDirectory) fechasDisponibles.push(fechaDir.name);
       }
 
-      fechasDisponibles.sort((a, b) => b.localeCompare(a)); // orden descendente
+      fechasDisponibles.sort((a, b) => b.localeCompare(a));
       const carpetaMasReciente = fechasDisponibles[0];
 
-      // Documento de farmacia para colección `medicines`
       const farmaciaDoc: any = {
         pharmacy: pharmacyName,
         categories: {}
       };
 
-      // Carga del historial previo si existe
       const historialPrevio = await priceHistoryCollection.findOne({ pharmacy: pharmacyName });
       const priceHistoryDoc: any = {
         pharmacy: pharmacyName,
         snapshots: historialPrevio?.snapshots || {}
       };
 
-      // Recorre cada carpeta de fecha
       for (const fechaFolder of fechasDisponibles) {
         const fullFolderPath = `${pathFarmacia}/${fechaFolder}`;
         const snapshot = {};
@@ -87,7 +82,6 @@ async function insertMedicinesFromUpdates() {
           const productos = Array.isArray(parsed) ? parsed : [parsed];
 
           const meds = productos.map((med) => {
-            // 🔍 Detecta distintos nombres para las claves de precios
             const rawOffer = med.price_offer ?? med.offer_price ?? 0;
             const rawNormal = med.price_normal ?? med.normal_price ?? 0;
 
@@ -105,16 +99,12 @@ async function insertMedicinesFromUpdates() {
             };
           });
 
-          // 📌 Solo agrega el scrapeo más reciente a `medicines`
           if (fechaFolder === carpetaMasReciente) {
-            if (!farmaciaDoc.categories[categoryName]) {
-              farmaciaDoc.categories[categoryName] = [];
-            }
+            farmaciaDoc.categories[categoryName] ??= [];
             farmaciaDoc.categories[categoryName].push(...meds);
           }
 
-          // 📅 Agrega snapshot para cada fecha (o sobreescribe si ya existía)
-          if (!snapshot[categoryName]) snapshot[categoryName] = [];
+          snapshot[categoryName] ??= [];
           snapshot[categoryName].push(
             ...meds.map((m) => ({
               id: m.id,
@@ -126,14 +116,10 @@ async function insertMedicinesFromUpdates() {
           );
         }
 
-        // 🕓 Almacena el snapshot bajo su fecha (puede sobrescribir esa fecha)
         priceHistoryDoc.snapshots[fechaFolder] = snapshot;
       }
 
-      // Inserta la farmacia en `medicines`
       await medicinesCollection.insertOne(farmaciaDoc);
-
-      // Elimina y reemplaza el historial completo por uno actualizado (con fechas anteriores + nueva)
       await priceHistoryCollection.updateOne(
         { pharmacy: pharmacyName },
         { $set: { snapshots: priceHistoryDoc.snapshots } },
@@ -152,7 +138,7 @@ async function insertMedicinesFromUpdates() {
   }
 }
 
-// 🏁 Ejecuta si se llama directamente como script
+// 🏁 Ejecutar desde consola
 insertMedicinesFromUpdates()
   .then(() => Deno.exit(0))
   .catch(() => Deno.exit(1));
