@@ -1,114 +1,129 @@
 from pathlib import Path
-import json, httpx, re, time
+import json, time, re
 from datetime import datetime
+from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/cruzverde_urls.json"
-timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = BASE_DIR / f"product_updates/cruzverde/{timestamp}"
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_FILE = BASE_DIR / "product_updates/cruzverde_products.jsonl"  # archivo único
 
-API_URL = "https://api.cruzverde.cl/product-service/products/detail/{}?inventoryId=zonaS2Soriente"
+def extract_data(soup):
+    name_tag = soup.select_one("div.product-name h1")
+    name = name_tag.get_text(strip=True) if name_tag else None
 
-def get_cruzverde_cookie():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context()
-        page = context.new_page()
-        page.goto("https://www.cruzverde.cl/ibuprofeno-600-mg-20-comprimidos/273362.html", wait_until="networkidle")
-        cookies = context.cookies()
-        browser.close()
-        return "; ".join([f"{c['name']}={c['value']}" for c in cookies])
+    image_tag = soup.select_one("img.productImage")
+    image_url = image_tag["src"] if image_tag and image_tag.has_attr("src") else None
+
+    price_block = soup.select_one("div.product-prices")
+    raw_normal_price, offer_price = None, None
+
+    if price_block:
+        try:
+            strike = price_block.select_one("span.price-standard span.value")
+            if strike and strike.has_attr("content"):
+                raw_normal_price = int(float(strike["content"]))
+            else:
+                strike_text = price_block.select_one("span.price-standard")
+                if strike_text:
+                    match = re.search(r'\$?(\d[\d\.]*)', strike_text.get_text(strip=True))
+                    if match:
+                        raw_normal_price = int(match.group(1).replace('.', ''))
+
+            offer = price_block.select_one("span.price-sales span.value")
+            if offer and offer.has_attr("content"):
+                offer_price = int(float(offer["content"]))
+            elif not offer:
+                # fallback
+                offer_text = price_block.select_one("span.price-sales")
+                if offer_text:
+                    match = re.search(r'\$?(\d[\d\.]*)', offer_text.get_text(strip=True))
+                    if match:
+                        offer_price = int(match.group(1).replace('.', ''))
+        except Exception as e:
+            print(f"Error extracting prices: {e}")
+
+    discount = 0
+    if raw_normal_price and offer_price and raw_normal_price > offer_price:
+        discount = round((1 - offer_price / raw_normal_price) * 100)
+
+    stock_info = soup.select_one(".availability")
+    stock = "unknown"
+    if stock_info:
+        stock_text = stock_info.get_text(strip=True).lower()
+        if "agotado" in stock_text or "sin stock" in stock_text:
+            stock = "out_of_stock"
+        elif "disponible" in stock_text or "stock" in stock_text:
+            stock = "available"
+
+    bioequivalent = bool(soup.select_one(".bioequivalent"))
+    return name, image_url, raw_normal_price, offer_price, discount, stock, bioequivalent
 
 def extract_id_from_url(url):
-    match = re.search(r"/(\d+)\.html", url)
-    return match.group(1) if match else None
+    match = re.search(r"-(\d+)\.html", url)
+    return int(match.group(1)) if match else None
 
-def process_category(categoria, urls, headers):
-    result = []
-    for url in urls:
-        product_id = extract_id_from_url(url)
-        if not product_id:
-            print(f"❌ No se pudo extraer ID de: {url}")
-            continue
+def process_category(categoria, urls):
+    cat = categoria.split("/")[0]
+    subcat = categoria.split("/")[1] if "/" in categoria else None
+    results = []
 
-        for attempt in range(2):
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+
+        for url in urls:
+            product_id = extract_id_from_url(url)
             try:
-                api_url = API_URL.format(product_id)
-                r = httpx.get(api_url, headers=headers, timeout=20)
-                if "INVALID_SESSION" in r.text or r.status_code == 401:
-                    if attempt == 0:
-                        print("🔁 Cookie expirada. Renovando y reintentando...")
-                        cookie = get_cruzverde_cookie()
-                        headers["Cookie"] = cookie
-                        continue
-                    else:
-                        raise Exception("Sesión inválida persistente.")
+                page.goto(url, timeout=20000)
+                page.wait_for_load_state("networkidle")
+                page.wait_for_timeout(1000)
+                soup = BeautifulSoup(page.content(), "html.parser")
+                name, image, normal_price, offer_price, discount, stock, bioeq = extract_data(soup)
 
-                r.raise_for_status()
-                data = r.json().get("productData", {})
-                prices = data.get("prices", {})
-                price_offer = prices.get("price-sale-cl") or prices.get("price-list-cl")
-                price_normal = prices.get("price-list-cl") if prices.get("price-sale-cl") else None
-                discount = round((1 - price_offer / price_normal) * 100) if price_normal and price_normal > price_offer else 0
-
-                result.append({
-                    "id": int(product_id),
-                    "pharmacy": "Farmacia Cruz Verde",
-                    "url": f"https://www.cruzverde.cl/{data.get('name')}/{product_id}.html",
-                    "api_url": api_url,
-                    "name": data.get("name"),
-                    "image": data.get("metaTags", {}).get("ogImage"),
-                    "bioequivalent": data.get("isBioequivalent") is True,
-                    "category": categoria.split("/")[0],
-                    "subcategory": categoria.split("/")[1] if "/" in categoria else None,
-                    "price_offer": price_offer,
-                    "price_normal": price_normal,
-                    "discount": discount
+                results.append({
+                    "pharmacy": "Cruz Verde",
+                    "id": product_id,
+                    "url": url,
+                    "offer_price": offer_price,
+                    "normal_price": normal_price,
+                    "discount": discount,
+                    "name": name,
+                    "category": cat,
+                    "subcategory": subcat,
+                    "image": image,
+                    "stock": stock,
+                    "bioequivalent": bioeq
                 })
-                break
-
             except Exception as e:
-                print(f"⚠️ Error en producto {product_id}: {e}")
-                break
+                print(f"❌ Error con ID {product_id}: {e}")
+            time.sleep(0.2)
 
-        time.sleep(0.2)
+        page.close()
+        browser.close()
 
-    if result:
-        output_path = OUTPUT_DIR / f"{categoria.split('/')[0]}.json"
-        existing = []
-        if output_path.exists():
-            with open(output_path, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(existing + result, f, indent=2, ensure_ascii=False)
-        print(f"✅ Guardado: {output_path} ({len(result)} productos)")
+    if results:
+        with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
+            for item in results:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f"✅ Guardado: {OUTPUT_FILE}")
 
 def main():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
-        category_urls = json.load(f)
-
-    cookie = get_cruzverde_cookie()
-    headers = {
-        "Accept": "application/json",
-        "Origin": "https://www.cruzverde.cl",
-        "Referer": "https://www.cruzverde.cl/",
-        "Cookie": cookie
-    }
+        all_data = json.load(f)
 
     with ThreadPoolExecutor(max_workers=6) as executor:
         futures = {
-            executor.submit(process_category, categoria, urls, headers.copy()): categoria
-            for categoria, urls in category_urls.items()
+            executor.submit(process_category, categoria, urls): categoria
+            for categoria, urls in all_data.items()
         }
         for future in as_completed(futures):
-            name = futures[future]
+            categoria = futures[future]
             try:
                 future.result()
             except Exception as e:
-                print(f"❌ Error procesando {name}: {e}")
+                print(f"❌ Error procesando {categoria}: {e}")
 
 if __name__ == "__main__":
     main()

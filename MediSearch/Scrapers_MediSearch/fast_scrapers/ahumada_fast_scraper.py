@@ -5,12 +5,12 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+# 📁 Directorios
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/ahumada_urls.json"
-timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = BASE_DIR / f"product_updates/ahumada/{timestamp}"
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_FILE = BASE_DIR / "product_updates/ahumada_products.jsonl"  # Archivo final único
 
+# 🧠 Función para extraer datos del HTML
 def extract_data(soup):
     main_container = soup.select_one("div.product-details-section")
     if not main_container:
@@ -71,10 +71,12 @@ def extract_data(soup):
     bioequivalent = bool(main_container.select_one(".bioequivalent-badge-container"))
     return name, image_url, raw_normal_price, offer_price, discount, stock, bioequivalent
 
+# 🧠 Extraer ID desde URL
 def extract_id_from_url(url):
     match = re.search(r"-(\d+)\.html", url)
     return int(match.group(1)) if match else None
 
+# 🔄 Procesamiento por categoría
 def process_category(categoria, urls):
     cat = categoria.split("/")[0]
     subcat = categoria.split("/")[1] if "/" in categoria else None
@@ -115,11 +117,12 @@ def process_category(categoria, urls):
         browser.close()
 
     if results:
-        output_path = OUTPUT_DIR / f"{cat}.json"
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-        print(f"✅ Guardado: {output_path}")
+        with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
+            for item in results:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        print(f"✅ Guardado: {OUTPUT_FILE}")
 
+# 🚀 Ejecutar
 def main():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         all_data = json.load(f)

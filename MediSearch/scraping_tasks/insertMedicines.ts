@@ -40,7 +40,7 @@ async function hayArchivosJSON(): Promise<boolean> {
       if (!fechaDir.isDirectory) continue;
       const fullFolderPath = `${pathFarmacia}/${fechaDir.name}`;
       for await (const archivo of Deno.readDir(fullFolderPath)) {
-        if (archivo.isFile && archivo.name.endsWith(".json")) return true;
+        if (archivo.isFile && (archivo.name.endsWith(".json") || archivo.name.endsWith(".jsonl"))) return true;
       }
     }
   }
@@ -90,15 +90,22 @@ async function insertMedicinesFromUpdates() {
         const snapshot = {};
 
         for await (const archivo of Deno.readDir(fullFolderPath)) {
-          if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
+          if (!archivo.isFile || (!archivo.name.endsWith(".json") && !archivo.name.endsWith(".jsonl"))) continue;
 
-          const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
+          const categoryRaw = archivo.name.replace(".json", "").replace(".jsonl", "").replace(/-/g, " ");
           const categoryName = normalizeCategoryName(categoryRaw);
           const jsonPath = `${fullFolderPath}/${archivo.name}`;
 
-          const rawData = await Deno.readTextFile(jsonPath);
-          const parsed = JSON.parse(rawData);
-          const productos = Array.isArray(parsed) ? parsed : [parsed];
+          // ✅ Lee tanto JSON como JSONL
+          let productos: any[] = [];
+          if (jsonPath.endsWith(".jsonl")) {
+            const lines = (await Deno.readTextFile(jsonPath)).split("\n").filter(Boolean);
+            productos = lines.map((line) => JSON.parse(line));
+          } else {
+            const rawData = await Deno.readTextFile(jsonPath);
+            const parsed = JSON.parse(rawData);
+            productos = Array.isArray(parsed) ? parsed : [parsed];
+          }
 
           const meds = productos.map((med) => {
             const rawOffer = med.price_offer ?? med.offer_price ?? 0;
