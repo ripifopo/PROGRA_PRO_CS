@@ -35,13 +35,15 @@ jobs:
           echo "GMAIL_USER=${{ secrets.GMAIL_USER }}" >> .env
           echo "GMAIL_PASS=${{ secrets.GMAIL_PASS }}" >> .env
           echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+        working-directory: MediSearch
 
       - name: Run scrape-and-insert
         run: deno task scrape-and-insert
+        working-directory: MediSearch
 
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: scrape-logs
-          path: logs/
+          path: MediSearch/logs/
