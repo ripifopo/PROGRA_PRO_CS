@@ -68,6 +68,10 @@ jobs:
           fi
         working-directory: MediSearch
 
+      - name: 🛠️ Ensure product_updates folder exists
+        run: mkdir -p Scrapers_MediSearch/product_updates
+        working-directory: MediSearch
+
       - name: 🚀 Run scrape-and-insert
         run: deno task scrape-and-insert
         working-directory: MediSearch

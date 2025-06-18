@@ -25,6 +25,7 @@ async function log(message: string) {
 
 await Deno.mkdir("logs", { recursive: true }).catch(() => {});
 await Deno.mkdir("backups", { recursive: true }).catch(() => {});
+await Deno.mkdir(updatesPath, { recursive: true }).catch(() => {}); // ✅ asegura que la carpeta exista
 
 function renderProgressBar(completed: number, total: number): string {
   const width = 30;
@@ -177,4 +178,4 @@ async function sendEmailNotification(duration: string, errors: string[]) {
   }
 }
 
-await sendEmailNotification(totalElapsed, errors); 
+await sendEmailNotification(totalElapsed, errors);
