@@ -7,9 +7,9 @@ import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
 
 const scrapers = [
-  { name: "Ahumada", command: ["python3", "Scrapers_MediSearch/ahumada_scraper.py"] },
-  { name: "Cruz Verde", command: ["python3", "Scrapers_MediSearch/cruzverde_scraper.py"] },
-  { name: "Salcobrand", command: ["python3", "Scrapers_MediSearch/salcobrand_scraper.py"] },
+  { name: "Ahumada", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\ahumada_fast_scraper.py"] },
+  { name: "Cruz Verde", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\cruzverde_fast_scraper.py"] },
+  { name: "Salcobrand", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\salcobrand_fast_scraper.py"] },
 ];
 
 const totalStart = Date.now();
@@ -83,7 +83,7 @@ const insertProcess = Deno.run({
     "--allow-read",
     "--allow-env",
     "--allow-net",
-    "MediSearch/scraping_tasks/insertMedicines.ts", // ✅ RUTA ACTUALIZADA
+    "scraping_tasks/insertMedicines.ts", // ✅ RUTA ACTUALIZADA
   ],
   stdout: "piped",
   stderr: "piped",
@@ -101,7 +101,7 @@ insertProcess.close();
 
 // 🧹 Limpieza de carpetas temporales
 await log("\n🧹 Limpiando carpetas temporales...");
-const updatesPath = "Scrapers_MediSearch/product_updates";
+const updatesPath = "MediSearch\Scrapers_MediSearch\product_updates";
 if (existsSync(updatesPath)) {
   for (const entry of walkSync(updatesPath, { maxDepth: 1, includeDirs: true })) {
     if (entry.isDirectory && entry.path !== updatesPath) {
