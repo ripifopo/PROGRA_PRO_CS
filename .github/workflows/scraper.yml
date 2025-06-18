@@ -19,6 +19,7 @@ jobs:
           deno-version: "1.42.0"  # Asegúrate que sea la que estás usando
 
       - name: Create .env file
+        working-directory: MediSearch
         run: |
           echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
@@ -27,4 +28,5 @@ jobs:
           echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
 
       - name: Run scrape-and-insert
+        working-directory: MediSearch
         run: deno task scrape-and-insert
