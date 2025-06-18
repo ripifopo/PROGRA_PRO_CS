@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Deno
+      - name: Set up Deno (versión estable compatible con smtp@0.7.0 y GitHub Actions)
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "2.3.6"
+          deno-version: "1.43.6" # ⚠️ No usar Deno 2.x ya que rompe smtp@0.7.0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -39,7 +39,7 @@ jobs:
           EOF
           echo "✅ .env file created"
           echo "Checking .env file format:"
-          cat .env | sed 's/=.*/=***/' # Mostrar variables sin valores
+          cat .env | sed 's/=.*/=***/'
         working-directory: MediSearch
 
       - name: Debug paths
@@ -63,18 +63,14 @@ jobs:
           else
             echo "📁 Creating empty URL files for scrapers..."
             mkdir -p url_extractor/extracted_urls
-            echo '[]' > url_extractor/extracted_urls/ahumada_urls.json
-            echo '[]' > url_extractor/extracted_urls/cruzverde_urls.json
-            echo '[]' > url_extractor/extracted_urls/salcobrand_urls.json
+            echo '{}' > url_extractor/extracted_urls/ahumada_urls.json
+            echo '{}' > url_extractor/extracted_urls/cruzverde_urls.json
+            echo '{}' > url_extractor/extracted_urls/salcobrand_urls.json
           fi
         working-directory: MediSearch
 
-      - name: Install Deno dependencies
-        run: deno install
-        working-directory: MediSearch
-
       - name: Run scrape-and-insert
-        run: deno task scrape-and-insert  
+        run: deno task scrape-and-insert
         working-directory: MediSearch
 
       - name: Upload logs

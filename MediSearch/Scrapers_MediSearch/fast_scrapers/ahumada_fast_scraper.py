@@ -1,15 +1,14 @@
-import json
-import time
-import re
-from datetime import datetime
 from pathlib import Path
+import json, time, re
+from datetime import datetime
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-INPUT_FILE = Path("../url_extractor/extracted_urls/ahumada_urls.json")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/ahumada_urls.json"
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../product_updates/ahumada/{timestamp}")
+OUTPUT_DIR = BASE_DIR / f"product_updates/ahumada/{timestamp}"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 def extract_data(soup):

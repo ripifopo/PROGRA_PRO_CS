@@ -1,16 +1,13 @@
-import json
-import httpx
-import re
-import time
-from datetime import datetime
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
+import json, httpx, re, time
+from datetime import datetime
 from playwright.sync_api import sync_playwright
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Ruta de entrada y salida
-INPUT_FILE = Path("../url_extractor/extracted_urls/cruzverde_urls.json")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/cruzverde_urls.json"
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../product_updates/cruzverde/{timestamp}")
+OUTPUT_DIR = BASE_DIR / f"product_updates/cruzverde/{timestamp}"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_URL = "https://api.cruzverde.cl/product-service/products/detail/{}?inventoryId=zonaS2Soriente"

@@ -1,14 +1,14 @@
-import json
-import time
-from datetime import datetime
 from pathlib import Path
-import httpx
+import json, time, httpx
+from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Rutas corregidas
-INPUT_FILE = Path("../url_extractor/extracted_urls/salcobrand_urls.json")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/salcobrand_urls.json"
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../product_updates/salcobrand/{timestamp}")
+OUTPUT_DIR = BASE_DIR / f"product_updates/salcobrand/{timestamp}"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 API_URL_TEMPLATE = "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds={}&stock=&format=json"
 
 # Extraer y transformar producto desde RetailRocket
