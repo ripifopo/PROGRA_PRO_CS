@@ -1,4 +1,4 @@
-// Archivo: src/scraping_tasks/automated_medicines.ts
+// Archivo: MediSearch/scraping_tasks/automated_medicines.ts
 // Ejecuta automáticamente los scrapers y luego inserta los medicamentos con InsertMedicines
 // Requiere permisos: --allow-read --allow-run --allow-env --allow-net --allow-write
 
@@ -53,8 +53,7 @@ async function runScraper({ name, command }: { name: string; command: string[] }
     await log(`✅ Scraper de ${name} completado en ${duration.toFixed(1)} segundos.`);
   } else {
     const error = new TextDecoder().decode(await process.stderrOutput());
-    await log(`❌ Error en scraper de ${name}:
-${error}`);
+    await log(`❌ Error en scraper de ${name}:\n${error}`);
     errors.push(`Scraper ${name} falló: ${error}`);
   }
 
@@ -70,13 +69,22 @@ ${error}`);
   await log(renderProgressBar(index + 1, total));
 }
 
+// 🔁 Ejecutar scrapers
 for (let i = 0; i < scrapers.length; i++) {
   await runScraper(scrapers[i], i, scrapers.length);
 }
 
+// ✅ Insertar medicamentos en MongoDB
 await log("\n🟢 Ejecutando InsertMedicines...");
 const insertProcess = Deno.run({
-  cmd: ["deno", "run", "--allow-read", "--allow-env", "--allow-net", "src/lib/insertMedicines.ts"],
+  cmd: [
+    "deno",
+    "run",
+    "--allow-read",
+    "--allow-env",
+    "--allow-net",
+    "MediSearch/scraping_tasks/insertMedicines.ts", // ✅ RUTA ACTUALIZADA
+  ],
   stdout: "piped",
   stderr: "piped",
 });
@@ -91,6 +99,7 @@ if (insertStatus.success) {
 }
 insertProcess.close();
 
+// 🧹 Limpieza de carpetas temporales
 await log("\n🧹 Limpiando carpetas temporales...");
 const updatesPath = "Scrapers_MediSearch/product_updates";
 if (existsSync(updatesPath)) {
@@ -111,7 +120,7 @@ if (existsSync(updatesPath)) {
 const totalElapsed = ((Date.now() - totalStart) / 1000).toFixed(1);
 await log(`\n🎉 Scrapeo e inserción completado en ${totalElapsed} segundos. Carpetas temporales eliminadas.`);
 
-// 📧 Notificación por correo
+// 📧 Enviar correo de notificación
 async function sendEmailNotification(duration: string, errors: string[]) {
   const client = new SmtpClient();
 
@@ -133,7 +142,7 @@ async function sendEmailNotification(duration: string, errors: string[]) {
 
     await client.send({
       from: Deno.env.get("GMAIL_USER")!,
-      to: "tucorreo@gmail.com", // Cambiar por tu correo real
+      to: "tucorreo@gmail.com", // 👉 Reemplaza con tu email real
       subject,
       content,
     });
