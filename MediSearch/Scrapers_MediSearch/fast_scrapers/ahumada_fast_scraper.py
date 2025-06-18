@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 📁 Directorios
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/ahumada_urls.json"
+INPUT_FILE = BASE_DIR / "Scrapers_MediSearch/url_extractor/extracted_urls/ahumada_urls.json"
 OUTPUT_FILE = BASE_DIR / "product_updates/ahumada_products.jsonl"  # Archivo final único
 
 # 🧠 Función para extraer datos del HTML

@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-INPUT_FILE = BASE_DIR / "url_extractor/extracted_urls/salcobrand_urls.json"
+INPUT_FILE = BASE_DIR / "Scrapers_MediSearch/url_extractor/extracted_urls/salcobrand_urls.json"
 OUTPUT_FILE = BASE_DIR / "product_updates/salcobrand_products.jsonl"  # archivo único
 
 def extract_data(soup):
