@@ -3,6 +3,7 @@
 import { emptyDirSync, existsSync, walkSync } from "https://deno.land/std@0.201.0/fs/mod.ts";
 import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
+import "https://deno.land/std@0.201.0/dotenv/load.ts";
 
 // ✅ Rutas corregidas para Linux (no usar \)
 const scrapers = [
