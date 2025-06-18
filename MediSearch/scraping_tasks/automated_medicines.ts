@@ -39,7 +39,7 @@ function renderProgressBar(completed: number, total: number): string {
 let errors: string[] = [];
 
 async function runScraper({ name, command }: { name: string; command: string[] }, index: number, total: number) {
-  await log(`\n🔄 [${index + 1}/${total}] Ejecutando scraper de ${name}...`);
+  await log(`\n🔀 [${index + 1}/${total}] Ejecutando scraper de ${name}...`);
   const start = Date.now();
 
   const process = Deno.run({ cmd: command, stdout: "piped", stderr: "piped" });
@@ -52,7 +52,8 @@ async function runScraper({ name, command }: { name: string; command: string[] }
     await log(`✅ Scraper de ${name} completado en ${duration.toFixed(1)} segundos.`);
   } else {
     const error = new TextDecoder().decode(await process.stderrOutput());
-    await log(`❌ Error en scraper de ${name}:\n${error}`);
+    await log(`❌ Error en scraper de ${name}:
+${error}`);
     errors.push(`Scraper ${name} falló: ${error}`);
   }
 
@@ -101,7 +102,7 @@ insertProcess.close();
 
 // 🧹 Limpiar carpetas temporales
 await log("\n🧹 Limpiando carpetas temporales...");
-const updatesPath = "Scrapers_MediSearch/product_updates"; // ✅ corregido
+const updatesPath = "../Scrapers_MediSearch/product_updates"; // 
 
 if (existsSync(updatesPath)) {
   for (const entry of walkSync(updatesPath, { maxDepth: 1, includeDirs: true })) {
