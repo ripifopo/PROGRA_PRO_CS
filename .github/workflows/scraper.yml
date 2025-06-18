@@ -2,16 +2,19 @@ name: Scrape and Insert Medicines
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
-  workflow_dispatch:
+    - cron: '0 */12 * * *'  # Cada 12 horas
+  workflow_dispatch:        # Permitir ejecución manual
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Timeout de seguridad
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Versión más reciente
+        with:
+          fetch-depth: 1  # Solo el commit más reciente
 
       - name: Set up Deno
         uses: denoland/setup-deno@v1
@@ -19,31 +22,84 @@ jobs:
           deno-version: "2.3.6"
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Versión más reciente
         with:
-          python-version: '3.10'
+          python-version: '3.11'  # Versión más reciente y estable
+          cache: 'pip'  # Cache de dependencias
 
       - name: Install Python dependencies
         run: |
-          pip install beautifulsoup4 playwright
-          playwright install
+          pip install --no-cache-dir beautifulsoup4 playwright
+          playwright install --with-deps chromium  # Solo instalar Chromium para ahorrar tiempo
+        working-directory: .
 
       - name: Create .env file
         run: |
-          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
+          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" > .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
           echo "GMAIL_USER=${{ secrets.GMAIL_USER }}" >> .env
           echo "GMAIL_PASS=${{ secrets.GMAIL_PASS }}" >> .env
           echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+          echo "Created .env file successfully"
+        working-directory: MediSearch
+
+      - name: Verify environment setup
+        run: |
+          echo "✅ Deno version: $(deno --version)"
+          echo "✅ Python version: $(python3 --version)"
+          echo "✅ Current directory: $(pwd)"
+          echo "✅ Directory contents:"
+          ls -la
+          echo "✅ .env file exists: $(test -f .env && echo 'Yes' || echo 'No')"
+          echo "✅ deno.json exists: $(test -f deno.json && echo 'Yes' || echo 'No')"
         working-directory: MediSearch
 
       - name: Run scrape-and-insert
-        run: deno task scrape-and-insert  
+        run: |
+          echo "🚀 Starting scrape-and-insert process..."
+          deno task scrape-and-insert
+        working-directory: MediSearch
+        env:
+          DENO_FUTURE: 1  
+
+      - name: Check scraping results
+        if: always()
+        run: |
+          echo "📊 Scraping process completed. Checking results..."
+          if [ -d "logs" ]; then
+            echo "✅ Logs directory exists"
+            echo "📄 Log files:"
+            ls -la logs/
+            echo "📋 Latest log content (last 50 lines):"
+            find logs -name "*.log" -type f -exec tail -50 {} \;
+          else
+            echo "⚠️ No logs directory found"
+          fi
         working-directory: MediSearch
 
-      - name: Upload logs
+      - name: Upload scraping logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: scrape-logs
+          name: scrape-logs-${{ github.run_number }}
           path: MediSearch/logs/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload error logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: error-logs-${{ github.run_number }}
+          path: |
+            MediSearch/logs/
+            MediSearch/.env
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Clean up sensitive files
+        if: always()
+        run: |
+          rm -f .env
+          echo "🧹 Cleanup completed"
+        working-directory: MediSearch
