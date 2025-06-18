@@ -1,11 +1,12 @@
 {
   "imports": {
-    "mongodb": "npm:mongodb@^6.0.0",
+    "mongodb": "npm:mongodb@^17.0.0",
     "dotenv": "https://deno.land/std@0.224.0/dotenv/load.ts"
+    
   },
   "tasks": {
-    "insert-medicines": "deno run --allow-read --allow-env --allow-net --allow-sys scraping_tasks/insertMedicines.ts",
-    "scrape-and-insert": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write --allow-sys scraping_tasks/automated_medicines.ts"
+    "insert-medicines": "deno run --allow-read --allow-env --allow-net scraping_tasks/insertMedicines.ts",
+    "scrape-medicines": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write --allow-sys scraping_tasks/runScrapersOnly.ts"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],

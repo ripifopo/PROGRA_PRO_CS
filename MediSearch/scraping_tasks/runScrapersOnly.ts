@@ -2,7 +2,7 @@
 
 import "https://deno.land/std@0.224.0/dotenv/load.ts";
 import { walkSync } from "https://deno.land/std@0.201.0/fs/walk.ts";
-import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
+import { SmtpClient } from "https://deno.land/x/smtp@v0.7.0/mod.ts";
 
 const scrapers = [
   { name: "Ahumada", command: ["python3", "Scrapers_MediSearch/fast_scrapers/ahumada_fast_scraper.py"] },
