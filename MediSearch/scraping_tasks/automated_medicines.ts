@@ -1,15 +1,14 @@
 // Archivo: MediSearch/scraping_tasks/automated_medicines.ts
-// Ejecuta automáticamente los scrapers y luego inserta los medicamentos con InsertMedicines
-// Requiere permisos: --allow-read --allow-run --allow-env --allow-net --allow-write
 
 import { emptyDirSync, existsSync, walkSync } from "https://deno.land/std@0.201.0/fs/mod.ts";
 import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
 
+// ✅ Rutas corregidas para Linux (no usar \)
 const scrapers = [
-  { name: "Ahumada", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\ahumada_fast_scraper.py"] },
-  { name: "Cruz Verde", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\cruzverde_fast_scraper.py"] },
-  { name: "Salcobrand", command: ["python3", "MediSearch\Scrapers_MediSearch\fast_scrapers\salcobrand_fast_scraper.py"] },
+  { name: "Ahumada", command: ["python3", "Scrapers_MediSearch/fast_scrapers/ahumada_fast_scraper.py"] },
+  { name: "Cruz Verde", command: ["python3", "Scrapers_MediSearch/fast_scrapers/cruzverde_fast_scraper.py"] },
+  { name: "Salcobrand", command: ["python3", "Scrapers_MediSearch/fast_scrapers/salcobrand_fast_scraper.py"] },
 ];
 
 const totalStart = Date.now();
@@ -74,7 +73,7 @@ for (let i = 0; i < scrapers.length; i++) {
   await runScraper(scrapers[i], i, scrapers.length);
 }
 
-// ✅ Insertar medicamentos en MongoDB
+// ✅ Ejecutar InsertMedicines
 await log("\n🟢 Ejecutando InsertMedicines...");
 const insertProcess = Deno.run({
   cmd: [
@@ -83,7 +82,8 @@ const insertProcess = Deno.run({
     "--allow-read",
     "--allow-env",
     "--allow-net",
-    "scraping_tasks/insertMedicines.ts", // ✅ RUTA ACTUALIZADA
+    "--allow-sys",
+    "scraping_tasks/insertMedicines.ts",
   ],
   stdout: "piped",
   stderr: "piped",
@@ -99,9 +99,10 @@ if (insertStatus.success) {
 }
 insertProcess.close();
 
-// 🧹 Limpieza de carpetas temporales
+// 🧹 Limpiar carpetas temporales
 await log("\n🧹 Limpiando carpetas temporales...");
-const updatesPath = "MediSearch\Scrapers_MediSearch\product_updates";
+const updatesPath = "Scrapers_MediSearch/product_updates"; // ✅ corregido
+
 if (existsSync(updatesPath)) {
   for (const entry of walkSync(updatesPath, { maxDepth: 1, includeDirs: true })) {
     if (entry.isDirectory && entry.path !== updatesPath) {
@@ -120,7 +121,7 @@ if (existsSync(updatesPath)) {
 const totalElapsed = ((Date.now() - totalStart) / 1000).toFixed(1);
 await log(`\n🎉 Scrapeo e inserción completado en ${totalElapsed} segundos. Carpetas temporales eliminadas.`);
 
-// 📧 Enviar correo de notificación
+// 📧 Enviar correo
 async function sendEmailNotification(duration: string, errors: string[]) {
   const client = new SmtpClient();
 
@@ -142,7 +143,7 @@ async function sendEmailNotification(duration: string, errors: string[]) {
 
     await client.send({
       from: Deno.env.get("GMAIL_USER")!,
-      to: "pharmasearch.alerts@gmail.com", 
+      to: "pharmasearch.alerts@gmail.com",
       subject,
       content,
     });

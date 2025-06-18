@@ -38,8 +38,7 @@ jobs:
         working-directory: MediSearch
 
       - name: Run scrape-and-insert
-        run: deno task scrape-and-insert
-        working-directory: MediSearch
+        run: deno task scrape-and-insert  
 
       - name: Upload logs
         if: always()
