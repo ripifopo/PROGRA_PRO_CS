@@ -1,4 +1,4 @@
-// Archivo: src/lib/insertMedicines.ts
+// Archivo: scraping_tasks/insertMedicines.ts
 
 import { MongoClient } from "npm:mongodb";
 import { normalizeCategoryName } from "../src/lib/utils/normalizeCategories.ts";
@@ -6,7 +6,6 @@ import "dotenv"; // Carga .env automáticamente desde deno.json
 
 const uri = Deno.env.get("MONGODB_URI");
 if (!uri) throw new Error("❌ No se encontró MONGODB_URI");
-
 
 const client = new MongoClient(uri);
 const db = client.db("medisearch");
@@ -57,25 +56,30 @@ async function insertMedicinesFromUpdates() {
           if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
 
           const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
-          const categoryName = normalizeCategoryName(categoryRaw);
-          const jsonPath = `${fullFolderPath}/${archivo.name}`;
+          const categoryName = categoryRaw.trim().toLowerCase(); // ✅ no usar normalizeCategoryName aquí
 
+          const jsonPath = `${fullFolderPath}/${archivo.name}`;
           const rawData = await Deno.readTextFile(jsonPath);
           const parsed = JSON.parse(rawData);
           const productos = Array.isArray(parsed) ? parsed : [parsed];
 
-          const meds = productos.map((med) => ({
-            pharmacy: pharmacyName,
-            id: med.id || null,
-            url: med.url || "",
-            offer_price: `$${med.price_offer ?? 0}`,
-            normal_price: `$${med.price_normal ?? 0}`,
-            discount: med.discount ?? 0,
-            name: med.name || "",
-            category: categoryName,
-            image: med.image || "",
-            stock: med.stock ?? ""
-          }));
+          const meds = productos.map((med) => {
+            const rawOffer = med.price_offer ?? med.offer_price ?? 0;
+            const rawNormal = med.price_normal ?? med.normal_price ?? 0;
+
+            return {
+              pharmacy: pharmacyName,
+              id: med.id || null,
+              url: med.url || "",
+              offer_price: `$${rawOffer}`,
+              normal_price: `$${rawNormal}`,
+              discount: med.discount ?? 0,
+              name: med.name || "",
+              category: med.category || categoryName, // ✅ usa la que viene en el JSON si existe
+              image: med.image || "",
+              stock: med.stock ?? ""
+            };
+          });
 
           // Guardar en medicines solo el scrapeo más reciente
           if (fechaFolder === archivoMasReciente) {
@@ -85,7 +89,7 @@ async function insertMedicinesFromUpdates() {
             farmaciaDoc.categories[categoryName].push(...meds);
           }
 
-          // Guardar todos los scrapeos en price_history (compacto)
+          // Guardar todos los scrapeos en price_history
           if (!snapshot[categoryName]) snapshot[categoryName] = [];
           snapshot[categoryName].push(
             ...meds.map((m) => ({
