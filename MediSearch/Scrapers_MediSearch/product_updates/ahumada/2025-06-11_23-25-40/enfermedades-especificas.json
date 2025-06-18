@@ -1,0 +1,44 @@
+[
+  {
+    "pharmacy": "Farmacia Ahumada",
+    "id": 5204,
+    "url": "https://www.farmaciasahumada.cl/antabus-500-mg-x-24-comprimidos-5204.html",
+    "offer_price": 26974,
+    "normal_price": 41499,
+    "discount": 35,
+    "name": "Antabus 500 mg x 24 Comprimidos",
+    "category": "enfermedades-especificas",
+    "subcategory": "tratamiento-adicciones",
+    "image": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw72cf824b/images/products/5204/5204.jpg?sw=525&sh=525&sm=fit",
+    "stock": "available",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Farmacia Ahumada",
+    "id": 71288,
+    "url": "https://www.farmaciasahumada.cl/nicorette-2-mg-x-30-gomas-masticables-freshmint-71288.html",
+    "offer_price": 26399,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Nicorette 2 mg x 30 Gomas Masticables Freshmint",
+    "category": "enfermedades-especificas",
+    "subcategory": "tratamiento-adicciones",
+    "image": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw7a1506dc/images/products/71288/71288.jpg?sw=525&sh=525&sm=fit",
+    "stock": "available",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Farmacia Ahumada",
+    "id": 71289,
+    "url": "https://www.farmaciasahumada.cl/nicorette-4-mg-x-30-gomas-masticables-freshmint-71289.html",
+    "offer_price": 25599,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Nicorette 4 mg x 30 Gomas Masticables Freshmint",
+    "category": "enfermedades-especificas",
+    "subcategory": "tratamiento-adicciones",
+    "image": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dwda27a4a6/images/products/71289/71289.jpg?sw=525&sh=525&sm=fit",
+    "stock": "available",
+    "bioequivalent": false
+  }
+]
