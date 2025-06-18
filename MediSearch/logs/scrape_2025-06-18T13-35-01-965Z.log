@@ -1,0 +1,55 @@
+
+🔀 [1/3] Ejecutando scraper de Ahumada...
+❌ Error en scraper de Ahumada:
+Traceback (most recent call last):
+  File "C:\Users\conta\Documents\GitHub\PROGRA_PRO_CS\MediSearch\Scrapers_MediSearch\fast_scrapers\ahumada_fast_scraper.py", line 4, in <module>
+    from bs4 import BeautifulSoup
+ModuleNotFoundError: No module named 'bs4'
+
+⏳ Estimado restante: 0.5 seg (2 scraper(s) restantes)
+[██████████░░░░░░░░░░░░░░░░░░░░] 33%
+
+🔀 [2/3] Ejecutando scraper de Cruz Verde...
+❌ Error en scraper de Cruz Verde:
+Traceback (most recent call last):
+  File "C:\Users\conta\Documents\GitHub\PROGRA_PRO_CS\MediSearch\Scrapers_MediSearch\fast_scrapers\cruzverde_fast_scraper.py", line 2, in <module>
+    import json, httpx, re, time
+ModuleNotFoundError: No module named 'httpx'
+
+⏳ Estimado restante: 0.2 seg (1 scraper(s) restantes)
+[████████████████████░░░░░░░░░░] 67%
+
+🔀 [3/3] Ejecutando scraper de Salcobrand...
+❌ Error en scraper de Salcobrand:
+Traceback (most recent call last):
+  File "C:\Users\conta\Documents\GitHub\PROGRA_PRO_CS\MediSearch\Scrapers_MediSearch\fast_scrapers\salcobrand_fast_scraper.py", line 2, in <module>
+    import json, time, httpx
+ModuleNotFoundError: No module named 'httpx'
+
+[██████████████████████████████] 100%
+
+🟢 Ejecutando InsertMedicines...
+❌ Error ejecutando InsertMedicines:
+[0m[33mWarning[0m Sloppy imports are not recommended and have a negative impact on performance.
+[0m[32mInitialize[0m mongodb@6.17.0
+[0m[32mInitialize[0m @mongodb-js/saslprep@1.3.0
+[0m[32mInitialize[0m mongodb-connection-string-url@3.0.2
+[0m[32mInitialize[0m bson@6.10.4
+[0m[32mInitialize[0m sparse-bitfield@3.0.3
+[0m[32mInitialize[0m whatwg-url@14.2.0
+[0m[32mInitialize[0m @types/whatwg-url@11.0.5
+[0m[32mInitialize[0m memory-pager@1.5.0
+[0m[32mInitialize[0m webidl-conversions@7.0.0
+[0m[32mInitialize[0m tr46@5.1.1
+[0m[32mInitialize[0m @types/webidl-conversions@7.0.3
+[0m[32mInitialize[0m punycode@2.3.1
+[0m[1m[31merror[0m: Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'env')
+const uri = process.env.MONGODB_URI;
+[0m[31m                    ^[0m
+    at [0m[36mfile:///C:/Users/conta/Documents/GitHub/PROGRA_PRO_CS/MediSearch/scraping_tasks/insertMedicines.ts[0m:[0m[33m7[0m:[0m[33m21[0m
+
+
+🧹 Limpiando carpetas temporales...
+
+🎉 Scrapeo e inserción completado en 4.1 segundos. Carpetas temporales eliminadas.
+📬 Correo de notificación enviado.

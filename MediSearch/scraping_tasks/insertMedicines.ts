@@ -1,10 +1,13 @@
+/// <reference lib="deno.ns" />
 // Archivo: src/lib/insertMedicines.ts
 
-import { MongoClient } from "mongodb";
+import "https://deno.land/std@0.224.0/dotenv/load.ts"; // ✅ Carga automática de .env
+
+import { MongoClient } from "npm:mongodb@6.17.0";
 import { normalizeCategoryName } from "../src/lib/utils/normalizeCategories.ts";
 
-// ✅ Accede correctamente a la URI desde las variables de entorno en Node.js
-const uri = process.env.MONGODB_URI;
+// ✅ Accede correctamente a las variables en Deno
+const uri = Deno.env.get("MONGODB_URI");
 if (!uri) throw new Error("❌ No se encontró MONGODB_URI en las variables de entorno");
 
 const client = new MongoClient(uri);

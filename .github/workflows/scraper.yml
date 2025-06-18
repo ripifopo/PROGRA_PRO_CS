@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Deno (versión estable compatible con smtp@0.7.0 y GitHub Actions)
+      - name: Set up Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "1.43.6" # ⚠️ No usar Deno 2.x ya que rompe smtp@0.7.0
+          deno-version: "1.43.6" # ✅ Compatible con smtp y MongoDB
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -38,24 +38,18 @@ jobs:
           BASE_URL=${{ secrets.BASE_URL }}
           EOF
           echo "✅ .env file created"
-          echo "Checking .env file format:"
           cat .env | sed 's/=.*/=***/'
         working-directory: MediSearch
 
       - name: Debug paths
         run: |
           echo "Current directory: $(pwd)"
-          echo "Directory contents:"
           ls -la
-          echo "deno.json exists: $(test -f deno.json && echo 'Yes' || echo 'No')"
-          echo "scraping_tasks directory exists: $(test -d scraping_tasks && echo 'Yes' || echo 'No')"
-          if [ -f deno.json ]; then
-            echo "deno.json content:"
-            cat deno.json
-          fi
+          test -f deno.json && echo "✅ deno.json exists"
+          test -d scraping_tasks && echo "✅ scraping_tasks exists"
         working-directory: MediSearch
 
-      - name: Extract URLs (if URL extractor exists)
+      - name: Extract URLs (if extractor exists)
         run: |
           if [ -f "url_extractor/extract_urls.py" ]; then
             echo "🔍 Running URL extractor..."

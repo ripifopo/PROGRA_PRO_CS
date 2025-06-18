@@ -1,21 +1,22 @@
 // Archivo: MediSearch/scraping_tasks/automated_medicines.ts
 
+import "https://deno.land/std@0.224.0/dotenv/load.ts"; // ✅ Carga de .env
+
 import { emptyDirSync, existsSync, walkSync } from "https://deno.land/std@0.201.0/fs/mod.ts";
 import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
-import "https://deno.land/std@0.201.0/dotenv/load.ts";
 
-// ✅ Rutas corregidas para Linux (no usar \)
+// ✅ Scrapers a ejecutar (usa rutas forward slash)
 const scrapers = [
   { name: "Ahumada", command: ["python3", "Scrapers_MediSearch/fast_scrapers/ahumada_fast_scraper.py"] },
   { name: "Cruz Verde", command: ["python3", "Scrapers_MediSearch/fast_scrapers/cruzverde_fast_scraper.py"] },
   { name: "Salcobrand", command: ["python3", "Scrapers_MediSearch/fast_scrapers/salcobrand_fast_scraper.py"] },
 ];
 
+// 🕓 Inicialización
 const totalStart = Date.now();
 const elapsedTimes: number[] = [];
-const now = new Date();
-const timestamp = now.toISOString().replace(/[:.]/g, "-");
+const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
 const logFile = `logs/scrape_${timestamp}.log`;
 
 async function log(message: string) {
@@ -23,18 +24,14 @@ async function log(message: string) {
   await Deno.writeTextFile(logFile, message + "\n", { append: true });
 }
 
-try {
-  await Deno.mkdir("logs", { recursive: true });
-} catch (_) {}
+await Deno.mkdir("logs", { recursive: true }).catch(() => {});
 
 function renderProgressBar(completed: number, total: number): string {
   const width = 30;
   const percent = completed / total;
   const filled = Math.round(width * percent);
   const empty = width - filled;
-  const bar = "█".repeat(filled) + "░".repeat(empty);
-  const percentage = Math.round(percent * 100);
-  return `[${bar}] ${percentage}%`;
+  return `[${"█".repeat(filled)}${"░".repeat(empty)}] ${Math.round(percent * 100)}%`;
 }
 
 let errors: string[] = [];
@@ -53,8 +50,7 @@ async function runScraper({ name, command }: { name: string; command: string[] }
     await log(`✅ Scraper de ${name} completado en ${duration.toFixed(1)} segundos.`);
   } else {
     const error = new TextDecoder().decode(await process.stderrOutput());
-    await log(`❌ Error en scraper de ${name}:
-${error}`);
+    await log(`❌ Error en scraper de ${name}:\n${error}`);
     errors.push(`Scraper ${name} falló: ${error}`);
   }
 
@@ -63,8 +59,7 @@ ${error}`);
   const remaining = total - (index + 1);
   if (remaining > 0) {
     const avgTime = elapsedTimes.reduce((a, b) => a + b, 0) / elapsedTimes.length;
-    const estRemaining = avgTime * remaining;
-    await log(`⏳ Estimado restante: ${estRemaining.toFixed(1)} seg (${remaining} scraper(s) restantes)`);
+    await log(`⏳ Estimado restante: ${(avgTime * remaining).toFixed(1)} seg (${remaining} scraper(s) restantes)`);
   }
 
   await log(renderProgressBar(index + 1, total));
@@ -101,9 +96,9 @@ if (insertStatus.success) {
 }
 insertProcess.close();
 
-// 🧹 Limpiar carpetas temporales
+// 🧹 Limpieza
 await log("\n🧹 Limpiando carpetas temporales...");
-const updatesPath = "../Scrapers_MediSearch/product_updates"; // 
+const updatesPath = "Scrapers_MediSearch/product_updates";
 
 if (existsSync(updatesPath)) {
   for (const entry of walkSync(updatesPath, { maxDepth: 1, includeDirs: true })) {
@@ -123,7 +118,7 @@ if (existsSync(updatesPath)) {
 const totalElapsed = ((Date.now() - totalStart) / 1000).toFixed(1);
 await log(`\n🎉 Scrapeo e inserción completado en ${totalElapsed} segundos. Carpetas temporales eliminadas.`);
 
-// 📧 Enviar correo
+// 📧 Enviar notificación por correo
 async function sendEmailNotification(duration: string, errors: string[]) {
   const client = new SmtpClient();
 
@@ -159,3 +154,4 @@ async function sendEmailNotification(duration: string, errors: string[]) {
 }
 
 await sendEmailNotification(totalElapsed, errors);
+// 📝 Guardar log final
