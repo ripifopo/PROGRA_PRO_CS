@@ -1,19 +1,16 @@
 // Archivo: MediSearch/scraping_tasks/automated_medicines.ts
 
-import "https://deno.land/std@0.224.0/dotenv/load.ts"; // ✅ Carga de .env
-
+import "https://deno.land/std@0.224.0/dotenv/load.ts";
 import { emptyDirSync, existsSync, walkSync } from "https://deno.land/std@0.201.0/fs/mod.ts";
 import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
 
-// ✅ Scrapers a ejecutar (usa rutas forward slash)
 const scrapers = [
   { name: "Ahumada", command: ["python3", "Scrapers_MediSearch/fast_scrapers/ahumada_fast_scraper.py"] },
   { name: "Cruz Verde", command: ["python3", "Scrapers_MediSearch/fast_scrapers/cruzverde_fast_scraper.py"] },
   { name: "Salcobrand", command: ["python3", "Scrapers_MediSearch/fast_scrapers/salcobrand_fast_scraper.py"] },
 ];
 
-// 🕓 Inicialización
 const totalStart = Date.now();
 const elapsedTimes: number[] = [];
 const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
@@ -70,31 +67,38 @@ for (let i = 0; i < scrapers.length; i++) {
   await runScraper(scrapers[i], i, scrapers.length);
 }
 
-// ✅ Ejecutar InsertMedicines
-await log("\n🟢 Ejecutando InsertMedicines...");
-const insertProcess = Deno.run({
-  cmd: [
-    "deno",
-    "run",
-    "--allow-read",
-    "--allow-env",
-    "--allow-net",
-    "--allow-sys",
-    "scraping_tasks/insertMedicines.ts",
-  ],
-  stdout: "piped",
-  stderr: "piped",
-});
-const insertStatus = await insertProcess.status();
+// ✅ Solo ejecutar InsertMedicines si no hubo errores
+if (errors.length === 0) {
+  await log("\n🟢 Todos los scrapers fueron exitosos. Ejecutando InsertMedicines...");
+  const insertProcess = Deno.run({
+    cmd: [
+      "deno",
+      "run",
+      "--allow-read",
+      "--allow-env",
+      "--allow-net",
+      "--allow-sys",
+      "scraping_tasks/insertMedicines.ts",
+    ],
+    stdout: "piped",
+    stderr: "piped",
+  });
 
-if (insertStatus.success) {
-  await log("✅ InsertMedicines ejecutado correctamente.");
+  const insertStatus = await insertProcess.status();
+
+  if (insertStatus.success) {
+    await log("✅ InsertMedicines ejecutado correctamente.");
+  } else {
+    const err = new TextDecoder().decode(await insertProcess.stderrOutput());
+    await log("❌ Error ejecutando InsertMedicines:\n" + err);
+    errors.push("InsertMedicines falló: " + err);
+  }
+
+  insertProcess.close();
 } else {
-  const err = new TextDecoder().decode(await insertProcess.stderrOutput());
-  await log("❌ Error ejecutando InsertMedicines:\n" + err);
-  errors.push("InsertMedicines falló: " + err);
+  await log("⛔ Se detectaron errores en los scrapers. No se ejecutará InsertMedicines para evitar borrar la base de datos.");
+  errors.push("InsertMedicines cancelado debido a errores previos.");
 }
-insertProcess.close();
 
 // 🧹 Limpieza
 await log("\n🧹 Limpiando carpetas temporales...");
@@ -154,4 +158,4 @@ async function sendEmailNotification(duration: string, errors: string[]) {
 }
 
 await sendEmailNotification(totalElapsed, errors);
-// 📝 Guardar log final
+// 📝 Guardar errores en archivo
