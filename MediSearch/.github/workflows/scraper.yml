@@ -1,22 +1,30 @@
-# .github/workflows/scraper.yml
-name: Ejecutar Scrapers e Insertar Medicamentos
+name: Scrape and Insert Medicines
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Cada 6 horas (puedes cambiar esto)
-  workflow_dispatch: # Permite correrlo manualmente desde GitHub
+    - cron: '0 */6 * * *'  # ⏰ Cada 6 horas
+  workflow_dispatch:       # 👉 Permite ejecutarlo manualmente desde GitHub
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Clonar el repositorio
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Instalar Deno
+      - name: Set up Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: v1.x
+          deno-version: "1.42.0"  # Asegúrate que sea la que estás usando
 
-      - name: Ejecutar scraping automático
-        run: deno run --allow-read --allow-run --allow-env --allow-net --allow-write scraping_tasks/automated_medicines.ts
+      - name: Create .env file
+        run: |
+          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
+          echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+          echo "GMAIL_USER=${{ secrets.GMAIL_USER }}" >> .env
+          echo "GMAIL_PASS=${{ secrets.GMAIL_PASS }}" >> .env
+          echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+
+      - name: Run scrape-and-insert
+        run: deno task scrape-and-insert
