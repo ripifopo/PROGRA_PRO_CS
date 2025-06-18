@@ -4,6 +4,6 @@
   },
   "tasks": {
     "insert-medicines": "deno run --allow-read --allow-env --allow-net --env=.env scraping_tasks/insertMedicines.ts",
-    "scrape-and-insert": "deno run --allow-read --allow-env --allow-net --allow-run --env=.env scraping_tasks/automated_medicines.ts"
+    "scrape-and-insert": "deno run --allow-read --allow-env --allow-net --allow-run --allow-write --env=.env scraping_tasks/automated_medicines.ts"
   }
 }
