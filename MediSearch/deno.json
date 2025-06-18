@@ -1,6 +1,6 @@
 {
   "imports": {
-    "mongodb": "npm:mongodb"
+    "mongodb": "npm:mongodb@^6.0.0"
   },
   "tasks": {
     "insert-medicines": "deno run --allow-read --allow-env --allow-net --allow-sys --env=.env scraping_tasks/insertMedicines.ts",

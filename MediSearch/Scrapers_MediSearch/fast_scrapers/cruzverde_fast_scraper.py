@@ -60,7 +60,7 @@ def process_category(categoria, urls, headers):
                 result.append({
                     "id": int(product_id),
                     "pharmacy": "Farmacia Cruz Verde",
-                    "url": f"https://www.cruzverde.cl/{data.get("name")}/{product_id}.html",
+                    "url": f"https://www.cruzverde.cl/{data.get('name')}/{product_id}.html",
                     "api_url": api_url,
                     "name": data.get("name"),
                     "image": data.get("metaTags", {}).get("ogImage"),
