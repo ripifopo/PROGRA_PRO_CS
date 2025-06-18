@@ -2,7 +2,7 @@ name: Scrape and Insert Medicines
 
 on:
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: '0 */12 * * *'  # Cada 12 horas
   workflow_dispatch:
 
 jobs:
@@ -10,25 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: 🔄 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Deno
+      - name: 🦕 Set up Deno 1.43.6
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "1.43.6" # ✅ Compatible con smtp y MongoDB
+          deno-version: "1.43.6"
 
-      - name: Set up Python
+      - name: 🧪 Confirm Deno version
+        run: deno --version
+
+      - name: 🐍 Set up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install Python dependencies
+      - name: 📦 Install Python dependencies
         run: |
           pip install beautifulsoup4 playwright httpx
           playwright install
 
-      - name: Create .env file
+      - name: 🗂️ Create .env file
         run: |
           cat > .env << 'EOF'
           MONGODB_URI=${{ secrets.MONGODB_URI }}
@@ -37,19 +40,21 @@ jobs:
           GMAIL_PASS=${{ secrets.GMAIL_PASS }}
           BASE_URL=${{ secrets.BASE_URL }}
           EOF
-          echo "✅ .env file created"
+          echo "✅ .env file created:"
           cat .env | sed 's/=.*/=***/'
         working-directory: MediSearch
 
-      - name: Debug paths
+      - name: 📁 Debug directory structure
         run: |
           echo "Current directory: $(pwd)"
           ls -la
-          test -f deno.json && echo "✅ deno.json exists"
-          test -d scraping_tasks && echo "✅ scraping_tasks exists"
+          echo "🔍 Checking important files:"
+          test -f deno.json && echo "✅ deno.json found"
+          test -f deno.lock && echo "✅ deno.lock found"
+          test -d scraping_tasks && echo "✅ scraping_tasks directory found"
         working-directory: MediSearch
 
-      - name: Extract URLs (if extractor exists)
+      - name: 🔗 Extract URLs (if extractor exists)
         run: |
           if [ -f "url_extractor/extract_urls.py" ]; then
             echo "🔍 Running URL extractor..."
@@ -63,11 +68,11 @@ jobs:
           fi
         working-directory: MediSearch
 
-      - name: Run scrape-and-insert
+      - name: 🚀 Run scrape-and-insert
         run: deno task scrape-and-insert
         working-directory: MediSearch
 
-      - name: Upload logs
+      - name: 📤 Upload logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
