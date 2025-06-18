@@ -55,6 +55,20 @@ jobs:
           fi
         working-directory: MediSearch
 
+      - name: Extract URLs (if URL extractor exists)
+        run: |
+          if [ -f "url_extractor/extract_urls.py" ]; then
+            echo "🔍 Running URL extractor..."
+            python3 url_extractor/extract_urls.py
+          else
+            echo "📁 Creating empty URL files for scrapers..."
+            mkdir -p url_extractor/extracted_urls
+            echo '[]' > url_extractor/extracted_urls/ahumada_urls.json
+            echo '[]' > url_extractor/extracted_urls/cruzverde_urls.json
+            echo '[]' > url_extractor/extracted_urls/salcobrand_urls.json
+          fi
+        working-directory: MediSearch
+
       - name: Install Deno dependencies
         run: deno install
         working-directory: MediSearch
