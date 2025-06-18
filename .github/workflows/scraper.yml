@@ -2,7 +2,7 @@ name: Scrape and Insert Medicines
 
 on:
   schedule:
-    - cron: '0 */12 * * *'  # Cada 12 horas
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -70,6 +70,12 @@ jobs:
 
       - name: 🚀 Run scrape-and-insert
         run: deno task scrape-and-insert
+        working-directory: MediSearch
+
+      - name: 🧹 Clean temporary folders after insert
+        run: |
+          echo "🧹 Removing old product updates..."
+          rm -rf Scrapers_MediSearch/product_updates
         working-directory: MediSearch
 
       - name: 📤 Upload logs

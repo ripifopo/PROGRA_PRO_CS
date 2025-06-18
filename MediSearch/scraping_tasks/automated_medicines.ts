@@ -2,7 +2,7 @@
 
 import "https://deno.land/std@0.224.0/dotenv/load.ts";
 import { emptyDirSync, existsSync, walkSync } from "https://deno.land/std@0.201.0/fs/mod.ts";
-import { join } from "https://deno.land/std@0.201.0/path/mod.ts";
+import { join, basename } from "https://deno.land/std@0.201.0/path/mod.ts";
 import { SmtpClient } from "https://deno.land/x/smtp/mod.ts";
 
 const scrapers = [
@@ -15,6 +15,8 @@ const totalStart = Date.now();
 const elapsedTimes: number[] = [];
 const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
 const logFile = `logs/scrape_${timestamp}.log`;
+const updatesPath = "Scrapers_MediSearch/product_updates";
+const backupPath = `backups/updates_${timestamp}`;
 
 async function log(message: string) {
   console.log(message);
@@ -22,6 +24,7 @@ async function log(message: string) {
 }
 
 await Deno.mkdir("logs", { recursive: true }).catch(() => {});
+await Deno.mkdir("backups", { recursive: true }).catch(() => {});
 
 function renderProgressBar(completed: number, total: number): string {
   const width = 30;
@@ -67,9 +70,23 @@ for (let i = 0; i < scrapers.length; i++) {
   await runScraper(scrapers[i], i, scrapers.length);
 }
 
-// ✅ Solo ejecutar InsertMedicines si no hubo errores
-if (errors.length === 0) {
-  await log("\n🟢 Todos los scrapers fueron exitosos. Ejecutando InsertMedicines...");
+// 🧪 Función: verificar si hay archivos .json en product_updates
+function hasJsonFiles(path: string): boolean {
+  for (const entry of walkSync(path, { includeFiles: true })) {
+    if (entry.name.endsWith(".json")) return true;
+  }
+  return false;
+}
+
+// 💾 Backup antes de eliminar
+if (existsSync(updatesPath)) {
+  await log(`🗂️ Creando respaldo en ${backupPath}`);
+  await Deno.run({ cmd: ["cp", "-r", updatesPath, backupPath] }).status();
+}
+
+// ✅ Solo ejecutar InsertMedicines si no hubo errores y hay archivos JSON
+if (errors.length === 0 && hasJsonFiles(updatesPath)) {
+  await log("\n🟢 Todos los scrapers fueron exitosos y se detectaron archivos JSON. Ejecutando InsertMedicines...");
   const insertProcess = Deno.run({
     cmd: [
       "deno",
@@ -96,14 +113,17 @@ if (errors.length === 0) {
 
   insertProcess.close();
 } else {
-  await log("⛔ Se detectaron errores en los scrapers. No se ejecutará InsertMedicines para evitar borrar la base de datos.");
-  errors.push("InsertMedicines cancelado debido a errores previos.");
+  await log("⛔ No se ejecutará InsertMedicines: hubo errores o no se encontraron archivos JSON.");
+  if (!hasJsonFiles(updatesPath)) {
+    errors.push("No se encontraron archivos .json para insertar.");
+  }
+  if (errors.length > 0) {
+    errors.push("InsertMedicines fue cancelado por precaución.");
+  }
 }
 
 // 🧹 Limpieza
 await log("\n🧹 Limpiando carpetas temporales...");
-const updatesPath = "Scrapers_MediSearch/product_updates";
-
 if (existsSync(updatesPath)) {
   for (const entry of walkSync(updatesPath, { maxDepth: 1, includeDirs: true })) {
     if (entry.isDirectory && entry.path !== updatesPath) {
@@ -157,5 +177,4 @@ async function sendEmailNotification(duration: string, errors: string[]) {
   }
 }
 
-await sendEmailNotification(totalElapsed, errors);
-// 📝 Guardar errores en archivo
+await sendEmailNotification(totalElapsed, errors); 
