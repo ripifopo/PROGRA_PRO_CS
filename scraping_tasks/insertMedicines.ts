@@ -1,7 +1,7 @@
 // Archivo: src/lib/insertMedicines.ts
 
 import { MongoClient } from "mongodb";
-import { normalizeCategoryName } from "./utils/normalizeCategories.ts";
+import { normalizeCategoryName } from "MediSearch/src/lib/utils/normalizeCategories.ts";
 
 // ✅ Accede correctamente a la URI desde las variables de entorno en Node.js
 const uri = process.env.MONGODB_URI;
