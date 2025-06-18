@@ -2,8 +2,8 @@ name: Scrape and Insert Medicines
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # ⏰ Cada 6 horas
-  workflow_dispatch:       # 👉 Permite ejecutarlo manualmente desde GitHub
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   run-scraper:
@@ -16,10 +16,19 @@ jobs:
       - name: Set up Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "2.3.6"  
+          deno-version: "2.3.6"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          pip install beautifulsoup4 playwright
+          playwright install
 
       - name: Create .env file
-        working-directory: MediSearch
         run: |
           echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
           echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
@@ -28,5 +37,11 @@ jobs:
           echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
 
       - name: Run scrape-and-insert
-        working-directory: MediSearch
         run: deno task scrape-and-insert
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: scrape-logs
+          path: logs/
