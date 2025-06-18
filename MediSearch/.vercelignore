@@ -1,0 +1,3 @@
+# Evitar que Vercel intente compilar scripts Deno
+scraping_tasks/
+Scrapers_MediSearch/
