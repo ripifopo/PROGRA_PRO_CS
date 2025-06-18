@@ -142,7 +142,7 @@ async function sendEmailNotification(duration: string, errors: string[]) {
 
     await client.send({
       from: Deno.env.get("GMAIL_USER")!,
-      to: "tucorreo@gmail.com", // 👉 Reemplaza con tu email real
+      to: "pharmasearch.alerts@gmail.com", 
       subject,
       content,
     });
