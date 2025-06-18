@@ -16,7 +16,7 @@ jobs:
       - name: Set up Deno
         uses: denoland/setup-deno@v1
         with:
-          deno-version: "1.42.0"  # Asegúrate que sea la que estás usando
+          deno-version: "2.3.6"  
 
       - name: Create .env file
         working-directory: MediSearch
