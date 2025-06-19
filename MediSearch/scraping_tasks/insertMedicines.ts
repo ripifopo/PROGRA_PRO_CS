@@ -77,7 +77,7 @@ async function insertMedicinesFromUpdates() {
               name: med.name || "",
               category: med.category || categoryName, // ✅ usa la que viene en el JSON si existe
               image: med.image || "",
-              stock: med.stock ?? ""
+              bioequivalent: med.bioequivalent || "No disponible" // ✅ nuevo campo agregado
             };
           });
 
