@@ -8,9 +8,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
 
 # Ruta de entrada y salida
-INPUT_FILE = Path("../url_extractor/extracted_urls/cruzverde_urls.json")
+INPUT_FILE = Path("../Scrapers_MediSearch/url_extractor/extracted_urls/cruzverde_urls.json")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../product_updates/cruzverde/{timestamp}")
+OUTPUT_DIR = Path(f"../Scrapers_MediSearch/product_updates/cruzverde/{timestamp}")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_URL = "https://api.cruzverde.cl/product-service/products/detail/{}?inventoryId=zonaS2Soriente"

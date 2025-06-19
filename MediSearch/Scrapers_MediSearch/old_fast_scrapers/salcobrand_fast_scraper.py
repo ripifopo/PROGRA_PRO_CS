@@ -6,9 +6,9 @@ import httpx
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Rutas corregidas
-INPUT_FILE = Path("../url_extractor/extracted_urls/salcobrand_urls.json")
+INPUT_FILE = Path("../Scrapers_MediSearch/url_extractor/extracted_urls/salcobrand_urls.json")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../product_updates/salcobrand/{timestamp}")
+OUTPUT_DIR = Path(f"../Scrapers_MediSearch/product_updates/salcobrand/{timestamp}")
 API_URL_TEMPLATE = "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds={}&stock=&format=json"
 
 # Extraer y transformar producto desde RetailRocket

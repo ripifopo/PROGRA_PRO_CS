@@ -13,10 +13,10 @@ export interface MedicineEntry {
   id: number | null;             // ID del producto
   name: string;                  // Nombre del medicamento
   offer_price: string;           // Precio de oferta (ej: "$1990")
-  normal_price: string;          // Precio normal (ej: "$2490")
+  normal_price: string;         // Precio normal (ej: "$2490")
   discount: number;              // Porcentaje de descuento
   url: string;                   // Enlace al producto
   image: string;                 // URL de la imagen
-  stock: string;                 // Ej: "yes", "no"
   category: string;              // Categoría del medicamento (normalizada)
+  bioequivalent: string;        // Indicador de bioequivalencia (ej: "Sí", "No", "No aplica")
 }
