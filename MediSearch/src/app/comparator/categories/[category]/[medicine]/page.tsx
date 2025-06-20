@@ -296,12 +296,14 @@ export default function MedicineDetailPage() {
           toast.info(`Región: ${region}, Comuna: ${commune}`);
         }}
         pharmacy={medData.pharmacy || ''}
-      />
-     <StatsTabs
+    />
+    <StatsTabs
     medicineId={medData.id}
     pharmacy={medData.pharmacy || ''}
     category={category as string}
+    name={medData.name || ''}
     />
+
     </Container>
   );
 }
