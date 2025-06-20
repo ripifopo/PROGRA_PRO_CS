@@ -1,13 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { priceHistoryCollection } from '@/lib/mongodb';
 
-export async function GET(req: NextRequest, context: { params: { id: string } }) {
+export async function GET(req: NextRequest) {
   try {
-    const medicineId = parseInt(context.params.id);
+    // 🟢 Extrae el ID desde la URL
+    const idStr = req.nextUrl.pathname.split('/').pop();
+    const medicineId = parseInt(idStr || '');
     const pharmacy = decodeURIComponent(req.nextUrl.searchParams.get('pharmacy') || '');
     const name = decodeURIComponent(req.nextUrl.searchParams.get('name') || '').toLowerCase();
 
-    if (!pharmacy) {
+    if (!pharmacy || isNaN(medicineId)) {
       return NextResponse.json({ error: 'Faltan parámetros' }, { status: 400 });
     }
 
@@ -23,7 +25,7 @@ export async function GET(req: NextRequest, context: { params: { id: string } })
         // 🟢 Intenta buscar por ID
         let product = items.find((p) => p.id === medicineId);
 
-        // 🔁 Si no lo encuentra por ID, intenta buscar por nombre (tolerancia mínima)
+        // 🔁 Si no lo encuentra por ID, intenta buscar por nombre
         if (!product && name) {
           product = items.find((p) => p.name?.toLowerCase() === name);
         }
@@ -32,7 +34,7 @@ export async function GET(req: NextRequest, context: { params: { id: string } })
           results.push({
             date,
             offer_price: parseInt(product.offer_price?.replace(/[^0-9]/g, '') || '0'),
-            normal_price: parseInt(product.normal_price?.replace(/[^0-9]/g, '') || '0')
+            normal_price: parseInt(product.normal_price?.replace(/[^0-9]/g, '') || '0'),
           });
         }
       }
