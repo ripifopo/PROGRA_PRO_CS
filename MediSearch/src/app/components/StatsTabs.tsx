@@ -10,9 +10,10 @@ interface Props {
   medicineId: number;
   pharmacy: string;
   category: string;
+  name: string; // 🔧 <-- agregar esta línea
 }
 
-export default function StatsTabs({ medicineId, pharmacy, category }: Props) {
+export default function StatsTabs({ medicineId, pharmacy, category, name }: Props) {
   return (
     <>
       <hr className="my-5 border-top border-2 border-secondary opacity-25" />
@@ -23,7 +24,7 @@ export default function StatsTabs({ medicineId, pharmacy, category }: Props) {
           <PriceTrendChart medicineId={medicineId} pharmacy={pharmacy} compact={false} />
         </Tab>
         <Tab eventKey="alternatives" title="Alternativas Similares">
-          <SimilarAlternatives medicineId={medicineId} category={category} medicineName={''} />
+          <SimilarAlternatives medicineId={medicineId} category={category} name={name} />
         </Tab>
       </Tabs>
     </>
