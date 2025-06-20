@@ -120,7 +120,12 @@ export default function PriceTrendChart({ medicineId, pharmacy, compact = false 
     scales: {
       y: {
         ticks: {
-          callback: (value: number) => `$${value.toLocaleString('es-CL')}`,
+          callback: function (value: string | number) {
+            if (typeof value === 'number') {
+              return `$${value.toLocaleString('es-CL')}`;
+            }
+            return value;
+          },
           font: {
             size: compact ? 10 : 12,
           }
