@@ -8,6 +8,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
 import StockLocationModal from '@/app/components/StockLocationModal';
+import StatsTabs from '@/app/components/StatsTabs';
 
 // Interfaz para tipar el medicamento
 interface Medicine {
@@ -296,6 +297,11 @@ export default function MedicineDetailPage() {
         }}
         pharmacy={medData.pharmacy || ''}
       />
+     <StatsTabs
+    medicineId={medData.id}
+    pharmacy={medData.pharmacy || ''}
+    category={category as string}
+    />
     </Container>
   );
 }

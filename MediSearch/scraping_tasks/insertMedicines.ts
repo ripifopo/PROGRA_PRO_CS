@@ -2,7 +2,7 @@
 
 import { MongoClient } from "npm:mongodb";
 import { normalizeCategoryName } from "../src/lib/utils/normalizeCategories.ts";
-import "dotenv"; // Carga .env automáticamente desde deno.json
+import "dotenv";
 
 const uri = Deno.env.get("MONGODB_URI");
 if (!uri) throw new Error("❌ No se encontró MONGODB_URI");
@@ -13,10 +13,8 @@ const db = client.db("medisearch");
 const medicinesCollection = db.collection("medicines");
 const priceHistoryCollection = db.collection("price_history");
 
-// Ruta de los scrapeos por farmacia y fecha
 const updatesPath = "./Scrapers_MediSearch/product_updates";
 
-// Función principal
 async function insertMedicinesFromUpdates() {
   try {
     console.log("✨ Conectado a la base de datos");
@@ -56,7 +54,7 @@ async function insertMedicinesFromUpdates() {
           if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
 
           const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
-          const categoryName = categoryRaw.trim().toLowerCase(); // ✅ no usar normalizeCategoryName aquí
+          const categoryName = categoryRaw.trim().toLowerCase();
 
           const jsonPath = `${fullFolderPath}/${archivo.name}`;
           const rawData = await Deno.readTextFile(jsonPath);
@@ -75,13 +73,12 @@ async function insertMedicinesFromUpdates() {
               normal_price: `$${rawNormal}`,
               discount: med.discount ?? 0,
               name: med.name || "",
-              category: med.category || categoryName, // ✅ usa la que viene en el JSON si existe
+              category: med.category || categoryName,
               image: med.image || "",
-              bioequivalent: med.bioequivalent || "No disponible" // ✅ nuevo campo agregado
+              bioequivalent: med.bioequivalent || "No disponible"
             };
           });
 
-          // Guardar en medicines solo el scrapeo más reciente
           if (fechaFolder === archivoMasReciente) {
             if (!farmaciaDoc.categories[categoryName]) {
               farmaciaDoc.categories[categoryName] = [];
@@ -89,7 +86,6 @@ async function insertMedicinesFromUpdates() {
             farmaciaDoc.categories[categoryName].push(...meds);
           }
 
-          // Guardar todos los scrapeos en price_history
           if (!snapshot[categoryName]) snapshot[categoryName] = [];
           snapshot[categoryName].push(
             ...meds.map((m) => ({
@@ -97,7 +93,8 @@ async function insertMedicinesFromUpdates() {
               name: m.name,
               offer_price: m.offer_price,
               normal_price: m.normal_price,
-              discount: m.discount
+              discount: m.discount,
+              category: m.category
             }))
           );
         }
@@ -105,7 +102,6 @@ async function insertMedicinesFromUpdates() {
         priceHistoryDoc.snapshots[fechaFolder] = snapshot;
       }
 
-      // Inserción final en la base de datos
       await medicinesCollection.insertOne(farmaciaDoc);
       await priceHistoryCollection.insertOne(priceHistoryDoc);
 
@@ -121,7 +117,6 @@ async function insertMedicinesFromUpdates() {
   }
 }
 
-// Utilidad para nombrar farmacias con formato legible
 function transformarNombreFarmacia(nombre: string): string {
   if (nombre.toLowerCase() === "cruzverde") return "Cruz Verde";
   if (nombre.toLowerCase() === "salcobrand") return "Salcobrand";
@@ -129,7 +124,6 @@ function transformarNombreFarmacia(nombre: string): string {
   return nombre;
 }
 
-// Ejecutar si corre directo
 insertMedicinesFromUpdates()
   .then(() => Deno.exit(0))
   .catch(() => Deno.exit(1));
