@@ -16,7 +16,7 @@ import {
 // Registro de módulos necesarios para Chart.js
 ChartJS.register(LineElement, PointElement, LinearScale, Title, Tooltip, CategoryScale, Legend);
 
-// Props del componente, incluye modo compacto para versión resumida
+// Props del componente
 interface PriceTrendChartProps {
   medicineId: number;
   pharmacy: string;
@@ -68,7 +68,6 @@ export default function PriceTrendChart({ medicineId, pharmacy, compact = false 
     return `${día} de ${meses[parseInt(mes) - 1]} de ${año}`;
   };
 
-  // Datos del gráfico: fechas, precios normales y precios en oferta
   const data = {
     labels: snapshots.map(s => formatFecha(s.date)),
     datasets: [
@@ -89,7 +88,6 @@ export default function PriceTrendChart({ medicineId, pharmacy, compact = false 
     ]
   };
 
-  // Configuración visual del gráfico
   const options = {
     responsive: true,
     plugins: {
@@ -106,7 +104,7 @@ export default function PriceTrendChart({ medicineId, pharmacy, compact = false 
         display: !compact,
         text: 'Tendencia de precios por fecha',
         font: {
-          size: 18,
+          size: compact ? 14 : 22,
         }
       },
       tooltip: {
@@ -143,9 +141,12 @@ export default function PriceTrendChart({ medicineId, pharmacy, compact = false 
     }
   };
 
-  // Render final del gráfico con altura ajustada según el modo
+  // Estilo visual mejorado: sombra, bordes, fondo
   return (
-    <div style={{ height: compact ? '180px' : '420px' }}>
+    <div
+      className="p-3 bg-white rounded shadow-sm"
+      style={{ height: compact ? '220px' : '550px' }}
+    >
       <Line data={data} options={options} />
     </div>
   );
