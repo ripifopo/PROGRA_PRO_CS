@@ -17,7 +17,7 @@ const updatesPath = "./Scrapers_MediSearch/product_updates";
 
 async function insertMedicinesFromUpdates() {
   try {
-    console.log("✨ Conectado a la base de datos");
+    console.log("✨ Conectado a MongoDB");
 
     for await (const pharmacyDir of Deno.readDir(updatesPath)) {
       if (!pharmacyDir.isDirectory) continue;
@@ -25,29 +25,38 @@ async function insertMedicinesFromUpdates() {
       const pharmacyName = transformarNombreFarmacia(pharmacyDir.name);
       const pathFarmacia = `${updatesPath}/${pharmacyDir.name}`;
 
-      const archivos: string[] = [];
-      for await (const fechaDir of Deno.readDir(pathFarmacia)) {
-        if (fechaDir.isDirectory) archivos.push(fechaDir.name);
+      // Obtener carpetas con fechas
+      const fechas: string[] = [];
+      for await (const carpeta of Deno.readDir(pathFarmacia)) {
+        if (carpeta.isDirectory) fechas.push(carpeta.name);
       }
 
-      archivos.sort((a, b) => b.localeCompare(a));
-      const archivoMasReciente = archivos[0];
-      console.log("📁 Carpeta más reciente detectada:", archivoMasReciente);
+      if (fechas.length === 0) {
+        console.warn(`⚠️ No se encontraron carpetas con fechas para ${pharmacyName}`);
+        continue;
+      }
 
-      // 💾 Guardar backup del estado actual antes de sobrescribir
+      fechas.sort((a, b) => b.localeCompare(a));
+      const nuevaFecha = fechas[0];
+      const nuevaRuta = `${pathFarmacia}/${nuevaFecha}`;
+
+      console.log(`📁 ${pharmacyName}: usando carpeta más reciente → ${nuevaFecha}`);
+
+      // Obtener el estado anterior de medicines (antes de sobrescribir)
       const estadoAnterior = await medicinesCollection.findOne({ pharmacy: pharmacyName });
       const fechaAnterior = estadoAnterior?.lastUpdated;
 
+      // Si existe una versión anterior y no ha sido guardada como snapshot
       if (estadoAnterior && estadoAnterior.categories && fechaAnterior) {
-        const snapshotExistente = await priceHistoryCollection.findOne({
+        const snapshotYaExiste = await priceHistoryCollection.findOne({
           pharmacy: pharmacyName,
           [`snapshots.${fechaAnterior}`]: { $exists: true }
         });
 
-        if (!snapshotExistente) {
+        if (!snapshotYaExiste) {
           const snapshot = {};
-          for (const [categoria, lista] of Object.entries(estadoAnterior.categories)) {
-            snapshot[categoria] = (lista as any[]).map((m: any) => ({
+          for (const [cat, lista] of Object.entries(estadoAnterior.categories)) {
+            snapshot[cat] = (lista as any[]).map((m: any) => ({
               id: m.id,
               name: m.name,
               offer_price: m.offer_price,
@@ -62,80 +71,80 @@ async function insertMedicinesFromUpdates() {
             { $set: { [`snapshots.${fechaAnterior}`]: snapshot } },
             { upsert: true }
           );
-          console.log(`📈 Guardado snapshot anterior en price_history con fecha ${fechaAnterior}`);
+
+          console.log(`📈 Snapshot guardado para ${pharmacyName} con fecha ${fechaAnterior}`);
         } else {
-          console.log(`⚠️ Ya existía snapshot para ${fechaAnterior}, no se duplicó.`);
+          console.log(`⏭️ Snapshot ${fechaAnterior} ya existe para ${pharmacyName}, se omite.`);
         }
       }
 
-      // 📦 Procesar la nueva carpeta más reciente
+      // Procesar medicamentos nuevos desde la carpeta más reciente
       const categorias: Record<string, any[]> = {};
-      const fullFolderPath = `${pathFarmacia}/${archivoMasReciente}`;
 
-      for await (const archivo of Deno.readDir(fullFolderPath)) {
+      for await (const archivo of Deno.readDir(nuevaRuta)) {
         if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
 
-        const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
-        const categoryName = categoryRaw.trim().toLowerCase();
-        const jsonPath = `${fullFolderPath}/${archivo.name}`;
+        const nombreCategoria = archivo.name.replace(".json", "").replace(/-/g, " ").trim().toLowerCase();
+        const rutaJson = `${nuevaRuta}/${archivo.name}`;
 
         try {
-          const rawData = await Deno.readTextFile(jsonPath);
-          const parsed = JSON.parse(rawData);
+          const raw = await Deno.readTextFile(rutaJson);
+          const parsed = JSON.parse(raw);
           const productos = Array.isArray(parsed) ? parsed : [parsed];
 
-          categorias[categoryName] = productos.map((med) => {
+          categorias[nombreCategoria] = productos.map((med) => {
             const rawOffer = med.price_offer ?? med.offer_price ?? med.offerPrice ?? med.price ?? 0;
             const rawNormal = med.price_normal ?? med.normal_price ?? med.normalPrice ?? 0;
 
             return {
               pharmacy: pharmacyName,
               id: med.id || null,
-              url: med.url || "",
+              name: med.name || "",
               offer_price: `$${rawOffer}`,
               normal_price: `$${rawNormal}`,
               discount: med.discount ?? 0,
-              name: med.name || "",
-              category: med.category || categoryName,
+              url: med.url || "",
               image: med.image || "",
+              category: med.category || nombreCategoria,
               bioequivalent: med.bioequivalent ?? "No disponible"
             };
           });
 
-          console.log(`📄 Procesados ${productos.length} productos en categoría ${categoryName}`);
+          console.log(`📄 ${nombreCategoria}: ${productos.length} productos procesados`);
         } catch (err) {
-          console.error(`❌ Error al procesar ${jsonPath}`, err);
+          console.error(`❌ Error procesando ${rutaJson}:`, err.message);
         }
       }
 
-      // 🟢 Actualizar medicines con nueva data y nueva fecha
+      // Actualizar documento actual de medicines
       await medicinesCollection.updateOne(
         { pharmacy: pharmacyName },
         {
           $set: {
             categories: categorias,
-            lastUpdated: archivoMasReciente
+            lastUpdated: nuevaFecha
           }
         },
         { upsert: true }
       );
 
-      console.log(`✅ Actualizado estado actual de ${pharmacyName} en 'medicines' con fecha ${archivoMasReciente}`);
+      console.log(`✅ Estado actual actualizado para ${pharmacyName} con fecha ${nuevaFecha}`);
     }
 
-    console.log("✅ Todo fue procesado exitosamente.");
+    console.log("🎉 Todo se procesó sin errores.");
   } catch (err) {
-    console.error("❌ Error general:", err);
+    console.error("💥 Error crítico:", err);
   } finally {
     await client.close();
-    console.log("🔵 Conexión cerrada.");
+    console.log("🔒 Conexión cerrada.");
   }
 }
 
 function transformarNombreFarmacia(nombre: string): string {
-  if (nombre.toLowerCase() === "cruzverde") return "Cruz Verde";
-  if (nombre.toLowerCase() === "salcobrand") return "Salcobrand";
-  if (nombre.toLowerCase() === "ahumada") return "Farmacia Ahumada";
+  const lower = nombre.toLowerCase();
+  if (lower === "cruzverde") return "Cruz Verde";
+  if (lower === "salcobrand") return "Salcobrand";
+  if (lower === "ahumada") return "Farmacia Ahumada";
   return nombre;
 }
 
