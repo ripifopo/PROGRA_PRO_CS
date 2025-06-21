@@ -41,21 +41,18 @@ export default function PriceHistoryClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Estados para búsqueda, resultados y selección
   const [search, setSearch] = useState('');
   const [allMedicines, setAllMedicines] = useState<Medicine[]>([]);
   const [results, setResults] = useState<Medicine[]>([]);
   const [selected, setSelected] = useState<SelectedMedicine[]>([]);
   const maxSelected = 3;
 
-  // Leer parámetros query para preselección y botón "Volver"
   const medicineIdParam = searchParams.get('medicineId') || '';
   const pharmacyParam = searchParams.get('pharmacy') || '';
   const nameParam = searchParams.get('name') || '';
   const categoryParam = searchParams.get('category') || '';
   const fromMedicine = searchParams.get('fromMedicine') === 'true';
 
-  // Cargar medicamentos al iniciar la página
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
@@ -90,7 +87,6 @@ export default function PriceHistoryClient() {
     fetchMedicines();
   }, []);
 
-  // Función para eliminar duplicados estrictos en la selección
   const cleanDuplicates = (arr: SelectedMedicine[]) => {
     const seen = new Set<string>();
     return arr.filter(med => {
@@ -101,7 +97,6 @@ export default function PriceHistoryClient() {
     });
   };
 
-  // Preseleccionar medicamento si vienen parámetros y no hay seleccionados aún
   useEffect(() => {
     if (
       fromMedicine &&
@@ -114,7 +109,7 @@ export default function PriceHistoryClient() {
     ) {
       const med = allMedicines.find(
         (m) =>
-          m.id === parseInt(medicineIdParam) &&
+          Number(m.id) === parseInt(medicineIdParam) &&
           m.pharmacy.toLowerCase() === pharmacyParam.toLowerCase() &&
           m.name.toLowerCase() === nameParam.toLowerCase()
       );
@@ -125,7 +120,6 @@ export default function PriceHistoryClient() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fromMedicine, medicineIdParam, pharmacyParam, nameParam, categoryParam, allMedicines]);
 
-  // Filtrar resultados según texto buscado, evitando ya seleccionados
   useEffect(() => {
     if (!search.trim()) {
       setResults([]);
@@ -136,20 +130,20 @@ export default function PriceHistoryClient() {
       (med) =>
         med.name?.toLowerCase().includes(lowerSearch) &&
         !selected.some(
-          (sel) => sel.id === med.id && sel.pharmacy === med.pharmacy && sel.name === med.name
+          (sel) => Number(sel.id) === Number(med.id) && sel.pharmacy === med.pharmacy && sel.name === med.name
         )
     );
     setResults(filtered.slice(0, 10));
   }, [search, allMedicines, selected]);
 
-  // Añadir medicamento seleccionado y cargar su historial de precios
   const addSelected = async (med: Medicine) => {
     if (selected.length >= maxSelected) {
       alert(`Solo puedes seleccionar máximo ${maxSelected} medicamentos.`);
       return;
     }
+
     const isAlreadySelected = selected.some(
-      (s) => s.id === med.id && s.pharmacy === med.pharmacy && s.name === med.name
+      (s) => Number(s.id) === Number(med.id) && s.pharmacy === med.pharmacy && s.name === med.name
     );
     if (isAlreadySelected) return;
 
@@ -171,12 +165,10 @@ export default function PriceHistoryClient() {
     }
   };
 
-  // Remover medicamento seleccionado
   const removeSelected = (id: number, pharmacy: string) => {
-    setSelected(selected.filter((med) => !(med.id === id && med.pharmacy === pharmacy)));
+    setSelected(selected.filter((med) => !(Number(med.id) === id && med.pharmacy === pharmacy)));
   };
 
-  // Formatear fecha para mostrar en el gráfico
   const formatFecha = (raw: string): string => {
     const [year, month, day] = raw.split('_')[0].split('-');
     const meses = [
@@ -186,7 +178,6 @@ export default function PriceHistoryClient() {
     return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
   };
 
-  // Preparar datos para el gráfico ChartJS
   const data = {
     labels: selected.length > 0 ? selected[0].history.map((h) => formatFecha(h.date)) : [],
     datasets: selected.map((med, i) => ({
@@ -202,12 +193,10 @@ export default function PriceHistoryClient() {
     })),
   };
 
-  // Calcular mínimo y máximo para eje Y con un margen
   const allPrices = selected.flatMap(med => med.history.map(h => h.offer_price));
   const minPrice = Math.min(...allPrices, 0);
   const maxPrice = Math.max(...allPrices, 1000);
 
-  // Configuración de opciones para ChartJS corregida para tipos y deploy
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -238,20 +227,16 @@ export default function PriceHistoryClient() {
           },
           font: { size: 12 },
         },
-        grid: {
-          color: '#e0e0e0',
-        },
+        grid: { color: '#e0e0e0' },
       },
       x: {
         ticks: {
           font: { size: 12 },
           maxRotation: 45,
           minRotation: 45,
-          display: false, // ocultamos etiquetas eje x para que no se dupliquen con tooltip
-        },
-        grid: {
           display: false,
         },
+        grid: { display: false },
       },
     },
   };
@@ -262,7 +247,6 @@ export default function PriceHistoryClient() {
         Precios Históricos — Selecciona hasta {maxSelected}
       </h2>
 
-      {/* Botón para volver al medicamento si vienen params */}
       {(medicineIdParam && pharmacyParam && nameParam && categoryParam) && (
         <div className="mb-4 text-center">
           <Button
@@ -280,7 +264,6 @@ export default function PriceHistoryClient() {
         </div>
       )}
 
-      {/* Campo de búsqueda */}
       <Form.Group controlId="searchMedicine" className="mb-4">
         <Form.Control
           type="text"
@@ -298,7 +281,6 @@ export default function PriceHistoryClient() {
         />
       </Form.Group>
 
-      {/* Resultados de búsqueda */}
       {results.length > 0 && (
         <div
           className="mb-4 border rounded p-3 bg-light shadow-sm"
@@ -333,7 +315,6 @@ export default function PriceHistoryClient() {
         </div>
       )}
 
-      {/* Medicamentos seleccionados */}
       {selected.length > 0 ? (
         <>
           <div className="mb-3 d-flex flex-wrap gap-2 justify-content-center">
@@ -353,14 +334,13 @@ export default function PriceHistoryClient() {
                 {med.name} ({med.pharmacy})
                 <FaTimes
                   style={{ cursor: 'pointer', marginLeft: 6 }}
-                  onClick={() => removeSelected(med.id, med.pharmacy)}
+                  onClick={() => removeSelected(Number(med.id), med.pharmacy)}
                   title="Quitar medicamento"
                 />
               </Badge>
             ))}
           </div>
 
-          {/* Gráfico con los precios históricos */}
           <div
             className="p-3 bg-white rounded shadow-sm mx-auto"
             style={{ maxWidth: 900, height: '480px' }}

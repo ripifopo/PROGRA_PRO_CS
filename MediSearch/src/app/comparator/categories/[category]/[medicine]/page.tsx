@@ -9,7 +9,6 @@ import { toast } from 'react-toastify';
 import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
 import StockLocationModal from '@/app/components/StockLocationModal';
 
-// Interfaz para tipar el medicamento
 interface Medicine {
   id: number;
   name: string;
@@ -32,7 +31,6 @@ export default function MedicineDetailPage() {
   const [isAlerted, setIsAlerted] = useState<boolean>(false);
   const [showModal, setShowModal] = useState(false);
 
-  // 🔁 Al montar la página, buscar el medicamento desde la API y verificar el login
   useEffect(() => {
     const fetchAndMatchMedicine = async () => {
       try {
@@ -47,7 +45,7 @@ export default function MedicineDetailPage() {
         for (const pharmacy of data) {
           for (const categoryList of Object.values(pharmacy.categories || {})) {
             for (const med of categoryList as any[]) {
-              if (med.id === decodedId) {
+              if (Number(med.id) === decodedId) {
                 const rawStock = med.stock ?? med.available ?? med.in_stock ?? null;
                 const normalizedStock =
                   rawStock === true || rawStock === 'yes' || rawStock === 'available'
@@ -93,14 +91,12 @@ export default function MedicineDetailPage() {
     fetchAndMatchMedicine();
   }, [medicine, category, router, setLoading]);
 
-  // 🧮 Da formato CLP a precios
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
     const clean = price.replace(/[^0-9]/g, '');
     return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
-  // 🧮 Calcula porcentaje de descuento si aplica
   const calculateDiscount = () => {
     if (!medData) return null;
     const offer = parseInt(medData.offer_price.replace(/\D/g, ''));
@@ -109,7 +105,6 @@ export default function MedicineDetailPage() {
     return Math.round(100 - (offer / normal) * 100);
   };
 
-  // 🔘 Guarda el medicamento como frecuente
   const handleSaveFrequent = async () => {
     if (!userEmail || !medData) {
       const currentPath = `/comparator/categories/${category}/${medicine}`;
@@ -147,7 +142,6 @@ export default function MedicineDetailPage() {
     }
   };
 
-  // 🔔 Crea una alerta para el medicamento
   const handleCreateAlert = async () => {
     if (!userEmail || !medData) {
       const currentPath = `/comparator/categories/${category}/${medicine}`;
@@ -297,36 +291,34 @@ export default function MedicineDetailPage() {
         pharmacy={medData.pharmacy || ''}
       />
 
-    {/* Botón para ver precios históricos */}
-    <div className="text-center mt-5">
-      <Button
-        aria-label={`Ver precios históricos de ${medData.name} en ${medData.pharmacy}`}
-        onClick={() => {
-          const url = `/price-history?medicineId=${medData.id}` +
-                      `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
-                      `&name=${encodeURIComponent(medData.name || '')}` +
-                      `&category=${encodeURIComponent(category as string)}` +
-                      `&fromMedicine=true`;
-          router.push(url);
-        }}
-        style={{
-          backgroundColor: '#004080',
-          border: 'none',
-          borderRadius: '12px',
-          padding: '12px 24px',
-          fontSize: '1.1rem',
-          fontWeight: 'bold',
-          color: 'white',
-          boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
-          transition: 'all 0.3s ease-in-out',
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0059b3')}
-        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#004080')}
-      >
-        📈 Ver precios históricos
-      </Button>
-    </div>
-
+      <div className="text-center mt-5">
+        <Button
+          aria-label={`Ver precios históricos de ${medData.name} en ${medData.pharmacy}`}
+          onClick={() => {
+            const url = `/price-history?medicineId=${medData.id}` +
+                        `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
+                        `&name=${encodeURIComponent(medData.name || '')}` +
+                        `&category=${encodeURIComponent(category as string)}` +
+                        `&fromMedicine=true`;
+            router.push(url);
+          }}
+          style={{
+            backgroundColor: '#004080',
+            border: 'none',
+            borderRadius: '12px',
+            padding: '12px 24px',
+            fontSize: '1.1rem',
+            fontWeight: 'bold',
+            color: 'white',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+            transition: 'all 0.3s ease-in-out',
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0059b3')}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#004080')}
+        >
+          📈 Ver precios históricos
+        </Button>
+      </div>
     </Container>
   );
 }

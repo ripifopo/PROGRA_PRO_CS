@@ -22,8 +22,8 @@ export async function GET(req: NextRequest) {
       for (const category of Object.values(categories as any)) {
         const items = category as any[];
 
-        // 🟢 Intenta buscar por ID
-        let product = items.find((p) => p.id === medicineId);
+        // 🟢 Compara con Number(p.id) para asegurar coincidencia aunque sea string
+        let product = items.find((p) => Number(p.id) === medicineId);
 
         // 🔁 Si no lo encuentra por ID, intenta buscar por nombre
         if (!product && name) {
