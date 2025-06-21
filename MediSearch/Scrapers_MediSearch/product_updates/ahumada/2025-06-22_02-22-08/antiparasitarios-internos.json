@@ -1,0 +1,30 @@
+[
+  {
+    "pharmacy": "Farmacia Ahumada",
+    "id": 495,
+    "url": "https://www.farmaciasahumada.cl/cloroquina-250-mg-x-20-comprimidos-chile-495.html",
+    "offer_price": 7899,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Cloroquina 250 mg x 20 Comprimidos CHILE",
+    "category": "antiparasitarios-internos",
+    "subcategory": "antimalaricos",
+    "image": "https://www.farmaciasahumada.cl/dw/image/v2/BJVH_PRD/on/demandware.static/-/Sites-ahumada-master-catalog/default/dw4de3478e/images/products/495/495.jpg?sw=525&sh=525&sm=fit",
+    "stock": "available",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Farmacia Ahumada",
+    "id": 88029,
+    "url": "https://www.farmaciasahumada.cl/cloroquina-250-mg-x-20-comprimidos-recubiertos-bph-s.a.-88029.html",
+    "offer_price": null,
+    "normal_price": null,
+    "discount": 0,
+    "name": null,
+    "category": "antiparasitarios-internos",
+    "subcategory": "antimalaricos",
+    "image": null,
+    "stock": null,
+    "bioequivalent": null
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "pharmacy": "Salcobrand",
+    "id": "584358",
+    "url": "https://salcobrand.cl/products/test-vitamina-d",
+    "api_url": "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds=584358&stock=&format=json",
+    "offer_price": 8299,
+    "normal_price": 9999,
+    "discount": 17,
+    "name": "Test Allbriefs Vitamina D 1 Unidad",
+    "category": "test-de-autodiagnostico",
+    "subcategory": null,
+    "image": "https://static.salcobrandonline.cl/spree/products/91002/small/584358.jpg?1681329071",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Salcobrand",
+    "id": "583348",
+    "url": "https://salcobrand.cl/products/test-multipanel-5-drogas",
+    "api_url": "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds=583348&stock=&format=json",
+    "offer_price": 9499,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Test Multipanel 5 Drogas La Prepie 1 Unidad",
+    "category": "test-de-autodiagnostico",
+    "subcategory": null,
+    "image": "https://static.salcobrandonline.cl/spree/products/91064/small/583348.jfif?1681412129",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Salcobrand",
+    "id": "3321252",
+    "url": "https://salcobrand.cl/products/test-de-droga-marihuana",
+    "api_url": "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds=3321252&stock=&format=json",
+    "offer_price": 6499,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Test De Droga Marihuana",
+    "category": "test-de-autodiagnostico",
+    "subcategory": null,
+    "image": "https://static.salcobrandonline.cl/spree/products/12935/small/3321252.jpg?1641480405",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Salcobrand",
+    "id": "589848",
+    "url": "https://salcobrand.cl/products/test-droga-doble-thc-coc-home-control",
+    "api_url": "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds=589848&stock=&format=json",
+    "offer_price": 7899,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Test Droga Doble THC-COC Home Control",
+    "category": "test-de-autodiagnostico",
+    "subcategory": null,
+    "image": "https://static.salcobrandonline.cl/spree/products/137986/small/589848.jpg?1741786518",
+    "bioequivalent": false
+  },
+  {
+    "pharmacy": "Salcobrand",
+    "id": "589390",
+    "url": "https://salcobrand.cl/products/allbriefs-hc-test-de-drogas-1-unidad",
+    "api_url": "https://api.retailrocket.net/api/1.0/partner/602bba6097a5281b4cc438c9/items/?itemsIds=589390&stock=&format=json",
+    "offer_price": 8999,
+    "normal_price": null,
+    "discount": 0,
+    "name": "Allbriefs HC Test De Drogas 1 Unidad",
+    "category": "test-de-autodiagnostico",
+    "subcategory": null,
+    "image": "https://static.salcobrandonline.cl/spree/products/127701/small/589390.jpg?1732644015",
+    "bioequivalent": false
+  }
+]
