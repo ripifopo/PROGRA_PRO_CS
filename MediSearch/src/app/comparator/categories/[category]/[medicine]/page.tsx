@@ -8,7 +8,6 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
 import StockLocationModal from '@/app/components/StockLocationModal';
-import StatsTabs from '@/app/components/StatsTabs';
 
 // Interfaz para tipar el medicamento
 interface Medicine {
@@ -296,13 +295,37 @@ export default function MedicineDetailPage() {
           toast.info(`Región: ${region}, Comuna: ${commune}`);
         }}
         pharmacy={medData.pharmacy || ''}
-    />
-    <StatsTabs
-    medicineId={medData.id}
-    pharmacy={medData.pharmacy || ''}
-    category={category as string}
-    name={medData.name || ''}
-    />
+      />
+
+    {/* Botón para ver precios históricos */}
+    <div className="text-center mt-5">
+      <Button
+        aria-label={`Ver precios históricos de ${medData.name} en ${medData.pharmacy}`}
+        onClick={() => {
+          const url = `/price-history?medicineId=${medData.id}` +
+                      `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
+                      `&name=${encodeURIComponent(medData.name || '')}` +
+                      `&category=${encodeURIComponent(category as string)}` +
+                      `&fromMedicine=true`;
+          router.push(url);
+        }}
+        style={{
+          backgroundColor: '#004080',
+          border: 'none',
+          borderRadius: '12px',
+          padding: '12px 24px',
+          fontSize: '1.1rem',
+          fontWeight: 'bold',
+          color: 'white',
+          boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
+          transition: 'all 0.3s ease-in-out',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0059b3')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#004080')}
+      >
+        📈 Ver precios históricos
+      </Button>
+    </div>
 
     </Container>
   );
