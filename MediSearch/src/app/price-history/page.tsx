@@ -23,8 +23,8 @@ interface Medicine {
   name: string;
   pharmacy: string;
   category: string;
-  offer_price?: number | string;
-  normal_price?: number | string;
+  offer_price?: number;
+  normal_price?: number;
 }
 
 interface PriceSnapshot {
@@ -55,15 +55,6 @@ export default function PriceHistoryPage() {
   const categoryParam = searchParams.get('category') || '';
   const fromMedicine = searchParams.get('fromMedicine') === 'true';
 
-  // Función para limpiar símbolo $ en precios si es string
-  const cleanPrice = (price: number | string | undefined) => {
-    if (price === undefined) return '-';
-    if (typeof price === 'string') {
-      return price.replace(/\$/g, '');
-    }
-    return price.toLocaleString('es-CL');
-  };
-
   // Cargar medicamentos al iniciar la página
   useEffect(() => {
     const fetchMedicines = async () => {
@@ -71,12 +62,14 @@ export default function PriceHistoryPage() {
         const res = await fetch('/api/medicines');
         const data = await res.json();
 
+        // Validar que data sea un array para evitar errores en build
         if (!Array.isArray(data)) {
           console.error('Datos recibidos no son un arreglo:', data);
           setAllMedicines([]);
           return;
         }
 
+        // Extraer medicamentos a un solo array plano
         const meds: Medicine[] = data.flatMap((pharmacy: any) =>
           Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]) =>
             Array.isArray(meds)
@@ -216,7 +209,7 @@ export default function PriceHistoryPage() {
   const minPrice = Math.min(...allPrices, 0);
   const maxPrice = Math.max(...allPrices, 1000);
 
-  // Configuración de opciones para ChartJS con corrección de tipos
+  // Configuración de opciones para ChartJS corregida para tipos
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -225,13 +218,13 @@ export default function PriceHistoryPage() {
       title: {
         display: true,
         text: 'Tendencia de precios históricos',
-        font: { size: 24, weight: 'bold' as const }, // 'as const' para compatibilidad TS
+        font: { size: 24, weight: 'bold' as const }, // Corrección de tipo: "bold" en lugar de "600"
       },
       tooltip: {
         callbacks: {
           label: (ctx: any) => `$${ctx.parsed.y.toLocaleString('es-CL')}`,
         },
-        bodyFont: { weight: '600' as const },
+        bodyFont: { weight: 'bold' as const }, // Corrección de tipo: "bold" en lugar de "600"
       },
     },
     scales: {
@@ -265,6 +258,7 @@ export default function PriceHistoryPage() {
         Precios Históricos — Selecciona hasta {maxSelected}
       </h2>
 
+      {/* Botón para volver al medicamento si vienen params */}
       {(medicineIdParam && pharmacyParam && nameParam && categoryParam) && (
         <div className="mb-4 text-center">
           <Button
@@ -282,6 +276,7 @@ export default function PriceHistoryPage() {
         </div>
       )}
 
+      {/* Campo de búsqueda */}
       <Form.Group controlId="searchMedicine" className="mb-4">
         <Form.Control
           type="text"
@@ -299,6 +294,7 @@ export default function PriceHistoryPage() {
         />
       </Form.Group>
 
+      {/* Resultados de búsqueda */}
       {results.length > 0 && (
         <div
           className="mb-4 border rounded p-3 bg-light shadow-sm"
@@ -323,7 +319,7 @@ export default function PriceHistoryPage() {
                   pill
                   style={{ fontSize: '1rem', padding: '0.5rem 0.75rem' }}
                 >
-                  ${cleanPrice(med.offer_price ?? med.normal_price)}
+                  ${med.offer_price?.toLocaleString('es-CL') ?? '-'}
                 </Badge>
               </Card.Body>
             </Card>
@@ -331,6 +327,7 @@ export default function PriceHistoryPage() {
         </div>
       )}
 
+      {/* Medicamentos seleccionados */}
       {selected.length > 0 ? (
         <>
           <div className="mb-3 d-flex flex-wrap gap-2 justify-content-center">
@@ -357,11 +354,11 @@ export default function PriceHistoryPage() {
             ))}
           </div>
 
+          {/* Gráfico con los precios históricos */}
           <div
             className="p-3 bg-white rounded shadow-sm mx-auto"
             style={{ maxWidth: 900, height: '480px' }}
           >
-            {/* Gráfico de precios históricos */}
             <Line data={data} options={options} />
           </div>
         </>
