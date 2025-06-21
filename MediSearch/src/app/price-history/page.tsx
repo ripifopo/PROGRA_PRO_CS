@@ -23,8 +23,8 @@ interface Medicine {
   name: string;
   pharmacy: string;
   category: string;
-  offer_price?: number;
-  normal_price?: number;
+  offer_price?: number | string;
+  normal_price?: number | string;
 }
 
 interface PriceSnapshot {
@@ -41,20 +41,30 @@ export default function PriceHistoryPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
+  // Estados para búsqueda, resultados y selección
   const [search, setSearch] = useState('');
   const [allMedicines, setAllMedicines] = useState<Medicine[]>([]);
   const [results, setResults] = useState<Medicine[]>([]);
   const [selected, setSelected] = useState<SelectedMedicine[]>([]);
   const maxSelected = 3;
 
-  // Leer params para botón "Volver al medicamento" y preselección
+  // Leer parámetros query para preselección y botón "Volver"
   const medicineIdParam = searchParams.get('medicineId') || '';
   const pharmacyParam = searchParams.get('pharmacy') || '';
   const nameParam = searchParams.get('name') || '';
   const categoryParam = searchParams.get('category') || '';
   const fromMedicine = searchParams.get('fromMedicine') === 'true';
 
-  // Carga medicamentos al iniciar con validación estricta para evitar errores de build
+  // Función para limpiar símbolo $ en precios si es string
+  const cleanPrice = (price: number | string | undefined) => {
+    if (price === undefined) return '-';
+    if (typeof price === 'string') {
+      return price.replace(/\$/g, '');
+    }
+    return price.toLocaleString('es-CL');
+  };
+
+  // Cargar medicamentos al iniciar la página
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
@@ -89,7 +99,7 @@ export default function PriceHistoryPage() {
     fetchMedicines();
   }, []);
 
-  // Función para limpiar duplicados en selected
+  // Función para eliminar duplicados estrictos en la selección
   const cleanDuplicates = (arr: SelectedMedicine[]) => {
     const seen = new Set<string>();
     return arr.filter(med => {
@@ -100,7 +110,7 @@ export default function PriceHistoryPage() {
     });
   };
 
-  // Preselecciona medicamento si vienen query params y no hay seleccionados
+  // Preseleccionar medicamento si vienen parámetros y no hay seleccionados aún
   useEffect(() => {
     if (
       fromMedicine &&
@@ -124,7 +134,7 @@ export default function PriceHistoryPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fromMedicine, medicineIdParam, pharmacyParam, nameParam, categoryParam, allMedicines]);
 
-  // Filtra resultados del buscador
+  // Filtrar resultados según texto buscado, evitando ya seleccionados
   useEffect(() => {
     if (!search.trim()) {
       setResults([]);
@@ -136,12 +146,12 @@ export default function PriceHistoryPage() {
         med.name?.toLowerCase().includes(lowerSearch) &&
         !selected.some(
           (sel) => sel.id === med.id && sel.pharmacy === med.pharmacy && sel.name === med.name
-        ) // evitar duplicados estrictos
+        )
     );
     setResults(filtered.slice(0, 10));
   }, [search, allMedicines, selected]);
 
-  // Añade seleccionado y carga historial (solo si no está duplicado)
+  // Añadir medicamento seleccionado y cargar su historial de precios
   const addSelected = async (med: Medicine) => {
     if (selected.length >= maxSelected) {
       alert(`Solo puedes seleccionar máximo ${maxSelected} medicamentos.`);
@@ -170,12 +180,12 @@ export default function PriceHistoryPage() {
     }
   };
 
-  // Quita seleccionado
+  // Remover medicamento seleccionado
   const removeSelected = (id: number, pharmacy: string) => {
     setSelected(selected.filter((med) => !(med.id === id && med.pharmacy === pharmacy)));
   };
 
-  // Formatea fechas
+  // Formatear fecha para mostrar en el gráfico
   const formatFecha = (raw: string): string => {
     const [year, month, day] = raw.split('_')[0].split('-');
     const meses = [
@@ -185,7 +195,7 @@ export default function PriceHistoryPage() {
     return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
   };
 
-  // Prepara datos ChartJS con zoom automático en eje Y
+  // Preparar datos para el gráfico ChartJS
   const data = {
     labels: selected.length > 0 ? selected[0].history.map((h) => formatFecha(h.date)) : [],
     datasets: selected.map((med, i) => ({
@@ -201,12 +211,12 @@ export default function PriceHistoryPage() {
     })),
   };
 
-  // Calcular min y max para zoom eje Y (considera todos los datos)
+  // Calcular mínimo y máximo para eje Y con un margen
   const allPrices = selected.flatMap(med => med.history.map(h => h.offer_price));
   const minPrice = Math.min(...allPrices, 0);
   const maxPrice = Math.max(...allPrices, 1000);
 
-  // Opciones ChartJS con zoom en eje Y
+  // Configuración de opciones para ChartJS con corrección de tipos
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -215,13 +225,13 @@ export default function PriceHistoryPage() {
       title: {
         display: true,
         text: 'Tendencia de precios históricos',
-        font: { size: 24, weight: 'bold' },
+        font: { size: 24, weight: 'bold' as const }, // 'as const' para compatibilidad TS
       },
       tooltip: {
         callbacks: {
           label: (ctx: any) => `$${ctx.parsed.y.toLocaleString('es-CL')}`,
         },
-        bodyFont: { weight: '600' },
+        bodyFont: { weight: '600' as const },
       },
     },
     scales: {
@@ -313,7 +323,7 @@ export default function PriceHistoryPage() {
                   pill
                   style={{ fontSize: '1rem', padding: '0.5rem 0.75rem' }}
                 >
-                  ${med.offer_price?.toLocaleString('es-CL') ?? '-'}
+                  ${cleanPrice(med.offer_price ?? med.normal_price)}
                 </Badge>
               </Card.Body>
             </Card>
@@ -351,6 +361,7 @@ export default function PriceHistoryPage() {
             className="p-3 bg-white rounded shadow-sm mx-auto"
             style={{ maxWidth: 900, height: '480px' }}
           >
+            {/* Gráfico de precios históricos */}
             <Line data={data} options={options} />
           </div>
         </>
