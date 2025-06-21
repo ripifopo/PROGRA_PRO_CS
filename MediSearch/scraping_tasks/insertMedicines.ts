@@ -30,16 +30,15 @@ async function insertMedicinesFromUpdates() {
         if (fechaDir.isDirectory) archivos.push(fechaDir.name);
       }
 
-      archivos.sort((a, b) => b.localeCompare(a)); // Más reciente primero
+      archivos.sort((a, b) => b.localeCompare(a));
       const archivoMasReciente = archivos[0];
       console.log("📁 Carpeta más reciente detectada:", archivoMasReciente);
 
-      // 💾 Guardar backup del estado actual antes de insertar el nuevo
+      // 💾 Guardar backup del estado actual antes de sobrescribir
       const estadoAnterior = await medicinesCollection.findOne({ pharmacy: pharmacyName });
+      const fechaAnterior = estadoAnterior?.lastUpdated;
 
-      if (estadoAnterior && estadoAnterior.categories && estadoAnterior.lastUpdated) {
-        const fechaAnterior = estadoAnterior.lastUpdated;
-
+      if (estadoAnterior && estadoAnterior.categories && fechaAnterior) {
         const snapshotExistente = await priceHistoryCollection.findOne({
           pharmacy: pharmacyName,
           [`snapshots.${fechaAnterior}`]: { $exists: true }
@@ -69,7 +68,7 @@ async function insertMedicinesFromUpdates() {
         }
       }
 
-      // 📦 Procesar medicamentos nuevos
+      // 📦 Procesar la nueva carpeta más reciente
       const categorias: Record<string, any[]> = {};
       const fullFolderPath = `${pathFarmacia}/${archivoMasReciente}`;
 
@@ -109,7 +108,7 @@ async function insertMedicinesFromUpdates() {
         }
       }
 
-      // ✅ Insertar nuevo estado actual en `medicines` con fecha
+      // 🟢 Actualizar medicines con nueva data y nueva fecha
       await medicinesCollection.updateOne(
         { pharmacy: pharmacyName },
         {
