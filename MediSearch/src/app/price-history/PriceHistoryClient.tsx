@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Line } from 'react-chartjs-2';
 import {
@@ -117,7 +117,6 @@ export default function PriceHistoryClient() {
         addSelected(med);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fromMedicine, medicineIdParam, pharmacyParam, nameParam, categoryParam, allMedicines]);
 
   useEffect(() => {
@@ -178,6 +177,11 @@ export default function PriceHistoryClient() {
     return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
   };
 
+  const isMobile = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth < 768;
+  }, []);
+
   const data = {
     labels: selected.length > 0 ? selected[0].history.map((h) => formatFecha(h.date)) : [],
     datasets: selected.map((med, i) => ({
@@ -201,7 +205,14 @@ export default function PriceHistoryClient() {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { position: 'top' as const },
+      legend: {
+        position: isMobile ? 'bottom' : 'top' as const,
+        labels: {
+          boxWidth: 12,
+          padding: 10,
+          font: { size: 11 },
+        },
+      },
       title: {
         display: true,
         text: 'Tendencia de precios históricos',
@@ -253,9 +264,7 @@ export default function PriceHistoryClient() {
             variant="outline-primary"
             onClick={() =>
               router.push(
-                `/comparator/categories/${categoryParam}/${encodeURIComponent(
-                  medicineIdParam
-                )}`
+                `/comparator/categories/${categoryParam}/${encodeURIComponent(medicineIdParam)}`
               )
             }
           >
@@ -323,17 +332,26 @@ export default function PriceHistoryClient() {
                 key={`${med.id}-${med.pharmacy}-${index}`}
                 bg="primary"
                 pill
-                className="d-flex align-items-center gap-2"
+                className="d-flex flex-column text-center"
                 style={{
-                  fontSize: '1rem',
-                  cursor: 'default',
-                  userSelect: 'none',
-                  padding: '0.5rem 1rem',
+                  fontSize: '0.95rem',
+                  padding: '0.85rem 1rem',
+                  lineHeight: '1.4',
+                  maxWidth: '100%',
+                  wordBreak: 'break-word',
+                  pointerEvents: 'auto',
                 }}
               >
-                {med.name} ({med.pharmacy})
+                <span className="fw-bold">{med.name}</span>
+                <span className="text-white-50">({med.pharmacy})</span>
                 <FaTimes
-                  style={{ cursor: 'pointer', marginLeft: 6 }}
+                  style={{
+                    cursor: 'pointer',
+                    fontSize: '1.3rem',
+                    marginTop: '6px',
+                    alignSelf: 'center',
+                    pointerEvents: 'auto',
+                  }}
                   onClick={() => removeSelected(Number(med.id), med.pharmacy)}
                   title="Quitar medicamento"
                 />
@@ -343,7 +361,12 @@ export default function PriceHistoryClient() {
 
           <div
             className="p-3 bg-white rounded shadow-sm mx-auto"
-            style={{ maxWidth: 900, height: '480px' }}
+            style={{
+              width: '100%',
+              maxWidth: 900,
+              height: 'min(70vh, 480px)',
+              minHeight: '320px',
+            }}
           >
             <Line data={data} options={options} />
           </div>
