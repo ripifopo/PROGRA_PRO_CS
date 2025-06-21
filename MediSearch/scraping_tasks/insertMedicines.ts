@@ -19,9 +19,6 @@ async function insertMedicinesFromUpdates() {
   try {
     console.log("✨ Conectado a la base de datos");
 
-    await medicinesCollection.deleteMany({});
-    console.log("🧹 Colección de medicamentos reiniciada");
-
     for await (const pharmacyDir of Deno.readDir(updatesPath)) {
       if (!pharmacyDir.isDirectory) continue;
 
@@ -35,35 +32,60 @@ async function insertMedicinesFromUpdates() {
 
       archivos.sort((a, b) => b.localeCompare(a));
       const archivoMasReciente = archivos[0];
+      console.log("📁 Carpeta más reciente detectada:", archivoMasReciente);
 
-      const farmaciaDoc: any = {
-        pharmacy: pharmacyName,
-        categories: {}
-      };
+      // 💾 Guardar backup del estado actual antes de insertar el nuevo
+      const estadoAnterior = await medicinesCollection.findOne({ pharmacy: pharmacyName });
 
-      const priceHistoryDoc: any = {
-        pharmacy: pharmacyName,
-        snapshots: {}
-      };
+      if (estadoAnterior && estadoAnterior.categories) {
+        const snapshotExistente = await priceHistoryCollection.findOne({
+          pharmacy: pharmacyName,
+          [`snapshots.${archivoMasReciente}`]: { $exists: true }
+        });
 
-      for (const fechaFolder of archivos) {
-        const fullFolderPath = `${pathFarmacia}/${fechaFolder}`;
-        const snapshot = {};
+        if (!snapshotExistente) {
+          const snapshot = {};
+          for (const [categoria, lista] of Object.entries(estadoAnterior.categories)) {
+            snapshot[categoria] = (lista as any[]).map((m: any) => ({
+              id: m.id,
+              name: m.name,
+              offer_price: m.offer_price,
+              normal_price: m.normal_price,
+              discount: m.discount,
+              category: m.category
+            }));
+          }
 
-        for await (const archivo of Deno.readDir(fullFolderPath)) {
-          if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
+          await priceHistoryCollection.updateOne(
+            { pharmacy: pharmacyName },
+            { $set: { [`snapshots.${archivoMasReciente}`]: snapshot } },
+            { upsert: true }
+          );
+          console.log(`📈 Guardado snapshot anterior en price_history con fecha ${archivoMasReciente}`);
+        } else {
+          console.log(`⚠️ Ya existía snapshot para ${archivoMasReciente}, no se duplicó.`);
+        }
+      }
 
-          const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
-          const categoryName = categoryRaw.trim().toLowerCase();
+      // 📦 Ahora procesar los medicamentos de la nueva carpeta
+      const categorias: Record<string, any[]> = {};
+      const fullFolderPath = `${pathFarmacia}/${archivoMasReciente}`;
 
-          const jsonPath = `${fullFolderPath}/${archivo.name}`;
+      for await (const archivo of Deno.readDir(fullFolderPath)) {
+        if (!archivo.isFile || !archivo.name.endsWith(".json")) continue;
+
+        const categoryRaw = archivo.name.replace(".json", "").replace(/-/g, " ");
+        const categoryName = categoryRaw.trim().toLowerCase();
+        const jsonPath = `${fullFolderPath}/${archivo.name}`;
+
+        try {
           const rawData = await Deno.readTextFile(jsonPath);
           const parsed = JSON.parse(rawData);
           const productos = Array.isArray(parsed) ? parsed : [parsed];
 
-          const meds = productos.map((med) => {
-            const rawOffer = med.price_offer ?? med.offer_price ?? 0;
-            const rawNormal = med.price_normal ?? med.normal_price ?? 0;
+          categorias[categoryName] = productos.map((med) => {
+            const rawOffer = med.price_offer ?? med.offer_price ?? med.offerPrice ?? med.price ?? 0;
+            const rawNormal = med.price_normal ?? med.normal_price ?? med.normalPrice ?? 0;
 
             return {
               pharmacy: pharmacyName,
@@ -75,42 +97,27 @@ async function insertMedicinesFromUpdates() {
               name: med.name || "",
               category: med.category || categoryName,
               image: med.image || "",
-              bioequivalent: med.bioequivalent || "No disponible"
+              bioequivalent: med.bioequivalent ?? "No disponible"
             };
           });
 
-          if (fechaFolder === archivoMasReciente) {
-            if (!farmaciaDoc.categories[categoryName]) {
-              farmaciaDoc.categories[categoryName] = [];
-            }
-            farmaciaDoc.categories[categoryName].push(...meds);
-          }
-
-          if (!snapshot[categoryName]) snapshot[categoryName] = [];
-          snapshot[categoryName].push(
-            ...meds.map((m) => ({
-              id: m.id,
-              name: m.name,
-              offer_price: m.offer_price,
-              normal_price: m.normal_price,
-              discount: m.discount,
-              category: m.category
-            }))
-          );
+          console.log(`📄 Procesados ${productos.length} productos en categoría ${categoryName}`);
+        } catch (err) {
+          console.error(`❌ Error al procesar ${jsonPath}`, err);
         }
-
-        priceHistoryDoc.snapshots[fechaFolder] = snapshot;
       }
 
-      await medicinesCollection.insertOne(farmaciaDoc);
-      await priceHistoryCollection.insertOne(priceHistoryDoc);
-
-      console.log(`✅ Procesado: ${pharmacyName}`);
+      await medicinesCollection.updateOne(
+        { pharmacy: pharmacyName },
+        { $set: { categories: categorias } },
+        { upsert: true }
+      );
+      console.log(`✅ Actualizado estado actual de ${pharmacyName} en 'medicines'`);
     }
 
-    console.log("✅ Todos los medicamentos fueron actualizados correctamente.");
+    console.log("✅ Todo fue procesado exitosamente.");
   } catch (err) {
-    console.error("❌ Error al insertar desde product_updates:", err);
+    console.error("❌ Error general:", err);
   } finally {
     await client.close();
     console.log("🔵 Conexión cerrada.");
