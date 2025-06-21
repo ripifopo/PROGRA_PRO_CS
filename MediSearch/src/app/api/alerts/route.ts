@@ -1,5 +1,3 @@
-// Archivo: src/app/api/alerts/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 import { alertsCollection } from '../../../lib/mongodb.ts';
 import { ObjectId } from 'mongodb';
@@ -31,12 +29,10 @@ export async function POST(req: NextRequest) {
     const data: Alert = await req.json();
     const collection = await alertsCollection;
 
-    // Validación de campos obligatorios
     if (!data.userEmail || !data.medicineId || !data.pharmacy || !data.category) {
       return NextResponse.json({ message: 'Faltan campos obligatorios.' }, { status: 400 });
     }
 
-    // Verifica si ya existe una alerta para ese usuario y ese ID en esa farmacia
     const exists = await collection.findOne({
       userEmail: data.userEmail,
       medicineId: data.medicineId,
@@ -47,7 +43,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Ya existe esta alerta.' }, { status: 409 });
     }
 
-    // Inserta la nueva alerta
     await collection.insertOne({
       userEmail: data.userEmail,
       medicineId: data.medicineId,
@@ -58,6 +53,7 @@ export async function POST(req: NextRequest) {
       categorySlug: data.categorySlug || null,
       pharmacyUrl: data.pharmacyUrl || null,
       imageUrl: data.imageUrl || null,
+      bioequivalent: data.bioequivalent || 'false', // 👈 se agregó este campo
       createdAt: new Date().toISOString()
     });
 

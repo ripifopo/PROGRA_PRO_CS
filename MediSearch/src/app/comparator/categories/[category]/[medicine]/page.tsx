@@ -18,6 +18,7 @@ interface Medicine {
   url: string;
   stock: string | null;
   pharmacy?: string;
+  bioequivalent?: string; // ✅ agregado como string
 }
 
 export default function MedicineDetailPage() {
@@ -54,7 +55,12 @@ export default function MedicineDetailPage() {
                     ? 'no'
                     : null;
 
-                found = { ...med, pharmacy: pharmacy.pharmacy, stock: normalizedStock };
+                found = {
+                  ...med,
+                  pharmacy: pharmacy.pharmacy,
+                  stock: normalizedStock,
+                  bioequivalent: String(med.bioequivalent ?? 'false'), // ✅ aquí se transforma a string
+                };
                 break;
               }
             }
@@ -159,7 +165,8 @@ export default function MedicineDetailPage() {
       categorySlug: encodeURIComponent(category as string),
       pharmacyUrl: medData.url || '',
       imageUrl: medData.image || '',
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      bioequivalent: medData.bioequivalent || 'false' // ✅ se envía como string
     };
 
     try {
