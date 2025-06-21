@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Line } from 'react-chartjs-2';
 import {
@@ -177,11 +177,6 @@ export default function PriceHistoryClient() {
     return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
   };
 
-  const isMobile = useMemo(() => {
-    if (typeof window === 'undefined') return false;
-    return window.innerWidth < 768;
-  }, []);
-
   const data = {
     labels: selected.length > 0 ? selected[0].history.map((h) => formatFecha(h.date)) : [],
     datasets: selected.map((med, i) => ({
@@ -206,7 +201,7 @@ export default function PriceHistoryClient() {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: isMobile ? 'bottom' : 'top' as const,
+        position: 'top' as const,
         labels: {
           boxWidth: 12,
           padding: 10,
