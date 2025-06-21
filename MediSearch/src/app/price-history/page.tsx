@@ -54,22 +54,31 @@ export default function PriceHistoryPage() {
   const categoryParam = searchParams.get('category') || '';
   const fromMedicine = searchParams.get('fromMedicine') === 'true';
 
-  // Carga medicamentos al iniciar
+  // Carga medicamentos al iniciar con validación estricta para evitar errores de build
   useEffect(() => {
     const fetchMedicines = async () => {
       try {
         const res = await fetch('/api/medicines');
         const data = await res.json();
+
+        if (!Array.isArray(data)) {
+          console.error('Datos recibidos no son un arreglo:', data);
+          setAllMedicines([]);
+          return;
+        }
+
         const meds: Medicine[] = data.flatMap((pharmacy: any) =>
           Object.entries(pharmacy.categories || {}).flatMap(([cat, meds]) =>
-            (meds || []).map((med: any) => ({
-              id: med.id,
-              name: med.name,
-              pharmacy: pharmacy.pharmacy,
-              category: cat,
-              offer_price: med.offer_price,
-              normal_price: med.normal_price,
-            }))
+            Array.isArray(meds)
+              ? meds.map((med: any) => ({
+                  id: med.id,
+                  name: med.name,
+                  pharmacy: pharmacy.pharmacy,
+                  category: cat,
+                  offer_price: med.offer_price,
+                  normal_price: med.normal_price,
+                }))
+              : []
           )
         );
         setAllMedicines(meds);
