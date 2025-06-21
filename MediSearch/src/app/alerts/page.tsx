@@ -30,17 +30,23 @@ interface Medicine {
 }
 
 export default function AlertsPage() {
+  // Estado para saber si el correo está verificado
   const [emailVerified, setEmailVerified] = useState(false);
+  // Estado para las alertas obtenidas del backend
   const [alerts, setAlerts] = useState<AlertData[]>([]);
+  // Control para mostrar mensaje cuando el correo fue verificado
   const [showVerifiedMessage, setShowVerifiedMessage] = useState(false);
+  // Estado que almacena medicamentos equivalentes para comparar en cada alerta
   const [selectedComparisons, setSelectedComparisons] = useState<{ [alertId: string]: Medicine[] }>({});
 
+  // Función para capitalizar palabras (primera letra mayúscula, resto minúsculas)
   const capitalizeWords = (text: string) =>
     decodeURIComponent(text)
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
       .join(' ');
 
+  // Al montar componente, verifica si usuario está logueado y si su correo está verificado
   useEffect(() => {
     const stored = localStorage.getItem('userProfile');
     if (stored) {
@@ -51,6 +57,7 @@ export default function AlertsPage() {
           if (data.verified) {
             setEmailVerified(true);
             setShowVerifiedMessage(true);
+            // Si está verificado, carga las alertas activas del usuario
             fetch(`/api/alerts?email=${user.email}`)
               .then(res => res.json())
               .then(setAlerts);
@@ -62,6 +69,7 @@ export default function AlertsPage() {
     }
   }, []);
 
+  // Enviar correo de verificación cuando el usuario lo solicita
   const handleVerifyEmail = async () => {
     try {
       const stored = localStorage.getItem('userProfile');
@@ -82,12 +90,15 @@ export default function AlertsPage() {
     }
   };
 
+  // Eliminar alerta al hacer clic en eliminar
   const handleDeleteAlert = async (id: string) => {
     try {
       const res = await fetch(`/api/alerts?id=${id}`, { method: 'DELETE' });
       if (res.ok) {
         toast.success('Alerta eliminada.');
+        // Quitar alerta del estado local
         setAlerts(prev => prev.filter(a => a._id !== id));
+        // Quitar comparaciones relacionadas
         setSelectedComparisons(prev => {
           const updated = { ...prev };
           delete updated[id];
@@ -101,6 +112,7 @@ export default function AlertsPage() {
     }
   };
 
+  // Cargar medicamentos equivalentes para comparación
   const handleCompare = async (alert: AlertData) => {
     try {
       const res = await fetch(`/api/compare-equivalents?id=${alert.medicineId}`);
@@ -129,14 +141,17 @@ export default function AlertsPage() {
 
       <h2 className="fw-bold text-success">Tus Alertas de Precio</h2>
 
+      {/* Mostrar mensaje de correo verificado */}
       {showVerifiedMessage && (
         <div className="alert alert-success fw-bold mb-4">
           ✅ Tu correo ha sido verificado correctamente.
         </div>
       )}
 
+      {/* Si el correo está verificado */}
       {emailVerified ? (
         <>
+          {/* Sin alertas activas */}
           {alerts.length === 0 ? (
             <>
               <p className="text-muted mt-2">Aún no tienes alertas activas.</p>
@@ -163,6 +178,7 @@ export default function AlertsPage() {
                         <p className="mb-0"><strong>Farmacia:</strong> {alert.pharmacy}</p>
                         <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(alert.category)}</p>
 
+                        {/* Checkbox para activar comparación */}
                         <div className="form-check mt-3">
                           <input
                             className="form-check-input"
@@ -187,6 +203,7 @@ export default function AlertsPage() {
                       </div>
                     </div>
 
+                    {/* Botón para eliminar alerta */}
                     <div className="d-flex align-items-center gap-3">
                       <button
                         className="btn btn-link text-danger"
@@ -199,6 +216,7 @@ export default function AlertsPage() {
                     </div>
                   </div>
 
+                  {/* Mostrar comparación si hay equivalentes */}
                   {selectedComparisons[alert._id]?.length > 0 && (
                     <div className="mt-4 border-top pt-3">
                       <h6 className="fw-bold text-dark mb-3">
@@ -218,8 +236,9 @@ export default function AlertsPage() {
                                   <div className="text-start">
                                     <Card.Title className="text-success fw-bold mb-1 text-uppercase">{med.name}</Card.Title>
                                     <p className="mb-1"><strong>Farmacia:</strong> {med.pharmacy}</p>
+                                    {/* CORRECCIÓN: asegurar que Math.round reciba un número */}
                                     <p className="mb-1">
-                                      <strong>Precio:</strong> ${Math.round(med.offer_price ?? med.normal_price)}
+                                      <strong>Precio:</strong> ${Math.round(med.offer_price ?? med.normal_price ?? 0)}
                                     </p>
                                   </div>
                                 </div>
@@ -244,6 +263,7 @@ export default function AlertsPage() {
           )}
         </>
       ) : (
+        // Mensaje si el correo NO está verificado
         <div className="mb-4">
           <p className="text-danger fw-bold">Debes verificar tu correo electrónico para activar las alertas.</p>
           <button className="btn btn-outline-primary" onClick={handleVerifyEmail}>
