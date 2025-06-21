@@ -209,7 +209,7 @@ export default function PriceHistoryPage() {
   const minPrice = Math.min(...allPrices, 0);
   const maxPrice = Math.max(...allPrices, 1000);
 
-  // Configuración de opciones para ChartJS corregida para tipos
+  // Configuración de opciones para ChartJS corregida para tipos y deploy
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -218,13 +218,13 @@ export default function PriceHistoryPage() {
       title: {
         display: true,
         text: 'Tendencia de precios históricos',
-        font: { size: 24, weight: 'bold' as const }, // Corrección de tipo: "bold" en lugar de "600"
+        font: { size: 24, weight: 'bold' as const },
       },
       tooltip: {
         callbacks: {
           label: (ctx: any) => `$${ctx.parsed.y.toLocaleString('es-CL')}`,
         },
-        bodyFont: { weight: 'bold' as const }, // Corrección de tipo: "bold" en lugar de "600"
+        bodyFont: { weight: 'bold' as const },
       },
     },
     scales: {
@@ -232,7 +232,13 @@ export default function PriceHistoryPage() {
         min: minPrice - 50,
         max: maxPrice + 50,
         ticks: {
-          callback: (v: number) => `$${v.toLocaleString('es-CL')}`,
+          callback: (tickValue: string | number) => {
+            // Formatear ticks del eje Y con signo $ y localización
+            if (typeof tickValue === 'number') {
+              return `$${tickValue.toLocaleString('es-CL')}`;
+            }
+            return tickValue;
+          },
           font: { size: 12 },
         },
         grid: {
@@ -319,7 +325,9 @@ export default function PriceHistoryPage() {
                   pill
                   style={{ fontSize: '1rem', padding: '0.5rem 0.75rem' }}
                 >
-                  ${med.offer_price?.toLocaleString('es-CL') ?? '-'}
+                  {med.offer_price !== undefined && med.offer_price !== null
+                    ? med.offer_price.toLocaleString('es-CL')
+                    : '-'}
                 </Badge>
               </Card.Body>
             </Card>
