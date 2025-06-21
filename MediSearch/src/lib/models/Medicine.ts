@@ -3,8 +3,9 @@
 // Representa la estructura final en la colección `medicines`
 export interface MedicineDocument {
   pharmacy: string; // Ej: "Cruz Verde", "Salcobrand"
+  lastUpdated: string; // Fecha del último scrapeo usado para este estado (formato: "YYYY-MM-DD")
   categories: {
-    [category: string]: MedicineEntry[]; // Cada categoría contiene un array de medicamentos
+    [category: string]: MedicineEntry[];
   };
 }
 

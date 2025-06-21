@@ -30,17 +30,19 @@ async function insertMedicinesFromUpdates() {
         if (fechaDir.isDirectory) archivos.push(fechaDir.name);
       }
 
-      archivos.sort((a, b) => b.localeCompare(a));
+      archivos.sort((a, b) => b.localeCompare(a)); // Más reciente primero
       const archivoMasReciente = archivos[0];
       console.log("📁 Carpeta más reciente detectada:", archivoMasReciente);
 
       // 💾 Guardar backup del estado actual antes de insertar el nuevo
       const estadoAnterior = await medicinesCollection.findOne({ pharmacy: pharmacyName });
 
-      if (estadoAnterior && estadoAnterior.categories) {
+      if (estadoAnterior && estadoAnterior.categories && estadoAnterior.lastUpdated) {
+        const fechaAnterior = estadoAnterior.lastUpdated;
+
         const snapshotExistente = await priceHistoryCollection.findOne({
           pharmacy: pharmacyName,
-          [`snapshots.${archivoMasReciente}`]: { $exists: true }
+          [`snapshots.${fechaAnterior}`]: { $exists: true }
         });
 
         if (!snapshotExistente) {
@@ -58,16 +60,16 @@ async function insertMedicinesFromUpdates() {
 
           await priceHistoryCollection.updateOne(
             { pharmacy: pharmacyName },
-            { $set: { [`snapshots.${archivoMasReciente}`]: snapshot } },
+            { $set: { [`snapshots.${fechaAnterior}`]: snapshot } },
             { upsert: true }
           );
-          console.log(`📈 Guardado snapshot anterior en price_history con fecha ${archivoMasReciente}`);
+          console.log(`📈 Guardado snapshot anterior en price_history con fecha ${fechaAnterior}`);
         } else {
-          console.log(`⚠️ Ya existía snapshot para ${archivoMasReciente}, no se duplicó.`);
+          console.log(`⚠️ Ya existía snapshot para ${fechaAnterior}, no se duplicó.`);
         }
       }
 
-      // 📦 Ahora procesar los medicamentos de la nueva carpeta
+      // 📦 Procesar medicamentos nuevos
       const categorias: Record<string, any[]> = {};
       const fullFolderPath = `${pathFarmacia}/${archivoMasReciente}`;
 
@@ -107,12 +109,19 @@ async function insertMedicinesFromUpdates() {
         }
       }
 
+      // ✅ Insertar nuevo estado actual en `medicines` con fecha
       await medicinesCollection.updateOne(
         { pharmacy: pharmacyName },
-        { $set: { categories: categorias } },
+        {
+          $set: {
+            categories: categorias,
+            lastUpdated: archivoMasReciente
+          }
+        },
         { upsert: true }
       );
-      console.log(`✅ Actualizado estado actual de ${pharmacyName} en 'medicines'`);
+
+      console.log(`✅ Actualizado estado actual de ${pharmacyName} en 'medicines' con fecha ${archivoMasReciente}`);
     }
 
     console.log("✅ Todo fue procesado exitosamente.");
