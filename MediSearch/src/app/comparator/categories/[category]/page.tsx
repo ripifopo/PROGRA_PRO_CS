@@ -9,6 +9,17 @@ import { normalizeCategoryName } from '@/lib/utils/normalizeCategories';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
+// 🔁 Elimina duplicados por nombre y farmacia
+function removeDuplicatesByNameAndPharmacy(meds: any[]) {
+  const seen = new Set<string>();
+  return meds.filter((med) => {
+    const key = `${med.name}-${med.pharmacy}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 export default function CategoryPage() {
   const router = useRouter();
   const { category: rawCategory } = useParams();
@@ -70,13 +81,15 @@ export default function CategoryPage() {
     fetchMedicines();
   }, [category]);
 
-  const filteredMedicines = medicines.flatMap((pharmacy: any) => {
-    const entries = Object.entries(pharmacy.categories || {});
-    return entries.flatMap(([cat, meds]) => {
-      if (cat.toLowerCase() !== category.toLowerCase()) return [];
-      return (meds as any[]).map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
-    });
-  }).filter((med) => {
+  const filteredMedicines = removeDuplicatesByNameAndPharmacy(
+    medicines.flatMap((pharmacy: any) => {
+      const entries = Object.entries(pharmacy.categories || {});
+      return entries.flatMap(([cat, meds]) => {
+        if (cat.toLowerCase() !== category.toLowerCase()) return [];
+        return (meds as any[]).map((med) => ({ ...med, pharmacy: pharmacy.pharmacy }));
+      });
+    })
+  ).filter((med) => {
     const offer = parseInt(med.offer_price?.replace(/[^0-9]/g, '') || '0');
     const discount = parseInt(med.discount || 0);
     const pharmacyOk = pharmacyFilter.length === 0 || pharmacyFilter.includes(med.pharmacy);
