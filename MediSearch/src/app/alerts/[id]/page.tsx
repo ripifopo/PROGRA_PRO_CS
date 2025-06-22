@@ -154,7 +154,9 @@ export default function AlertByIdPage() {
             const offer = med.offer_price || '$0';
             const normal = med.normal_price || '$0';
             const hasDiscount = offer !== normal && normal !== '$0';
-            const isGeneric = med.bioequivalent === 'true';
+            const isBioequivalent = med.bioequivalent === 'true';
+
+            const showBadge = hasDiscount || isBioequivalent;
 
             return (
               <Col key={idx} xs={12} sm={6} md={4}>
@@ -178,9 +180,11 @@ export default function AlertByIdPage() {
                         {med.discount}% dcto.
                       </Badge>
                     )}
-                    <Badge bg={isGeneric ? 'success' : 'warning'} className="mb-2">
-                      {isGeneric ? 'Genérico' : 'Marca'}
-                    </Badge>
+                    {showBadge && (
+                      <Badge bg="info" className="mb-2">
+                        ✅ ¡Buena opción!
+                      </Badge>
+                    )}
                     <Link
                       href={`/comparator/categories/${encodeURIComponent(med.category)}/${encodeURIComponent(med.id || '0')}`}
                       className="btn btn-outline-primary btn-sm w-100 mt-2"

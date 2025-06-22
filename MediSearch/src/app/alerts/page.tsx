@@ -20,17 +20,34 @@ interface AlertData {
   createdAt: string;
 }
 
+// 🔄 Función para decodificar múltiples niveles de codificación
+function deepDecode(text: string): string {
+  let decoded = text;
+  let prev;
+  try {
+    do {
+      prev = decoded;
+      decoded = decodeURIComponent(prev);
+    } while (decoded !== prev);
+  } catch {
+    return decoded; // si falla, devuelve lo que alcanzó a decodificar
+  }
+  return decoded;
+}
+
+// 🔠 Capitaliza palabra por palabra
+function capitalizeWords(text: string): string {
+  return text
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ');
+}
+
 export default function AlertsPage() {
   const [emailVerified, setEmailVerified] = useState(false);
   const [alerts, setAlerts] = useState<AlertData[]>([]);
   const [showVerifiedMessage, setShowVerifiedMessage] = useState(false);
   const [loading, setLoading] = useState(true);
-
-  const capitalizeWords = (text: string) =>
-    decodeURIComponent(text)
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
 
   useEffect(() => {
     const stored = localStorage.getItem('userProfile');
@@ -139,7 +156,9 @@ export default function AlertsPage() {
                         <div className="text-start w-100">
                           <h6 className="text-success fw-bold mb-1 text-uppercase">{alert.medicineName}</h6>
                           <p className="mb-0"><strong>Farmacia:</strong> {alert.pharmacy}</p>
-                          <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(decodeURIComponent(decodeURIComponent(alert.categorySlug)))}</p>
+                          <p className="mb-0">
+                            <strong>Categoría:</strong> {capitalizeWords(deepDecode(alert.categorySlug))}
+                          </p>
                           <div className="mt-3">
                             <Link
                               href={`/alerts/${alert.medicineId}`}
