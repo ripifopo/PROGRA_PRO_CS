@@ -3,33 +3,29 @@
 
 import { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import ahumadaData from '@/stock/zones/ahumada_stock_locations.json';
 import cruzverdeData from '@/stock/zones/cruzverde_stock_locations.json';
 import salcobrandData from '@/stock/zones/salcobrand_stock_locations.json';
 
-// Interfaz para representar cada ubicación de stock
 interface Location {
   region: string;
   commune: string;
 }
 
-// Props esperadas por el modal de selección de región y comuna
 interface StockLocationModalProps {
   pharmacy: string | undefined;
+  productUrl: string | undefined;
   show: boolean;
   onClose: () => void;
   onSelect: (region: string, commune: string) => void;
 }
 
-export default function StockLocationModal({ pharmacy, show, onClose, onSelect }: StockLocationModalProps) {
-  // Estado para la región y comuna seleccionadas por el usuario
+export default function StockLocationModal({ pharmacy, productUrl, show, onClose, onSelect }: StockLocationModalProps) {
   const [region, setRegion] = useState('');
   const [commune, setCommune] = useState('');
-
-  // Estado que contiene las ubicaciones válidas según la farmacia
   const [locations, setLocations] = useState<Location[]>([]);
 
-  // Efecto que reacciona al cambio de farmacia y define las ubicaciones válidas
   useEffect(() => {
     if (!pharmacy) {
       setLocations([]);
@@ -49,17 +45,25 @@ export default function StockLocationModal({ pharmacy, show, onClose, onSelect }
     }
   }, [pharmacy]);
 
-  // Obtiene las regiones únicas de las ubicaciones disponibles
   const uniqueRegions = [...new Set(locations.map((loc) => loc.region))];
-
-  // Filtra las comunas según la región seleccionada
   const filteredCommunes = locations
     .filter((loc) => loc.region === region)
     .map((loc) => loc.commune);
 
-  // Confirma la selección y envía los datos al componente padre
-  const handleConfirm = () => {
-    if (region && commune) {
+  const handleConfirm = async () => {
+    if (region && commune && productUrl) {
+      try {
+        const res = await fetch('/api/stock/check', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url: productUrl, comuna: commune })
+        });
+        const data = await res.json();
+        toast.info(`Resultado stock: ${data.result}`);
+      } catch {
+        toast.error('Error al verificar stock');
+      }
+
       onSelect(region, commune);
       onClose();
     }
@@ -76,7 +80,6 @@ export default function StockLocationModal({ pharmacy, show, onClose, onSelect }
           Selecciona una región y comuna para consultar el stock disponible en tu zona.
         </p>
 
-        {/* Selector de Región */}
         <Form.Group className="mb-3">
           <Form.Label>Región</Form.Label>
           <Form.Select value={region} onChange={(e) => setRegion(e.target.value)}>
@@ -87,7 +90,6 @@ export default function StockLocationModal({ pharmacy, show, onClose, onSelect }
           </Form.Select>
         </Form.Group>
 
-        {/* Selector de Comuna */}
         <Form.Group className="mb-3">
           <Form.Label>Comuna</Form.Label>
           <Form.Select
