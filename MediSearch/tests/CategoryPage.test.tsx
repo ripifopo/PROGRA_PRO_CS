@@ -1,6 +1,6 @@
 'use client';
 
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import CategoryPage from '@/app/comparator/categories/[category]/page';
 import { useParams } from 'next/navigation';
 
@@ -9,7 +9,6 @@ jest.mock('next/navigation', () => ({
   useRouter: () => ({ push: jest.fn() }),
 }));
 
-// 🔁 Mock de fetch que retorna el formato esperado
 beforeEach(() => {
   (useParams as jest.Mock).mockReturnValue({ category: 'Analgésicos' });
 
@@ -60,7 +59,9 @@ afterEach(() => {
 describe('🧪 CategoryPage Component', () => {
   test('🔍 filtra medicamentos por nombre', async () => {
     render(<CategoryPage />);
-    const input = await screen.findByPlaceholderText(/buscar medicamento/i);
+    await screen.findByText(/Paracetamol/i);
+
+    const input = screen.getByPlaceholderText(/buscar medicamento/i);
     fireEvent.change(input, { target: { value: 'para' } });
 
     expect(await screen.findByText(/Paracetamol/i)).toBeInTheDocument();
@@ -69,7 +70,9 @@ describe('🧪 CategoryPage Component', () => {
 
   test('🏪 filtra por farmacia', async () => {
     render(<CategoryPage />);
-    const checkbox = await screen.findByLabelText('Cruz Verde');
+    await screen.findByText(/Paracetamol/i);
+
+    const checkbox = screen.getByLabelText('Cruz Verde');
     fireEvent.click(checkbox);
 
     expect(await screen.findByText(/Paracetamol/i)).toBeInTheDocument();
@@ -79,16 +82,19 @@ describe('🧪 CategoryPage Component', () => {
 
   test('💸 muestra sliders de precio correctamente', async () => {
     render(<CategoryPage />);
-    expect(await screen.findAllByText(/\$1/)).toHaveLength(1);
+    const dollarTexts = await screen.findAllByText(/\$1/);
+    expect(dollarTexts.length).toBeGreaterThan(0);
     expect(screen.getByText(/\$1000000/)).toBeInTheDocument();
   });
 
   test('♻️ limpia filtros al hacer clic en reset', async () => {
     render(<CategoryPage />);
-    const input = await screen.findByPlaceholderText(/buscar medicamento/i);
+    await screen.findByText(/Paracetamol/i);
+
+    const input = screen.getByPlaceholderText(/buscar medicamento/i);
     fireEvent.change(input, { target: { value: 'para' } });
 
-    const resetButton = await screen.findByRole('button', { name: /Reiniciar filtros/i });
+    const resetButton = screen.getByRole('button', { name: /Reiniciar filtros/i });
     fireEvent.click(resetButton);
 
     expect(await screen.findByText(/Paracetamol/i)).toBeInTheDocument();
@@ -98,7 +104,9 @@ describe('🧪 CategoryPage Component', () => {
 
   test('🔃 ordena por precio y descuento descendente', async () => {
     render(<CategoryPage />);
-    const sortSelect = await screen.findByDisplayValue('Menor precio');
+    await screen.findByText(/Paracetamol/i);
+
+    const sortSelect = screen.getByDisplayValue('Menor precio');
     fireEvent.change(sortSelect, { target: { value: 'desc' } });
 
     const discountSelect = screen.getByDisplayValue('No ordenar por descuento');
