@@ -1,3 +1,5 @@
+// Archivo: src/app/api/alerts/route.ts
+
 import { NextRequest, NextResponse } from 'next/server';
 import { alertsCollection } from '../../../lib/mongodb.ts';
 import { ObjectId } from 'mongodb';
@@ -43,6 +45,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Ya existe esta alerta.' }, { status: 409 });
     }
 
+    // ⚠️ Extra: si no viene el precio, se pone un valor muy alto como predeterminado
+    const lastKnown = data.lastKnownPrice || '999999';
+
     await collection.insertOne({
       userEmail: data.userEmail,
       medicineId: data.medicineId,
@@ -53,7 +58,8 @@ export async function POST(req: NextRequest) {
       categorySlug: data.categorySlug || null,
       pharmacyUrl: data.pharmacyUrl || null,
       imageUrl: data.imageUrl || null,
-      bioequivalent: data.bioequivalent || 'false', // 👈 se agregó este campo
+      bioequivalent: data.bioequivalent || 'false',
+      lastKnownPrice: lastKnown, // ✅ precio guardado como string
       createdAt: new Date().toISOString()
     });
 

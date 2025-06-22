@@ -11,5 +11,6 @@ export interface Alert {
   pharmacyUrl?: string;
   imageUrl?: string;
   createdAt: string;
-  bioequivalent?: string; // ← Ahora como string ('true' o 'false')
+  bioequivalent?: string;
+  lastKnownPrice?: string; // ← Ahora como string ('true' o 'false')
 }

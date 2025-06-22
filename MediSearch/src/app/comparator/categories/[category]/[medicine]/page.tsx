@@ -155,19 +155,23 @@ export default function MedicineDetailPage() {
       return;
     }
 
-    const payload = {
-      userEmail,
-      medicineId: medData.id,
-      medicineName: medData.name,
-      pharmacy: medData.pharmacy || '',
-      category: category as string,
-      medicineSlug: encodeURIComponent(medicine as string),
-      categorySlug: encodeURIComponent(category as string),
-      pharmacyUrl: medData.url || '',
-      imageUrl: medData.image || '',
-      createdAt: new Date().toISOString(),
-      bioequivalent: medData.bioequivalent || 'false' // ✅ se envía como string
-    };
+ const cleanPrice = (price: string | undefined) =>
+  price?.replace(/[^0-9]/g, '') || '999999';
+
+const payload = {
+  userEmail,
+  medicineId: medData.id,
+  medicineName: medData.name,
+  pharmacy: medData.pharmacy || '',
+  category: category as string,
+  medicineSlug: encodeURIComponent(medicine as string),
+  categorySlug: encodeURIComponent(category as string),
+  pharmacyUrl: medData.url || '',
+  imageUrl: medData.image || '',
+  createdAt: new Date().toISOString(),
+  bioequivalent: medData.bioequivalent || 'false',
+  lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price) // ✅ agregado aquí
+};
 
     try {
       const res = await fetch('/api/alerts', {
