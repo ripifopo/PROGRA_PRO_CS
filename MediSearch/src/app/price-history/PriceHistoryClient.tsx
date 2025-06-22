@@ -177,11 +177,27 @@ export default function PriceHistoryClient() {
     return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
   };
 
-  const data = {
-    labels: selected.length > 0 ? selected[0].history.map((h) => formatFecha(h.date)) : [],
-    datasets: selected.map((med, i) => ({
+const uniqueFormattedDates = Array.from(
+  new Set(
+    selected.length > 0
+      ? selected[0].history.map((h) => formatFecha(h.date))
+      : []
+  )
+);
+
+const data = {
+  labels: uniqueFormattedDates,
+  datasets: selected.map((med, i) => {
+    // Agrupar precios por fecha formateada (para evitar duplicados en x)
+    const grouped: { [key: string]: number } = {};
+    med.history.forEach((h) => {
+      const formatted = formatFecha(h.date);
+      grouped[formatted] = h.offer_price;
+    });
+
+    return {
       label: `${med.name} (${med.pharmacy})`,
-      data: med.history.map((h) => h.offer_price),
+      data: uniqueFormattedDates.map((d) => grouped[d] ?? null), // mantiene orden y fechas únicas
       borderColor: ['#3b82f6', '#f59e0b', '#8b5cf6'][i % 3],
       backgroundColor: 'transparent',
       tension: 0.3,
@@ -189,8 +205,9 @@ export default function PriceHistoryClient() {
       pointRadius: 4,
       pointHoverRadius: 6,
       fill: false,
-    })),
-  };
+    };
+  }),
+};
 
   const allPrices = selected.flatMap(med => med.history.map(h => h.offer_price));
   const minPrice = Math.min(...allPrices, 0);

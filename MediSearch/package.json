@@ -8,10 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:category": "jest tests/CategoryPage.test.tsx --coverage",
     "test:coverage": "jest --coverage",
-    "test:utils": "jest tests/formatPrice.test.tsx",
-    "test:category+utils": "jest tests/CategoryPage.test.tsx tests/utils/*.test.tsx --coverage"
+    "test:category+utils": "jest tests/CategoryPage.test.tsx tests/utils/*.test.tsx --coverage",
+    "test:history": "jest tests/PriceHistoryClient.test.tsx --coverage"
   },
   "dependencies": {
     "@mapbox/mapbox-gl-directions": "^4.3.1",
