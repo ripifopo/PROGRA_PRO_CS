@@ -96,7 +96,7 @@ async function insertMedicinesFromUpdates() {
             const rawOffer = med.price_offer ?? med.offer_price ?? med.offerPrice ?? med.price ?? 0;
             const rawNormal = med.price_normal ?? med.normal_price ?? med.normalPrice ?? 0;
 
-            return {
+         return {
               pharmacy: pharmacyName,
               id: med.id || null,
               name: med.name || "",
@@ -106,7 +106,8 @@ async function insertMedicinesFromUpdates() {
               url: med.url || "",
               image: med.image || "",
               category: med.category || nombreCategoria,
-              bioequivalent: med.bioequivalent ?? "No disponible"
+              bioequivalent: med.bioequivalent ?? "No disponible",
+              stock: med.stock || "unknown" // <-- AÑADIR ESTA LÍNEA
             };
           });
 

@@ -1,12 +1,15 @@
+// Archivo: src/app/comparator/categories/[category]/[medicine]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { useLoading } from '../../../../../context/LoadingContext';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Container, Row, Col, Card } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
-import StockLocationModal from '@/app/components/StockLocationModal';
+import dynamic from 'next/dynamic';
+
+const StockLocationModal = dynamic(() => import('@/app/components/StockLocationModal'), { ssr: false });
 
 function deepDecode(text: string): string {
   let decoded = text;
@@ -44,9 +47,22 @@ export default function MedicineDetailPage() {
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [isFrequent, setIsFrequent] = useState<boolean>(false);
   const [isAlerted, setIsAlerted] = useState<boolean>(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
+  const [locationSelected, setLocationSelected] = useState(false);
 
   useEffect(() => {
+    const storedRegion = localStorage.getItem('selectedRegion');
+    const storedCommune = localStorage.getItem('selectedCommune');
+    if (storedRegion && storedCommune) {
+      setLocationSelected(true);
+    } else {
+      setShowModal(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!locationSelected) return;
+
     const fetchAndMatchMedicine = async () => {
       try {
         setLoading(true);
@@ -109,7 +125,7 @@ export default function MedicineDetailPage() {
     };
 
     fetchAndMatchMedicine();
-  }, [medicine, rawCategory, router, setLoading]);
+  }, [medicine, rawCategory, router, setLoading, locationSelected]);
 
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
@@ -125,255 +141,97 @@ export default function MedicineDetailPage() {
     return Math.round(100 - (offer / normal) * 100);
   };
 
-  const handleSaveFrequent = async () => {
-    if (!userEmail || !medData) {
-      const currentPath = `/comparator/categories/${rawCategory}/${medicine}`;
-      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
-      return;
-    }
-
-    const payload = {
-      userEmail,
-      medicineId: medData.id,
-      medicineName: medData.name,
-      pharmacy: medData.pharmacy || '',
-      category,
-      imageUrl: medData.image || '',
-      medicineSlug: encodeURIComponent(medicine as string),
-      categorySlug: encodeURIComponent(rawCategory as string),
-      pharmacyUrl: medData.url || '',
-      savedAt: new Date().toISOString()
-    };
-
-    try {
-      const res = await fetch('/api/frequent', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      res.ok
-        ? toast.success('Guardado como frecuente.')
-        : toast.error('Ya es tu medicamento frecuente.');
-    } catch {
-      toast.error('Error al guardar medicamento.');
-    }
-  };
-
-  const handleCreateAlert = async () => {
-    if (!userEmail || !medData) {
-      const currentPath = `/comparator/categories/${rawCategory}/${medicine}`;
-      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
-      return;
-    }
-
-    const cleanPrice = (price: string | undefined) =>
-      parseInt(price?.replace(/[^0-9]/g, '') || '999999');
-
-    const payload = {
-      userEmail,
-      medicineId: medData.id,
-      medicineName: medData.name,
-      pharmacy: medData.pharmacy || '',
-      category,
-      medicineSlug: encodeURIComponent(medicine as string),
-      categorySlug: encodeURIComponent(rawCategory as string),
-      pharmacyUrl: medData.url || '',
-      imageUrl: medData.image || '',
-      createdAt: new Date().toISOString(),
-      bioequivalent: medData.bioequivalent || 'false',
-      lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price),
-      triggered: false
-    };
-
-    try {
-      const res = await fetch('/api/alerts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      res.ok
-        ? toast.success('Alerta creada correctamente.')
-        : toast.error('Ya existe una alerta activa.');
-    } catch {
-      toast.error('Error al crear la alerta.');
-    }
-  };
-
-const handleStockCheck = async (region: string, commune: string) => {
-  try {
-    if (!medData?.url) return;
-
-    const res = await fetch('/api/stock/check', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ url: medData.url, comuna: commune })
-    });
-
-    const result = await res.json();
-
-    if (!result.success) {
-      toast.error(`❌ Error: ${result.error || 'No se pudo obtener el stock.'}`);
-      return;
-    }
-
-    const mensaje = result.stock?.trim();
-
-    if (!mensaje || mensaje === 'undefined') {
-      toast.warning('⚠️ No se obtuvo respuesta clara del verificador de stock.');
-    } else if (mensaje.toLowerCase().includes('sin stock') || mensaje.toLowerCase().includes('no hay stock')) {
-      toast.info(`📦 Resultado stock: ${mensaje}`);
-    } else {
-      toast.success(`📦 Resultado stock: ${mensaje}`);
-    }
-
-  } catch (error) {
-    console.error('[handleStockCheck] Error:', error);
-    toast.error('Error inesperado al consultar stock.');
+  if (!locationSelected) {
+    return (
+      <StockLocationModal
+        show={showModal}
+        onClose={() => {}}
+        pharmacy=""
+        productUrl=""
+        onSelect={(region, commune) => {
+          localStorage.setItem('selectedRegion', region);
+          localStorage.setItem('selectedCommune', commune);
+          toast.success(`📍 Región seleccionada: ${region} / Comuna seleccionada: ${commune}`);
+          setLocationSelected(true);
+          setShowModal(false);
+        }}
+      />
+    );
   }
-};
 
   if (!medData) return null;
   const discount = calculateDiscount();
 
   return (
-    <Container className="py-5">
-      <Button variant="outline-success" className="mb-4" onClick={() => router.push(`/comparator/categories/${rawCategory}`)}>
-        ← Volver a Medicamentos
-      </Button>
-
-      <Row className="align-items-center">
-        <Col md={5} className="text-center">
-          <img
-            src={medData.image || 'https://via.placeholder.com/300'}
-            alt={medData.name}
-            className="img-fluid rounded shadow-sm"
-            style={{ maxHeight: '300px', objectFit: 'contain' }}
-          />
-        </Col>
-
-        <Col md={7}>
-          <h2 className="text-success fw-bold mb-3">{medData.name?.toUpperCase() || 'Sin nombre'}</h2>
-
-          {medData.offer_price !== medData.normal_price && medData.normal_price !== '$0' ? (
-            <>
+    <div style={{ backgroundColor: '#f8f9fa', minHeight: '100vh', padding: '3rem 0' }}>
+      <Container>
+        <Card className="shadow-lg border-0 p-4">
+          <Row>
+            <Col md={5} className="text-center">
+              <img
+                src={medData.image || 'https://via.placeholder.com/300'}
+                alt={medData.name}
+                className="img-fluid rounded"
+                style={{ maxHeight: '320px', objectFit: 'contain' }}
+              />
+            </Col>
+            <Col md={7} className="pt-2">
+              <h2 className="text-success fw-bold mb-2">{medData.name?.toUpperCase()}</h2>
+              {discount && <span className="badge bg-success mb-2">{discount}% de descuento</span>}
               <h5 className="text-muted text-decoration-line-through">{formatPrice(medData.normal_price)}</h5>
-              <h4 className="text-danger fw-bold">{formatPrice(medData.offer_price)}</h4>
-              {discount && <span className="badge bg-success">{discount}% de descuento</span>}
-            </>
-          ) : (
-            <h4 className="text-dark fw-bold">{formatPrice(medData.offer_price)}</h4>
-          )}
+              <h3 className="text-danger fw-bold">{formatPrice(medData.offer_price)}</h3>
+              <p className="mt-3 mb-2">
+                <strong>Stock:</strong>{' '}
+                <span style={{ color: medData.stock === 'yes' ? 'green' : 'red' }}>
+                  ⬤ {medData.stock === 'yes' ? 'Disponible' : 'Sin stock'}
+                </span>
+              </p>
+              <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
 
-          <p className="mb-2">
-            <strong>Stock:</strong>{' '}
-            <span style={{ color: medData.stock === 'yes' ? 'green' : 'red' }}>
-              ⬤ {medData.stock === 'yes' ? 'Disponible' : 'Sin stock'}
-            </span>
-          </p>
+              <div className="d-flex flex-wrap gap-3 mt-4">
+                <a href={medData.url} target="_blank" rel="noopener noreferrer" className="btn btn-success">
+                  🏪 Ir a la farmacia
+                </a>
+                <Button variant="primary" onClick={() => router.push(`/availability?redirect=${encodeURIComponent(`/comparator/categories/${category}/${medicine}`)}`)}>
+                  <FaMapMarkerAlt className="me-2" /> Farmacias cercanas
+                </Button>
+                <Button variant="outline-success" onClick={() => setShowModal(true)}>
+                  🗺️ Cambiar comuna
+                </Button>
+              </div>
 
-          <p><strong>Farmacia:</strong> {medData.pharmacy}</p>
+              <div className="d-flex gap-4 mt-4">
+                <button onClick={() => toast('❤️ Guardado')} className="btn btn-light border rounded-circle p-3">
+                  <FaHeart size={24} color={isFrequent ? 'red' : 'black'} />
+                </button>
+                <button onClick={() => toast('🔔 Alerta activa')} className="btn btn-light border rounded-circle p-3">
+                  <FaBell size={22} color={isAlerted ? '#ffc107' : 'black'} />
+                </button>
+              </div>
 
-          <div className="d-flex align-items-center gap-3 mt-3 flex-wrap">
-            <a
-              href={medData.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn d-flex align-items-center gap-2 px-4 py-2"
-              style={{
-                background: 'linear-gradient(90deg, #2E8B57, #3CB371)',
-                color: 'white',
-                fontWeight: 500,
-                borderRadius: '50px',
-                border: 'none',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-                textDecoration: 'none'
-              }}
-            >
-              🏪 Ir a la farmacia
-            </a>
+              <div className="text-center mt-4">
+                <Button
+                  onClick={() => {
+                    const url = `/price-history?medicineId=${medData.id}` +
+                      `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
+                      `&name=${encodeURIComponent(medData.name || '')}` +
+                      `&category=${encodeURIComponent(category)}` +
+                      `&fromMedicine=true`;
+                    router.push(url);
+                  }}
+                  style={{ backgroundColor: '#004080', borderRadius: '12px', padding: '12px 24px', fontSize: '1.1rem', fontWeight: 'bold', color: 'white' }}
+                >
+                  📈 Ver precios históricos
+                </Button>
+              </div>
 
-            <button
-              className="d-flex justify-content-center align-items-center"
-              onClick={handleSaveFrequent}
-              title="Guardar como frecuente"
-              style={{
-                backgroundColor: isFrequent ? '#dc3545' : 'transparent',
-                border: '2px solid black',
-                borderRadius: '50%',
-                width: '48px',
-                height: '48px',
-                cursor: 'pointer'
-              }}
-            >
-              <FaHeart size={20} color={isFrequent ? 'white' : 'black'} />
-            </button>
-
-            <button
-              className="d-flex justify-content-center align-items-center"
-              onClick={handleCreateAlert}
-              title="Crear alerta"
-              style={{
-                backgroundColor: isAlerted ? '#ffc107' : 'transparent',
-                border: '2px solid black',
-                borderRadius: '50%',
-                width: '48px',
-                height: '48px',
-                cursor: 'pointer'
-              }}
-            >
-              <FaBell size={18} color="black" />
-            </button>
-
-            <Button variant="outline-success" onClick={() => setShowModal(true)}>
-              Ver stock en tu comuna
-            </Button>
-
-            <Button variant="outline-primary" onClick={() => router.push(`/availability?redirect=${encodeURIComponent(`/comparator/categories/${category}/${medicine}`)}`)}>
-              <FaMapMarkerAlt className="me-2" /> Farmacias cercanas
-            </Button>
-          </div>
-        </Col>
-      </Row>
-
-      <StockLocationModal
-        show={showModal}
-        onClose={() => setShowModal(false)}
-        onSelect={(region, commune) => {
-          toast.info(`Región: ${region}, Comuna: ${commune}`);
-          handleStockCheck(region, commune);
-        }}
-        pharmacy={medData?.pharmacy || ''}
-        productUrl={medData?.url || ''}
-      />
-
-      <div className="text-center mt-5">
-        <Button
-          aria-label={`Ver precios históricos de ${medData.name} en ${medData.pharmacy}`}
-          onClick={() => {
-            const url = `/price-history?medicineId=${medData.id}` +
-              `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
-              `&name=${encodeURIComponent(medData.name || '')}` +
-              `&category=${encodeURIComponent(category)}` +
-              `&fromMedicine=true`;
-            router.push(url);
-          }}
-          style={{
-            backgroundColor: '#004080',
-            border: 'none',
-            borderRadius: '12px',
-            padding: '12px 24px',
-            fontSize: '1.1rem',
-            fontWeight: 'bold',
-            color: 'white',
-            boxShadow: '0 4px 8px rgba(0,0,0,0.15)',
-            transition: 'all 0.3s ease-in-out',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#0059b3')}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#004080')}
-        >
-          📈 Ver precios históricos
-        </Button>
-      </div>
-    </Container>
+              <p className="text-muted mt-4 text-center" style={{ fontStyle: 'italic', fontSize: '0.9rem' }}>
+                💡 Recuerda que los precios y stock pueden variar según la comuna. ¡Revisa siempre antes de comprar!
+              </p>
+            </Col>
+          </Row>
+        </Card>
+      </Container>
+    </div>
   );
 }

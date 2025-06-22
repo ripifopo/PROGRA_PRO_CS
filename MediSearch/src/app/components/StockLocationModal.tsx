@@ -3,7 +3,6 @@
 
 import { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import { toast } from 'react-toastify';
 import ahumadaData from '@/stock/zones/ahumada_stock_locations.json';
 import cruzverdeData from '@/stock/zones/cruzverde_stock_locations.json';
 import salcobrandData from '@/stock/zones/salcobrand_stock_locations.json';
@@ -46,24 +45,12 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
   }, [pharmacy]);
 
   const uniqueRegions = [...new Set(locations.map((loc) => loc.region))];
-  const filteredCommunes = locations
-    .filter((loc) => loc.region === region)
-    .map((loc) => loc.commune);
+  const filteredCommunes = locations.filter((loc) => loc.region === region).map((loc) => loc.commune);
 
-  const handleConfirm = async () => {
-    if (region && commune && productUrl) {
-      try {
-        const res = await fetch('/api/stock/check', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url: productUrl, comuna: commune })
-        });
-        const data = await res.json();
-        toast.info(`Resultado stock: ${data.result}`);
-      } catch {
-        toast.error('Error al verificar stock');
-      }
-
+  const handleConfirm = () => {
+    if (region && commune) {
+      localStorage.setItem('selectedRegion', region);
+      localStorage.setItem('selectedCommune', commune);
       onSelect(region, commune);
       onClose();
     }
@@ -72,12 +59,12 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
   return (
     <Modal show={show} onHide={onClose} centered>
       <Modal.Header closeButton>
-        <Modal.Title>Seleccionar ubicación de stock</Modal.Title>
+        <Modal.Title>📍 Selecciona tu ubicación</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
         <p className="mb-3 text-muted">
-          Selecciona una región y comuna para consultar el stock disponible en tu zona.
+          Elige una región y comuna para personalizar la visualización del stock.
         </p>
 
         <Form.Group className="mb-3">
@@ -106,11 +93,11 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
       </Modal.Body>
 
       <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
+        <Button variant="outline-secondary" onClick={onClose}>
           Cancelar
         </Button>
         <Button variant="success" onClick={handleConfirm} disabled={!region || !commune}>
-          Aceptar
+          ✅ Confirmar
         </Button>
       </Modal.Footer>
     </Modal>
