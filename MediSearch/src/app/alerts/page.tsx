@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { FaBell } from 'react-icons/fa';
-import { XCircleFill } from 'react-bootstrap-icons';
+import { XCircleFill, CheckCircleFill } from 'react-bootstrap-icons';
 import { toast } from 'react-toastify';
-import { Card, Spinner } from 'react-bootstrap';
+import { Spinner, Button } from 'react-bootstrap';
 import Link from 'next/link';
 
 interface AlertData {
@@ -18,9 +18,9 @@ interface AlertData {
   categorySlug: string;
   imageUrl?: string;
   createdAt: string;
+  triggered?: boolean;
 }
 
-// 🔄 Función para decodificar múltiples niveles de codificación
 function deepDecode(text: string): string {
   let decoded = text;
   let prev;
@@ -30,12 +30,11 @@ function deepDecode(text: string): string {
       decoded = decodeURIComponent(prev);
     } while (decoded !== prev);
   } catch {
-    return decoded; // si falla, devuelve lo que alcanzó a decodificar
+    return decoded;
   }
   return decoded;
 }
 
-// 🔠 Capitaliza palabra por palabra
 function capitalizeWords(text: string): string {
   return text
     .split(' ')
@@ -80,18 +79,16 @@ export default function AlertsPage() {
   const handleVerifyEmail = async () => {
     try {
       const stored = localStorage.getItem('userProfile');
-      if (!stored) {
-        toast.error("No se encontró el usuario.");
-        return;
-      }
+      if (!stored) return toast.error("No se encontró el usuario.");
       const user = JSON.parse(stored);
       const res = await fetch(`/api/send-verification`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email }),
       });
-      if (res.ok) toast.success('Correo de verificación enviado. Revisa tu bandeja de entrada.');
-      else toast.error('Error al enviar el correo.');
+      res.ok
+        ? toast.success('Correo de verificación enviado.')
+        : toast.error('Error al enviar el correo.');
     } catch {
       toast.error('Error de red al enviar el correo.');
     }
@@ -110,6 +107,27 @@ export default function AlertsPage() {
       toast.error('Error al eliminar.');
     }
   };
+
+ const handleDismissTrigger = async (id: string) => {
+  try {
+    await fetch('/api/alerts/disable-trigger', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id })
+    });
+
+    // 🔄 Actualiza el estado local
+    setAlerts(prev =>
+      prev.map(alert => alert._id === id ? { ...alert, triggered: false } : alert)
+    );
+
+    // 📣 Notifica a la Navbar que vuelva a revisar
+    window.dispatchEvent(new Event('trigger-status-updated'));
+  } catch {
+    toast.error('Error al actualizar el estado de la alerta.');
+  }
+};
+
 
   return (
     <div className="container text-center py-5">
@@ -159,6 +177,20 @@ export default function AlertsPage() {
                           <p className="mb-0">
                             <strong>Categoría:</strong> {capitalizeWords(deepDecode(alert.categorySlug))}
                           </p>
+
+                          {alert.triggered && (
+                            <div className="alert alert-success mt-2 py-2 px-3 d-flex justify-content-between align-items-center">
+                              <span>💸 ¡Este medicamento bajó de precio desde tu última visita!</span>
+                              <Button
+                                variant="outline-success"
+                                size="sm"
+                                onClick={() => handleDismissTrigger(alert._id)}
+                              >
+                                <CheckCircleFill />
+                              </Button>
+                            </div>
+                          )}
+
                           <div className="mt-3">
                             <Link
                               href={`/alerts/${alert.medicineId}`}
@@ -204,9 +236,9 @@ export default function AlertsPage() {
       <div className="mb-4">
         <h5 className="fw-bold mb-3 text-dark">¿Qué podrás activar aquí?</h5>
         <ul className="list-unstyled text-start d-inline-block">
-          <li>🔔 Recibir alertas cuando un medicamento baje de precio</li>
+          <li>🔔 Recibir alertas cuando un medicamento bajó de precio</li>
           <li>📉 Comparar precios entre versiones genéricas y de marca</li>
-          <li>📩 Activar notificaciones por correo electrónico</li>
+          <li>📩 Activar notificaciones visuales en esta página</li>
         </ul>
       </div>
     </div>
