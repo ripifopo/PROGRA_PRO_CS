@@ -294,7 +294,9 @@ export default function CategoryPage() {
               <Button variant="outline-secondary" disabled={currentPage === 1} onClick={() => setCurrentPage(prev => prev - 1)}>
                 Anterior
               </Button>
-              <span className="fw-semibold">Página {currentPage} de {totalPages}</span>
+              <span className="fw-semibold" data-testid="pagination-indicator">
+                Página {currentPage} de {totalPages}
+              </span>
               <Button variant="outline-secondary" disabled={currentPage === totalPages} onClick={() => setCurrentPage(prev => prev + 1)}>
                 Siguiente
               </Button>
