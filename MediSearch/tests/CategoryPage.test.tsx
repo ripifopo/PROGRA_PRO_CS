@@ -15,8 +15,7 @@ jest.mock('next/navigation', () => {
 });
 
 beforeEach(() => {
-  (useParams as jest.Mock).mockReturnValue({ category: 'Analgesicos' });
-
+  (useParams as jest.Mock).mockReturnValue({ category: 'dolor fiebre e inflamacion' });
   global.fetch = jest.fn(() =>
     Promise.resolve({
       json: () =>
@@ -24,7 +23,7 @@ beforeEach(() => {
           {
             pharmacy: 'Cruz Verde',
             categories: {
-              Analgesicos: Array.from({ length: 13 }).map((_, i) => ({
+              'dolor y fiebre': Array.from({ length: 13 }).map((_, i) => ({
                 id: i + 1,
                 name: `Medicamento ${i + 1}`,
                 offer_price: '$1000',
@@ -43,7 +42,6 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-// Espera a que los medicamentos terminen de cargarse antes de realizar validaciones
 async function waitForMedicinesToLoad() {
   await screen.findByText(/Cargando medicamentos/i);
   await waitFor(() =>
@@ -74,7 +72,7 @@ describe('🧚️ CategoryPage Component', () => {
     const titles = screen.getAllByRole('heading', { level: 5 }).filter((el) =>
       el.textContent?.startsWith('Medicamento ')
     );
-    expect(titles).toHaveLength(12); // Ajusta según tu mock
+    expect(titles).toHaveLength(12); // Ajusta según mock
   });
 
   test('💸 muestra sliders de precio correctamente', async () => {
@@ -154,7 +152,6 @@ describe('🧚️ CategoryPage Component', () => {
     const button = screen.getByRole('button', { name: /Volver a Categorías/i });
     expect(button).toBeInTheDocument();
     fireEvent.click(button);
-    // No se valida el router push porque no está interceptado
   });
 
   test('🚫 muestra mensaje si no hay medicamentos', async () => {
@@ -165,7 +162,7 @@ describe('🧚️ CategoryPage Component', () => {
             {
               pharmacy: 'Cruz Verde',
               categories: {
-                Analgesicos: [],
+                'dolor y fiebre': [],
               },
             },
           ]),
@@ -173,10 +170,55 @@ describe('🧚️ CategoryPage Component', () => {
     );
 
     render(<CategoryPage />);
-    await waitForMedicinesToLoad();
+    await waitFor(() => {
+      expect(screen.queryByText(/Cargando medicamentos/i)).not.toBeInTheDocument();
+    });
 
-    // Reemplazamos findByText por una búsqueda más tolerante usando `.getByTestId`
     const emptyMessage = await screen.findByTestId('empty-message');
     expect(emptyMessage).toBeInTheDocument();
+  });
+
+  test('🧹 elimina medicamentos duplicados por nombre y farmacia', async () => {
+    (global.fetch as jest.Mock).mockImplementationOnce(() =>
+      Promise.resolve({
+        json: () =>
+          Promise.resolve([
+            {
+              pharmacy: 'Cruz Verde',
+              categories: {
+                'dolor y fiebre': [
+                  {
+                    id: 1,
+                    name: 'Medicamento duplicado',
+                    offer_price: '$1000',
+                    normal_price: '$2000',
+                    discount: 50,
+                    image: '',
+                  },
+                  {
+                    id: 2,
+                    name: 'Medicamento duplicado',
+                    offer_price: '$1000',
+                    normal_price: '$2000',
+                    discount: 50,
+                    image: '',
+                  },
+                ],
+              },
+            },
+          ]),
+      })
+    );
+
+    render(<CategoryPage />);
+    await waitFor(() => {
+      expect(screen.queryByText(/Cargando medicamentos/i)).not.toBeInTheDocument();
+    });
+
+    const titles = screen.getAllByRole('heading', { level: 5 }).filter(el =>
+      el.textContent?.includes('Medicamento duplicado')
+    );
+
+    expect(titles).toHaveLength(1);
   });
 });

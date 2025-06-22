@@ -110,8 +110,14 @@ export default function CategoryPage() {
     return sortDiscount === 'asc' ? a.discount - b.discount : b.discount - a.discount;
   });
 
-  const currentMedicines = filteredMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
-  const totalPages = Math.ceil(filteredMedicines.length / itemsPerPage);
+  const uniqueMedicines = Array.from(
+  new Map(
+    filteredMedicines.map((med) => [`${med.name}-${med.pharmacy}`, med])
+  ).values()
+);
+
+  const currentMedicines = uniqueMedicines.slice(indexOfFirstMedicine, indexOfLastMedicine);
+  const totalPages = Math.ceil(uniqueMedicines.length / itemsPerPage);
 
   const togglePharmacy = (value: string) => {
     setCurrentPage(1);
