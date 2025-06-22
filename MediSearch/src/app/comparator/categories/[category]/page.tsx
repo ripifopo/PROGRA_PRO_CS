@@ -14,6 +14,7 @@ export default function CategoryPage() {
 
   const [category, setCategory] = useState('');
   const [medicines, setMedicines] = useState<any[]>([]);
+  const [originalMedicines, setOriginalMedicines] = useState<any[]>([]);
   const [search, setSearch] = useState('');
   const [pharmacyFilter, setPharmacyFilter] = useState<string[]>([]);
   const [sort, setSort] = useState<'asc' | 'desc'>('asc');
@@ -46,6 +47,7 @@ export default function CategoryPage() {
       const res = await fetch('/api/medicines');
       const data = await res.json();
       setMedicines(data);
+      setOriginalMedicines(data);
 
       const prices = data.flatMap((pharmacy: any) => {
         const entries = Object.entries(pharmacy.categories || {});
@@ -113,6 +115,7 @@ export default function CategoryPage() {
     setSortDiscount('');
     setPriceRange([1, maxPrice]);
     setDiscountRange([0, 100]);
+    setMedicines(originalMedicines);
     setCurrentPage(1);
   };
 
@@ -153,6 +156,7 @@ export default function CategoryPage() {
                 <Form.Check
                   key={pharm}
                   type="checkbox"
+                  id={`pharmacy-${pharm}`}
                   label={pharm}
                   checked={pharmacyFilter.includes(pharm)}
                   onChange={() => togglePharmacy(pharm)}
