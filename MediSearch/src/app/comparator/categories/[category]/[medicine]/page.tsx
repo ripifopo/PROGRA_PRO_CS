@@ -1,4 +1,3 @@
-// Archivo: src/app/comparator/categories/[category]/[medicine]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -9,6 +8,20 @@ import { toast } from 'react-toastify';
 import { FaHeart, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
 import StockLocationModal from '@/app/components/StockLocationModal';
 
+function deepDecode(text: string): string {
+  let decoded = text;
+  let prev;
+  try {
+    do {
+      prev = decoded;
+      decoded = decodeURIComponent(prev);
+    } while (decoded !== prev);
+  } catch {
+    return decoded;
+  }
+  return decoded;
+}
+
 interface Medicine {
   id: number;
   name: string;
@@ -18,11 +31,12 @@ interface Medicine {
   url: string;
   stock: string | null;
   pharmacy?: string;
-  bioequivalent?: string; // ✅ agregado como string
+  bioequivalent?: string;
 }
 
 export default function MedicineDetailPage() {
-  const { category, medicine } = useParams();
+  const { category: rawCategory, medicine } = useParams();
+  const category = deepDecode(rawCategory as string);
   const router = useRouter();
   const { setLoading } = useLoading();
 
@@ -59,7 +73,7 @@ export default function MedicineDetailPage() {
                   ...med,
                   pharmacy: pharmacy.pharmacy,
                   stock: normalizedStock,
-                  bioequivalent: String(med.bioequivalent ?? 'false'), // ✅ aquí se transforma a string
+                  bioequivalent: String(med.bioequivalent ?? 'false'),
                 };
                 break;
               }
@@ -88,14 +102,14 @@ export default function MedicineDetailPage() {
         }
       } catch {
         toast.error('Medicamento no encontrado.');
-        router.push(`/comparator/categories/${category}`);
+        router.push(`/comparator/categories/${rawCategory}`);
       } finally {
         setLoading(false);
       }
     };
 
     fetchAndMatchMedicine();
-  }, [medicine, category, router, setLoading]);
+  }, [medicine, rawCategory, router, setLoading]);
 
   const formatPrice = (price: string) => {
     if (!price || price === '$0') return 'Sin precio disponible';
@@ -113,7 +127,7 @@ export default function MedicineDetailPage() {
 
   const handleSaveFrequent = async () => {
     if (!userEmail || !medData) {
-      const currentPath = `/comparator/categories/${category}/${medicine}`;
+      const currentPath = `/comparator/categories/${rawCategory}/${medicine}`;
       router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
       return;
     }
@@ -123,10 +137,10 @@ export default function MedicineDetailPage() {
       medicineId: medData.id,
       medicineName: medData.name,
       pharmacy: medData.pharmacy || '',
-      category: category as string,
+      category,
       imageUrl: medData.image || '',
       medicineSlug: encodeURIComponent(medicine as string),
-      categorySlug: encodeURIComponent(category as string),
+      categorySlug: encodeURIComponent(rawCategory as string),
       pharmacyUrl: medData.url || '',
       savedAt: new Date().toISOString()
     };
@@ -137,58 +151,84 @@ export default function MedicineDetailPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      if (res.ok) {
-        setIsFrequent(true);
-        toast.success('Guardado como frecuente.');
-      } else {
-        toast.error('Ya es tu medicamento frecuente.');
-      }
+      res.ok
+        ? toast.success('Guardado como frecuente.')
+        : toast.error('Ya es tu medicamento frecuente.');
     } catch {
       toast.error('Error al guardar medicamento.');
     }
   };
 
- const handleCreateAlert = async () => {
-  if (!userEmail || !medData) {
-    const currentPath = `/comparator/categories/${category}/${medicine}`;
-    router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
-    return;
-  }
+  const handleCreateAlert = async () => {
+    if (!userEmail || !medData) {
+      const currentPath = `/comparator/categories/${rawCategory}/${medicine}`;
+      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
+      return;
+    }
 
-  // 🔧 Limpiar y asegurar que sea un número
-  const cleanPrice = (price: string | undefined) =>
-    parseInt(price?.replace(/[^0-9]/g, '') || '999999');
+    const cleanPrice = (price: string | undefined) =>
+      parseInt(price?.replace(/[^0-9]/g, '') || '999999');
 
-  const payload = {
-    userEmail,
-    medicineId: medData.id,
-    medicineName: medData.name,
-    pharmacy: medData.pharmacy || '',
-    category: category as string,
-    medicineSlug: encodeURIComponent(medicine as string),
-    categorySlug: encodeURIComponent(category as string),
-    pharmacyUrl: medData.url || '',
-    imageUrl: medData.image || '',
-    createdAt: new Date().toISOString(),
-    bioequivalent: medData.bioequivalent || 'false',
-    lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price), // 💰 asegurado como número
-    triggered: false // 🔔 nuevo campo que lo deja listo para el sistema de alertas
+    const payload = {
+      userEmail,
+      medicineId: medData.id,
+      medicineName: medData.name,
+      pharmacy: medData.pharmacy || '',
+      category,
+      medicineSlug: encodeURIComponent(medicine as string),
+      categorySlug: encodeURIComponent(rawCategory as string),
+      pharmacyUrl: medData.url || '',
+      imageUrl: medData.image || '',
+      createdAt: new Date().toISOString(),
+      bioequivalent: medData.bioequivalent || 'false',
+      lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price),
+      triggered: false
+    };
+
+    try {
+      const res = await fetch('/api/alerts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      res.ok
+        ? toast.success('Alerta creada correctamente.')
+        : toast.error('Ya existe una alerta activa.');
+    } catch {
+      toast.error('Error al crear la alerta.');
+    }
   };
 
+const handleStockCheck = async (region: string, commune: string) => {
   try {
-    const res = await fetch('/api/alerts', {
+    if (!medData?.url) return;
+
+    const res = await fetch('/api/stock/check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({ url: medData.url, comuna: commune })
     });
-    if (res.ok) {
-      setIsAlerted(true);
-      toast.success('Alerta creada correctamente.');
-    } else {
-      toast.error('Ya existe una alerta activa.');
+
+    const result = await res.json();
+
+    if (!result.success) {
+      toast.error(`❌ Error: ${result.error || 'No se pudo obtener el stock.'}`);
+      return;
     }
-  } catch {
-    toast.error('Error al crear la alerta.');
+
+    const mensaje = result.stock?.trim();
+
+    if (!mensaje || mensaje === 'undefined') {
+      toast.warning('⚠️ No se obtuvo respuesta clara del verificador de stock.');
+    } else if (mensaje.toLowerCase().includes('sin stock') || mensaje.toLowerCase().includes('no hay stock')) {
+      toast.info(`📦 Resultado stock: ${mensaje}`);
+    } else {
+      toast.success(`📦 Resultado stock: ${mensaje}`);
+    }
+
+  } catch (error) {
+    console.error('[handleStockCheck] Error:', error);
+    toast.error('Error inesperado al consultar stock.');
   }
 };
 
@@ -197,7 +237,7 @@ export default function MedicineDetailPage() {
 
   return (
     <Container className="py-5">
-      <Button variant="outline-success" className="mb-4" onClick={() => router.push(`/comparator/categories/${category}`)}>
+      <Button variant="outline-success" className="mb-4" onClick={() => router.push(`/comparator/categories/${rawCategory}`)}>
         ← Volver a Medicamentos
       </Button>
 
@@ -300,8 +340,10 @@ export default function MedicineDetailPage() {
         onClose={() => setShowModal(false)}
         onSelect={(region, commune) => {
           toast.info(`Región: ${region}, Comuna: ${commune}`);
+          handleStockCheck(region, commune);
         }}
-        pharmacy={medData.pharmacy || ''}
+        pharmacy={medData?.pharmacy || ''}
+        productUrl={medData?.url || ''}
       />
 
       <div className="text-center mt-5">
@@ -309,10 +351,10 @@ export default function MedicineDetailPage() {
           aria-label={`Ver precios históricos de ${medData.name} en ${medData.pharmacy}`}
           onClick={() => {
             const url = `/price-history?medicineId=${medData.id}` +
-                        `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
-                        `&name=${encodeURIComponent(medData.name || '')}` +
-                        `&category=${encodeURIComponent(category as string)}` +
-                        `&fromMedicine=true`;
+              `&pharmacy=${encodeURIComponent(medData.pharmacy || '')}` +
+              `&name=${encodeURIComponent(medData.name || '')}` +
+              `&category=${encodeURIComponent(category)}` +
+              `&fromMedicine=true`;
             router.push(url);
           }}
           style={{
