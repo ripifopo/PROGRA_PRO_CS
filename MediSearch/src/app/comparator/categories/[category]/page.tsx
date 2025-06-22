@@ -1,3 +1,4 @@
+// app/comparator/categories/[category]/page.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -152,8 +153,8 @@ export default function CategoryPage() {
               {['Cruz Verde', 'Salcobrand', 'Farmacia Ahumada'].map((pharm) => (
                 <Form.Check
                   key={pharm}
-                  id={`pharmacy-${pharm.replace(/\s+/g, '-')}`}
                   type="checkbox"
+                  id={`pharmacy-${pharm}`}
                   label={pharm}
                   checked={pharmacyFilter.includes(pharm)}
                   onChange={() => togglePharmacy(pharm)}
