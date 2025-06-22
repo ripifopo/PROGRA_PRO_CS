@@ -1,0 +1,12 @@
+{
+  "cron": [
+    {
+      "path": "/api/alerts/check-prices",
+      "schedule": "0 13 * * *",
+      "method": "GET",
+      "headers": {
+        "Authorization": "Bearer mi_secreto_demo_123"
+      }
+    }
+  ]
+}

@@ -12,5 +12,6 @@ export interface Alert {
   imageUrl?: string;
   createdAt: string;
   bioequivalent?: string;
-  lastKnownPrice?: string; // ← Ahora como string ('true' o 'false')
+  lastKnownPrice?: string;
+  triggered?: boolean; // ✅ Agregado aquí
 }

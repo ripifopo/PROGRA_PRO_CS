@@ -148,47 +148,49 @@ export default function MedicineDetailPage() {
     }
   };
 
-  const handleCreateAlert = async () => {
-    if (!userEmail || !medData) {
-      const currentPath = `/comparator/categories/${category}/${medicine}`;
-      router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
-      return;
-    }
+ const handleCreateAlert = async () => {
+  if (!userEmail || !medData) {
+    const currentPath = `/comparator/categories/${category}/${medicine}`;
+    router.push(`/auth/continue?redirect=${encodeURIComponent(currentPath)}`);
+    return;
+  }
 
- const cleanPrice = (price: string | undefined) =>
-  price?.replace(/[^0-9]/g, '') || '999999';
+  // 🔧 Limpiar y asegurar que sea un número
+  const cleanPrice = (price: string | undefined) =>
+    parseInt(price?.replace(/[^0-9]/g, '') || '999999');
 
-const payload = {
-  userEmail,
-  medicineId: medData.id,
-  medicineName: medData.name,
-  pharmacy: medData.pharmacy || '',
-  category: category as string,
-  medicineSlug: encodeURIComponent(medicine as string),
-  categorySlug: encodeURIComponent(category as string),
-  pharmacyUrl: medData.url || '',
-  imageUrl: medData.image || '',
-  createdAt: new Date().toISOString(),
-  bioequivalent: medData.bioequivalent || 'false',
-  lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price) // ✅ agregado aquí
-};
-
-    try {
-      const res = await fetch('/api/alerts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if (res.ok) {
-        setIsAlerted(true);
-        toast.success('Alerta creada correctamente.');
-      } else {
-        toast.error('Ya existe una alerta activa.');
-      }
-    } catch {
-      toast.error('Error al crear la alerta.');
-    }
+  const payload = {
+    userEmail,
+    medicineId: medData.id,
+    medicineName: medData.name,
+    pharmacy: medData.pharmacy || '',
+    category: category as string,
+    medicineSlug: encodeURIComponent(medicine as string),
+    categorySlug: encodeURIComponent(category as string),
+    pharmacyUrl: medData.url || '',
+    imageUrl: medData.image || '',
+    createdAt: new Date().toISOString(),
+    bioequivalent: medData.bioequivalent || 'false',
+    lastKnownPrice: cleanPrice(medData.offer_price || medData.normal_price), // 💰 asegurado como número
+    triggered: false // 🔔 nuevo campo que lo deja listo para el sistema de alertas
   };
+
+  try {
+    const res = await fetch('/api/alerts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      setIsAlerted(true);
+      toast.success('Alerta creada correctamente.');
+    } else {
+      toast.error('Ya existe una alerta activa.');
+    }
+  } catch {
+    toast.error('Error al crear la alerta.');
+  }
+};
 
   if (!medData) return null;
   const discount = calculateDiscount();
