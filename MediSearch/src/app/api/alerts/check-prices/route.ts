@@ -39,22 +39,23 @@ export async function GET(req: NextRequest) {
 
       if (!foundMedicine) continue;
 
-      // 💰 Extraer precios limpios
+      // 💰 Precios limpios y forzados a número
       const newPrice = parseInt(foundMedicine.offer_price?.toString().replace(/[^\d]/g, '') || '0');
 
-      const oldPriceRaw = typeof alert.lastKnownPrice === 'number'
-        ? alert.lastKnownPrice
-        : parseInt(alert.lastKnownPrice?.toString().replace(/[^\d]/g, '') || '999999');
+      const oldPriceRaw =
+        typeof alert.lastKnownPrice === 'number'
+          ? alert.lastKnownPrice
+          : parseInt(alert.lastKnownPrice?.toString().replace(/[^\d]/g, '') || '999999');
 
       const oldPrice = isNaN(oldPriceRaw) ? 999999 : oldPriceRaw;
 
-      // ✅ Si el precio bajó, actualizar alerta
+      // ✅ Si el precio bajó, actualizar alerta y activar campanita
       if (newPrice > 0 && newPrice < oldPrice) {
         await alerts.updateOne(
           { _id: alert._id },
           {
             $set: {
-              lastKnownPrice: Number(newPrice), // 🔧 ahora sí: tipo numérico garantizado
+              lastKnownPrice: Number(newPrice), // 🔧 tipo numérico obligatorio
               triggered: true
             }
           }
