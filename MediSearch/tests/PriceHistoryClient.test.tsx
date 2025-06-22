@@ -1,27 +1,27 @@
-// tests/PriceHistoryClient.test.tsx 
-// #### EJECUTAR CON "npx jest tests/PriceHistoryClient.test.tsx --coverage" ####
-
+// tests/PriceHistoryClient.test.tsx
 import React from 'react';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PriceHistoryClient from '@/app/price-history/PriceHistoryClient';
-import { useRouter } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-// 📌 Mocks
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn(),
   useSearchParams: jest.fn(),
 }));
 
-// 🧪 Helper: mock fetch
-const mockFetch = (data: any) => {
-  global.fetch = jest.fn(() =>
-    Promise.resolve({
+// 🧪 Helper: mock fetch con estructura correcta
+const mockFetch = (historyData: any, medicinesData: any = []) => {
+  global.fetch = jest
+    .fn()
+    .mockResolvedValueOnce({
       ok: true,
-      json: () => Promise.resolve(data),
+      json: async () => historyData,
     })
-  ) as jest.Mock;
+    .mockResolvedValueOnce({
+      ok: true,
+      json: async () => medicinesData,
+    });
 };
 
 describe('🧪 PriceHistoryClient', () => {
@@ -34,14 +34,11 @@ describe('🧪 PriceHistoryClient', () => {
       get: (key: string) => fakeSearchParams.get(key) || null,
     }));
     fakeSearchParams.clear();
-  });
-
-  afterEach(() => {
     jest.clearAllMocks();
   });
 
   it('🔍 renderiza correctamente los datos y gráfico', async () => {
-    const fakeData = {
+    const history = {
       id: 123,
       name: 'Paracetamol 500mg',
       pharmacy: 'Cruz Verde',
@@ -55,7 +52,16 @@ describe('🧪 PriceHistoryClient', () => {
       ],
     };
 
-    mockFetch(fakeData);
+    const allMeds = [
+      {
+        pharmacy: 'Cruz Verde',
+        categories: {
+          analgésicos: [history],
+        },
+      },
+    ];
+
+    mockFetch(history, allMeds);
 
     render(<PriceHistoryClient />);
 
@@ -67,7 +73,10 @@ describe('🧪 PriceHistoryClient', () => {
   });
 
   it('⚠️ muestra mensaje de error si no se obtiene el medicamento', async () => {
-    mockFetch(undefined);
+    global.fetch = jest.fn().mockResolvedValueOnce({
+      ok: true,
+      json: async () => undefined,
+    });
 
     render(<PriceHistoryClient />);
 
@@ -77,7 +86,7 @@ describe('🧪 PriceHistoryClient', () => {
   });
 
   it('↩️ botón de volver redirige al home', async () => {
-    mockFetch({
+    const med = {
       id: 123,
       name: 'Ibuprofeno',
       pharmacy: 'Salcobrand',
@@ -85,27 +94,34 @@ describe('🧪 PriceHistoryClient', () => {
       offer_price: 2500,
       normal_price: 2900,
       history: [],
-    });
+    };
+
+    const allMeds = [
+      {
+        pharmacy: 'Salcobrand',
+        categories: {
+          antiinflamatorios: [med],
+        },
+      },
+    ];
+
+    mockFetch(med, allMeds);
 
     render(<PriceHistoryClient />);
-
     const button = await screen.findByRole('button', { name: /volver/i });
     fireEvent.click(button);
-
     expect(mockPush).toHaveBeenCalledWith('/');
   });
 
   it('📦 selecciona medicamento automáticamente desde search params', async () => {
-    const allMeds = [
-      {
-        id: 999,
-        name: 'Clonazepam',
-        pharmacy: 'Ahumada',
-        category: 'ansiolíticos',
-        offer_price: 1234,
-        normal_price: 1450,
-      },
-    ];
+    const med = {
+      id: 999,
+      name: 'Clonazepam',
+      pharmacy: 'Ahumada',
+      category: 'ansiolíticos',
+      offer_price: 1234,
+      normal_price: 1450,
+    };
 
     fakeSearchParams.set('fromMedicine', 'true');
     fakeSearchParams.set('medicineId', '999');
@@ -113,13 +129,18 @@ describe('🧪 PriceHistoryClient', () => {
     fakeSearchParams.set('name', 'Clonazepam');
     fakeSearchParams.set('category', 'ansiolíticos');
 
-    global.fetch = jest
-      .fn()
-      .mockResolvedValueOnce({ json: async () => ({ ...allMeds[0], history: [] }) }) // history fetch
-      .mockResolvedValueOnce({ json: async () => allMeds }); // /api/medicines
+    const allMeds = [
+      {
+        pharmacy: 'Ahumada',
+        categories: {
+          ansioliticos: [med],
+        },
+      },
+    ];
+
+    mockFetch({ ...med, history: [] }, allMeds);
 
     render(<PriceHistoryClient />);
-
     await waitFor(() => {
       expect(screen.getByText(/Clonazepam/)).toBeInTheDocument();
     });
@@ -131,13 +152,18 @@ describe('🧪 PriceHistoryClient', () => {
       { id: 2, name: 'Paracetamol', pharmacy: 'B', category: '', offer_price: 1100, normal_price: 1300 },
     ];
 
-    mockFetch({ ...meds[0], history: [] }); // dummy history
-    global.fetch = jest.fn()
-      .mockResolvedValueOnce({ json: async () => ({ ...meds[0], history: [] }) })
-      .mockResolvedValueOnce({ json: async () => meds });
+    const allMeds = [
+      {
+        pharmacy: 'Mixtas',
+        categories: {
+          otros: meds,
+        },
+      },
+    ];
+
+    mockFetch({ ...meds[0], history: [] }, allMeds);
 
     render(<PriceHistoryClient />);
-
     const input = await screen.findByPlaceholderText(/buscar/i);
     fireEvent.change(input, { target: { value: 'para' } });
 
@@ -157,22 +183,30 @@ describe('🧪 PriceHistoryClient', () => {
       normal_price: 1200,
     }));
 
-    mockFetch({ ...meds[0], history: [] });
-    global.fetch = jest
-      .fn()
-      .mockResolvedValueOnce({ json: async () => ({ ...meds[0], history: [] }) })
-      .mockResolvedValueOnce({ json: async () => meds });
+    const allMeds = [
+      {
+        pharmacy: 'X',
+        categories: {
+          genericos: meds,
+        },
+      },
+    ];
+
+    mockFetch({ ...meds[0], history: [] }, allMeds);
 
     render(<PriceHistoryClient />);
 
     await waitFor(() => {
-      const selects = meds.map((med) => med.name);
-      selects.forEach((name) => screen.getByText(name));
+      meds.forEach((m) => {
+        expect(screen.getByText(m.name)).toBeInTheDocument();
+      });
     });
 
     const buttons = screen.getAllByText(/agregar/i);
     buttons.forEach((btn) => fireEvent.click(btn));
 
-    expect(screen.getAllByText(/comparar/i).length).toBeLessThanOrEqual(3);
+    // Validación: solo se pueden agregar 3
+    const comparables = screen.getAllByText(/comparar/i);
+    expect(comparables.length).toBeLessThanOrEqual(3);
   });
 });
