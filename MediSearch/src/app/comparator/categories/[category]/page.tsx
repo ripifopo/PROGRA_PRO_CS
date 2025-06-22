@@ -53,6 +53,7 @@ export default function CategoryPage() {
   }, [rawCategory]);
 
   useEffect(() => {
+    if (!category) return; // 🛡️ Protección agregada
     const fetchMedicines = async () => {
       setLoading(true);
       const res = await fetch('/api/medicines');
@@ -268,7 +269,9 @@ export default function CategoryPage() {
                         {hasDiscount && (
                           <p className="text-muted text-decoration-line-through">{formatPrice(normal)}</p>
                         )}
-                        <p className="text-danger fw-bold fs-5">{formatPrice(offer)}</p>
+                        <p className="text-danger fw-bold fs-5" data-testid="price-display">
+                          {formatPrice(offer)}
+                        </p>
                         {parseInt(med.discount) > 0 && (
                           <Badge bg="success" className="mb-2">{med.discount}% de descuento</Badge>
                         )}
