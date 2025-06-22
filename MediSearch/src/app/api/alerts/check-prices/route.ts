@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     for (const alert of allAlerts) {
       let foundMedicine = null;
 
-      // 🔍 Buscar medicamento por ID en todas las farmacias y categorías
+      // 🔍 Buscar el medicamento asociado a la alerta por ID
       for (const pharmacyDoc of allPharmacies) {
         for (const categoryArray of Object.values(pharmacyDoc.categories || {})) {
           for (const med of categoryArray as any[]) {
@@ -39,24 +39,29 @@ export async function GET(req: NextRequest) {
 
       if (!foundMedicine) continue;
 
-      // 💰 Precios limpios y forzados a número
-      const newPrice = parseInt(foundMedicine.offer_price?.toString().replace(/[^\d]/g, '') || '0');
+      // 💰 Extraer precios limpios
+      const offerPriceRaw = foundMedicine.offer_price;
+      const newPrice = parseInt(
+        typeof offerPriceRaw === 'number'
+          ? offerPriceRaw.toString()
+          : offerPriceRaw?.toString().replace(/[^\d]/g, '') || '0'
+      );
 
-      const oldPriceRaw =
-        typeof alert.lastKnownPrice === 'number'
-          ? alert.lastKnownPrice
-          : parseInt(alert.lastKnownPrice?.toString().replace(/[^\d]/g, '') || '999999');
+      const lastKnownRaw = alert.lastKnownPrice;
+      const oldPrice = parseInt(
+        typeof lastKnownRaw === 'number'
+          ? lastKnownRaw.toString()
+          : lastKnownRaw?.toString().replace(/[^\d]/g, '') || '999999'
+      );
 
-      const oldPrice = isNaN(oldPriceRaw) ? 999999 : oldPriceRaw;
-
-      // ✅ Si el precio bajó, actualizar alerta y activar campanita
+      // ✅ Si el precio bajó, actualizar alerta
       if (newPrice > 0 && newPrice < oldPrice) {
         await alerts.updateOne(
           { _id: alert._id },
           {
             $set: {
-              lastKnownPrice: Number(newPrice), // 🔧 tipo numérico obligatorio
-              triggered: true
+              lastKnownPrice: newPrice,  // 🔁 nuevo precio
+              triggered: true            // 🔔 activa campanita
             }
           }
         );
@@ -64,10 +69,7 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({
-      success: true,
-      updated: updatedCount,
-    });
+    return NextResponse.json({ success: true, updated: updatedCount });
   } catch (error) {
     console.error('[ERROR][check-prices]', error);
     return NextResponse.json(
