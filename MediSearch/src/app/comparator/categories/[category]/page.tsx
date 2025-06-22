@@ -227,7 +227,7 @@ export default function CategoryPage() {
               <p className="mt-3">Cargando medicamentos...</p>
             </div>
           ) : currentMedicines.length === 0 ? (
-            <div className="text-center my-5">
+            <div className="text-center my-5" data-testid="empty-message">
               <h4>No se encontraron medicamentos</h4>
               <p>Prueba otros filtros o términos.</p>
             </div>
