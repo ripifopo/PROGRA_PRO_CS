@@ -8,6 +8,7 @@ import { Button, Card, Container, Row, Col, Form, Spinner, Badge } from 'react-b
 import { normalizeCategoryName } from '@/lib/utils/normalizeCategories';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import { formatPrice } from '@/lib/utils/formatPrice';
 
 // 🔁 Elimina duplicados por nombre y farmacia
 function removeDuplicatesByNameAndPharmacy(meds: any[]) {
@@ -135,12 +136,6 @@ export default function CategoryPage() {
     setPriceRange([1, maxPrice]);
     setDiscountRange([0, 100]);
     setCurrentPage(1);
-  };
-
-  const formatPrice = (price: string) => {
-    if (!price || price === '$0') return 'No disponible';
-    const clean = price.replace(/[^0-9]/g, '');
-    return '$' + clean.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
   };
 
   return (
