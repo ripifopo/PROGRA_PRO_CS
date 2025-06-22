@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     for (const alert of allAlerts) {
       let foundMedicine = null;
 
-      // Buscar el medicamento por ID recorriendo todas las farmacias y sus categorías
+      // 🔍 Buscar medicamento por ID en todas las farmacias y categorías
       for (const pharmacyDoc of allPharmacies) {
         for (const categoryArray of Object.values(pharmacyDoc.categories || {})) {
           for (const med of categoryArray as any[]) {
@@ -39,11 +39,11 @@ export async function GET(req: NextRequest) {
 
       if (!foundMedicine) continue;
 
-      const newPrice = parseInt(foundMedicine.offer_price?.replace(/[^\d]/g, '') || '0');
-      const oldPrice = parseInt(alert.lastKnownPrice || '999999');
+      const newPrice = parseInt(foundMedicine.offer_price?.toString().replace(/[^\d]/g, '') || '0');
+      const oldPrice = parseInt(alert.lastKnownPrice?.toString().replace(/[^\d]/g, '') || '999999');
 
-      if (newPrice < oldPrice && newPrice > 0) {
-        // Se actualiza el lastKnownPrice y se activa el trigger visual
+      if (newPrice > 0 && newPrice < oldPrice) {
+        // 🔁 Actualizar lastKnownPrice y activar triggered
         await alerts.updateOne(
           { _id: alert._id },
           {
@@ -53,12 +53,14 @@ export async function GET(req: NextRequest) {
             }
           }
         );
-
         updatedCount++;
       }
     }
 
-    return NextResponse.json({ success: true, updated: updatedCount });
+    return NextResponse.json({
+      success: true,
+      updated: updatedCount,
+    });
   } catch (error) {
     console.error('[ERROR][check-prices]', error);
     return NextResponse.json(
