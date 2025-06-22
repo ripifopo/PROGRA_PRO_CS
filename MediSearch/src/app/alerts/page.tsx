@@ -139,7 +139,7 @@ export default function AlertsPage() {
                         <div className="text-start w-100">
                           <h6 className="text-success fw-bold mb-1 text-uppercase">{alert.medicineName}</h6>
                           <p className="mb-0"><strong>Farmacia:</strong> {alert.pharmacy}</p>
-                          <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(decodeURIComponent(decodeURIComponent(alert.category)))}</p>
+                          <p className="mb-0"><strong>Categoría:</strong> {capitalizeWords(decodeURIComponent(decodeURIComponent(alert.categorySlug)))}</p>
                           <div className="mt-3">
                             <Link
                               href={`/alerts/${alert.medicineId}`}
