@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { connectDB } from '@/lib/mongodb';
+import { alertsCollection, medicinesCollection } from '@/lib/mongodb';
 import sendEmail from '@/lib/email/sendEmail';
 
-export const dynamic = 'force-dynamic'; // Vercel Scheduled Functions compatibility
+export const dynamic = 'force-dynamic'; // Para que el cron funcione correctamente
 
 export async function GET(req: NextRequest) {
-  // 🔐 Protección por secreto CRON_SECRET
+  // 🔐 Verificación del token de seguridad
   const authHeader = req.headers.get('Authorization');
   const expected = `Bearer ${process.env.CRON_SECRET}`;
 
@@ -14,14 +14,16 @@ export async function GET(req: NextRequest) {
   }
 
   try {
-    const db = await connectDB();
-    const alerts = await db.collection('alerts').find({}).toArray();
-    const medicines = await db.collection('medicines').find({}).toArray();
+    const alerts = await alertsCollection;
+    const medicines = await medicinesCollection;
+
+    const allAlerts = await alerts.find({}).toArray();
+    const allMedicines = await medicines.find({}).toArray();
 
     const notificationsSent: string[] = [];
 
-    for (const alert of alerts) {
-      const medicine = medicines.find(m => m.medicineId === alert.medicineId);
+    for (const alert of allAlerts) {
+      const medicine = allMedicines.find(m => m.medicineId === alert.medicineId);
       if (!medicine) continue;
 
       const newPrice = parseInt(medicine.offer_price?.replace(/[^0-9]/g, '') || '0');
@@ -71,7 +73,7 @@ export async function GET(req: NextRequest) {
 
         notificationsSent.push(alert.userEmail);
 
-        await db.collection('alerts').updateOne(
+        await alerts.updateOne(
           { _id: alert._id },
           { $set: { lastKnownPrice: newPrice } }
         );
