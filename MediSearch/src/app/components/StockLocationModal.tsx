@@ -34,11 +34,11 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
       let path = '';
 
       if (normalized.includes('ahumada')) {
-        path = '/data/stock/zones/ahumada_stock_locations.json';
+        path = '/public/stock/zones/ahumada_stock_locations.json';
       } else if (normalized.includes('cruz verde')) {
-        path = '/data/stock/zones/cruzverde_stock_locations.json';
+        path = '/public/stock/zones/cruzverde_stock_locations.json';
       } else if (normalized.includes('salcobrand')) {
-        path = '/data/stock/zones/salcobrand_stock_locations.json';
+        path = '/public/stock/zones/salcobrand_stock_locations.json';
       } else {
         setLocations([]);
         return;
