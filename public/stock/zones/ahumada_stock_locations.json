@@ -1,0 +1,437 @@
+[
+  {
+    "region": "Antofagasta",
+    "commune": "Antofagasta",
+    "inventory_zone": "inventario_antofagasta"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Calama",
+    "inventory_zone": "inventario_calama"
+  },
+  {
+    "region": "Araucanía",
+    "commune": "Angol",
+    "inventory_zone": "inventario_angol"
+  },
+  {
+    "region": "Araucanía",
+    "commune": "Pucón",
+    "inventory_zone": "inventario_pucon"
+  },
+  {
+    "region": "Araucanía",
+    "commune": "Temuco",
+    "inventory_zone": "inventario_temuco"
+  },
+  {
+    "region": "Araucanía",
+    "commune": "Victoria",
+    "inventory_zone": "inventario_victoria"
+  },
+  {
+    "region": "Araucanía",
+    "commune": "Villarrica",
+    "inventory_zone": "inventario_villarrica"
+  },
+  {
+    "region": "Arica y Parinacota",
+    "commune": "Arica",
+    "inventory_zone": "inventario_arica"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Copiapó",
+    "inventory_zone": "inventario_copiapo"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Vallenar",
+    "inventory_zone": "inventario_vallenar"
+  },
+  {
+    "region": "Aysén",
+    "commune": "Coyhaique",
+    "inventory_zone": "inventario_coyhaique"
+  },
+  {
+    "region": "Aysén",
+    "commune": "Puerto Aysén",
+    "inventory_zone": "inventario_puertoaysen"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "Concepción",
+    "inventory_zone": "inventario_concepcion"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "Coronel",
+    "inventory_zone": "inventario_coronel"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "Hualpén",
+    "inventory_zone": "inventario_hualpen"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "Los Ángeles",
+    "inventory_zone": "inventario_losangeles"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "San Pedro de la Paz",
+    "inventory_zone": "inventario_sanpedrodelapaz"
+  },
+  {
+    "region": "Bío Bío",
+    "commune": "Talcahuano",
+    "inventory_zone": "inventario_talcahuano"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Coquimbo",
+    "inventory_zone": "inventario_coquimbo"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "La Serena",
+    "inventory_zone": "inventario_laserena"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Ovalle",
+    "inventory_zone": "inventario_ovalle"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Ancud",
+    "inventory_zone": "inventario_ancud"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Castro",
+    "inventory_zone": "inventario_castro"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Osorno",
+    "inventory_zone": "inventario_osorno"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puerto Montt",
+    "inventory_zone": "inventario_puertomontt"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "La Unión",
+    "inventory_zone": "inventario_launion"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Valdivia",
+    "inventory_zone": "inventario_valdivia"
+  },
+  {
+    "region": "Magallanes y la Antártica Chilena",
+    "commune": "Natales",
+    "inventory_zone": "inventario_natales"
+  },
+  {
+    "region": "Magallanes y la Antártica Chilena",
+    "commune": "Punta Arenas",
+    "inventory_zone": "inventario_puntaarenas"
+  },
+  {
+    "region": "Maule",
+    "commune": "Cauquenes",
+    "inventory_zone": "inventario_cauquenes"
+  },
+  {
+    "region": "Maule",
+    "commune": "Curicó",
+    "inventory_zone": "inventario_curico"
+  },
+  {
+    "region": "Maule",
+    "commune": "Linares",
+    "inventory_zone": "inventario_linares"
+  },
+  {
+    "region": "Maule",
+    "commune": "Parral",
+    "inventory_zone": "inventario_parral"
+  },
+  {
+    "region": "Maule",
+    "commune": "San Javier",
+    "inventory_zone": "inventario_sanjavier"
+  },
+  {
+    "region": "Maule",
+    "commune": "Talca",
+    "inventory_zone": "inventario_talca"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Chillán",
+    "inventory_zone": "inventario_chillan"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "Machalí",
+    "inventory_zone": "inventario_machali"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "Rancagua",
+    "inventory_zone": "inventario_rancagua"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "Rengo",
+    "inventory_zone": "inventario_rengo"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "San Fernando",
+    "inventory_zone": "inventario_sanfernando"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "San Vicente",
+    "inventory_zone": "inventario_sanvicente"
+  },
+  {
+    "region": "OHiggins",
+    "commune": "Santa Cruz",
+    "inventory_zone": "inventario_santacruz"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Buin",
+    "inventory_zone": "inventario_buin"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Cerrillos",
+    "inventory_zone": "inventario_cerrillos"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Colina",
+    "inventory_zone": "inventario_colina"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "El Bosque",
+    "inventory_zone": "inventario_elbosque"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Estación Central",
+    "inventory_zone": "inventario_estacioncentral"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Huechuraba",
+    "inventory_zone": "inventario_huechuraba"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Independencia",
+    "inventory_zone": "inventario_independencia"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Cisterna",
+    "inventory_zone": "inventario_lacisterna"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Florida",
+    "inventory_zone": "inventario_laflorida"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Reina",
+    "inventory_zone": "inventario_lareina"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Las Condes",
+    "inventory_zone": "inventario_lascondes"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lo Barnechea",
+    "inventory_zone": "inventario_lobarnechea"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lo Prado",
+    "inventory_zone": "inventario_loprado"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Macul",
+    "inventory_zone": "inventario_macul"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Maipú",
+    "inventory_zone": "inventario_maipu"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Melipilla",
+    "inventory_zone": "inventario_melipilla"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Ñuñoa",
+    "inventory_zone": "inventario_ñuñoa"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Peñalolén",
+    "inventory_zone": "inventario_peñalolen"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Providencia",
+    "inventory_zone": "inventario_providencia"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Pudahuel",
+    "inventory_zone": "inventario_pudahuel"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Puente Alto",
+    "inventory_zone": "inventario_puentealto"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Quilicura",
+    "inventory_zone": "inventario_quilicura"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Quinta Normal",
+    "inventory_zone": "inventario_quintanormal"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Recoleta",
+    "inventory_zone": "inventario_recoleta"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Renca",
+    "inventory_zone": "inventario_renca"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Bernardo",
+    "inventory_zone": "inventario_sanbernardo"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Joaquín",
+    "inventory_zone": "inventario_sanjoaquin"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Miguel",
+    "inventory_zone": "inventario_sanmiguel"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Santiago",
+    "inventory_zone": "inventario_santiago"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Talagante",
+    "inventory_zone": "inventario_talagante"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Vitacura",
+    "inventory_zone": "inventario_vitacura"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Iquique",
+    "inventory_zone": "inventario_iquique"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Calera",
+    "inventory_zone": "inventario_calera"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Concón",
+    "inventory_zone": "inventario_concon"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "La Ligua",
+    "inventory_zone": "inventario_laligua"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Los Andes",
+    "inventory_zone": "inventario_losandes"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Puchuncaví",
+    "inventory_zone": "inventario_puchuncavi"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quillota",
+    "inventory_zone": "inventario_quillota"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quilpué",
+    "inventory_zone": "inventario_quilpue"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quintero",
+    "inventory_zone": "inventario_quintero"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Reñaca",
+    "inventory_zone": "inventario_reñaca"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "San Felipe",
+    "inventory_zone": "inventario_sanfelipe"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Valparaíso",
+    "inventory_zone": "inventario_valparaiso"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Villa Alemana",
+    "inventory_zone": "inventario_villaalemana"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Viña del Mar",
+    "inventory_zone": "inventario_viñadelmar"
+  }
+]
