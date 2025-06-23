@@ -3,9 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import ahumadaData from '@/stock/zones/ahumada_stock_locations.json';
-import cruzverdeData from '@/stock/zones/cruzverde_stock_locations.json';
-import salcobrandData from '@/stock/zones/salcobrand_stock_locations.json';
+import { toast } from 'react-toastify';
 
 interface Location {
   region: string;
@@ -26,26 +24,44 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
   const [locations, setLocations] = useState<Location[]>([]);
 
   useEffect(() => {
-    if (!pharmacy) {
-      setLocations([]);
-      return;
-    }
+    const loadLocations = async () => {
+      if (!pharmacy) {
+        setLocations([]);
+        return;
+      }
 
-    const normalized = pharmacy.toLowerCase();
+      const normalized = pharmacy.toLowerCase();
+      let path = '';
 
-    if (normalized.includes('ahumada')) {
-      setLocations(ahumadaData);
-    } else if (normalized.includes('cruz verde')) {
-      setLocations(cruzverdeData);
-    } else if (normalized.includes('salcobrand')) {
-      setLocations(salcobrandData);
-    } else {
-      setLocations([]);
-    }
+      if (normalized.includes('ahumada')) {
+        path = '/data/stock/zones/ahumada_stock_locations.json';
+      } else if (normalized.includes('cruz verde')) {
+        path = '/data/stock/zones/cruzverde_stock_locations.json';
+      } else if (normalized.includes('salcobrand')) {
+        path = '/data/stock/zones/salcobrand_stock_locations.json';
+      } else {
+        setLocations([]);
+        return;
+      }
+
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        setLocations(data);
+      } catch {
+        setLocations([]);
+        toast.error('Error al cargar regiones.');
+      }
+    };
+
+    loadLocations();
   }, [pharmacy]);
 
   const uniqueRegions = [...new Set(locations.map((loc) => loc.region))];
-  const filteredCommunes = locations.filter((loc) => loc.region === region).map((loc) => loc.commune);
+  const filteredCommunes = locations
+    .filter((loc) => loc.region === region)
+    .map((loc) => loc.commune);
 
   const handleConfirm = () => {
     if (region && commune) {
@@ -69,7 +85,13 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
 
         <Form.Group className="mb-3">
           <Form.Label>Región</Form.Label>
-          <Form.Select value={region} onChange={(e) => setRegion(e.target.value)}>
+          <Form.Select
+            value={region}
+            onChange={(e) => {
+              setRegion(e.target.value);
+              setCommune(''); // Reinicia comuna al cambiar región
+            }}
+          >
             <option value="">Selecciona una región</option>
             {uniqueRegions.map((reg, i) => (
               <option key={i} value={reg}>{reg}</option>
@@ -96,7 +118,11 @@ export default function StockLocationModal({ pharmacy, productUrl, show, onClose
         <Button variant="outline-secondary" onClick={onClose}>
           Cancelar
         </Button>
-        <Button variant="success" onClick={handleConfirm} disabled={!region || !commune}>
+        <Button
+          variant="success"
+          onClick={handleConfirm}
+          disabled={!region || !commune}
+        >
           ✅ Confirmar
         </Button>
       </Modal.Footer>

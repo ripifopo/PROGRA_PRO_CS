@@ -1,0 +1,1732 @@
+[
+  {
+    "region": "Antofagasta",
+    "commune": "Antofagasta",
+    "zoneId": "zona12"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Calama",
+    "zoneId": "zona16"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "María Elena",
+    "zoneId": "zona20"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Mejillones",
+    "zoneId": "zona13"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Ollagüe",
+    "zoneId": "zona17"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "San Pedro de Atacama",
+    "zoneId": "zona18"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Sierra Gorda",
+    "zoneId": "zona14"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Taltal",
+    "zoneId": "zona15"
+  },
+  {
+    "region": "Antofagasta",
+    "commune": "Tocopilla",
+    "zoneId": "zona19"
+  },
+  {
+    "region": "Arica y Parinacota",
+    "commune": "Arica",
+    "zoneId": "zona1"
+  },
+  {
+    "region": "Arica y Parinacota",
+    "commune": "Camarones",
+    "zoneId": "zona2"
+  },
+  {
+    "region": "Arica y Parinacota",
+    "commune": "General Lagos",
+    "zoneId": "zona4"
+  },
+  {
+    "region": "Arica y Parinacota",
+    "commune": "Putre",
+    "zoneId": "zona3"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Alto del Carmen",
+    "zoneId": "zona27"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Caldera",
+    "zoneId": "zona22"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Chañaral",
+    "zoneId": "zona24"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Copiapó",
+    "zoneId": "zona21"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Diego de Almagro",
+    "zoneId": "zona25"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Freirina",
+    "zoneId": "zona28"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Huasco",
+    "zoneId": "zona29"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Tierra Amarilla",
+    "zoneId": "zona23"
+  },
+  {
+    "region": "Atacama",
+    "commune": "Vallenar",
+    "zoneId": "zona26"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Aysén",
+    "zoneId": "zona276"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Chile Chico",
+    "zoneId": "zona282"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Cisnes",
+    "zoneId": "zona277"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Cochrane",
+    "zoneId": "zona279"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Coyhaique",
+    "zoneId": "zona274"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Guaitecas",
+    "zoneId": "zona278"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Lago Verde",
+    "zoneId": "zona275"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "O'Higgins",
+    "zoneId": "zona280"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Río Ibáñez",
+    "zoneId": "zona283"
+  },
+  {
+    "region": "Aysén del Gral. C. Ibáñez del Campo",
+    "commune": "Tortel",
+    "zoneId": "zona281"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Alto Biobío",
+    "zoneId": "zona199"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Antuco",
+    "zoneId": "zona187"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Arauco",
+    "zoneId": "zona180"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Cabrero",
+    "zoneId": "zona188"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Cañete",
+    "zoneId": "zona181"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Chiguayante",
+    "zoneId": "zona169"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Concepción",
+    "zoneId": "zona167"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Contulmo",
+    "zoneId": "zona182"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Coronel",
+    "zoneId": "zona168"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Curanilahue",
+    "zoneId": "zona183"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Florida",
+    "zoneId": "zona170"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Hualpén",
+    "zoneId": "zona178"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Hualqui",
+    "zoneId": "zona171"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Laja",
+    "zoneId": "zona189"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Lebu",
+    "zoneId": "zona179"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Los Álamos",
+    "zoneId": "zona184"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Los Ángeles",
+    "zoneId": "zona186"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Lota",
+    "zoneId": "zona172"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Mulchén",
+    "zoneId": "zona190"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Nacimiento",
+    "zoneId": "zona191"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Negrete",
+    "zoneId": "zona192"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Penco",
+    "zoneId": "zona173"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Quilaco",
+    "zoneId": "zona193"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Quilleco",
+    "zoneId": "zona194"
+  },
+  {
+    "region": "Biobío",
+    "commune": "San Pedro de La Paz",
+    "zoneId": "zona174"
+  },
+  {
+    "region": "Biobío",
+    "commune": "San Rosendo",
+    "zoneId": "zona195"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Santa Bárbara",
+    "zoneId": "zona196"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Santa Juana",
+    "zoneId": "zona175"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Talcahuano",
+    "zoneId": "zona176"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Tirúa",
+    "zoneId": "zona185"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Tomé",
+    "zoneId": "zona177"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Tucapel",
+    "zoneId": "zona197"
+  },
+  {
+    "region": "Biobío",
+    "commune": "Yumbel",
+    "zoneId": "zona198"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Andacollo",
+    "zoneId": "zona32"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Canela",
+    "zoneId": "zona37"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Combarbalá",
+    "zoneId": "zona41"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Coquimbo",
+    "zoneId": "zona31"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Illapel",
+    "zoneId": "zona36"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "La Higuera",
+    "zoneId": "zona33"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "La Serena",
+    "zoneId": "zona30"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Los Vilos",
+    "zoneId": "zona38"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Monte Patria",
+    "zoneId": "zona42"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Ovalle",
+    "zoneId": "zona40"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Paihuano",
+    "zoneId": "zona34"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Punitaqui",
+    "zoneId": "zona43"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Río Hurtado",
+    "zoneId": "zona44"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Salamanca",
+    "zoneId": "zona39"
+  },
+  {
+    "region": "Coquimbo",
+    "commune": "Vicuña",
+    "zoneId": "zona35"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Chimbarongo",
+    "zoneId": "zona108"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Chépica",
+    "zoneId": "zona107"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Codegua",
+    "zoneId": "zona84"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Coinco",
+    "zoneId": "zona85"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Coltauco",
+    "zoneId": "zona86"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Doñihue",
+    "zoneId": "zona87"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Graneros",
+    "zoneId": "zona88"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "La Estrella",
+    "zoneId": "zona101"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Las Cabras",
+    "zoneId": "zona89"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Litueche",
+    "zoneId": "zona102"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Lolol",
+    "zoneId": "zona109"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Machalí",
+    "zoneId": "zona90"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Malloa",
+    "zoneId": "zona91"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Marchihue",
+    "zoneId": "zona103"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Mostazal",
+    "zoneId": "zona92"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Nancagua",
+    "zoneId": "zona110"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Navidad",
+    "zoneId": "zona104"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Olivar",
+    "zoneId": "zona93"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Palmilla",
+    "zoneId": "zona111"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Paredones",
+    "zoneId": "zona105"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Peralillo",
+    "zoneId": "zona112"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Peumo",
+    "zoneId": "zona94"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Pichidegua",
+    "zoneId": "zona95"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Pichilemu",
+    "zoneId": "zona100"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Placilla",
+    "zoneId": "zona113"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Pumanque",
+    "zoneId": "zona114"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Quinta de Tilcoco",
+    "zoneId": "zona96"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Rancagua",
+    "zoneId": "zona83"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Rengo",
+    "zoneId": "zona97"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Requínoa",
+    "zoneId": "zona98"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "San Fernando",
+    "zoneId": "zona106"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "San Vicente",
+    "zoneId": "zona99"
+  },
+  {
+    "region": "Lib. Gral. Bernardo O'Higgins",
+    "commune": "Santa Cruz",
+    "zoneId": "zona115"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Ancud",
+    "zoneId": "zona254"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Calbuco",
+    "zoneId": "zona245"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Castro",
+    "zoneId": "zona253"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Chaitén",
+    "zoneId": "zona270"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Chonchi",
+    "zoneId": "zona255"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Cochamó",
+    "zoneId": "zona246"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Curaco de Vélez",
+    "zoneId": "zona256"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Dalcahue",
+    "zoneId": "zona257"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Fresia",
+    "zoneId": "zona247"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Frutillar",
+    "zoneId": "zona248"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Futaleufú",
+    "zoneId": "zona271"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Hualaihué",
+    "zoneId": "zona272"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Llanquihue",
+    "zoneId": "zona250"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Los Muermos",
+    "zoneId": "zona249"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Maullín",
+    "zoneId": "zona251"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Osorno",
+    "zoneId": "zona263"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Palena",
+    "zoneId": "zona273"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puerto Montt",
+    "zoneId": "zona244"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puerto Octay",
+    "zoneId": "zona264"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puerto Varas",
+    "zoneId": "zona252"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puqueldón",
+    "zoneId": "zona258"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Purranque",
+    "zoneId": "zona265"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Puyehue",
+    "zoneId": "zona266"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Queilén",
+    "zoneId": "zona259"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Quellón",
+    "zoneId": "zona260"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Quemchi",
+    "zoneId": "zona261"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Quinchao",
+    "zoneId": "zona262"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "Río Negro",
+    "zoneId": "zona267"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "San Juan de la Costa",
+    "zoneId": "zona268"
+  },
+  {
+    "region": "Los Lagos",
+    "commune": "San Pablo",
+    "zoneId": "zona269"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Corral",
+    "zoneId": "zona233"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Futrono",
+    "zoneId": "zona241"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "La Unión",
+    "zoneId": "zona240"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Lago Ranco",
+    "zoneId": "zona242"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Lanco",
+    "zoneId": "zona234"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Los Lagos",
+    "zoneId": "zona235"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Mariquina",
+    "zoneId": "zona237"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Máfil",
+    "zoneId": "zona236"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Paillaco",
+    "zoneId": "zona238"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Panguipulli",
+    "zoneId": "zona239"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Río Bueno",
+    "zoneId": "zona243"
+  },
+  {
+    "region": "Los Ríos",
+    "commune": "Valdivia",
+    "zoneId": "zona232"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Antártica",
+    "zoneId": "zona289"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Cabo de Hornos",
+    "zoneId": "zona288"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Laguna Blanca",
+    "zoneId": "zona285"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Natales",
+    "zoneId": "zona293"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Porvenir",
+    "zoneId": "zona290"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Primavera",
+    "zoneId": "zona291"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Punta Arenas",
+    "zoneId": "zona284"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Río Verde",
+    "zoneId": "zona286"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "San Gregorio",
+    "zoneId": "zona287"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Timaukel",
+    "zoneId": "zona292"
+  },
+  {
+    "region": "Magallanes y Antártica Chilena",
+    "commune": "Torres del Paine",
+    "zoneId": "zona294"
+  },
+  {
+    "region": "Maule",
+    "commune": "Cauquenes",
+    "zoneId": "zona126"
+  },
+  {
+    "region": "Maule",
+    "commune": "Chanco",
+    "zoneId": "zona127"
+  },
+  {
+    "region": "Maule",
+    "commune": "Colbún",
+    "zoneId": "zona139"
+  },
+  {
+    "region": "Maule",
+    "commune": "Constitución",
+    "zoneId": "zona117"
+  },
+  {
+    "region": "Maule",
+    "commune": "Curepto",
+    "zoneId": "zona118"
+  },
+  {
+    "region": "Maule",
+    "commune": "Curicó",
+    "zoneId": "zona129"
+  },
+  {
+    "region": "Maule",
+    "commune": "Empedrado",
+    "zoneId": "zona119"
+  },
+  {
+    "region": "Maule",
+    "commune": "Hualañé",
+    "zoneId": "zona130"
+  },
+  {
+    "region": "Maule",
+    "commune": "Licantén",
+    "zoneId": "zona131"
+  },
+  {
+    "region": "Maule",
+    "commune": "Linares",
+    "zoneId": "zona138"
+  },
+  {
+    "region": "Maule",
+    "commune": "Longaví",
+    "zoneId": "zona140"
+  },
+  {
+    "region": "Maule",
+    "commune": "Maule",
+    "zoneId": "zona120"
+  },
+  {
+    "region": "Maule",
+    "commune": "Molina",
+    "zoneId": "zona132"
+  },
+  {
+    "region": "Maule",
+    "commune": "Parral",
+    "zoneId": "zona141"
+  },
+  {
+    "region": "Maule",
+    "commune": "Pelarco",
+    "zoneId": "zona121"
+  },
+  {
+    "region": "Maule",
+    "commune": "Pelluhue",
+    "zoneId": "zona128"
+  },
+  {
+    "region": "Maule",
+    "commune": "Pencahue",
+    "zoneId": "zona122"
+  },
+  {
+    "region": "Maule",
+    "commune": "Rauco",
+    "zoneId": "zona133"
+  },
+  {
+    "region": "Maule",
+    "commune": "Retiro",
+    "zoneId": "zona142"
+  },
+  {
+    "region": "Maule",
+    "commune": "Romeral",
+    "zoneId": "zona134"
+  },
+  {
+    "region": "Maule",
+    "commune": "Río Claro",
+    "zoneId": "zona123"
+  },
+  {
+    "region": "Maule",
+    "commune": "Sagrada Familia",
+    "zoneId": "zona135"
+  },
+  {
+    "region": "Maule",
+    "commune": "San Clemente",
+    "zoneId": "zona124"
+  },
+  {
+    "region": "Maule",
+    "commune": "San Javier",
+    "zoneId": "zona143"
+  },
+  {
+    "region": "Maule",
+    "commune": "San Rafael",
+    "zoneId": "zona125"
+  },
+  {
+    "region": "Maule",
+    "commune": "Talca",
+    "zoneId": "zona116"
+  },
+  {
+    "region": "Maule",
+    "commune": "Teno",
+    "zoneId": "zona136"
+  },
+  {
+    "region": "Maule",
+    "commune": "Vichuquén",
+    "zoneId": "zona137"
+  },
+  {
+    "region": "Maule",
+    "commune": "Villa Alegre",
+    "zoneId": "zona144"
+  },
+  {
+    "region": "Maule",
+    "commune": "Yerbas Buenas",
+    "zoneId": "zona145"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Bulnes",
+    "zoneId": "zona147"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Chillán",
+    "zoneId": "zona146"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Chillán Viejo",
+    "zoneId": "zona148"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Cobquecura",
+    "zoneId": "zona156"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Coelemu",
+    "zoneId": "zona157"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Coihueco",
+    "zoneId": "zona163"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "El Carmen",
+    "zoneId": "zona149"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Ninhue",
+    "zoneId": "zona158"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Ñiquén",
+    "zoneId": "zona164"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Pemuco",
+    "zoneId": "zona150"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Pinto",
+    "zoneId": "zona151"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Portezuelo",
+    "zoneId": "zona159"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Quillón",
+    "zoneId": "zona152"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Quirihue",
+    "zoneId": "zona155"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Ránquil",
+    "zoneId": "zona160"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "San Carlos",
+    "zoneId": "zona162"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "San Fabián",
+    "zoneId": "zona165"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "San Ignacio",
+    "zoneId": "zona153"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "San Nicolás",
+    "zoneId": "zona166"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Treguaco",
+    "zoneId": "zona161"
+  },
+  {
+    "region": "Ñuble",
+    "commune": "Yungay",
+    "zoneId": "zona154"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Alhué",
+    "zoneId": "zona338"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Buin",
+    "zoneId": "zona334"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Calera de Tango",
+    "zoneId": "zona335"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Cerrillos",
+    "zoneId": "zona296"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Cerro Navia",
+    "zoneId": "zona297"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Colina",
+    "zoneId": "zona330"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Conchalí",
+    "zoneId": "zona298"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Curacaví",
+    "zoneId": "zona339"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "El Bosque",
+    "zoneId": "zona299"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "El Monte",
+    "zoneId": "zona343"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Estación Central",
+    "zoneId": "zona300"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Huechuraba",
+    "zoneId": "zona301"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Independencia",
+    "zoneId": "zona302"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Isla de Maipo",
+    "zoneId": "zona344"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Cisterna",
+    "zoneId": "zona303"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Florida",
+    "zoneId": "zona304"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Granja",
+    "zoneId": "zona305"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Pintana",
+    "zoneId": "zona306"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "La Reina",
+    "zoneId": "zona307"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lampa",
+    "zoneId": "zona331"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Las Condes",
+    "zoneId": "zona308"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lo Barnechea",
+    "zoneId": "zona309"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lo Espejo",
+    "zoneId": "zona310"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Lo Prado",
+    "zoneId": "zona311"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Macul",
+    "zoneId": "zona312"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Maipú",
+    "zoneId": "zona313"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "María Pinto",
+    "zoneId": "zona340"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Ñuñoa",
+    "zoneId": "zona314"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Melipilla",
+    "zoneId": "zona337"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Padre Hurtado",
+    "zoneId": "zona345"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Paine",
+    "zoneId": "zona336"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Pedro Aguirre Cerda",
+    "zoneId": "zona315"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Peñaflor",
+    "zoneId": "zona346"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Peñalolén",
+    "zoneId": "zona316"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Pirque",
+    "zoneId": "zona328"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Providencia",
+    "zoneId": "zona317"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Pudahuel",
+    "zoneId": "zona318"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Puente Alto",
+    "zoneId": "zona327"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Quilicura",
+    "zoneId": "zona319"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Quinta Normal",
+    "zoneId": "zona320"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Recoleta",
+    "zoneId": "zona321"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Renca",
+    "zoneId": "zona322"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Bernardo",
+    "zoneId": "zona333"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Joaquín",
+    "zoneId": "zona323"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San José de Maipo",
+    "zoneId": "zona329"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Miguel",
+    "zoneId": "zona324"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Pedro",
+    "zoneId": "zona341"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "San Ramón",
+    "zoneId": "zona325"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Santiago",
+    "zoneId": "zona295"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Talagante",
+    "zoneId": "zona342"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Til Til",
+    "zoneId": "zona332"
+  },
+  {
+    "region": "Región Metropolitana",
+    "commune": "Vitacura",
+    "zoneId": "zona326"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Angol",
+    "zoneId": "zona221"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Carahue",
+    "zoneId": "zona201"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Cholchol",
+    "zoneId": "zona220"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Collipulli",
+    "zoneId": "zona222"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Cunco",
+    "zoneId": "zona202"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Curacautín",
+    "zoneId": "zona223"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Curarrehue",
+    "zoneId": "zona203"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Ercilla",
+    "zoneId": "zona224"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Freire",
+    "zoneId": "zona204"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Galvarino",
+    "zoneId": "zona205"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Gorbea",
+    "zoneId": "zona206"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Lautaro",
+    "zoneId": "zona207"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Loncoche",
+    "zoneId": "zona208"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Lonquimay",
+    "zoneId": "zona225"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Los Sauces",
+    "zoneId": "zona226"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Lumaco",
+    "zoneId": "zona227"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Melipeuco",
+    "zoneId": "zona209"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Nueva Imperial",
+    "zoneId": "zona210"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Padre Las Casas",
+    "zoneId": "zona211"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Perquenco",
+    "zoneId": "zona212"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Pitrufquén",
+    "zoneId": "zona213"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Pucón",
+    "zoneId": "zona214"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Purén",
+    "zoneId": "zona228"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Renaico",
+    "zoneId": "zona229"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Saavedra",
+    "zoneId": "zona215"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Temuco",
+    "zoneId": "zona200"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Teodoro Schmidt",
+    "zoneId": "zona216"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Toltén",
+    "zoneId": "zona217"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Traiguén",
+    "zoneId": "zona230"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Victoria",
+    "zoneId": "zona231"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Vilcún",
+    "zoneId": "zona218"
+  },
+  {
+    "region": "Región de la Araucanía",
+    "commune": "Villarrica",
+    "zoneId": "zona219"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Alto Hospicio",
+    "zoneId": "zona6"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Camiña",
+    "zoneId": "zona8"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Colchane",
+    "zoneId": "zona9"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Huara",
+    "zoneId": "zona10"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Iquique",
+    "zoneId": "zona5"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Pica",
+    "zoneId": "zona11"
+  },
+  {
+    "region": "Tarapacá",
+    "commune": "Pozo Almonte",
+    "zoneId": "zona7"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Algarrobo",
+    "zoneId": "zona68"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Cabildo",
+    "zoneId": "zona58"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Calle Larga",
+    "zoneId": "zona54"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Cartagena",
+    "zoneId": "zona69"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Casablanca",
+    "zoneId": "zona46"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Catemu",
+    "zoneId": "zona74"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Concón",
+    "zoneId": "zona47"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "El Quisco",
+    "zoneId": "zona70"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "El Tabo",
+    "zoneId": "zona71"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Hijuelas",
+    "zoneId": "zona64"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Isla de Pascua",
+    "zoneId": "zona52"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Juan Fernández",
+    "zoneId": "zona48"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "La Calera",
+    "zoneId": "zona63"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "La Cruz",
+    "zoneId": "zona65"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "La Ligua",
+    "zoneId": "zona57"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Limache",
+    "zoneId": "zona80"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Llay-Llay",
+    "zoneId": "zona75"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Los Andes",
+    "zoneId": "zona53"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Nogales",
+    "zoneId": "zona66"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Olmué",
+    "zoneId": "zona81"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Panquehue",
+    "zoneId": "zona76"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Papudo",
+    "zoneId": "zona59"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Petorca",
+    "zoneId": "zona60"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Puchuncaví",
+    "zoneId": "zona49"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Putaendo",
+    "zoneId": "zona77"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quillota",
+    "zoneId": "zona62"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quilpué",
+    "zoneId": "zona79"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Quintero",
+    "zoneId": "zona50"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Rinconada",
+    "zoneId": "zona55"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "San Antonio",
+    "zoneId": "zona67"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "San Esteban",
+    "zoneId": "zona56"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "San Felipe",
+    "zoneId": "zona73"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Santa María",
+    "zoneId": "zona78"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Santo Domingo",
+    "zoneId": "zona72"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Valparaíso",
+    "zoneId": "zona45"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Villa Alemana",
+    "zoneId": "zona82"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Viña del Mar",
+    "zoneId": "zona51"
+  },
+  {
+    "region": "Valparaíso",
+    "commune": "Zapallar",
+    "zoneId": "zona61"
+  }
+]
