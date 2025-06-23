@@ -1,16 +1,17 @@
 // Archivo: src/app/api/zones/[pharmacy]/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: Record<string, string> } // ✅ Esta es la forma que sí acepta Vercel
-) {
+export async function GET(req: NextRequest) {
   try {
-    const slug = params.pharmacy.toLowerCase().replace(/\s/g, '');
-    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
-    const url = `${baseUrl}/stock/zones/${slug}_stock_locations.json`;
+    // Extrae el parámetro dinámico manualmente desde la URL
+    const url = new URL(req.url);
+    const segments = url.pathname.split('/');
+    const pharmacySlug = segments[segments.length - 1]; // obtiene 'ahumada', etc.
 
-    const res = await fetch(url);
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    const jsonUrl = `${baseUrl}/stock/zones/${pharmacySlug}_stock_locations.json`;
+
+    const res = await fetch(jsonUrl);
     if (!res.ok) throw new Error('Archivo no encontrado');
 
     const data = await res.json();
