@@ -1,3 +1,4 @@
+// Archivo: src/components/StockLocationModal.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -31,7 +32,7 @@ export default function StockLocationModal({
 
   useEffect(() => {
     const fetchLocations = async () => {
-      if (!pharmacy) return;
+      if (!pharmacy || typeof pharmacy !== 'string') return;
 
       const normalized = pharmacy.toLowerCase();
       let path = '';
@@ -49,10 +50,10 @@ export default function StockLocationModal({
 
       try {
         const res = await fetch(path);
-        if (!res.ok) throw new Error('404');
+        if (!res.ok) throw new Error('No se pudo cargar el archivo');
         const data = await res.json();
         setLocations(data);
-      } catch {
+      } catch (err) {
         toast.error('❌ Error al cargar ubicaciones desde el archivo JSON.');
         setLocations([]);
       }
