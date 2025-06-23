@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import ahumadaData from '@/stock/zones/ahumada_stock_locations.json';
-import cruzverdeData from '@/stock/zones/cruzverde_stock_locations.json';
-import salcobrandData from '@/stock/zones/salcobrand_stock_locations.json';
 import { toast } from 'react-toastify';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
@@ -33,22 +30,35 @@ export default function StockLocationModal({
   const [locations, setLocations] = useState<Location[]>([]);
 
   useEffect(() => {
-    if (!pharmacy) {
-      setLocations([]);
-      return;
-    }
+    const fetchLocations = async () => {
+      if (!pharmacy) return;
 
-    const normalized = pharmacy.toLowerCase();
+      const normalized = pharmacy.toLowerCase();
+      let path = '';
 
-    if (normalized.includes('ahumada')) {
-      setLocations(ahumadaData);
-    } else if (normalized.includes('cruz verde')) {
-      setLocations(cruzverdeData);
-    } else if (normalized.includes('salcobrand')) {
-      setLocations(salcobrandData);
-    } else {
-      setLocations([]);
-    }
+      if (normalized.includes('ahumada')) {
+        path = '/stock/zones/ahumada_stock_locations.json';
+      } else if (normalized.includes('cruz verde')) {
+        path = '/stock/zones/cruzverde_stock_locations.json';
+      } else if (normalized.includes('salcobrand')) {
+        path = '/stock/zones/salcobrand_stock_locations.json';
+      } else {
+        setLocations([]);
+        return;
+      }
+
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error('404');
+        const data = await res.json();
+        setLocations(data);
+      } catch {
+        toast.error('❌ Error al cargar ubicaciones desde el archivo JSON.');
+        setLocations([]);
+      }
+    };
+
+    fetchLocations();
   }, [pharmacy]);
 
   const uniqueRegions = [...new Set(locations.map((loc) => loc.region))];
