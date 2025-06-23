@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-INPUT_FILE = Path("../Scrapers_MediSearch/url_extractor/extracted_urls/ahumada_urls.json")
+INPUT_FILE = Path("../url_extractor/extracted_urls/ahumada_urls.json")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../Scrapers_MediSearch/product_updates/ahumada/{timestamp}")
+OUTPUT_DIR = Path(f"../product_updates/ahumada/{timestamp}")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 def extract_data(soup):

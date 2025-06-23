@@ -8,9 +8,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from playwright.sync_api import sync_playwright
 
 # Ruta de entrada y salida
-INPUT_FILE = Path("../Scrapers_MediSearch/url_extractor/extracted_urls/cruzverde_urls.json")
+INPUT_FILE = Path("../url_extractor/extracted_urls/cruzverde_urls.json")
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-OUTPUT_DIR = Path(f"../Scrapers_MediSearch/product_updates/cruzverde/{timestamp}")
+OUTPUT_DIR = Path(f"../product_updates/cruzverde/{timestamp}")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 API_URL = "https://api.cruzverde.cl/product-service/products/detail/{}?inventoryId=zonaS2Soriente"
@@ -56,6 +56,7 @@ def process_category(categoria, urls, headers):
                 price_offer = prices.get("price-sale-cl") or prices.get("price-list-cl")
                 price_normal = prices.get("price-list-cl") if prices.get("price-sale-cl") else None
                 discount = round((1 - price_offer / price_normal) * 100) if price_normal and price_normal > price_offer else 0
+                stock = "available" if data.get("stock") != 0 else "unknown"
 
                 result.append({
                     "id": int(product_id),
@@ -69,7 +70,8 @@ def process_category(categoria, urls, headers):
                     "subcategory": categoria.split("/")[1] if "/" in categoria else None,
                     "price_offer": price_offer,
                     "price_normal": price_normal,
-                    "discount": discount
+                    "discount": discount,
+                    "stock": stock
                 })
                 break
 
