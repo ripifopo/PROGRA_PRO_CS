@@ -1,4 +1,3 @@
-// Archivo: src/components/StockLocationModal.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -34,27 +33,26 @@ export default function StockLocationModal({
     const fetchLocations = async () => {
       if (!pharmacy || typeof pharmacy !== 'string') return;
 
-      const normalized = pharmacy.toLowerCase();
-      let path = '';
+      const slug = pharmacy.toLowerCase().includes('ahumada')
+        ? 'ahumada'
+        : pharmacy.toLowerCase().includes('cruz verde')
+        ? 'cruzverde'
+        : pharmacy.toLowerCase().includes('salcobrand')
+        ? 'salcobrand'
+        : '';
 
-      if (normalized.includes('ahumada')) {
-        path = '/stock/zones/ahumada_stock_locations.json';
-      } else if (normalized.includes('cruz verde')) {
-        path = '/stock/zones/cruzverde_stock_locations.json';
-      } else if (normalized.includes('salcobrand')) {
-        path = '/stock/zones/salcobrand_stock_locations.json';
-      } else {
+      if (!slug) {
         setLocations([]);
         return;
       }
 
       try {
-        const res = await fetch(path);
-        if (!res.ok) throw new Error('No se pudo cargar el archivo');
+        const res = await fetch(`/api/zones/${slug}`);
+        if (!res.ok) throw new Error();
         const data = await res.json();
         setLocations(data);
-      } catch (err) {
-        toast.error('❌ Error al cargar ubicaciones desde el archivo JSON.');
+      } catch {
+        toast.error('❌ Error al cargar ubicaciones desde la API interna.');
         setLocations([]);
       }
     };
