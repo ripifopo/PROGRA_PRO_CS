@@ -3,10 +3,10 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { pharmacy: string } }
+  context: { params: { pharmacy: string } } // ✅ Forma válida
 ) {
   try {
-    const slug = params.pharmacy.toLowerCase().replace(/\s/g, '');
+    const slug = context.params.pharmacy.toLowerCase().replace(/\s/g, '');
 
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
     const url = `${baseUrl}/stock/zones/${slug}_stock_locations.json`;
