@@ -1,29 +1,21 @@
 // Archivo: src/app/api/zones/[pharmacy]/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-import { promises as fs } from 'fs';
 
-export async function GET(req: NextRequest) {
+export async function GET(_req: NextRequest, context: { params: { pharmacy: string } }) {
   try {
-    // Extraer el nombre de la farmacia desde la URL
-    const url = new URL(req.url);
-    const segments = url.pathname.split('/');
-    const pharmacy = segments[segments.length - 1];
+    const { pharmacy } = context.params;
+    const slug = pharmacy.toLowerCase().replace(/\s/g, '');
 
-    // Normalizar nombre del archivo
-    const fileName = `${pharmacy.toLowerCase().replace(/\s/g, '')}_stock_locations.json`;
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
+    const url = `${baseUrl}/stock/zones/${slug}_stock_locations.json`;
 
-    // Construir ruta del archivo dentro de /public/stock/zones/
-    const filePath = path.join(process.cwd(), 'public', 'stock', 'zones', fileName);
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Archivo no encontrado');
 
-    // Leer contenido
-    const fileContent = await fs.readFile(filePath, 'utf-8');
-    const json = JSON.parse(fileContent);
-
-    return NextResponse.json(json);
+    const data = await res.json();
+    return NextResponse.json(data);
   } catch (err) {
-    console.error('❌ Error leyendo JSON:', err);
+    console.error('❌ Error en /api/zones/[pharmacy]:', err);
     return NextResponse.json({ error: 'Error al leer JSON' }, { status: 500 });
   }
 }
