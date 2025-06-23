@@ -19,8 +19,6 @@ interface StockLocationModalProps {
 }
 
 export default function StockLocationModal({
-  pharmacy,
-  productUrl,
   show,
   onClose,
   onSelect,
@@ -31,34 +29,19 @@ export default function StockLocationModal({
 
   useEffect(() => {
     const fetchLocations = async () => {
-      if (!pharmacy || typeof pharmacy !== 'string') return;
-
-      const slug = pharmacy.toLowerCase().includes('ahumada')
-        ? 'ahumada'
-        : pharmacy.toLowerCase().includes('cruz verde')
-        ? 'cruzverde'
-        : pharmacy.toLowerCase().includes('salcobrand')
-        ? 'salcobrand'
-        : '';
-
-      if (!slug) {
-        setLocations([]);
-        return;
-      }
-
       try {
-        const res = await fetch(`/api/zones/${slug}`);
-        if (!res.ok) throw new Error();
+        const res = await fetch('/data/ahumada_stock_locations.json'); // ✅ Usa cualquiera, son todos iguales
+        if (!res.ok) throw new Error('Error al cargar JSON');
         const data = await res.json();
         setLocations(data);
-      } catch {
-        toast.error('❌ Error al cargar ubicaciones desde la API interna.');
+      } catch (error) {
+        toast.error('❌ Error al cargar regiones y comunas.');
         setLocations([]);
       }
     };
 
     fetchLocations();
-  }, [pharmacy]);
+  }, []);
 
   const uniqueRegions = [...new Set(locations.map((loc) => loc.region))];
   const filteredCommunes = locations
