@@ -37,6 +37,16 @@ interface SelectedMedicine extends Medicine {
   history: PriceSnapshot[];
 }
 
+// ✅ Función exportada para los tests
+export function formatFecha(raw: string): string {
+  const [year, month, day] = raw.split('_')[0].split('-');
+  const meses = [
+    'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
+  ];
+  return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
+}
+
 export default function PriceHistoryClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -168,46 +178,36 @@ export default function PriceHistoryClient() {
     setSelected(selected.filter((med) => !(Number(med.id) === id && med.pharmacy === pharmacy)));
   };
 
-  const formatFecha = (raw: string): string => {
-    const [year, month, day] = raw.split('_')[0].split('-');
-    const meses = [
-      'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-      'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
-    ];
-    return `${day} de ${meses[parseInt(month) - 1]} de ${year}`;
+  const uniqueFormattedDates = Array.from(
+    new Set(
+      selected.length > 0
+        ? selected[0].history.map((h) => formatFecha(h.date))
+        : []
+    )
+  );
+
+  const data = {
+    labels: uniqueFormattedDates,
+    datasets: selected.map((med, i) => {
+      const grouped: { [key: string]: number } = {};
+      med.history.forEach((h) => {
+        const formatted = formatFecha(h.date);
+        grouped[formatted] = h.offer_price;
+      });
+
+      return {
+        label: `${med.name} (${med.pharmacy})`,
+        data: uniqueFormattedDates.map((d) => grouped[d] ?? null),
+        borderColor: ['#3b82f6', '#f59e0b', '#8b5cf6'][i % 3],
+        backgroundColor: 'transparent',
+        tension: 0.3,
+        borderDash: selected.length > 1 ? [6, 4] : [],
+        pointRadius: 4,
+        pointHoverRadius: 6,
+        fill: false,
+      };
+    }),
   };
-
-const uniqueFormattedDates = Array.from(
-  new Set(
-    selected.length > 0
-      ? selected[0].history.map((h) => formatFecha(h.date))
-      : []
-  )
-);
-
-const data = {
-  labels: uniqueFormattedDates,
-  datasets: selected.map((med, i) => {
-    // Agrupar precios por fecha formateada (para evitar duplicados en x)
-    const grouped: { [key: string]: number } = {};
-    med.history.forEach((h) => {
-      const formatted = formatFecha(h.date);
-      grouped[formatted] = h.offer_price;
-    });
-
-    return {
-      label: `${med.name} (${med.pharmacy})`,
-      data: uniqueFormattedDates.map((d) => grouped[d] ?? null), // mantiene orden y fechas únicas
-      borderColor: ['#3b82f6', '#f59e0b', '#8b5cf6'][i % 3],
-      backgroundColor: 'transparent',
-      tension: 0.3,
-      borderDash: selected.length > 1 ? [6, 4] : [],
-      pointRadius: 4,
-      pointHoverRadius: 6,
-      fill: false,
-    };
-  }),
-};
 
   const allPrices = selected.flatMap(med => med.history.map(h => h.offer_price));
   const minPrice = Math.min(...allPrices, 0);
