@@ -2,12 +2,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(
-  _req: NextRequest,
-  context: { params: { pharmacy: string } } // ✅ Forma válida
+  req: NextRequest,
+  { params }: { params: Record<string, string> } // ✅ Esta es la forma que sí acepta Vercel
 ) {
   try {
-    const slug = context.params.pharmacy.toLowerCase().replace(/\s/g, '');
-
+    const slug = params.pharmacy.toLowerCase().replace(/\s/g, '');
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
     const url = `${baseUrl}/stock/zones/${slug}_stock_locations.json`;
 
