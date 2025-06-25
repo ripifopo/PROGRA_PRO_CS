@@ -12,8 +12,9 @@ module.exports = {
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy', // ⬅️ esto soluciona el error de rc-slider
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['**/tests/**/*.test.ts?(x)'],
+  setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts']
 };
